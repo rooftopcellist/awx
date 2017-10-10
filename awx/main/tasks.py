@@ -26,7 +26,7 @@ except Exception:
 
 # Celery
 from celery import Task, shared_task
-from celery.signals import celeryd_init, worker_process_init, worker_shutdown, worker_ready, beat_init, celeryd_after_setup
+from celery.signals import celeryd_init, worker_process_init, worker_shutdown, worker_ready, celeryd_after_setup
 
 # Django
 from django.conf import settings
@@ -168,7 +168,6 @@ def handle_ha_toplogy_worker_ready(sender, **kwargs):
                 .format(instance.hostname, removed_queues, added_queues))
 
 
-@beat_init.connect
 @celeryd_init.connect
 def handle_update_celery_routes(sender=None, conf=None, **kwargs):
     conf = conf if conf else sender.app.conf
