@@ -447,7 +447,7 @@ CELERY_TASK_QUEUES = (
 )
 CELERY_TASK_ROUTES = {}
 
-CELERYBEAT_SCHEDULE = {
+CELERY_BEAT_SCHEDULE = {
     'tower_scheduler': {
         'task': 'awx.main.tasks.awx_periodic_scheduler',
         'schedule': timedelta(seconds=30),
