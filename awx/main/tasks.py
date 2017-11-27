@@ -134,27 +134,34 @@ def inform_cluster_of_shutdown(*args, **kwargs):
 
 @shared_task(bind=True, queue='tower', base=LogErrorsTask)
 def apply_cluster_membership_policies(self):
-    considered_instances = Instance.objects.all().order_by('id').only('id')
+    considered_instances = Instance.objects.all().order_by('id')
     total_instances = considered_instances.count()
+    filtered_instances = []
     actual_groups = []
     actual_instances = []
     Group = namedtuple('Group', ['obj', 'instances'])
-    Instance = namedtuple('Instance', ['obj', 'groups'])
+    Node = namedtuple('Instance', ['obj', 'groups'])
     # Process policy instance list first, these will represent manually managed instances
     # that will not go through automatic policy determination
     for ig in InstanceGroup.objects.all():
+        ig.instances.clear()
         group_actual = Group(obj=ig, instances=[])
         for i in ig.policy_instance_list:
-            group_actual.instances.append(i)
-            if i in considered_instances:
-                considered_instances.remove(i)
+            inst = Instance.objects.filter(hostname=i)
+            if not inst.exists():
+                continue
+            inst = inst[0]
+            group_actual.instances.append(inst.id)
+            ig.instances.add(inst)
+            filtered_instances.append(inst)
         actual_groups.append(group_actual)
     # Process Instance minimum policies next, since it represents a concrete lower bound to the
     # number of instances to make available to instance groups
-    for i in considered_instances:
-        instance_actual = Instance(obj=i, groups=[])
+    for i in filter(lambda x: x not in filtered_instances, considered_instances):
+        instance_actual = Node(obj=i, groups=[])
         for g in sorted(actual_groups, cmp=lambda x,y: len(x.instances) - len(y.instances)):
             if len(g.instances) < g.obj.policy_instance_minimum:
+                g.obj.instances.add(instance_actual.obj)
                 g.instances.append(instance_actual.obj.id)
                 instance_actual.groups.append(g.obj.id)
                 break
@@ -164,9 +171,10 @@ def apply_cluster_membership_policies(self):
         for g in sorted(actual_groups, cmp=lambda x,y: len(x.instances) - len(y.instances)):
             if 100 * float(len(g.instances)) / total_instances < g.obj.policy_instance_percentage:
                 g.instances.append(i.obj.id)
+                g.obj.instances.add(i.obj)
                 i.groups.append(g.obj.id)
                 break
-    # Next step
+    handle_ha_toplogy_changes.apply_async()
 
 
 @shared_task(queue='tower_broadcast_all', bind=True, base=LogErrorsTask)

@@ -2,6 +2,8 @@ import pytest
 import mock
 from datetime import timedelta
 from awx.main.scheduler import TaskManager
+from awx.main.models import InstanceGroup
+from awx.main.tasks import apply_cluster_membership_policies
 
 
 @pytest.mark.django_db
@@ -151,3 +153,27 @@ def test_failover_group_run(instance_factory, default_instance_group, mocker,
             tm.schedule()
             mock_job.assert_has_calls([mock.call(j1, ig1, []), mock.call(j1_1, ig2, [])])
             assert mock_job.call_count == 2
+
+
+@pytest.mark.django_db
+def test_instance_group_basic_policies(instance_factory, instance_group_factory):
+    i0 = instance_factory("i0")
+    instance_factory("i1")
+    instance_factory("i2")
+    instance_factory("i3")
+    instance_factory("i4")
+    ig0 = instance_group_factory("ig0")
+    ig1 = instance_group_factory("ig1", minimum=2)
+    ig2 = instance_group_factory("ig2", percentage=50)
+    ig3 = instance_group_factory("ig3", percentage=50)
+    ig0.policy_instance_list.append(i0.hostname)
+    ig0.save()
+    apply_cluster_membership_policies()
+    print([x.hostname for x in InstanceGroup.objects.get(id=ig0.id).instances.all()])
+    print([x.hostname for x in InstanceGroup.objects.get(id=ig1.id).instances.all()])
+    print([x.hostname for x in InstanceGroup.objects.get(id=ig2.id).instances.all()])
+    print([x.hostname for x in InstanceGroup.objects.get(id=ig3.id).instances.all()])
+    assert len(InstanceGroup.objects.get(id=ig0.id).instances.all()) == 1
+    assert len(InstanceGroup.objects.get(id=ig1.id).instances.all()) == 2
+    assert len(InstanceGroup.objects.get(id=ig2.id).instances.all()) == 2
+    assert len(InstanceGroup.objects.get(id=ig3.id).instances.all()) == 2
