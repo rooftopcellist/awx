@@ -26,7 +26,7 @@ except Exception:
     psutil = None
 
 # Celery
-from celery import Task, shared_task
+from celery import Task, shared_task, Celery
 from celery.signals import celeryd_init, worker_process_init, worker_shutdown, worker_ready, celeryd_after_setup
 
 # Django
@@ -201,7 +201,9 @@ def handle_setting_changes(self, setting_keys):
 def handle_ha_toplogy_changes(self):
     instance = Instance.objects.me()
     logger.debug("Reconfigure celeryd queues task on host {}".format(self.request.hostname))
-    (instance, removed_queues, added_queues) = register_celery_worker_queues(self.app, self.request.hostname)
+    awx_app = Celery('awx')
+    awx_app.config_from_object('django.conf:settings', namespace='CELERY')
+    (instance, removed_queues, added_queues) = register_celery_worker_queues(awx_app, self.request.hostname)
     logger.info("Workers on tower node '{}' removed from queues {} and added to queues {}"
                 .format(instance.hostname, removed_queues, added_queues))
     updated_routes = update_celery_worker_routes(instance, settings)
