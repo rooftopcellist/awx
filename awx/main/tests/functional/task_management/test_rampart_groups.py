@@ -158,10 +158,10 @@ def test_failover_group_run(instance_factory, default_instance_group, mocker,
 @pytest.mark.django_db
 def test_instance_group_basic_policies(instance_factory, instance_group_factory):
     i0 = instance_factory("i0")
-    instance_factory("i1")
-    instance_factory("i2")
-    instance_factory("i3")
-    instance_factory("i4")
+    i1 = instance_factory("i1")
+    i2 = instance_factory("i2")
+    i3 = instance_factory("i3")
+    i4 = instance_factory("i4")
     ig0 = instance_group_factory("ig0")
     ig1 = instance_group_factory("ig1", minimum=2)
     ig2 = instance_group_factory("ig2", percentage=50)
@@ -169,11 +169,18 @@ def test_instance_group_basic_policies(instance_factory, instance_group_factory)
     ig0.policy_instance_list.append(i0.hostname)
     ig0.save()
     apply_cluster_membership_policies()
-    print([x.hostname for x in InstanceGroup.objects.get(id=ig0.id).instances.all()])
-    print([x.hostname for x in InstanceGroup.objects.get(id=ig1.id).instances.all()])
-    print([x.hostname for x in InstanceGroup.objects.get(id=ig2.id).instances.all()])
-    print([x.hostname for x in InstanceGroup.objects.get(id=ig3.id).instances.all()])
-    assert len(InstanceGroup.objects.get(id=ig0.id).instances.all()) == 1
+    ig0 = InstanceGroup.objects.get(id=ig0.id)
+    ig1 = InstanceGroup.objects.get(id=ig1.id)
+    ig2 = InstanceGroup.objects.get(id=ig2.id)
+    ig3 = InstanceGroup.objects.get(id=ig3.id)
+    assert len(ig0.instances.all()) == 1
+    assert i0 in ig0.instances.all() 
     assert len(InstanceGroup.objects.get(id=ig1.id).instances.all()) == 2
+    assert i1 in ig1.instances.all()
+    assert i2 in ig1.instances.all()
     assert len(InstanceGroup.objects.get(id=ig2.id).instances.all()) == 2
+    assert i3 in ig2.instances.all()
+    assert i4 in ig2.instances.all()
     assert len(InstanceGroup.objects.get(id=ig3.id).instances.all()) == 2
+    assert i1 in ig3.instances.all()
+    assert i2 in ig3.instances.all()

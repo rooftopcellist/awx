@@ -56,7 +56,7 @@ from social_core.backends.utils import load_backends
 from wsgiref.util import FileWrapper
 
 # AWX
-from awx.main.tasks import send_notifications, handle_ha_toplogy_changes
+from awx.main.tasks import send_notifications
 from awx.main.access import get_user_queryset
 from awx.main.ha import is_ha_environment
 from awx.api.authentication import TokenGetAuthentication
@@ -154,19 +154,29 @@ class InstanceGroupMembershipMixin(object):
     def attach(self, request, *args, **kwargs):
         response = super(InstanceGroupMembershipMixin, self).attach(request, *args, **kwargs)
         if status.is_success(response.status_code):
-            handle_ha_toplogy_changes.apply_async()
+            if self.parent_model is Instance:
+                inst_name = self.get_parent_object().hostname
+                ig_obj = self
+            else:
+                ig_obj = self.get_parent_object()
+                inst_name = self.hostname
+            if inst_name not in ig_obj.policy_instance_list:
+                ig_obj.policy_instance_list.append(inst_name)
+                ig_obj.save()
         return response
 
     def unattach(self, request, *args, **kwargs):
         response = super(InstanceGroupMembershipMixin, self).unattach(request, *args, **kwargs)
         if status.is_success(response.status_code):
-            handle_ha_toplogy_changes.apply_async()
-        return response
-
-    def destroy(self, request, *args, **kwargs):
-        response = super(InstanceGroupMembershipMixin, self).destroy(request, *args, **kwargs)
-        if status.is_success(response.status_code):
-            handle_ha_toplogy_changes.apply_async()
+            if self.parent_model is Instance:
+                inst_name = self.get_parent_object().hostname
+                ig_obj = self
+            else:
+                ig_obj = self.get_parent_object()
+                inst_name = self.hostname
+            if inst_name in ig_obj.policy_instance_list:
+                ig_obj.policy_instance_list.pop(ig_obj.policy_instance_list.index(inst_name))
+                ig_obj.save()
         return response
 
 
@@ -588,7 +598,7 @@ class InstanceGroupList(ListCreateAPIView):
     new_in_320 = True
 
 
-class InstanceGroupDetail(InstanceGroupMembershipMixin, RetrieveUpdateDestroyAPIView):
+class InstanceGroupDetail(RetrieveUpdateDestroyAPIView):
 
     view_name = _("Instance Group Detail")
     model = InstanceGroup

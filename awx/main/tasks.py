@@ -64,7 +64,7 @@ from awx.main.consumers import emit_channel_notification
 from awx.conf import settings_registry
 
 __all__ = ['RunJob', 'RunSystemJob', 'RunProjectUpdate', 'RunInventoryUpdate',
-           'RunAdHocCommand', 'handle_work_error', 'handle_work_success',
+           'RunAdHocCommand', 'handle_work_error', 'handle_work_success', 'apply_cluster_membership_policies',
            'update_inventory_computed_fields', 'update_host_smart_inventory_memberships',
            'send_notifications', 'run_administrative_checks', 'purge_old_stdout_files']
 
@@ -132,7 +132,7 @@ def inform_cluster_of_shutdown(*args, **kwargs):
         logger.exception('Encountered problem with normal shutdown signal.')
 
 
-@shared_task(bind=True, queue='tower', base=LogErrorsTask)
+@shared_task(bind=True, queue='tower_instance_router', base=LogErrorsTask)
 def apply_cluster_membership_policies(self):
     considered_instances = Instance.objects.all().order_by('id')
     total_instances = considered_instances.count()
@@ -151,29 +151,32 @@ def apply_cluster_membership_policies(self):
             if not inst.exists():
                 continue
             inst = inst[0]
+            logger.info("Policy List, adding {} to {}".format(inst.hostname, ig.name))
             group_actual.instances.append(inst.id)
             ig.instances.add(inst)
             filtered_instances.append(inst)
         actual_groups.append(group_actual)
     # Process Instance minimum policies next, since it represents a concrete lower bound to the
     # number of instances to make available to instance groups
-    for i in filter(lambda x: x not in filtered_instances, considered_instances):
-        instance_actual = Node(obj=i, groups=[])
-        for g in sorted(actual_groups, cmp=lambda x,y: len(x.instances) - len(y.instances)):
-            if len(g.instances) < g.obj.policy_instance_minimum:
-                g.obj.instances.add(instance_actual.obj)
-                g.instances.append(instance_actual.obj.id)
-                instance_actual.groups.append(g.obj.id)
+    actual_instances = [Node(obj=i, groups=[]) for i in filter(lambda x: x not in filtered_instances, considered_instances)]
+    logger.info("Total instances not directly associated: {}".format(total_instances))
+    for g in sorted(actual_groups, cmp=lambda x,y: len(x.instances) - len(y.instances)):
+        for i in sorted(actual_instances, cmp=lambda x,y: len(x.groups) - len(y.groups)):
+            if len(g.instances) >= g.obj.policy_instance_minimum:
                 break
-        actual_instances.append(instance_actual)
+            logger.info("Policy minimum, adding {} to {}".format(i.obj.hostname, g.obj.name))
+            g.obj.instances.add(i.obj)
+            g.instances.append(i.obj.id)
+            i.groups.append(g.obj.id)
     # Finally process instance policy percentages
-    for i in sorted(actual_instances, cmp=lambda x,y: len(x.groups) - len(y.groups)):
-        for g in sorted(actual_groups, cmp=lambda x,y: len(x.instances) - len(y.instances)):
-            if 100 * float(len(g.instances)) / total_instances < g.obj.policy_instance_percentage:
-                g.instances.append(i.obj.id)
-                g.obj.instances.add(i.obj)
-                i.groups.append(g.obj.id)
+    for g in sorted(actual_groups, cmp=lambda x,y: len(x.instances) - len(y.instances)):
+        for i in sorted(actual_instances, cmp=lambda x,y: len(x.groups) - len(y.groups)):
+            if 100 * float(len(g.instances)) / len(actual_instances) >= g.obj.policy_instance_percentage:
                 break
+            logger.info("Policy percentage, adding {} to {}".format(i.obj.hostname, g.obj.name))
+            g.instances.append(i.obj.id)
+            g.obj.instances.add(i.obj)
+            i.groups.append(g.obj.id)
     handle_ha_toplogy_changes.apply_async()
 
 
@@ -203,7 +206,7 @@ def handle_ha_toplogy_changes(self):
                 .format(instance.hostname, removed_queues, added_queues))
     updated_routes = update_celery_worker_routes(instance, settings)
     logger.info("Worker on tower node '{}' updated celery routes {} all routes are now {}"
-                .format(instance.hostname, updated_routes, self.app.conf.CELERY_ROUTES))
+                .format(instance.hostname, updated_routes, self.app.conf.CELERY_TASK_ROUTES))
 
 
 @worker_ready.connect
@@ -221,7 +224,7 @@ def handle_update_celery_routes(sender=None, conf=None, **kwargs):
     instance = Instance.objects.me()
     added_routes = update_celery_worker_routes(instance, conf)
     logger.info("Workers on tower node '{}' added routes {} all routes are now {}"
-                .format(instance.hostname, added_routes, conf.CELERY_ROUTES))
+                .format(instance.hostname, added_routes, conf.CELERY_TASK_ROUTES))
 
 
 @celeryd_after_setup.connect
