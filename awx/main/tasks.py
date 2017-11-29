@@ -58,6 +58,7 @@ from awx.main.utils import (get_ansible_version, get_ssh_version, decrypt_field,
                             ignore_inventory_computed_fields, ignore_inventory_group_removal,
                             get_type_for_model, extract_ansible_vars)
 from awx.main.utils.reload import restart_local_services, stop_local_services
+from awx.main.utils.pglock import advisory_lock
 from awx.main.utils.ha import update_celery_worker_routes, register_celery_worker_queues
 from awx.main.utils.handlers import configure_external_logger
 from awx.main.consumers import emit_channel_notification
@@ -134,50 +135,52 @@ def inform_cluster_of_shutdown(*args, **kwargs):
 
 @shared_task(bind=True, queue='tower_instance_router', base=LogErrorsTask)
 def apply_cluster_membership_policies(self):
-    considered_instances = Instance.objects.all().order_by('id')
-    total_instances = considered_instances.count()
-    filtered_instances = []
-    actual_groups = []
-    actual_instances = []
-    Group = namedtuple('Group', ['obj', 'instances'])
-    Node = namedtuple('Instance', ['obj', 'groups'])
-    # Process policy instance list first, these will represent manually managed instances
-    # that will not go through automatic policy determination
-    for ig in InstanceGroup.objects.all():
-        ig.instances.clear()
-        group_actual = Group(obj=ig, instances=[])
-        for i in ig.policy_instance_list:
-            inst = Instance.objects.filter(hostname=i)
-            if not inst.exists():
-                continue
-            inst = inst[0]
-            logger.info("Policy List, adding {} to {}".format(inst.hostname, ig.name))
-            group_actual.instances.append(inst.id)
-            ig.instances.add(inst)
-            filtered_instances.append(inst)
-        actual_groups.append(group_actual)
-    # Process Instance minimum policies next, since it represents a concrete lower bound to the
-    # number of instances to make available to instance groups
-    actual_instances = [Node(obj=i, groups=[]) for i in filter(lambda x: x not in filtered_instances, considered_instances)]
-    logger.info("Total instances not directly associated: {}".format(total_instances))
-    for g in sorted(actual_groups, cmp=lambda x,y: len(x.instances) - len(y.instances)):
-        for i in sorted(actual_instances, cmp=lambda x,y: len(x.groups) - len(y.groups)):
-            if len(g.instances) >= g.obj.policy_instance_minimum:
-                break
-            logger.info("Policy minimum, adding {} to {}".format(i.obj.hostname, g.obj.name))
-            g.obj.instances.add(i.obj)
-            g.instances.append(i.obj.id)
-            i.groups.append(g.obj.id)
-    # Finally process instance policy percentages
-    for g in sorted(actual_groups, cmp=lambda x,y: len(x.instances) - len(y.instances)):
-        for i in sorted(actual_instances, cmp=lambda x,y: len(x.groups) - len(y.groups)):
-            if 100 * float(len(g.instances)) / len(actual_instances) >= g.obj.policy_instance_percentage:
-                break
-            logger.info("Policy percentage, adding {} to {}".format(i.obj.hostname, g.obj.name))
-            g.instances.append(i.obj.id)
-            g.obj.instances.add(i.obj)
-            i.groups.append(g.obj.id)
-    handle_ha_toplogy_changes.apply_async()
+    with advisory_lock('cluster_policy_lock', wait=True):
+        considered_instances = Instance.objects.all().order_by('id')
+        total_instances = considered_instances.count()
+        filtered_instances = []
+        actual_groups = []
+        actual_instances = []
+        Group = namedtuple('Group', ['obj', 'instances'])
+        Node = namedtuple('Instance', ['obj', 'groups'])
+        # Process policy instance list first, these will represent manually managed instances
+        # that will not go through automatic policy determination
+        for ig in InstanceGroup.objects.all():
+            logger.info("Considering group {}".format(ig.name))
+            ig.instances.clear()
+            group_actual = Group(obj=ig, instances=[])
+            for i in ig.policy_instance_list:
+                inst = Instance.objects.filter(hostname=i)
+                if not inst.exists():
+                    continue
+                inst = inst[0]
+                logger.info("Policy List, adding {} to {}".format(inst.hostname, ig.name))
+                group_actual.instances.append(inst.id)
+                ig.instances.add(inst)
+                filtered_instances.append(inst)
+            actual_groups.append(group_actual)
+        # Process Instance minimum policies next, since it represents a concrete lower bound to the
+        # number of instances to make available to instance groups
+        actual_instances = [Node(obj=i, groups=[]) for i in filter(lambda x: x not in filtered_instances, considered_instances)]
+        logger.info("Total instances not directly associated: {}".format(total_instances))
+        for g in sorted(actual_groups, cmp=lambda x,y: len(x.instances) - len(y.instances)):
+            for i in sorted(actual_instances, cmp=lambda x,y: len(x.groups) - len(y.groups)):
+                if len(g.instances) >= g.obj.policy_instance_minimum:
+                    break
+                logger.info("Policy minimum, adding {} to {}".format(i.obj.hostname, g.obj.name))
+                g.obj.instances.add(i.obj)
+                g.instances.append(i.obj.id)
+                i.groups.append(g.obj.id)
+        # Finally process instance policy percentages
+        for g in sorted(actual_groups, cmp=lambda x,y: len(x.instances) - len(y.instances)):
+            for i in sorted(actual_instances, cmp=lambda x,y: len(x.groups) - len(y.groups)):
+                if 100 * float(len(g.instances)) / len(actual_instances) >= g.obj.policy_instance_percentage:
+                    break
+                logger.info("Policy percentage, adding {} to {}".format(i.obj.hostname, g.obj.name))
+                g.instances.append(i.obj.id)
+                g.obj.instances.add(i.obj)
+                i.groups.append(g.obj.id)
+        handle_ha_toplogy_changes.apply_async()
 
 
 @shared_task(queue='tower_broadcast_all', bind=True, base=LogErrorsTask)

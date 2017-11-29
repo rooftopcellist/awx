@@ -140,26 +140,26 @@ class JobOrigin(models.Model):
 def on_instance_group_saved(sender, instance, created=False, raw=False, **kwargs):
     if created:
         from awx.main.tasks import apply_cluster_membership_policies
-        apply_cluster_membership_policies.apply_async()
+        apply_cluster_membership_policies.apply_async(countdown=5)
 
 
 @receiver(post_save, sender=Instance)
 def on_instance_saved(sender, instance, created=False, raw=False, **kwargs):
     if created:
         from awx.main.tasks import apply_cluster_membership_policies
-        apply_cluster_membership_policies.apply_async()
+        apply_cluster_membership_policies.apply_async(countdown=5)
 
 
 @receiver(post_delete, sender=InstanceGroup)
 def on_instance_group_deleted(sender, instance, using, **kwargs):
     from awx.main.tasks import apply_cluster_membership_policies
-    apply_cluster_membership_policies.apply_async()
+    apply_cluster_membership_policies.apply_async(countdown=5)
 
 
 @receiver(post_delete, sender=Instance)
 def on_instance_deleted(sender, instance, using, **kwargs):
     from awx.main.tasks import apply_cluster_membership_policies
-    apply_cluster_membership_policies.apply_async()
+    apply_cluster_membership_policies.apply_async(countdown=5)
 
 
 # Unfortunately, the signal can't just be connected against UnifiedJob; it
