@@ -153,13 +153,14 @@ class InstanceGroupMembershipMixin(object):
     '''
     def attach(self, request, *args, **kwargs):
         response = super(InstanceGroupMembershipMixin, self).attach(request, *args, **kwargs)
+        sub_id, res = self.attach_validate(request)
         if status.is_success(response.status_code):
             if self.parent_model is Instance:
-                inst_name = self.get_parent_object().hostname
-                ig_obj = self
+                ig_obj = get_object_or_400(self.model, pk=sub_id)
+                inst_name = ig_obj.hostname
             else:
                 ig_obj = self.get_parent_object()
-                inst_name = self.hostname
+                inst_name = get_object_or_400(self.model, pk=sub_id).hostname
             if inst_name not in ig_obj.policy_instance_list:
                 ig_obj.policy_instance_list.append(inst_name)
                 ig_obj.save()
@@ -167,13 +168,14 @@ class InstanceGroupMembershipMixin(object):
 
     def unattach(self, request, *args, **kwargs):
         response = super(InstanceGroupMembershipMixin, self).unattach(request, *args, **kwargs)
+        sub_id, res = self.attach_validate(request)
         if status.is_success(response.status_code):
             if self.parent_model is Instance:
+                ig_obj = get_object_or_400(self.model, pk=sub_id)
                 inst_name = self.get_parent_object().hostname
-                ig_obj = self
             else:
                 ig_obj = self.get_parent_object()
-                inst_name = self.hostname
+                inst_name = get_object_or_400(self.model, pk=sub_id).hostname
             if inst_name in ig_obj.policy_instance_list:
                 ig_obj.policy_instance_list.pop(ig_obj.policy_instance_list.index(inst_name))
                 ig_obj.save()
