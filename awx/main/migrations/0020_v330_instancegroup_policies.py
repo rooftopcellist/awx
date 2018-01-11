@@ -8,7 +8,7 @@ import awx.main.fields
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('main', '0017_v330_move_deprecated_stdout'),
+        ('main', '0019_v330_custom_virtualenv'),
     ]
 
     operations = [
