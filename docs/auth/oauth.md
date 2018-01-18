@@ -18,7 +18,7 @@ approach, OAuth resources will only take effect to the underlying user.
 
 Each OAuth application belongs to a specific user, and is used to represent a specific API client
 on the server side. For example, if AWX user Alice wants to make her `curl` command to talk to
-AWX, the first thing is creating a new application and probably name it `Alice' curl client`.
+AWX, she must first create a new application and name it something like `Alice' curl client`.
 
 Individual applications will be accessible via their primary keys:
 `/api/<version>/me/oauth/applications/<primary key of an application>/`. Here is a typical application:
@@ -43,7 +43,8 @@ Individual applications will be accessible via their primary keys:
             "count": 13,
             "results": [
                 {
-                    "token": "UdglJ1IkG3YrkzPWkEIwBqWP2xL8X7",
+                    "scope: "read",
+                    "token": "**************",
                     "id": 16
                 },
                 ...
@@ -62,7 +63,7 @@ Individual applications will be accessible via their primary keys:
     "skip_authorization": false
 }
 ```
-In the above example, `user` is the underlying user this application associates to; `name` can be
+In the above example, `user` is the primary key of the underlying user this application associates to, and `name` can be
 used as a human-readable identifier of the application. The rest fields, like `client_id` and
 `redirect_uris`, are mainly used for OAuth authorization, which will be covered later in 'Using
 OAuth token system' section.
@@ -123,23 +124,26 @@ Individual tokens will be accessible via their primary keys:
     "scope": "read"
 }
 ```
-For an OAuth token, the only fully mutable field is `scope`. `application` field is *immutable
+For an OAuth token, the only fully mutable field is `scope`. The `application` field is *immutable
 on update*, and all other fields are totally immutable, and will be auto-populated during creation:
 `user` field will be the `user` field of related application; `expires` will be generated according
-to Tower configuration setting `OAUTH2_PROVIDER`; `token` and `refresh_token` will be auto-
-generated to be non-crashing random strings.
+to Tower configuration setting `OAUTH2_PROVIDER`; `token` and `refresh_token` will be auto-generated 
+to be non-crashing random strings.
 
 On RBAC side:
-- A user will be able to create a token if she is able to see the related application;
-- System admin is able to see and manipulate every token in the system;
+- A user will be able to create a token if they are able to see the related application;
+- System admin is able to see and manipulate every token in the system; 
 - Organization admins will be able to see and manipulate all tokens belonging to Organization
   members;
 - Other normal users will only be able to see and manipulate their own tokens.
+>> Note: Users can only see the token or refresh-token _value_ at the time of creation ONLY.  
 
-#### Using OAuth token system
-The most significant usage of OAuth is authenticating users. `token` field of a token is used
-as part of HTTP authentication header, in the format `Authorization: Bearer <token field value>`.
-Here is a `curl` command example:
+#### Using OAuth token system as a Personal Access Token (PAT)
+The most common usage of OAuth is authenticating users. The `token` field of a token is used
+as part of the HTTP authentication header, in the format `Authorization: Bearer <token field value>`.  This _Bearer_
+token can be obtained by doing a curl to the `/api/o/token/` endpoint as shown in `api_o_auth_authorization_root_view.md`.  
+
+Here is an example of using that PAT to access an API endpoint using `curl`:
 ```
 curl -H "Authorization: Bearer kqHqxfpHGRRBXLNCOXxT5Zt3tpJogn" http://localhost:8013/api/v2/credentials/
 ```
@@ -151,13 +155,13 @@ a token, and deleting a token quickly followed by creating a new one.
 On the other hand, the specification also provides standard ways of doing those. RFC 6749 elaborates
 on those topics, but in summary, an OAuth token is officially acquired via authorization using
 authorization information provided by applications (special application fields mentioned above).
-There are dedicated endpoints for authorization and token acquire; The token acquire endpoint
-is also responsible for token refresh; and token revoke is done by dedicated token revoke endpoint.
+There are dedicated endpoints for authorization and acquiring tokens. The token acquire endpoint
+is also responsible for token refresh, and token revoke is done by a dedicated token revoke endpoint.
 
 In AWX, our OAuth system is built on top of
 [Django Oauth Toolkit](https://django-oauth-toolkit.readthedocs.io/en/latest/), which provides full
-support on standard authorization, token revoke and refresh. AWX reuses them and puts related
-endpoints under `/api/o/` endpoint. Detailed examples on some most typical usage of those endpoints
+support on standard authorization, token revoke and refresh. AWX implements them and puts related
+endpoints under `/api/o/` endpoint. Detailed examples on the most typical usage of those endpoints
 are available as description text of `/api/o/`.
 
 #### Token scope mask over RBAC system

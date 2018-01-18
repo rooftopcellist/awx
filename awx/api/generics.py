@@ -20,6 +20,7 @@ from django.utils.safestring import mark_safe
 from django.contrib.contenttypes.models import ContentType
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.auth import views as auth_views
+from django.http import HttpResponse
 
 # Django REST Framework
 from rest_framework.authentication import get_authorization_header
@@ -68,7 +69,13 @@ class LoggedLoginView(auth_views.LoginView):
         current_user = getattr(request, 'user', None)
         if current_user and getattr(current_user, 'pk', None) and current_user != original_user:
             logger.info("User {} logged in.".format(current_user.username))
-        return ret
+        if request.user.is_authenticated:
+            return ret
+        else:
+            ret.render()
+            return HttpResponse(status=401)
+
+ 
 
 
 class LoggedLogoutView(auth_views.LogoutView):

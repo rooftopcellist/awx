@@ -220,6 +220,8 @@ class ApiOAuthAuthorizationRootView(APIView):
         data['authorize'] = drf_reverse('api:authorize')
         data['token'] = drf_reverse('api:token')
         data['revoke_token'] = drf_reverse('api:revoke-token')
+        data['applications'] = drf_reverse('api:user_me_oauth_application_list')
+        data['tokens'] = drf_reverse('api:user_me_oauth_token_list')
         return Response(data)
 
 
@@ -232,7 +234,6 @@ class ApiVersionRootView(APIView):
     def get(self, request, format=None):
         ''' List top level resources '''
         data = OrderedDict()
-        data['authtoken'] = reverse('api:auth_token_view', request=request)
         data['ping'] = reverse('api:api_v1_ping_view', request=request)
         data['instances'] = reverse('api:instance_list', request=request)
         data['instance_groups'] = reverse('api:instance_group_list', request=request)
@@ -797,78 +798,6 @@ class AuthView(APIView):
                 data[name] = backend_data
         return Response(data)
 
-
-class AuthTokenView(APIView):
-
-    authentication_classes = []
-    permission_classes = (AllowAny,)
-    serializer_class = AuthTokenSerializer
-    model = AuthToken
-    swagger_topic = 'Authentication'
-
-    def get_serializer(self, *args, **kwargs):
-        serializer = self.serializer_class(*args, **kwargs)
-        # Override when called from browsable API to generate raw data form;
-        # update serializer "validated" data to be displayed by the raw data
-        # form.
-        if hasattr(self, '_raw_data_form_marker'):
-            # Always remove read only fields from serializer.
-            for name, field in serializer.fields.items():
-                if getattr(field, 'read_only', None):
-                    del serializer.fields[name]
-            serializer._data = self.update_raw_data(serializer.data)
-        return serializer
-
-    @never_cache
-    def post(self, request):
-        serializer = self.get_serializer(data=request.data)
-        if serializer.is_valid():
-            request_hash = AuthToken.get_request_hash(self.request)
-            try:
-                token = AuthToken.objects.filter(user=serializer.validated_data['user'],
-                                                 request_hash=request_hash,
-                                                 expires__gt=now(),
-                                                 reason='')[0]
-                token.refresh()
-                if 'username' in request.data:
-                    logger.info(smart_text(u"User {} logged in".format(request.data['username'])),
-                                extra=dict(actor=request.data['username']))
-            except IndexError:
-                token = AuthToken.objects.create(user=serializer.validated_data['user'],
-                                                 request_hash=request_hash)
-                if 'username' in request.data:
-                    logger.info(smart_text(u"User {} logged in".format(request.data['username'])),
-                                extra=dict(actor=request.data['username']))
-                # Get user un-expired tokens that are not invalidated that are
-                # over the configured limit.
-                # Mark them as invalid and inform the user
-                invalid_tokens = AuthToken.get_tokens_over_limit(serializer.validated_data['user'])
-                for t in invalid_tokens:
-                    emit_channel_notification('control-limit_reached', dict(group_name='control',
-                                                                            reason=force_text(AuthToken.reason_long('limit_reached')),
-                                                                            token_key=t.key))
-                    t.invalidate(reason='limit_reached')
-
-            # Note: This header is normally added in the middleware whenever an
-            # auth token is included in the request header.
-            headers = {
-                'Auth-Token-Timeout': int(settings.AUTH_TOKEN_EXPIRATION),
-                'Pragma': 'no-cache',
-            }
-            return Response({'token': token.key, 'expires': token.expires}, headers=headers)
-        if 'username' in request.data:
-            logger.warning(smart_text(u"Login failed for user {}".format(request.data['username'])),
-                           extra=dict(actor=request.data['username']))
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-    def delete(self, request):
-        if 'HTTP_AUTHORIZATION' in request.META:
-            token_match = re.match("Token\s(.+)", request.META['HTTP_AUTHORIZATION'])
-            if token_match:
-                filter_tokens = AuthToken.objects.filter(key=token_match.groups()[0])
-                if filter_tokens.exists():
-                    filter_tokens[0].invalidate()
-        return Response(status=status.HTTP_204_NO_CONTENT)
 
 
 class OrganizationCountsMixin(object):
@@ -1572,7 +1501,7 @@ class UserMeList(ListAPIView):
         return self.model.objects.filter(pk=self.request.user.pk)
 
 
-class UserMeOauthRootView(APIView):
+class UserMeOauthRootView(APIView):     #TODO: Take this out, it should no longer be needed (contents now in api/o)
 
     view_name = _("OAuth Root")
 
