@@ -12,7 +12,7 @@ from collections import OrderedDict
 from dateutil import rrule
 from datetime import timedelta
 
-# OAuth
+# OAuth2
 from oauthlib.common import generate_token
 from oauth2_provider.settings import oauth2_settings
 
@@ -937,8 +937,15 @@ class OauthApplicationSerializer(BaseSerializer):
         extra_kwargs = {
             'user': {'allow_null': False, 'required': True},
             'authorization_grant_type': {'allow_null': False}
-        }
-
+        }        
+        
+    def to_representation(self, obj):
+        ret = super(OauthApplicationSerializer, self).to_representation(obj)
+        if obj.client_type == 'public':
+            ret.pop('client_secret')
+        return ret
+        
+        
     def get_modified(self, obj):
         if obj is None:
             return None
@@ -957,7 +964,7 @@ class OauthApplicationSerializer(BaseSerializer):
         return ret
 
     def _summary_field_tokens(self, obj):
-        token_list = [{'id': x.pk, 'token': x.token} for x in obj.accesstoken_set.all()[:10]]
+        token_list = [{'id': x.pk, 'token': '**************', 'scope': x.scope} for x in obj.accesstoken_set.all()[:10]]
         if has_model_field_prefetched(obj, 'accesstoken_set'):
             token_count = len(obj.accesstoken_set.all())
         else:
@@ -976,6 +983,7 @@ class OauthApplicationSerializer(BaseSerializer):
 class OauthTokenSerializer(BaseSerializer):
 
     refresh_token = serializers.SerializerMethodField()
+    token = serializers.SerializerMethodField()
 
     class Meta:
         model = AccessToken
@@ -1007,9 +1015,23 @@ class OauthTokenSerializer(BaseSerializer):
         )
         return ret
 
-    def get_refresh_token(self, obj):
+    def get_token(self, obj):
+        request = self.context.get('request', None)
         try:
-            return getattr(obj.refresh_token, 'token', '')
+            if request.method == 'POST':
+                return obj.token
+            else:
+                return '*************'
+        except ObjectDoesNotExist:
+            return ''
+
+    def get_refresh_token(self, obj):
+        request = self.context.get('request', None)
+        try:
+            if request.method == 'POST':
+                return getattr(obj.refresh_token, 'token', '')
+            else:
+                return '**************'
         except ObjectDoesNotExist:
             return ''
 
@@ -1029,6 +1051,7 @@ class OauthTokenSerializer(BaseSerializer):
             access_token=obj
         )
         return obj
+
 
 
 class OrganizationSerializer(BaseSerializer):

@@ -1,9 +1,12 @@
+# Handling Personal Access Tokens (PAT) using OAuth2
+
 This page lists OAuth utility endpoints used for authorization, token refresh and revoke.
 Note endpoints other than `/api/o/authorize/` are not meant to be used in browsers and do not
 support HTTP GET. The endpoints here strictly follow
 [RFC specs for OAuth2](https://tools.ietf.org/html/rfc6749), so please use that for detailed
-reference. Here we give some examples to demonstrate the typical usage of these endpoints in
+reference. The `implicit` grant type can only be used to acquire a access token if the user is already logged in via session authentication, as that confirms that the user is authorized to create an access token. Here we give some examples to demonstrate the typical usage of these endpoints in
 AWX context (Note AWX net location default to `http://localhost:8013` in examples):
+
 
 ## Authorization using application of grant type `implicit`
 Suppose we have an application `admin's app` of grant type `implicit`:
@@ -30,9 +33,8 @@ endpoint with given parameters:
 http://localhost:8013/api/o/authorize/?response_type=token&client_id=L0uQQWW8pKX51hoqIRQGsuqmIdPi2AcXZ9EJRGmj&scope=read
 ```
 Here the value of `client_id` should be the same as that of `client_id` field of underlying application.
-On success, an authorization page should be displayed asking logged in user to grant/deny access token.
-Once user click on 'grant', API browser will try POSTing to the same endpoint with the same parameters
-in POST body, on success a 302 redirect will be returned:
+On success, an authorization page should be displayed asking the logged in user to grant/deny the access token.
+Once the user clicks on 'grant', the API browser will try POSTing to the same endpoint with the same parameters in POST body, on success a 302 redirect will be returned:
 ```text
 HTTP/1.1 302 Found
 Connection:keep-alive
@@ -93,7 +95,8 @@ Suppose we have an application `curl for admin` with grant type `password`:
     "skip_authorization": false
 }
 ```
-Log in is not required for `password` grant type, so we can simply use `curl` to acquire access token
+
+Log in is not required for `password` grant type, so we can simply use `curl` to acquire a personal access token
 via `/api/o/token/`:
 ```bash
 curl -X POST \
