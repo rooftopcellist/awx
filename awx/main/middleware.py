@@ -118,6 +118,7 @@ class ActivityStreamMiddleware(threading.local):
                 if instance.id not in self.instance_ids:
                     self.instance_ids.append(instance.id)
 
+# TODO: Take this AuthToken code out
 
 class AuthTokenTimeoutMiddleware(object):
     """Presume that when the user includes the auth header, they go through the

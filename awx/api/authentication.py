@@ -143,7 +143,7 @@ class LoggedBasicAuthentication(authentication.BasicAuthentication):
 
 
 class SessionAuthentication(authentication.SessionAuthentication):
-
+    
     def authenticate_header(self, request):
         return 'Session'
 

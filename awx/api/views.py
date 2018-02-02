@@ -185,7 +185,7 @@ class InstanceGroupMembershipMixin(object):
 
 class ApiRootView(APIView):
 
-    authentication_classes = []
+    # authentication_classes = []
     permission_classes = (AllowAny,)
     view_name = _('REST API')
     versioning_class = None
@@ -210,7 +210,7 @@ class ApiRootView(APIView):
 
 class ApiOAuthAuthorizationRootView(APIView):
 
-    authentication_classes = []
+    # authentication_classes = []
     permission_classes = (AllowAny,)
     view_name = _("API OAuth Authorization Root")
     versioning_class = None
@@ -227,7 +227,7 @@ class ApiOAuthAuthorizationRootView(APIView):
 
 class ApiVersionRootView(APIView):
 
-    authentication_classes = []
+    # authentication_classes = []
     permission_classes = (AllowAny,)
     swagger_topic = 'Versioning'
 
