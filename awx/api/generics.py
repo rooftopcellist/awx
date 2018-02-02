@@ -72,11 +72,9 @@ class LoggedLoginView(auth_views.LoginView):
         if request.user.is_authenticated:
             return ret
         else:
-            ret.render()
-            return HttpResponse(status=401)
-
- 
-
+            ret.status = 401
+            return ret
+            
 
 class LoggedLogoutView(auth_views.LogoutView):
 
