@@ -9,10 +9,7 @@ from awx.api.views import (
     ApiOAuthAuthorizationRootView,
 )
 
-from .user_oauth import urls as user_oauth_urls
-
 urls = [
-    url(r'^me/oauth/', include(user_oauth_urls)),
     url(r'^$', ApiOAuthAuthorizationRootView.as_view(), name='oauth_authorization_root_view'),
 ] + base_urlpatterns
 

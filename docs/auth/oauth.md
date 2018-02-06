@@ -64,7 +64,7 @@ Individual applications will be accessible via their primary keys:
 }
 ```
 In the above example, `user` is the primary key of the underlying user this application associates to, and `name` can be
-used as a human-readable identifier of the application. The rest fields, like `client_id` and
+used as a human-readable identifier of the application. The other fields, like `client_id` and
 `redirect_uris`, are mainly used for OAuth authorization, which will be covered later in 'Using
 OAuth token system' section.
 

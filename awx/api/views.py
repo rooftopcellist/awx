@@ -221,7 +221,7 @@ class ApiOAuthAuthorizationRootView(APIView):
         data['token'] = drf_reverse('api:token')
         data['revoke_token'] = drf_reverse('api:revoke-token')
         data['applications'] = drf_reverse('api:user_me_oauth_application_list')
-        data['tokens'] = drf_reverse('api:user_me_oauth_token_list')
+        # data['tokens'] = drf_reverse('api:user_me_oauth_token_list')
         return Response(data)
 
 
