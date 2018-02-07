@@ -141,7 +141,7 @@ urlpatterns = [
         next_page='/api/', redirect_field_name='next'
     ), name='logout'),
     url(r'^o/', include(oauth_urls)),
-    url(r'^o/', include(user_oauth_urls)),
+    # url(r'^o/', include(user_oauth_urls)),
 ]
 if settings.SETTINGS_MODULE == 'awx.settings.development':
     from awx.api.swagger import SwaggerSchemaView

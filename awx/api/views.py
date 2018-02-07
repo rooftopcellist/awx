@@ -221,7 +221,8 @@ class ApiOAuthAuthorizationRootView(APIView):
         data['token'] = drf_reverse('api:token')
         data['revoke_token'] = drf_reverse('api:revoke-token')
         data['applications'] = drf_reverse('api:user_me_oauth_application_list')
-        # data['tokens'] = drf_reverse('api:user_me_oauth_token_list')
+        # data['all-tokens'] = drf_reverse('api:user_me_oauth_token_list')  #Do we want to have an 'all-tokens' or 'tokens' endpoint here?
+        # data['personal-tokens'] = drf_reverse('api:user_me_oauth_token_list')
         return Response(data)
 
 
@@ -1508,6 +1509,7 @@ class UserMeOauthRootView(APIView):     #TODO: Take this out, it should no longe
         data = OrderedDict()
         data['applications'] = reverse('api:user_me_oauth_application_list', request=request)
         data['tokens'] = reverse('api:user_me_oauth_token_list', request=request)
+        data['personal-tokens'] = reverse('api:user_me_oauth_token_list', request=request)
         return Response(data)
 
 
