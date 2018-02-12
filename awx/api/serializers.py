@@ -927,7 +927,7 @@ class UserSerializer(BaseSerializer):
 class OauthApplicationSerializer(BaseSerializer):
 
     class Meta:
-        model = Application
+        model = OAuth2Application
         fields = (
             '*', '-description', 'user', 'client_id', 'client_secret', 'client_type',
             'redirect_uris',  'authorization_grant_type', 'skip_authorization',
@@ -964,14 +964,14 @@ class OauthApplicationSerializer(BaseSerializer):
         return ret
 
     def _summary_field_tokens(self, obj):
-        token_list = [{'id': x.pk, 'token': '**************', 'scope': x.scope} for x in obj.accesstoken_set.all()[:10]]
-        if has_model_field_prefetched(obj, 'accesstoken_set'):
-            token_count = len(obj.accesstoken_set.all())
+        token_list = [{'id': x.pk, 'token': '**************', 'scope': x.scope} for x in obj.oauth2accesstoken_set.all()[:10]]
+        if has_model_field_prefetched(obj, 'oauth2accesstoken_set'):
+            token_count = len(obj.oauth2accesstoken_set.all())
         else:
             if len(token_list) < 10:
                 token_count = len(token_list)
             else:
-                token_count = obj.accesstoken_set.count()
+                token_count = obj.oauth2accesstoken_set.count()
         return {'count': token_count, 'results': token_list}
 
     def get_summary_fields(self, obj):
@@ -986,9 +986,9 @@ class OauthTokenSerializer(BaseSerializer):
     token = serializers.SerializerMethodField()
 
     class Meta:
-        model = AccessToken
+        model = OAuth2AccessToken
         fields = (
-            '*', '-name', '-description', 'user', 'token', 'refresh_token',
+            '*', '-name', 'description', 'user', 'token', 'refresh_token',
             'application', 'expires', 'scope',
         )
         read_only_fields = ('user', 'token', 'expires')

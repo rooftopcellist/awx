@@ -127,34 +127,9 @@ Strict-Transport-Security: max-age=15768000
 
 {"access_token": "9epHOqHhnXUcgYK8QanOmUQPSgX92g", "token_type": "Bearer", "expires_in": 36000, "refresh_token": "jMRX6QvzOTf046KHee3TU5mT3nyXsz", "scope": "read"}
 ```
-Verify by searching created token:
-```text
-GET /api/v2/me/oauth/tokens/?token=9epHOqHhnXUcgYK8QanOmUQPSgX92g
 
-HTTP 200 OK
-Allow: GET, POST, HEAD, OPTIONS
-Content-Type: application/json
-...
-
-{
-    "count": 1,
-    "next": null,
-    "previous": null,
-    "results": [
-        {
-            "id": 26,
-            "type": "access_token",
-            ...
-            "user": 1,
-            "token": "9epHOqHhnXUcgYK8QanOmUQPSgX92g",
-            "refresh_token": "jMRX6QvzOTf046KHee3TU5mT3nyXsz",
-            "application": 6,
-            "expires": "2017-12-06T02:48:09.812720Z",
-            "scope": "read"
-        }
-    ]
-}
-```
+## Verify by introspecting the access token:
+>> Need to fill in Introspection Example in the docs here #TODO: Add Introspection
 
 ## Refresh an existing access token
 Suppose we have an existing access token with refresh token provided:

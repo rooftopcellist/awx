@@ -20,7 +20,7 @@ from rest_framework import HTTP_HEADER_ENCODING
 from oauth2_provider.contrib.rest_framework import OAuth2Authentication
 
 # AWX
-from awx.main.models import AuthToken
+from awx.main.models import AuthToken                                   #TODO: delete this
 
 logger = logging.getLogger('awx.api.authentication')
 

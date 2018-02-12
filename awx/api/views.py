@@ -220,6 +220,7 @@ class ApiOAuthAuthorizationRootView(APIView):
         data['authorize'] = drf_reverse('api:authorize')
         data['token'] = drf_reverse('api:token')
         data['revoke_token'] = drf_reverse('api:revoke-token')
+        data['introspect'] = drf_reverse('api:introspect')
         data['applications'] = drf_reverse('api:user_me_oauth_application_list')
         # data['all-tokens'] = drf_reverse('api:user_me_oauth_token_list')  #Do we want to have an 'all-tokens' or 'tokens' endpoint here?
         # data['personal-tokens'] = drf_reverse('api:user_me_oauth_token_list')
@@ -1518,7 +1519,7 @@ class UserMeOauthApplicationList(ListCreateAPIView):
 
     view_name = _("OAuth Applications")
 
-    model = Application
+    model = OAuth2Application
     serializer_class = OauthApplicationSerializer
 
 
@@ -1526,7 +1527,7 @@ class UserMeOauthApplicationDetail(RetrieveUpdateDestroyAPIView):
 
     view_name = _("OAuth Application Detail")
 
-    model = Application
+    model = OAuth2Application
     serializer_class = OauthApplicationSerializer
 
 
@@ -1534,10 +1535,10 @@ class UserMeOauthApplicationTokenList(SubListCreateAPIView):
 
     view_name = _("OAuth Application Tokens")
 
-    model = AccessToken
+    model = OAuth2AccessToken
     serializer_class = OauthTokenSerializer
-    parent_model = Application
-    relationship = 'accesstoken_set'
+    parent_model = OAuth2Application
+    relationship = 'oauth2accesstoken_set'
     parent_key = 'application'
 
 
@@ -1545,7 +1546,7 @@ class UserMeOauthApplicationActivityStreamList(ActivityStreamEnforcementMixin, S
 
     model = ActivityStream
     serializer_class = ActivityStreamSerializer
-    parent_model = Application
+    parent_model = OAuth2Application
     relationship = 'activitystream_set'
 
 
@@ -1553,7 +1554,7 @@ class UserMeOauthTokenList(ListCreateAPIView):
 
     view_name = _("OAuth Tokens")
 
-    model = AccessToken
+    model = OAuth2AccessToken
     serializer_class = OauthTokenSerializer
 
 
@@ -1561,7 +1562,7 @@ class UserMeOauthTokenDetail(RetrieveUpdateDestroyAPIView):
 
     view_name = _("OAuth Token Detail")
 
-    model = AccessToken
+    model = OAuth2AccessToken
     serializer_class = OauthTokenSerializer
 
 
@@ -1569,7 +1570,7 @@ class UserMeOauthTokenActivityStreamList(ActivityStreamEnforcementMixin, SubList
 
     model = ActivityStream
     serializer_class = ActivityStreamSerializer
-    parent_model = AccessToken
+    parent_model = OAuth2AccessToken
     relationship = 'activitystream_set'
 
 
