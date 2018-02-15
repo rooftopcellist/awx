@@ -12,7 +12,7 @@ class Migration(migrations.Migration):
     dependencies = [
         ('sessions', '0001_initial'),
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('main', '0017_v330_move_deprecated_stdout'),
+        ('main', '0021_v330_add_oauth_activity_stream_registrar'),
     ]
 
     operations = [

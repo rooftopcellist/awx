@@ -12,7 +12,7 @@ class Migration(migrations.Migration):
     dependencies = [
         migrations.swappable_dependency(settings.OAUTH2_PROVIDER_APPLICATION_MODEL),
         migrations.swappable_dependency(settings.OAUTH2_PROVIDER_ACCESS_TOKEN_MODEL),
-        ('main', '0018_v330_create_user_session_membership'),
+        ('main', '0020_v330_instancegroup_policies'),
     ]
 
     operations = [
