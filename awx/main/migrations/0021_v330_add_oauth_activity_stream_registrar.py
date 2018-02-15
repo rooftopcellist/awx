@@ -11,7 +11,7 @@ import re
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('main', '0018_v330_create_user_session_membership'),
+        ('main', '0021_v330_create_user_session_membership'),
     ]
 
     operations = [

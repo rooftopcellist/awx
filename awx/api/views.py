@@ -54,6 +54,11 @@ import ansiconv
 from social_core.backends.utils import load_backends
 
 import pytz
+
+# Django OAuth Toolkit
+from oauth2_provider.models import get_access_token_model
+from oauth2_provider.scopes import get_scopes_backend
+
 from wsgiref.util import FileWrapper
 
 # AWX
@@ -220,10 +225,9 @@ class ApiOAuthAuthorizationRootView(APIView):
         data['authorize'] = drf_reverse('api:authorize')
         data['token'] = drf_reverse('api:token')
         data['revoke_token'] = drf_reverse('api:revoke-token')
-        data['introspect'] = drf_reverse('api:introspect')
+        # data['introspect'] = drf_reverse('api:introspect')                                #TODO: Will add in a later issue
         data['applications'] = drf_reverse('api:user_me_oauth_application_list')
-        # data['all-tokens'] = drf_reverse('api:user_me_oauth_token_list')  #Do we want to have an 'all-tokens' or 'tokens' endpoint here?
-        # data['personal-tokens'] = drf_reverse('api:user_me_oauth_token_list')
+        # data['all-tokens'] = drf_reverse('api:user_me_oauth_token_list')                  #TODO: #Do we want to have an 'all-tokens' or 'tokens' endpoint here?
         return Response(data)
 
 
@@ -243,7 +247,7 @@ class ApiVersionRootView(APIView):
         data['settings'] = reverse('api:setting_category_list', request=request)
         data['me'] = reverse('api:user_me_list', request=request)
         if get_request_version(request) > 1:
-            data['oauth'] = reverse('api:user_me_oauth_root_view', request=request)
+            data['oauth2'] = reverse('api:user_me_oauth_root_view', request=request)
         data['dashboard'] = reverse('api:dashboard_view', request=request)
         data['organizations'] = reverse('api:organization_list', request=request)
         data['users'] = reverse('api:user_list', request=request)
@@ -1503,17 +1507,28 @@ class UserMeList(ListAPIView):
         return self.model.objects.filter(pk=self.request.user.pk)
 
 
-class UserMeOauthRootView(APIView):     #TODO: Take this out, it should no longer be needed (contents now in api/o)
+class UserMeOauthRootView(APIView):
 
-    view_name = _("OAuth Root")
+    view_name = _("User OAuth Root")
 
     def get(self, request, format=None):
         data = OrderedDict()
         data['applications'] = reverse('api:user_me_oauth_application_list', request=request)
-        data['tokens'] = reverse('api:user_me_oauth_token_list', request=request)
-        data['personal-tokens'] = reverse('api:user_me_oauth_token_list', request=request)
+        data['authorized-tokens'] = reverse('api:user_me_oauth_token_list', request=request)
+        data['personal-tokens'] = reverse('api:user_me_o_auth2_personal_token_list', request=request)
         return Response(data)
 
+# class OAuth2RootView(APIView):
+# 
+#     view_name = _("OAuth Root")
+# 
+#     def get(self, request, format=None):
+#         data = OrderedDict()
+#         data['applications'] = reverse('api:user_me_oauth_application_list', request=request)
+#         data['authorized-tokens'] = reverse('api:user_me_oauth_token_list', request=request)
+#         data['personal-tokens'] = reverse('api:user_me_o_auth2_personal_token_list', request=request)
+#         return Response(data)
+        
 
 class UserMeOauthApplicationList(ListCreateAPIView):
 
@@ -1550,6 +1565,14 @@ class UserMeOauthApplicationActivityStreamList(ActivityStreamEnforcementMixin, S
     relationship = 'activitystream_set'
 
 
+# class AuthorizedTokenList(SubListCreateAPIView):
+# 
+#     view_name = _("OAuth Tokens")
+# 
+#     model = OAuth2AccessToken
+#     serializer_class = OauthTokenSerializer
+    
+
 class UserMeOauthTokenList(ListCreateAPIView):
 
     view_name = _("OAuth Tokens")
@@ -1572,6 +1595,94 @@ class UserMeOauthTokenActivityStreamList(ActivityStreamEnforcementMixin, SubList
     serializer_class = ActivityStreamSerializer
     parent_model = OAuth2AccessToken
     relationship = 'activitystream_set'
+
+
+
+        
+
+class UserMeOAuth2PersonalTokenList(ListCreateAPIView):
+    
+    view_name = _("OAuth2 Personal Access Tokens")
+    
+    model = OAuth2AccessToken
+    serializer_class = OAuth2PersonalTokenSerializer
+    parent_model = OAuth2Application
+    relationship = 'oauth2accesstoken_set'
+    # parent_key = 'user'
+
+    def get_queryset(self):
+        return get_access_token_model().objects.filter(application__isnull=True, user=self.request.user)
+        
+        
+class UserMeOAuth2AuthorizedTokenList(SubListCreateAPIView):
+    
+    view_name = _("OAuth2 Personal Access Tokens")
+    
+    model = OAuth2AccessToken
+    serializer_class = OAuth2PersonalTokenSerializer
+    parent_model = OAuth2Application
+    relationship = 'oauth2accesstoken_set'
+    parent_key = 'application'
+
+    def get_queryset(self):
+        return get_access_token_model().objects.filter(application__isnull=False, user=self.request.user)
+
+# 
+# class UserMeOauthTokenDetail(RetrieveUpdateDestroyAPIView):
+# 
+#     view_name = _("OAuth2 Personal Token Detail")
+# 
+#     model = OAuth2AccessToken
+#     serializer_class = OauthTokenSerializer
+
+
+
+
+# class OAuth2PersonalTokenRevoke(OAuth2PersonalTokenMixin, FormView):
+# 
+#     template_name = 'oauth2_custom/personal_token_revoke.html'
+#     form_class = OAuth2PersonalTokenRevokeForm
+#     success_url = reverse_lazy('oauth2_custom:personal-token-list')
+# 
+#     def form_valid(self, form):
+#         response = super(OAuth2PersonalTokenRevoke, self).form_valid(form)
+#         self.get_queryset().delete()
+#         return response
+# 
+# 
+# class OAuth2PersonalTokenDetail(ModelFormMixin, OAuth2PersonalTokenMixin, DetailView):
+# 
+#     context_object_name = 'personal_token'
+#     template_name = 'oauth2_custom/personal_token_detail.html'
+#     form_class = OAuth2PersonalTokenForm
+# 
+#     def get_form_kwargs(self):
+#         kwargs = super(OAuth2PersonalTokenDetail, self).get_form_kwargs()
+#         kwargs['readonly'] = True
+#         kwargs['show_token'] = self.request.session.pop('show-personal-token-{}'.format(self.object.pk), False)
+#         return kwargs
+# 
+# 
+# class OAuth2PersonalTokenUpdate(OAuth2PersonalTokenMixin, UpdateView):
+# 
+#     context_object_name = 'personal_token'
+#     template_name = 'oauth2_custom/personal_token_update.html'
+# 
+#     def get_form_class(self):
+#         return OAuth2PersonalTokenForm
+# 
+#     def get_success_url(self):
+#         return reverse('oauth2_custom:personal-token-detail', args=(self.object.pk,))
+# 
+# 
+# class OAuth2PersonalTokenDelete(ModelFormMixin, OAuth2PersonalTokenMixin, DeleteView):
+# 
+#     context_object_name = 'personal_token'
+#     template_name = 'oauth2_custom/personal_token_delete.html'
+#     form_class = OAuth2PersonalTokenDeleteForm
+#     success_url = reverse_lazy('oauth2_custom:personal-token-list')
+
+
 
 
 class UserTeamsList(ListAPIView):

@@ -1,7 +1,7 @@
 # Copyright (c) 2017 Ansible, Inc.
 # All Rights Reserved.
 
-from django.conf.urls import url
+from django.conf.urls import url, include
 
 from awx.api.views import (
     UserList,
@@ -14,8 +14,10 @@ from awx.api.views import (
     UserRolesList,
     UserActivityStreamList,
     UserAccessList,
+    UserMeOauthRootView
 )
 
+from .user_oauth import urls as user_oauth_urls
 
 urls = [ 
     url(r'^$', UserList.as_view(), name='user_list'),
@@ -28,6 +30,8 @@ urls = [
     url(r'^(?P<pk>[0-9]+)/roles/$', UserRolesList.as_view(), name='user_roles_list'),
     url(r'^(?P<pk>[0-9]+)/activity_stream/$', UserActivityStreamList.as_view(), name='user_activity_stream_list'),
     url(r'^(?P<pk>[0-9]+)/access_list/$', UserAccessList.as_view(), name='user_access_list'),
+    # url(r'^(?P<pk>[0-9]+)/oauth2/$', UserOAuth2RootView.as_view(), name='user_oauth_root_view'),
+    
 ] 
 
 __all__ = ['urls']

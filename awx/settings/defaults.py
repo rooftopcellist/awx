@@ -338,8 +338,6 @@ AUTHENTICATION_BACKENDS = (
 # Django OAuth Toolkit settings
 # OAUTH2_PROVIDER_APPLICATION_MODEL = 'oauth2_provider.Application'
 # OAUTH2_PROVIDER_ACCESS_TOKEN_MODEL = 'oauth2_provider.AccessToken'
-# OAUTH2_PROVIDER_APPLICATION_MODEL = 'awx.main.models.oauth.OAuth2Application'
-# OAUTH2_PROVIDER_ACCESS_TOKEN_MODEL = 'awx.main.models.oauth.OAuth2AccessToken'
 OAUTH2_PROVIDER_APPLICATION_MODEL = 'main.OAuth2Application'
 OAUTH2_PROVIDER_ACCESS_TOKEN_MODEL = 'main.OAuth2AccessToken'
 

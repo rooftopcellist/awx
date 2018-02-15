@@ -25,21 +25,11 @@ class OAuth2Application(AbstractApplication):
         default='',
         blank=True,
     )
-    # url = models.URLField(
-    #     blank=True,
-    # )
     logo_data = models.TextField(
         default='',
         editable=False,
         validators=[RegexValidator(DATA_URI_RE)],
     )
-
-
-# class OAuth2Grant(Grant):
-# 
-#     class Meta:
-#         verbose_name = _('grant')
-#         proxy = True
 
 
 class OAuth2AccessToken(AbstractAccessToken):
@@ -66,10 +56,3 @@ class OAuth2AccessToken(AbstractAccessToken):
             self.last_used = now()
             self.save(update_fields=['last_used'])
         return valid
-
-
-# class RefreshToken(RefreshToken):
-# 
-#     class Meta:
-#         verbose_name = _('refresh token')
-#         proxy = True

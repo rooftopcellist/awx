@@ -1053,6 +1053,116 @@ class OauthTokenSerializer(BaseSerializer):
         return obj
 
 
+class OAuth2AuthorizedTokenSerializer(BaseSerializer):
+    
+    refresh_token = serializers.SerializerMethodField()
+    token = serializers.SerializerMethodField()
+
+    class Meta:
+        model = OAuth2AccessToken
+        fields = (
+            '*', '-name', 'description', 'user', 'token', 'refresh_token',
+            'expires', 'scope',
+        )
+        read_only_fields = ('user', 'token', 'expires')
+        
+    def get_token(self, obj):
+        request = self.context.get('request', None)
+        try:
+            if request.method == 'POST':
+                return obj.token
+            else:
+                return '*************'
+        except ObjectDoesNotExist:
+            return ''    
+        
+    def get_refresh_token(self, obj):
+        request = self.context.get('request', None)
+        try:
+            if request.method == 'POST':
+                return getattr(obj.refresh_token, 'token', '')
+            else:
+                return '**************'
+        except ObjectDoesNotExist:
+            return ''
+            
+
+class OAuth2PersonalTokenSerializer(BaseSerializer):
+    
+    refresh_token = serializers.SerializerMethodField()
+    token = serializers.SerializerMethodField()
+
+    class Meta:
+        model = OAuth2AccessToken
+        fields = (
+            '*', '-name', 'description', 'user', 'token', 'refresh_token',
+            'application', 'expires', 'scope',
+        )
+        read_only_fields = ('user', 'token', 'expires')
+        read_only_on_update_fields = ('application',)
+        # extra_kwargs = {
+        #     'application': {'allow_null': True}
+        # }
+
+    def get_modified(self, obj):
+        if obj is None:
+            return None
+        return obj.updated
+
+    def get_related(self, obj):
+        ret = super(OAuth2PersonalTokenSerializer, self).get_related(obj)
+        if obj.user:
+            ret['user'] = self.reverse('api:user_detail', kwargs={'pk': obj.user.pk})
+        if obj.application:
+            ret['application'] = self.reverse(
+                'api:user_me_oauth_application_detail', kwargs={'pk': obj.application.pk}
+            )
+        ret['activity_stream'] = self.reverse(
+            'api:user_me_oauth_token_activity_stream_list', kwargs={'pk': obj.pk}
+        )
+        return ret
+
+    def get_token(self, obj):
+        request = self.context.get('request', None)
+        try:
+            if request.method == 'POST':
+                return obj.token
+            else:
+                return '*************'
+        except ObjectDoesNotExist:
+            return ''
+
+    def get_refresh_token(self, obj):
+        request = self.context.get('request', None)
+        try:
+            if request.method == 'POST':
+                return getattr(obj.refresh_token, 'token', '')
+            else:
+                return '**************'
+        except ObjectDoesNotExist:
+            return ''
+
+    def create(self, validated_data):
+        validated_data['token'] = generate_token()
+        validated_data['expires'] = now() + timedelta(
+            seconds=oauth2_settings.ACCESS_TOKEN_EXPIRE_SECONDS
+        )
+        obj = super(OAuth2PersonalTokenSerializer, self).create(validated_data)
+        if obj.application and obj.application.user:
+            obj.user = obj.application.user
+        obj.save()
+        # RefreshToken.objects.create(
+        #     user=obj.application.user if obj.application and obj.application.user else None,
+        #     token=generate_token(),
+        #     application=obj.application if obj.application else None,
+        #     access_token=obj
+        # )
+        return obj
+    
+    
+    
+    
+    
 
 class OrganizationSerializer(BaseSerializer):
     show_capabilities = ['edit', 'delete']

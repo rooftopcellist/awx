@@ -122,8 +122,9 @@ v2_urls = [
     url(r'^job_templates/(?P<pk>[0-9]+)/credentials/$', JobTemplateCredentialsList.as_view(), name='job_template_credentials_list'),
     
     url(r'^me/oauth2/', include(user_oauth_urls)),
+    # url(r'^', include(user_oauth_urls))
     # url(r'^me//', include(user_oauth_urls))
-    url(r'^me/oauth/', include(user_oauth_urls))
+    url(r'^me/oauth/', include(user_oauth_urls)),
     url(r'^schedules/preview/$', SchedulePreview.as_view(), name='schedule_rrule'),
     url(r'^schedules/zoneinfo/$', ScheduleZoneInfo.as_view(), name='schedule_zoneinfo'),
 ]
