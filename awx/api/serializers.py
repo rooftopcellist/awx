@@ -1056,7 +1056,7 @@ class OauthTokenSerializer(BaseSerializer):
             access_token=obj
         )
         return obj
-
+        
 
 class OAuth2AuthorizedTokenSerializer(BaseSerializer):
     
@@ -1067,9 +1067,10 @@ class OAuth2AuthorizedTokenSerializer(BaseSerializer):
         model = OAuth2AccessToken
         fields = (
             '*', '-name', 'description', 'user', 'token', 'refresh_token',
-            'expires', 'scope',
+            'expires', 'scope', 'application',
         )
         read_only_fields = ('user', 'token', 'expires')
+        read_only_on_update_fields = ('application',)
         
     def get_token(self, obj):
         request = self.context.get('request', None)
@@ -1135,14 +1136,7 @@ class OAuth2PersonalTokenSerializer(BaseSerializer):
             return ''
 
     def get_refresh_token(self, obj):
-        request = self.context.get('request', None)
-        try:
-            if request.method == 'POST':
-                return getattr(obj.refresh_token, 'token', '')
-            else:
-                return '**************'
-        except ObjectDoesNotExist:
-            return ''
+            return None
 
     def create(self, validated_data):
         user = self.context['request'].user
@@ -1155,12 +1149,6 @@ class OAuth2PersonalTokenSerializer(BaseSerializer):
         if obj.application and obj.application.user:
             obj.user = obj.application.user
         obj.save()
-        OAuth2RefreshToken.objects.create(
-            user=user,
-            token=generate_token(),
-            application=None,
-            access_token=obj
-        )
         return obj
     
 

@@ -38,13 +38,6 @@ class OAuth2AccessToken(AbstractAccessToken):
         app_label = 'main'
         verbose_name = _('access token')
 
-    # application = models.ForeignKey(
-    #     OAuth2Application, 
-    #     on_delete=models.CASCADE, 
-    #     blank=True, 
-    #     null=True,
-    #     db_constraint=False
-    # )
     description = models.CharField(
         max_length=200,
         default='',
@@ -58,7 +51,6 @@ class OAuth2AccessToken(AbstractAccessToken):
 
     def is_valid(self, scopes=None):
         valid = super(OAuth2AccessToken, self).is_valid(scopes)
-        # Save on is_valid check to update 'last_used' timestamp.
         if valid:
             self.last_used = now()
             self.save(update_fields=['last_used'])
@@ -70,7 +62,6 @@ class OAuth2RefreshToken(AbstractRefreshToken):
     class Meta:
         app_label = 'main'
         verbose_name = _('refresh token')
-        # proxy = True
         
     application = models.ForeignKey(
         OAuth2Application, 

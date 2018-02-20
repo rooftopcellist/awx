@@ -28,6 +28,11 @@ from awx.api.views import (
     JobTemplateExtraCredentialsList,
     SchedulePreview,
     ScheduleZoneInfo,
+    OAuth2ApplicationList,
+    OAuth2TokenList,
+    ApplicationOAuth2TokenList,
+    OAuth2ApplicationDetail,
+    
 )
 
 from .organization import urls as organization_urls
@@ -122,7 +127,11 @@ v2_urls = [
     url(r'^job_templates/(?P<pk>[0-9]+)/credentials/$', JobTemplateCredentialsList.as_view(), name='job_template_credentials_list'),
     url(r'^schedules/preview/$', SchedulePreview.as_view(), name='schedule_rrule'),
     url(r'^schedules/zoneinfo/$', ScheduleZoneInfo.as_view(), name='schedule_zoneinfo'),
-    url(r'^me/oauth2/', include(user_oauth_urls)),
+    url(r'^applications/$', OAuth2ApplicationList.as_view(), name='o_auth2_application_list'),
+    url(r'^applications/(?P<pk>[0-9]+)/$', OAuth2ApplicationDetail.as_view(), name='o_auth2_application_list'),
+    url(r'^applications/(?P<pk>[0-9]+)/tokens/$', ApplicationOAuth2TokenList.as_view(), name='application_o_auth2_token_detail'),
+    url(r'^tokens/$', OAuth2TokenList.as_view(), name='o_auth2_token_list'),
+    url(r'^', include(user_oauth_urls)),
 ]
 
 app_name = 'api'
@@ -138,7 +147,6 @@ urlpatterns = [
         next_page='/api/', redirect_field_name='next'
     ), name='logout'),
     url(r'^o/', include(oauth_urls)),
-    # url(r'^o/', include(user_oauth_urls)),
 ]
 if settings.SETTINGS_MODULE == 'awx.settings.development':
     from awx.api.swagger import SwaggerSchemaView

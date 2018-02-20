@@ -201,7 +201,7 @@ class ApiRootView(APIView):
 
         v1 = reverse('api:api_v1_root_view', kwargs={'version': 'v1'})
         v2 = reverse('api:api_v2_root_view', kwargs={'version': 'v2'})
-        data = dict(
+        data = OrderedDict(
             description = _('AWX REST API'),
             current_version = v2,
             available_versions = dict(v1 = v1, v2 = v2),
@@ -209,7 +209,7 @@ class ApiRootView(APIView):
         if feature_enabled('rebranding'):
             data['custom_logo'] = settings.CUSTOM_LOGO
             data['custom_login_info'] = settings.CUSTOM_LOGIN_INFO
-        data['oauth'] = drf_reverse('api:oauth_authorization_root_view')
+        data['oauth2'] = drf_reverse('api:oauth_authorization_root_view')
         return Response(data)
 
 
@@ -225,7 +225,7 @@ class ApiOAuthAuthorizationRootView(APIView):
         data['authorize'] = drf_reverse('api:authorize')
         data['token'] = drf_reverse('api:token')
         data['revoke_token'] = drf_reverse('api:revoke-token')
-        # data['introspect'] = drf_reverse('api:introspect')                                #TODO: Will add in a later issue
+        # data['introspect'] = drf_reverse('api:introspect')                           #TODO: Will add in a later issue
         return Response(data)
 
 
@@ -244,8 +244,6 @@ class ApiVersionRootView(APIView):
         data['config'] = reverse('api:api_v1_config_view', request=request)
         data['settings'] = reverse('api:setting_category_list', request=request)
         data['me'] = reverse('api:user_me_list', request=request)
-        if get_request_version(request) > 1:
-            data['oauth2'] = reverse('api:user_me_oauth_root_view', request=request)
         data['dashboard'] = reverse('api:dashboard_view', request=request)
         data['organizations'] = reverse('api:organization_list', request=request)
         data['users'] = reverse('api:user_list', request=request)
@@ -255,6 +253,8 @@ class ApiVersionRootView(APIView):
         data['credentials'] = reverse('api:credential_list', request=request)
         if get_request_version(request) > 1:
             data['credential_types'] = reverse('api:credential_type_list', request=request)
+            data['applications'] = reverse('api:o_auth2_application_list', request=request)
+            data['tokens'] = reverse('api:o_auth2_token_list', request=request)
         data['inventory'] = reverse('api:inventory_list', request=request)
         data['inventory_scripts'] = reverse('api:inventory_script_list', request=request)
         data['inventory_sources'] = reverse('api:inventory_source_list', request=request)
@@ -1518,9 +1518,25 @@ class UserMeOauthRootView(APIView):
         return Response(data)
         
 
+class OAuth2ApplicationList(ListCreateAPIView):
+
+    view_name = _("OAuth Applications List")
+
+    model = OAuth2Application
+    serializer_class = OauthApplicationSerializer
+
+
+class OAuth2ApplicationDetail(RetrieveUpdateDestroyAPIView):
+
+    view_name = _("OAuth Application Detail")
+
+    model = OAuth2Application
+    serializer_class = OauthApplicationSerializer
+    
+
 class UserMeOauthApplicationList(ListCreateAPIView):
 
-    view_name = _("OAuth Applications")
+    view_name = _("OAuth Applications List")
 
     model = OAuth2Application
     serializer_class = OauthApplicationSerializer
@@ -1534,7 +1550,7 @@ class UserMeOauthApplicationDetail(RetrieveUpdateDestroyAPIView):
     serializer_class = OauthApplicationSerializer
 
 
-class UserMeOauthApplicationTokenList(SubListCreateAPIView):
+class UserMeOauthApplicationTokenList(SubListCreateAPIView):    #TODO: Get rid of this
 
     view_name = _("OAuth Application Tokens")
 
@@ -1553,12 +1569,37 @@ class UserMeOauthApplicationActivityStreamList(ActivityStreamEnforcementMixin, S
     relationship = 'activitystream_set'
     
 
-class UserMeOauthTokenList(ListCreateAPIView):
+class OAuth2TokenList(ListCreateAPIView):
 
     view_name = _("OAuth Tokens")
 
     model = OAuth2AccessToken
     serializer_class = OauthTokenSerializer
+    
+
+class UserMeOauthTokenList(ListCreateAPIView):   # TODO: Get rid of this
+
+    view_name = _("OAuth Tokens")
+
+    model = OAuth2AccessToken
+    serializer_class = OauthTokenSerializer
+    
+# class UserOAuth2TokenList(ListCreateAPIView):   
+# 
+#     view_name = _("OAuth Tokens")
+# 
+#     model = OAuth2AccessToken
+#     serializer_class = OauthTokenSerializer
+
+class ApplicationOAuth2TokenList(SubListCreateAPIView):   
+
+    view_name = _("OAuth Application Tokens")
+
+    model = OAuth2AccessToken
+    serializer_class = OauthTokenSerializer
+    parent_model = OAuth2Application
+    relationship = 'oauth2accesstoken_set'
+    parent_key = 'application'
 
 
 class UserMeOauthTokenDetail(RetrieveUpdateDestroyAPIView):
@@ -1602,7 +1643,6 @@ class UserMeOAuth2PersonalTokenList(SubListCreateAPIView):
     parent_key = 'user'
     def get_queryset(self):
         return get_access_token_model().objects.filter(application__isnull=True, user=self.request.user)
-        # return get_access_token_model().objects.filter(self.request.application == null, user=self.request.user)
         
 
 # 
@@ -1615,19 +1655,6 @@ class UserMeOAuth2PersonalTokenList(SubListCreateAPIView):
 
 
 
-
-# class OAuth2PersonalTokenRevoke(OAuth2PersonalTokenMixin, FormView):
-# 
-#     template_name = 'oauth2_custom/personal_token_revoke.html'
-#     form_class = OAuth2PersonalTokenRevokeForm
-#     success_url = reverse_lazy('oauth2_custom:personal-token-list')
-# 
-#     def form_valid(self, form):
-#         response = super(OAuth2PersonalTokenRevoke, self).form_valid(form)
-#         self.get_queryset().delete()
-#         return response
-# 
-# 
 # class OAuth2PersonalTokenDetail(ModelFormMixin, OAuth2PersonalTokenMixin, DetailView):
 # 
 #     context_object_name = 'personal_token'
@@ -1639,8 +1666,6 @@ class UserMeOAuth2PersonalTokenList(SubListCreateAPIView):
 #         kwargs['readonly'] = True
 #         kwargs['show_token'] = self.request.session.pop('show-personal-token-{}'.format(self.object.pk), False)
 #         return kwargs
-# 
-# 
 
 
 
