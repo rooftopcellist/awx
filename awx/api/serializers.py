@@ -1013,7 +1013,7 @@ class OauthTokenSerializer(BaseSerializer):
             ret['user'] = self.reverse('api:user_detail', kwargs={'pk': obj.user.pk})
         if obj.application:
             ret['application'] = self.reverse(
-                'api:user_me_oauth_application_detail', kwargs={'pk': obj.application.pk}
+                'api:o_auth2_application_detail', kwargs={'pk': obj.application.pk}
             )
         ret['activity_stream'] = self.reverse(
             'api:user_me_oauth_token_activity_stream_list', kwargs={'pk': obj.pk}
@@ -1118,7 +1118,7 @@ class OAuth2PersonalTokenSerializer(BaseSerializer):
             ret['user'] = self.reverse('api:user_detail', kwargs={'pk': obj.user.pk})
         if obj.application:
             ret['application'] = self.reverse(
-                'api:user_me_oauth_application_detail', kwargs={'pk': obj.application.pk}
+                'api:o_auth2_application_detail', kwargs={'pk': obj.application.pk}
             )
         ret['activity_stream'] = self.reverse(
             'api:user_me_oauth_token_activity_stream_list', kwargs={'pk': obj.pk}
@@ -4441,7 +4441,7 @@ class ActivityStreamSerializer(BaseSerializer):
                         rel[fk].append(self.reverse('api:inventory_script_detail', kwargs={'pk': thisItem.id}))
                     elif fk == 'application':
                         rel[fk].append(self.reverse(
-                            'api:user_me_oauth_application_detail', kwargs={'pk': thisItem.pk}
+                            'api:o_auth2_application_detail', kwargs={'pk': thisItem.pk}
                         ))
                     elif fk == 'access_token':
                         rel[fk].append(self.reverse(

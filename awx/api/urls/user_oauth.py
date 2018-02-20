@@ -4,9 +4,9 @@
 from django.conf.urls import url
 
 from awx.api.views import (
-    UserMeOauthRootView,
+    OAuth2RootView,
     UserMeOauthApplicationList,
-    UserMeOauthApplicationDetail,
+    OAuth2ApplicationDetail,
     UserMeOauthApplicationTokenList,
     UserMeOauthApplicationActivityStreamList,
     UserMeOauthTokenList,
@@ -17,12 +17,12 @@ from awx.api.views import (
 
 
 urls = [
-    url(r'^$', UserMeOauthRootView.as_view(), name='user_me_oauth_root_view'),
+    url(r'^$', OAuth2RootView.as_view(), name='o_auth2_root_view'),
     url(r'^applications/$', UserMeOauthApplicationList.as_view(), name='user_me_oauth_application_list'),
     url(
         r'^applications/(?P<pk>[0-9]+)/$',
-        UserMeOauthApplicationDetail.as_view(),
-        name='user_me_oauth_application_detail'
+        OAuth2ApplicationDetail.as_view(),
+        name='o_auth2_application_detail'
     ),
     url(
         r'^applications/(?P<pk>[0-9]+)/tokens/$',

@@ -8,7 +8,7 @@ from oauth2_provider.urls import base_urlpatterns
 from awx.api.views import (
     ApiOAuthAuthorizationRootView,
     UserMeOauthApplicationList,
-    UserMeOauthApplicationDetail,
+    OAuth2ApplicationDetail,
     UserMeOauthApplicationTokenList,
     UserMeOauthApplicationActivityStreamList,
 )

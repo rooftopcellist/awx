@@ -15,7 +15,7 @@ from awx.api.views import (
     UserActivityStreamList,
     UserAccessList,
     UserMeOauthApplicationList,
-    UserMeOauthRootView,
+    OAuth2RootView,
     UserMeOauthTokenList,
     UserMeOAuth2AuthorizedTokenList,
     UserMeOAuth2PersonalTokenList
@@ -38,8 +38,6 @@ urls = [
     url(r'^(?P<pk>[0-9]+)/tokens/$', UserMeOauthTokenList.as_view(), name='user_me_oauth_token_list'),
     url(r'^(?P<pk>[0-9]+)/authorized_tokens/$', UserMeOAuth2AuthorizedTokenList.as_view(), name='user_me_oauth2_authorized_token_list'),
     url(r'^(?P<pk>[0-9]+)/personal_tokens/$', UserMeOAuth2PersonalTokenList.as_view(), name='user_me_oauth2_personal_token_list'),
-    
-    # url(r'^(?P<pk>[0-9]+)/oauth2/$', UserOAuth2RootView.as_view(), name='user_oauth_root_view'),
     
 ] 
 

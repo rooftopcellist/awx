@@ -122,7 +122,7 @@ User.add_to_class('is_in_enterprise_category', user_is_in_enterprise_category)
 
 
 def o_auth2_application_get_absolute_url(self, request=None):
-    return reverse('api:user_me_oauth_application_detail', kwargs={'pk': self.pk}, request=request)
+    return reverse('api:o_auth2_application_detail', kwargs={'pk': self.pk}, request=request)
 
 
 OAuth2Application.add_to_class('get_absolute_url', o_auth2_application_get_absolute_url)

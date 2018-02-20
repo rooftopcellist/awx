@@ -33,7 +33,7 @@ def test_oauth_application_create(admin, post):
 @pytest.mark.django_db
 def test_oauth_application_update(oauth_application, patch, admin, alice):
     patch(
-        reverse('api:user_me_oauth_application_detail', kwargs={'pk': oauth_application.pk}), {
+        reverse('api:o_auth2_application_detail', kwargs={'pk': oauth_application.pk}), {
             'name': 'Test app with immutable grant type and user',
             'redirect_uris': 'http://localhost/api/',
             'authorization_grant_type': 'implicit',
@@ -71,7 +71,7 @@ def test_oauth_token_create(oauth_application, get, post, admin):
     )
     assert response.data['count'] == 1
     response = get(
-        reverse('api:user_me_oauth_application_detail', kwargs={'pk': oauth_application.pk}),
+        reverse('api:user_me_o_auth2_application_detail', kwargs={'pk': oauth_application.pk}),
         admin, expect=200
     )
     assert response.data['summary_fields']['tokens']['count'] == 1
@@ -114,7 +114,7 @@ def test_oauth_token_delete(oauth_application, post, delete, get, admin):
     )
     assert response.data['count'] == 0
     response = get(
-        reverse('api:user_me_oauth_application_detail', kwargs={'pk': oauth_application.pk}),
+        reverse('api:user_me_o_auth2_application_detail', kwargs={'pk': oauth_application.pk}),
         admin, expect=200
     )
     assert response.data['summary_fields']['tokens']['count'] == 0
@@ -127,7 +127,7 @@ def test_oauth_application_delete(oauth_application, post, delete, admin):
         {'scope': 'read'}, admin, expect=201
     )
     delete(
-        reverse('api:user_me_oauth_application_detail', kwargs={'pk': oauth_application.pk}),
+        reverse('api:user_me_o_auth2_application_detail', kwargs={'pk': oauth_application.pk}),
         admin, expect=204
     )
     assert Application.objects.filter(client_id=oauth_application.client_id).count() == 0

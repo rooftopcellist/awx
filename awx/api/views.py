@@ -1505,7 +1505,7 @@ class UserMeList(ListAPIView):
         return self.model.objects.filter(pk=self.request.user.pk)
 
 
-class UserMeOauthRootView(APIView):
+class OAuth2RootView(APIView):
 
     view_name = _("User OAuth Root")
 
@@ -1542,7 +1542,7 @@ class UserMeOauthApplicationList(ListCreateAPIView):
     serializer_class = OauthApplicationSerializer
 
 
-class UserMeOauthApplicationDetail(RetrieveUpdateDestroyAPIView):
+class Oauth2ApplicationDetail(RetrieveUpdateDestroyAPIView):
 
     view_name = _("OAuth Application Detail")
 
