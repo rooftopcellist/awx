@@ -334,12 +334,11 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
 
-# from awx.main.models.oauth import OAuth2Application, OAuth2AccessToken
+
 # Django OAuth Toolkit settings
-# OAUTH2_PROVIDER_APPLICATION_MODEL = 'oauth2_provider.Application'
-# OAUTH2_PROVIDER_ACCESS_TOKEN_MODEL = 'oauth2_provider.AccessToken'
 OAUTH2_PROVIDER_APPLICATION_MODEL = 'main.OAuth2Application'
 OAUTH2_PROVIDER_ACCESS_TOKEN_MODEL = 'main.OAuth2AccessToken'
+OAUTH2_PROVIDER_REFRESH_TOKEN_MODEL = 'main.OAuth2RefreshToken'
 
 OAUTH2_PROVIDER = {}
 

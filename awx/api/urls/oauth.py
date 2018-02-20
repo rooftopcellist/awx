@@ -15,22 +15,6 @@ from awx.api.views import (
 
 
 urls = [
-    url(r'^applications/$', UserMeOauthApplicationList.as_view(), name='user_me_oauth_application_list'),
-    url(
-        r'^applications/(?P<pk>[0-9]+)/$',
-        UserMeOauthApplicationDetail.as_view(),
-        name='user_me_oauth_application_detail'
-    ),
-    url(
-        r'^applications/(?P<pk>[0-9]+)/tokens/$',
-        UserMeOauthApplicationTokenList.as_view(),
-        name='user_me_oauth_application_token_list'
-    ),
-    url(
-        r'^applications/(?P<pk>[0-9]+)/activity_stream/$',
-        UserMeOauthApplicationActivityStreamList.as_view(),
-        name='user_me_oauth_application_activity_stream_list'
-    ),
     url(r'^$', ApiOAuthAuthorizationRootView.as_view(), name='oauth_authorization_root_view'),
 ] + base_urlpatterns
 

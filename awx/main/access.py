@@ -18,8 +18,8 @@ from django.core.exceptions import ObjectDoesNotExist
 from rest_framework.exceptions import ParseError, PermissionDenied, ValidationError
 
 # Django OAuth Toolkit
-from oauth2_provider.models import Grant, RefreshToken
-from awx.main.models.oauth import OAuth2Application, OAuth2AccessToken
+from oauth2_provider.models import Grant
+from awx.main.models.oauth import OAuth2Application, OAuth2AccessToken, OAuth2RefreshToken
 
 # AWX
 from awx.main.utils import (
@@ -474,7 +474,7 @@ class InstanceGroupAccess(BaseAccess):
 class UserAccess(BaseAccess):
     '''
     I can see user records when:
-     - I'm a useruser
+     - I'm a superuser
      - I'm in a role with them (such as in an organization or team)
      - They are in a role which includes a role of mine
      - I am in a role that includes a role of theirs
@@ -621,7 +621,7 @@ class OauthTokenAccess(BaseAccess):
     def can_add(self, data):
         app = get_object_from_data('application', OAuth2Application, data)
         if not app:
-            return False
+            return True
         return OauthApplicationAccess(self.user).can_read(app)
 
 

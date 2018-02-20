@@ -881,14 +881,19 @@ class UserSerializer(BaseSerializer):
     def get_related(self, obj):
         res = super(UserSerializer, self).get_related(obj)
         res.update(dict(
-            teams                  = self.reverse('api:user_teams_list',               kwargs={'pk': obj.pk}),
-            organizations          = self.reverse('api:user_organizations_list',       kwargs={'pk': obj.pk}),
+            teams                  = self.reverse('api:user_teams_list',                  kwargs={'pk': obj.pk}),
+            organizations          = self.reverse('api:user_organizations_list',          kwargs={'pk': obj.pk}),
             admin_of_organizations = self.reverse('api:user_admin_of_organizations_list', kwargs={'pk': obj.pk}),
-            projects               = self.reverse('api:user_projects_list',            kwargs={'pk': obj.pk}),
-            credentials            = self.reverse('api:user_credentials_list',         kwargs={'pk': obj.pk}),
-            roles                  = self.reverse('api:user_roles_list',               kwargs={'pk': obj.pk}),
-            activity_stream        = self.reverse('api:user_activity_stream_list',     kwargs={'pk': obj.pk}),
-            access_list            = self.reverse('api:user_access_list',              kwargs={'pk': obj.pk}),
+            projects               = self.reverse('api:user_projects_list',               kwargs={'pk': obj.pk}),
+            credentials            = self.reverse('api:user_credentials_list',            kwargs={'pk': obj.pk}),
+            roles                  = self.reverse('api:user_roles_list',                  kwargs={'pk': obj.pk}),
+            activity_stream        = self.reverse('api:user_activity_stream_list',        kwargs={'pk': obj.pk}),
+            access_list            = self.reverse('api:user_access_list',                 kwargs={'pk': obj.pk}),
+            applications           = self.reverse('api:user_me_oauth_application_list',   kwargs={'pk': obj.pk}),
+            tokens                 = self.reverse('api:user_me_oauth_token_list',         kwargs={'pk': obj.pk}),
+            authorized_tokens      = self.reverse('api:user_me_oauth2_authorized_token_list', kwargs={'pk': obj.pk}),
+            personal_tokens        = self.reverse('api:user_me_oauth2_personal_token_list',   kwargs={'pk': obj.pk}),
+            
         ))
         return res
 
@@ -1044,7 +1049,7 @@ class OauthTokenSerializer(BaseSerializer):
         if obj.application and obj.application.user:
             obj.user = obj.application.user
         obj.save()
-        RefreshToken.objects.create(
+        OAuth2RefreshToken.objects.create(
             user=obj.application.user if obj.application and obj.application.user else None,
             token=generate_token(),
             application=obj.application if obj.application else None,
@@ -1100,9 +1105,6 @@ class OAuth2PersonalTokenSerializer(BaseSerializer):
         )
         read_only_fields = ('user', 'token', 'expires')
         read_only_on_update_fields = ('application',)
-        # extra_kwargs = {
-        #     'application': {'allow_null': True}
-        # }
 
     def get_modified(self, obj):
         if obj is None:
@@ -1143,25 +1145,23 @@ class OAuth2PersonalTokenSerializer(BaseSerializer):
             return ''
 
     def create(self, validated_data):
+        user = self.context['request'].user
         validated_data['token'] = generate_token()
         validated_data['expires'] = now() + timedelta(
             seconds=oauth2_settings.ACCESS_TOKEN_EXPIRE_SECONDS
         )
+        validated_data['user'] = user
         obj = super(OAuth2PersonalTokenSerializer, self).create(validated_data)
         if obj.application and obj.application.user:
             obj.user = obj.application.user
         obj.save()
-        # RefreshToken.objects.create(
-        #     user=obj.application.user if obj.application and obj.application.user else None,
-        #     token=generate_token(),
-        #     application=obj.application if obj.application else None,
-        #     access_token=obj
-        # )
+        OAuth2RefreshToken.objects.create(
+            user=user,
+            token=generate_token(),
+            application=None,
+            access_token=obj
+        )
         return obj
-    
-    
-    
-    
     
 
 class OrganizationSerializer(BaseSerializer):

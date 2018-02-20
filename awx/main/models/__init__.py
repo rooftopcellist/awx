@@ -27,7 +27,7 @@ from awx.main.models.channels import * # noqa
 from awx.api.versioning import reverse
 from awx.main.models.oauth import * # noqa
 
-from oauth2_provider.models import Grant, RefreshToken # noqa
+from oauth2_provider.models import Grant # noqa
 
 
 # Monkeypatch Django serializer to ignore django-taggit fields (which break
