@@ -11,7 +11,6 @@ appdirs==1.4.2
 argparse==1.4.0           # via uwsgitop
 asgi-amqp==1.1.3
 asgiref==1.1.2
-asn1crypto==0.24.0        # via cryptography
 attrs==18.2.0             # via automat, service-identity, twisted
 autobahn==19.2.1          # via daphne
 automat==0.7.0            # via twisted
@@ -22,11 +21,9 @@ billiard==3.5.0.5         # via celery
 boto==2.47.0
 celery==4.2.1
 certifi==2018.11.29       # via msrest, requests
-cffi==1.12.1              # via cryptography
 channels==1.1.8
 chardet==3.0.4            # via requests
 constantly==15.1.0        # via twisted
-cryptography==2.5         # via adal, azure-keyvault, pyopenssl
 daphne==1.3.0
 defusedxml==0.5.0
 django-auth-ldap==1.7.0
@@ -101,7 +98,7 @@ requests-oauthlib==1.2.0  # via msrest, social-auth-core
 requests[security]==2.21.0
 service-identity==17.0.0
 simplejson==3.16.0        # via uwsgitop
-six==1.12.0               # via asgi-amqp, asgiref, autobahn, automat, cryptography, django-extensions, irc, isodate, jaraco.classes, jaraco.collections, jaraco.itertools, jaraco.logging, jaraco.stream, pygerduty, pyhamcrest, pyopenssl, pyrad, python-dateutil, python-memcached, slackclient, social-auth-app-django, social-auth-core, tacacs-plus, tempora, twilio, txaio, websocket-client
+six==1.12.0               # via asgi-amqp, asgiref, autobahn, automat, django-extensions, irc, isodate, jaraco.classes, jaraco.collections, jaraco.itertools, jaraco.logging, jaraco.stream, pygerduty, pyhamcrest, pyopenssl, pyrad, python-dateutil, python-memcached, slackclient, social-auth-app-django, social-auth-core, tacacs-plus, tempora, twilio, txaio, websocket-client
 slackclient==1.1.2
 social-auth-app-django==2.1.0
 social-auth-core==3.0.0
