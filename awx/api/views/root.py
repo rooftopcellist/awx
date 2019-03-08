@@ -157,6 +157,7 @@ class ApiV1PingView(APIView):
             'ha': is_ha_environment(),
             'version': get_awx_version(),
             'active_node': settings.CLUSTER_HOST_ID,
+            'system_uuid': settings.SYSTEM_UUID,
         }
 
         response['instances'] = []
