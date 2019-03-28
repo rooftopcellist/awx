@@ -1,6 +1,7 @@
 import os
 import os.path
 import platform
+import time                 # TODO: Remove this
 
 from django.db import connection
 from django.db.models import Count
@@ -201,11 +202,13 @@ def job_instance_counts(since):
 # Copies Job Events from db to a .csv to be shipped
 def copy_tables(since, full_path):
     def _copy_table(table, query, path):
+        start_time = time.time()    # TODO: Remove this  
         file_path = os.path.join(path, table + '_table.csv')
         file = open(file_path, 'w', encoding='utf-8')
         with connection.cursor() as cursor:
             cursor.copy_expert(query, file)
             file.close()
+        print(table, "%s" % (time.time() - start_time))  # TODO: Remove this
         return file_path
 
     events_query = '''COPY (SELECT main_jobevent.id, 

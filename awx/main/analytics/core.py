@@ -87,19 +87,28 @@ def gather(dest=None, module=None):
         module = collectors
 
     dest = dest or tempfile.mkdtemp(prefix='awx_analytics')
+    
+    import time                 # TODO: Remove this
+    total_start_time = time.time()
     for name, func in inspect.getmembers(module):
+        start_time = time.time()    # TODO: Remove this  
         if inspect.isfunction(func) and hasattr(func, '__awx_analytics_key__'):
             key = func.__awx_analytics_key__
             path = '{}.json'.format(os.path.join(dest, key))
             with open(path, 'w', encoding='utf-8') as f:
                 try:
                     json.dump(func(last_run), f)
+                    print(key, "%s" % (time.time() - start_time))  # TODO: Remove this
                 except Exception:
                     logger.exception("Could not generate metric {}.json".format(key))
                     f.close()
                     os.remove(f.name)
+    print("all_queries %s" % (time.time() - total_start_time))  # TODO: Remove this
+
     try:
+        start_time = time.time()    # TODO: Remove this  
         collectors.copy_tables(since=last_run, full_path=dest)
+        print("all_tables %s" % (time.time() - start_time))  # TODO: Remove this
     except Exception:
         logger.exception("Could not copy tables")
         
