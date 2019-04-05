@@ -1,2 +1,5 @@
 pycurl  # requires system package version
 rsa	# stop adding new crypto libs
+cryptography # use system crypto libs
+paramiko # use ansible vendored package
+bcrypt
