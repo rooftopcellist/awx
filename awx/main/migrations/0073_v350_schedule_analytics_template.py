@@ -4,13 +4,13 @@
 # All Rights Reserved.
 
 from __future__ import unicode_literals
-
+import random
 import awx.main.fields
 
 from django.db import migrations, models
 import django.db.models.deletion
 from django.conf import settings
-from django.utils.timezone import now
+from django.utils.timezone import now, timedelta
 
 import jsonfield.fields
 import jsonbfield.fields
@@ -28,8 +28,8 @@ def create_system_job_templates(apps, schema_editor):
     ContentType = apps.get_model('contenttypes', 'ContentType')
     sjt_ct = ContentType.objects.get_for_model(SystemJobTemplate)
     now_dt = now()
-    random_schedule_time = now() + timedelta(minutes=random.randint(-30,30))
-    now_str = now_dt.strftime('%Y%m%dT%H%M%SZ')
+    random_time = now() + timedelta(minutes=random.randint(-30,30))
+    random_schedule_time = random_time.strftime('%Y%m%dT%H%M%SZ')
 
     sjt, created = SystemJobTemplate.objects.get_or_create(
         job_type='gather_analytics --ship',
@@ -44,9 +44,9 @@ def create_system_job_templates(apps, schema_editor):
     if created:
         sched = Schedule(
             name='Gather Automation Insights',
-            rrule='DTSTART:%s RRULE:FREQ=DAILY;INTERVAL=1;BYDAY=SU' % random_schedule_time,
+            rrule='DTSTART:%s RRULE:FREQ=DAILY;INTERVAL=1;COUNT=1' % random_schedule_time,
             description='Automatically Generated Schedule',
-            enabled=True,
+            enabled=False,
             extra_data={},
             created=now_dt,
             modified=now_dt,

@@ -45,11 +45,30 @@ export default
                     });
                 };
 
+                function launchJob(url) {
+                    Rest.setUrl(url);
+                    return Rest.post({})
+                        .then(({data}) => {
+                            Wait('stop');
+                            $state.go('output', { id: data.system_job, type: 'system' }, { reload: true });
+                        }) 
+                        .catch(({data, status}) => {
+                            let template_id = $scope.job_template_id;
+                            template_id = (template_id === undefined) ? "undefined" : i18n.sprintf("%d", template_id);
+                            ProcessErrors($scope, data, status, null, { hdr: i18n._('Error!'),
+                                msg: i18n.sprintf(i18n._('Failed updating job %s with variables. POST returned: %d'), template_id, status) });
+                        });
+                }
+
+ 
                 $scope.submitJob = function (id, name) {
                     Wait('start');
                         defaultUrl = GetBasePath('system_job_templates')+id+'/launch/';
+                        if(name === 'Automation Insights Collection') {
+                          return launchJob(defaultUrl);
+                        }
                         CreateDialog({
-                            id: 'prompt-for-days'    ,
+                            id: 'prompt-for-days',
                             title: name,
                             scope: $scope,
                             width: 500,
