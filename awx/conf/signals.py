@@ -11,7 +11,7 @@ from django.dispatch import receiver
 # Tower
 from awx.conf import settings_registry
 from awx.conf.models import Setting
-from awx.main.models import Schedule
+from awx.main.models import Schedule, SystemJobTemplate
 
 logger = logging.getLogger('awx.conf.signals')
 
