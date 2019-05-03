@@ -11,6 +11,7 @@ from django.dispatch import receiver
 # Tower
 from awx.conf import settings_registry
 from awx.conf.models import Setting
+from awx.main.models import Schedule
 
 logger = logging.getLogger('awx.conf.signals')
 
@@ -21,6 +22,13 @@ def handle_setting_change(key, for_delete=False):
     # When a setting changes or is deleted, remove its value from cache along
     # with any other settings that depend on it.
     setting_keys = [key]
+    # enabled/disable analytics sys job schedule with setting value
+    if key == 'INSIGHTS_TRACKING_STATE':
+        enabled = getattr(settings, key, None)
+        system_jt_id = SystemJobTemplate.objects.filter(name='Automation Insights Collection').first().id
+        analytics_schedule = Schedule.objects.filter(name='Gather Automation Insights', unified_job_template=system_jt_id).first()
+        analytics_schedule.enabled = enabled
+        analytics_schedule.save()
     for dependent_key in settings_registry.get_dependent_settings(key):
         # Note: Doesn't handle multiple levels of dependencies!
         setting_keys.append(dependent_key)
