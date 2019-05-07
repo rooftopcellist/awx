@@ -45,23 +45,28 @@ export default
                     });
                 };
 
+                var launchManagementJob = function (defaultUrl, name){
+                  var data = {};
+                  Rest.setUrl(defaultUrl);
+                  Rest.post(data)
+                      .then(({data}) => {
+                          Wait('stop');
+                          $state.go('output', { id: data.system_job, type: 'system' }, { reload: true });
+                      })
+                      .catch(({data, status}) => {
+                          let template_id = $scope.job_template_id;
+                          template_id = (template_id === undefined) ? "undefined" : i18n.sprintf("%d", template_id);
+                          ProcessErrors($scope, data, status, null, { hdr: i18n._('Error!'),
+                              msg: i18n.sprintf(i18n._('Failed updating job %s with variables. POST returned: %d'), template_id, status) });
+                      });
+                }
+
                 $scope.submitJob = function (id, name) {
                     Wait('start');
                         defaultUrl = GetBasePath('system_job_templates')+id+'/launch/';
-                        if(name === 'Automation Insights Collection') {
-                                      var data = {};
-                                      Rest.setUrl(defaultUrl);
-                                      Rest.post(data)
-                                          .then(({data}) => {
-                                              Wait('stop');
-                                              $state.go('output', { id: data.system_job, type: 'system' }, { reload: true });
-                                          })
-                                          .catch(({data, status}) => {
-                                              let template_id = $scope.job_template_id;
-                                              template_id = (template_id === undefined) ? "undefined" : i18n.sprintf("%d", template_id);
-                                              ProcessErrors($scope, data, status, null, { hdr: i18n._('Error!'),
-                                                  msg: i18n.sprintf(i18n._('Failed updating job %s with variables. POST returned: %d'), template_id, status) });
-                                          });
+                        var noModalJobs = ['Automation Insights Collection', 'Cleanup Expired Sessions', 'Cleanup Expired OAuth 2 Tokens']
+                        if (noModalJobs.includes(name)) {
+                            launchManagementJob(defaultUrl, name);
                         } else {
                             
                             CreateDialog({

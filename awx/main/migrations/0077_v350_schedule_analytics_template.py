@@ -5,28 +5,22 @@
 
 from __future__ import unicode_literals
 import random
-import awx.main.fields
 
 from django.db import migrations, models
-import django.db.models.deletion
-from django.conf import settings
-from django.utils.timezone import now, timedelta
-from awx.main.migrations._create_collection_system_jt import create_system_job_templates
+from awx.main.migrations._create_system_jobs import create_collection_jt
 
-import jsonfield.fields
-import jsonbfield.fields
 import taggit.managers
 
 
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('main', '0072_v350_deprecate_fields'),
+        ('main', '0076_v360_add_new_instance_group_relations'),
     ]
 
     operations = [
         # Schedule Analytics System Job Template
-        migrations.RunPython(create_system_job_templates, migrations.RunPython.noop),
+        migrations.RunPython(create_collection_jt, migrations.RunPython.noop),
         migrations.AlterField(
             model_name='systemjob',
             name='job_type',

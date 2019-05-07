@@ -6,7 +6,7 @@ from django.apps import apps
 from awx.api.versioning import reverse
 from awx.main.models import JobTemplate, Schedule, SystemJobTemplate
 from awx.main.utils.encryption import decrypt_value, get_encryption_key
-from awx.main.migrations._create_collection_system_jt import create_system_job_templates
+from awx.main.migrations._create_system_jobs import create_system_jt
 
 
 RRULE_EXAMPLE = 'DTSTART:20151117T050000Z RRULE:FREQ=DAILY;INTERVAL=1;COUNT=1'
@@ -371,7 +371,7 @@ def test_zoneinfo(get, admin_user):
 
 @pytest.mark.django_db
 def test_analytics_schedule_setting(get, patch, admin_user):
-    create_system_job_templates(apps, None)
+    create_system_jt(apps, None)
 
     job_template = SystemJobTemplate.objects.filter(name='Automation Insights Collection').first()
 
