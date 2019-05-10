@@ -251,6 +251,7 @@ TEMPLATES = [
 ]
 
 MIDDLEWARE_CLASSES = (  # NOQA
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'awx.main.middleware.TimingMiddleware',
     'awx.main.middleware.MigrationRanCheckMiddleware',
     'corsheaders.middleware.CorsMiddleware',
