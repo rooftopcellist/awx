@@ -39,10 +39,15 @@ services:
   #   build:
   #     context: ./docker-compose
   #     dockerfile: Dockerfile-logstash
+
   # Postgres Database Container
   postgres:
-    image: postgres:10
+    image: centos/postgresql-10-centos7
     container_name: tools_postgres_1
+    environment:
+      POSTGRESQL_USER: awx
+      POSTGRESQL_PASSWORD: awxpass
+      POSTGRESQL_DATABASE: awx
     ports:
         - "5432:5432"
   memcached:

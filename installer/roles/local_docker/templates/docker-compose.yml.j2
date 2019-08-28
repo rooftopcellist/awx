@@ -128,7 +128,7 @@ services:
 
   {% if pg_hostname is not defined %}
   postgres:
-    image: postgres:10
+    image: centos/postgresql-10-centos7
     container_name: awx_postgres
     restart: unless-stopped
     volumes:
