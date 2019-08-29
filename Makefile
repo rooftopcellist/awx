@@ -223,9 +223,9 @@ init:
 	$(MANAGEMENT_COMMAND) provision_instance --hostname=$(COMPOSE_HOST); \
 	$(MANAGEMENT_COMMAND) register_queue --queuename=tower --instance_percent=100;\
 	if [ "$(AWX_GROUP_QUEUES)" == "tower,thepentagon" ]; then \
-		$(MANAGEMENT_COMMAND) provision_instance --hostname=isolated; \
-		$(MANAGEMENT_COMMAND) register_queue --queuename='thepentagon' --hostnames=isolated --controller=tower; \
-		$(MANAGEMENT_COMMAND) generate_isolated_key > /awx_devel/awx/main/isolated/authorized_keys; \
+		scl enable rh-postgresql10 '$(MANAGEMENT_COMMAND) provision_instance --hostname=isolated; \
+		$(MANAGEMENT_COMMAND) register_queue --queuename="thepentagon" --hostnames=isolated --controller=tower; \
+		$(MANAGEMENT_COMMAND) generate_isolated_key > /awx_devel/awx/main/isolated/authorized_keys; \'
 	fi;
 
 # Refresh development environment after pulling new code.
@@ -240,7 +240,7 @@ migrate:
 	if [ "$(VENV_BASE)" ]; then \
 		. $(VENV_BASE)/awx/bin/activate; \
 	fi; \
-	$(MANAGEMENT_COMMAND) migrate --noinput
+	scl enable rh-postgresql10 '$(MANAGEMENT_COMMAND) migrate --noinput'
 
 # Run after making changes to the models to create a new migration.
 dbchange:
@@ -276,7 +276,7 @@ supervisor:
 	@if [ "$(VENV_BASE)" ]; then \
 		. $(VENV_BASE)/awx/bin/activate; \
 	fi; \
-	supervisord --pidfile=/tmp/supervisor_pid -n
+	scl enable rh-postgresql10 'supervisord --pidfile=/tmp/supervisor_pid -n'
 
 collectstatic:
 	@if [ "$(VENV_BASE)" ]; then \
@@ -294,27 +294,27 @@ daphne:
 	@if [ "$(VENV_BASE)" ]; then \
 		. $(VENV_BASE)/awx/bin/activate; \
 	fi; \
-	daphne -b 127.0.0.1 -p 8051 awx.asgi:channel_layer
+	scl enable rh-postgresql10 'daphne -b 127.0.0.1 -p 8051 awx.asgi:channel_layer'
 
 runworker:
 	@if [ "$(VENV_BASE)" ]; then \
 		. $(VENV_BASE)/awx/bin/activate; \
 	fi; \
-	$(PYTHON) manage.py runworker --only-channels websocket.*
+	scl enable rh-postgresql10 '$(PYTHON) manage.py runworker --only-channels websocket.*'
 
 # Run the built-in development webserver (by default on http://localhost:8013).
 runserver:
 	@if [ "$(VENV_BASE)" ]; then \
 		. $(VENV_BASE)/awx/bin/activate; \
 	fi; \
-	$(PYTHON) manage.py runserver
+	scl enable rh-postgresql10 '$(PYTHON) manage.py runserver'
 
 # Run to start the background task dispatcher for development.
 dispatcher:
 	@if [ "$(VENV_BASE)" ]; then \
 		. $(VENV_BASE)/awx/bin/activate; \
 	fi; \
-	$(PYTHON) manage.py run_dispatcher
+	scl enable rh-postgresql10 '$(PYTHON) manage.py run_dispatcher'
 
 
 # Run to start the zeromq callback receiver
@@ -322,7 +322,7 @@ receiver:
 	@if [ "$(VENV_BASE)" ]; then \
 		. $(VENV_BASE)/awx/bin/activate; \
 	fi; \
-	$(PYTHON) manage.py run_callback_receiver
+	scl enable rh-postgresql10 '$(PYTHON) manage.py run_callback_receiver'
 
 nginx:
 	nginx -g "daemon off;"
@@ -331,7 +331,7 @@ jupyter:
 	@if [ "$(VENV_BASE)" ]; then \
 		. $(VENV_BASE)/awx/bin/activate; \
 	fi; \
-	$(MANAGEMENT_COMMAND) shell_plus --notebook
+	scl enable rh-postgresql10 '$(MANAGEMENT_COMMAND) shell_plus --notebook'
 
 reports:
 	mkdir -p $@
