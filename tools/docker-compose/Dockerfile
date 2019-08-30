@@ -152,6 +152,9 @@ RUN rm -rf /root/.cache
 # makes postgres available for data migrations when upgrading
 RUN export PATH=/usr/pgsql-10/bin:$PATH
 
+# symlink python interpreter
+RUN ln -s /awx_devel/tools/scripts/awx-python /usr/bin/awx-python
+
 RUN localedef -c -i en_US -f UTF-8 en_US.UTF-8
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
