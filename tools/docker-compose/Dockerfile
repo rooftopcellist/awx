@@ -6,7 +6,9 @@ ARG UID=0
 ADD tools/docker-compose/ansible_nightly.repo /etc/yum.repos.d/ansible_nightly.repo
 
 # add rhscl repo for rh-postgresql-devel
+RUN yum -y install centos-release-scl 
 RUN yum-config-manager --enable rhel-server-rhscl-7-rpms
+
 RUN yum -y update && yum -y install epel-release && yum -y install https://centos7.iuscommunity.org/ius-release.rpm 
 
 # sync with installer/roles/image_build/templates/Dockerfile.j2
@@ -15,7 +17,6 @@ RUN yum -y install acl \
   ansible \
   atk \
   bubblewrap \
-  centos-release-scl \
   cups-libs \
   curl \
   cyrus-sasl \
@@ -53,7 +54,8 @@ RUN yum -y install acl \
   openldap-devel \
   openssh-server \
   patch \
-  rh-postgresql10-devel \
+  rh-postgresql10-postgresql-devel \
+  rh-postgresql10-postgresql-server-syspaths \
   scl-utils-build \
   scl-utils \
   python-devel \
@@ -131,7 +133,7 @@ RUN yum -y remove cyrus-sasl-devel \
   libxml2-devel \
   libxslt-devel \
   openldap-devel \
-  rh-postgresql10-devel \
+  rh-postgresql10-postgresql-devel \
   python-devel \
   python36-devel \
   nodejs \
@@ -143,8 +145,8 @@ RUN yum -y clean all
 RUN rm -rf /root/.cache
 
 # exclude postgresql from yum updates
-RUN yum-config-manager --setopt=base."exclude=postgresql*" --save && \
-    yum-config-manager --setopt=updates."exclude=postgresql*" --save
+# RUN yum-config-manager --setopt=base."exclude=postgresql*" --save && \
+#     yum-config-manager --setopt=updates."exclude=postgresql*" --save
 
 
 # makes postgres available for data migrations when upgrading
