@@ -90,6 +90,9 @@ RUN yum install -y https://github.com/krallin/tini/releases/download/v0.18.0/tin
 RUN /usr/bin/ssh-keygen -q -t rsa -N "" -f /root/.ssh/id_rsa
 RUN mkdir -p /data/db
 
+# symlink python interpreter
+RUN ln -s /awx_devel/tools/scripts/awx-python /usr/bin/awx-python
+
 ADD tools/docker-compose/awx.egg-link /tmp/awx.egg-link
 ADD tools/docker-compose/awx-manage /usr/local/bin/awx-manage
 ADD tools/docker-compose/awx.egg-info /tmp/awx.egg-info
@@ -148,12 +151,8 @@ RUN rm -rf /root/.cache
 # RUN yum-config-manager --setopt=base."exclude=postgresql*" --save && \
 #     yum-config-manager --setopt=updates."exclude=postgresql*" --save
 
-
 # makes postgres available for data migrations when upgrading
 RUN export PATH=/usr/pgsql-10/bin:$PATH
-
-# symlink python interpreter
-RUN ln -s /awx_devel/tools/scripts/awx-python /usr/bin/awx-python
 
 RUN localedef -c -i en_US -f UTF-8 en_US.UTF-8
 ENV LANG en_US.UTF-8

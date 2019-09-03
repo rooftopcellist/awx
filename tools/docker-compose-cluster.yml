@@ -90,7 +90,7 @@ services:
       - CLUSTERED=true
       - CLUSTER_WITH=rabbitmq_1
   postgres:
-    image: postgres:10
+    image: centos/postgresql-10-centos7
     container_name: tools_postgres_1
   memcached:
     image: memcached:alpine

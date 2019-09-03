@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Enable needed Software Collections, if installed
 for scl in rh-python36 rh-postgresql10; do
   if [ -f /etc/scl/prefixes/$scl ]; then
