@@ -137,6 +137,7 @@ services:
       POSTGRES_USER: {{ pg_username }}
       POSTGRES_PASSWORD: {{ pg_password | quote }}
       POSTGRES_DB: {{ pg_database }}
+      POSTGRESQL_ADMIN_PASSWORD: 'postgrespass'    # TODO: Remove This
       PGDATA: /var/lib/postgresql/data/pgdata
       http_proxy: {{ http_proxy | default('') }}
       https_proxy: {{ https_proxy | default('') }}
