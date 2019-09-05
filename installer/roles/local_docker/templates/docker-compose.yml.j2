@@ -135,7 +135,7 @@ services:
       - {{ postgres_data_dir }}:/var/lib/postgresql/data:Z
     environment:
       POSTGRES_USER: {{ pg_username }}
-      POSTGRES_PASSWORD: {{ pg_password | quote }}
+      POSTGRES_PASSWORD: {{ pg_password }}
       POSTGRES_DB: {{ pg_database }}
       POSTGRESQL_ADMIN_PASSWORD: 'postgrespass'    # TODO: Remove This
       PGDATA: /var/lib/postgresql/data/pgdata
