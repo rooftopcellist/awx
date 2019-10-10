@@ -158,6 +158,7 @@ register(
     default='https://example.com',
     schemes=('http', 'https'),
     allow_plain_hostname=True,  # Allow hostname only without TLD.
+    read_only=False,
     label=_('Automation Analytics upload URL.'),
     help_text=_('This setting is used to to configure data collection for the Automation Analytics dashboard'),
     category=_('System'),
