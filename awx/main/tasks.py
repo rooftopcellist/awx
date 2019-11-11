@@ -35,6 +35,10 @@ from django.utils.translation import ugettext_lazy as _
 from django.core.cache import cache
 from django.core.exceptions import ObjectDoesNotExist
 
+# Django REST Framework
+from rest_framework.exceptions import PermissionDenied
+
+
 # Kubernetes
 from kubernetes.client.rest import ApiException
 
@@ -69,7 +73,7 @@ from awx.main.dispatch import get_local_queuename, reaper
 from awx.main.utils import (get_ssh_version, update_scm_url,
                             ignore_inventory_computed_fields,
                             ignore_inventory_group_removal, extract_ansible_vars, schedule_task_manager,
-                            get_awx_version)
+                            get_awx_version, get_license)
 from awx.main.utils.ansible import read_ansible_config
 from awx.main.utils.common import get_ansible_version, _get_ansible_version, get_custom_venv_choices
 from awx.main.utils.safe_yaml import safe_dump, sanitize_jinja
@@ -78,9 +82,6 @@ from awx.main.utils.pglock import advisory_lock
 from awx.main.consumers import emit_channel_notification
 from awx.main import analytics
 from awx.conf import settings_registry
-from awx.conf.license import get_license
-
-from rest_framework.exceptions import PermissionDenied
 
 
 __all__ = ['RunJob', 'RunSystemJob', 'RunProjectUpdate', 'RunInventoryUpdate',

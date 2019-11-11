@@ -7,9 +7,9 @@ from django.db.models import Count
 from django.conf import settings
 from django.utils.timezone import now
 
-from awx.conf.license import get_license
 from awx.main.utils import (get_awx_version, get_ansible_version,
-                            get_custom_venv_choices, camelcase_to_underscore)
+                            get_custom_venv_choices, camelcase_to_underscore,
+                            get_license)
 from awx.main import models
 from django.contrib.sessions.models import Session
 from awx.main.analytics import register, table_version

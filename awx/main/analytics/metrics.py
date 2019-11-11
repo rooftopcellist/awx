@@ -9,8 +9,7 @@ from prometheus_client import (
     generate_latest
 )
 
-from awx.conf.license import get_license
-from awx.main.utils import (get_awx_version, get_ansible_version)
+from awx.main.utils import (get_awx_version, get_ansible_version, get_license)
 from awx.main.analytics.collectors import (
     counts, 
     instance_info,

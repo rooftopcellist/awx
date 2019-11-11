@@ -11,11 +11,10 @@ from django.conf import settings
 from django.utils.timezone import now, timedelta
 from rest_framework.exceptions import PermissionDenied
 
-from awx.conf.license import get_license
 from awx.main.models import Job
 from awx.main.access import access_registry
 from awx.main.models.ha import TowerAnalyticsState
-from awx.main.utils import get_awx_http_client_headers
+from awx.main.utils import get_awx_http_client_headers, get_license
 
 
 __all__ = ['register', 'gather', 'ship', 'table_version']
