@@ -15,6 +15,7 @@ from awx.conf.license import get_license
 from awx.main.models import Job
 from awx.main.access import access_registry
 from awx.main.models.ha import TowerAnalyticsState
+from awx.main.utils import get_awx_version
 
 
 __all__ = ['register', 'gather', 'ship', 'table_version']
@@ -165,10 +166,15 @@ def ship(path):
             return logger.error('REDHAT_PASSWORD is not set')
         with open(path, 'rb') as f:
             files = {'file': (os.path.basename(path), f, settings.INSIGHTS_AGENT_MIME)}
+            distribution = 'AnsibleTower'
+            if _valid_license() is False:
+                distribution = 'AWX'
+            headers = {'User-Agent': distribution + '/' + get_awx_version()}
             response = requests.post(url, 
                                      files=files,
                                      verify="/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem",
                                      auth=(rh_user, rh_password),
+                                     headers=headers,
                                      timeout=(31, 31))
             if response.status_code != 202:
                 return logger.exception('Upload failed with status {}, {}'.format(response.status_code,
