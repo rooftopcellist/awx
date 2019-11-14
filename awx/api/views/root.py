@@ -26,9 +26,9 @@ from awx.main.utils import (
     get_ansible_version,
     get_custom_venv_choices,
     to_python_boolean,
-    get_license,
 )
 from awx.api.versioning import reverse, drf_reverse
+from awx.conf.license import get_license
 from awx.main.constants import PRIVILEGE_ESCALATION_METHODS
 from awx.main.models import (
     Project,
