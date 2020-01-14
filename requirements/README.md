@@ -140,11 +140,6 @@ in the top-level Makefile.
 
 ## Library Notes
 
-### requests-futures
-
-This can be removed when a solution for the external log queuing is ready.
-https://github.com/ansible/awx/pull/5092
-
 ### asgi-amqp
 
 This library is not compatible with channels 2 and is not expected
