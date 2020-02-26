@@ -966,6 +966,7 @@ LOG_AGGREGATOR_LEVEL = 'INFO'
 CHANNEL_LAYER_RECEIVE_MAX_RETRY = 10
 
 # Logging configuration.
+LOGGING_SOCK = '/var/run/tower/sockets/rsyslog.sock'
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -1022,9 +1023,9 @@ LOGGING = {
             'formatter': 'simple',
         },
         'external_logger': {
-            'class': 'logging.handlers.SysLogHandler',
+            'class': 'awx.main.utils.handlers.RSysLogHandler',
             'formatter': 'json',
-            'address': ('localhost', 51414),
+            'address': LOGGING_SOCK,
             'filters': ['external_log_enabled', 'dynamic_level_filter'],
         },
         'tower_warnings': {

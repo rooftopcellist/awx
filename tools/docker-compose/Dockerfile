@@ -105,7 +105,7 @@ RUN cd /usr/local/bin && \
 
 ADD tools/docker-compose/rsyslog.repo /etc/yum.repos.d/
 RUN yum install -y rsyslog-omhttp
-RUN echo '$IncludeConfig /var/lib/awx/rsyslog.conf' >> /etc/rsyslog.conf
+RUN mkdir -p /var/lib/awx/rsyslog/ && echo '$IncludeConfig /etc/rsyslog.conf' >> /var/lib/awx/rsyslog/rsyslog.conf
 
 ADD tools/docker-compose/google-cloud-sdk.repo /etc/yum.repos.d/
 RUN dnf install -y kubectl
@@ -137,7 +137,7 @@ ENTRYPOINT ["/entrypoint.sh"]
 CMD ["/bin/bash"]
 
 # Pre-create things that we need to write to
-RUN for dir in /var/lib/awx/ /var/log/tower/ /var/lib/awx/projects /.ansible /var/log/nginx /var/lib/nginx /.local; \
+RUN for dir in /var/lib/awx/rsyslog /var/run/tower/rsyslog /var/log/tower/ /var/lib/awx/projects /.ansible /var/log/nginx /var/lib/nginx /.local; \
   do mkdir -p $dir; chmod -R g+rwx $dir; chgrp -R root $dir; done
 
 RUN for file in /etc/passwd /etc/supervisord.conf \

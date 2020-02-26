@@ -136,6 +136,8 @@ def dispatch_startup():
     if Instance.objects.me().is_controller():
         awx_isolated_heartbeat()
 
+    reconfigure_rsyslog()
+
 
 def inform_cluster_of_shutdown():
     try:
