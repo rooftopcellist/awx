@@ -220,6 +220,8 @@ spec:
           ports:
             - containerPort: 8052
           volumeMounts:
+            - name: rsyslog
+              mountPath: "/var/run/tower/rsyslog/"
 {% if ca_trust_dir is defined %}
             - name: {{ kubernetes_deployment_name }}-ca-trust-dir
               mountPath: "/etc/pki/ca-trust/source/anchors/"
@@ -274,6 +276,8 @@ spec:
             - /usr/bin/launch_awx_task.sh
           imagePullPolicy: Always
           volumeMounts:
+            - name: rsyslog
+              mountPath: "/var/run/tower/rsyslog/"
 {% if ca_trust_dir is defined %}
             - name: {{ kubernetes_deployment_name }}-ca-trust-dir
               mountPath: "/etc/pki/ca-trust/source/anchors/"
@@ -297,6 +301,8 @@ spec:
               subPath: SECRET_KEY
               readOnly: true
           env:
+            - name: SUPERVISOR_CONFIG_PATH
+              value: "/supervisor_task.conf"
             - name: AWX_SKIP_MIGRATIONS
               value: "1"
             - name: MY_POD_UID
@@ -412,6 +418,8 @@ spec:
 {{ affinity | to_nice_yaml(indent=2) | indent(width=8, indentfirst=True) }}
 {% endif %}
       volumes:
+        - name: rsyslog
+          emptyDir: {}
 {% if ca_trust_dir is defined %}
         - name: {{ kubernetes_deployment_name }}-ca-trust-dir
           hostPath:
