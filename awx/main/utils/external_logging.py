@@ -28,7 +28,7 @@ def reconfigure_rsyslog():
                 port = settings.LOG_AGGREGATOR_PORT
 
         parts.extend([
-            'input(type="imuxsock" Socket="/var/run/tower/rsyslog/rsyslog.sock" unlink="on")',
+            'input(type="imuxsock" Socket="/var/run/tower/sockets/rsyslog.sock" unlink="on")',
             'template(name="awx" type="string" string="%msg%")',
         ])
         if protocol.startswith('http'):
@@ -65,6 +65,8 @@ def reconfigure_rsyslog():
             )
 
     tmpl = '\n'.join(parts)
-    with open('/var/lib/awx/rsyslog.conf', 'w') as f:
+    with open('/var/lib/awx/rsyslog/rsyslog.conf', 'w') as f:
         f.write(tmpl + '\n')
     supervisor_service_command(command='restart', service='awx-rsyslogd')
+    if True: # what conditional can I put here? When awx_task exists....
+        supervisor_service_command(command='restart', service='awx-rsyslogd', config_path='/supervisor_task.conf')

@@ -12,7 +12,7 @@ from django.conf import settings
 logger = logging.getLogger('awx.main.utils.reload')
 
 
-def supervisor_service_command(command, service='*', communicate=True):
+def supervisor_service_command(command, service='*', communicate=True, config_path=None):
     '''
     example use pattern of supervisorctl:
     # supervisorctl restart tower-processes:receiver tower-processes:factcacher
@@ -20,6 +20,8 @@ def supervisor_service_command(command, service='*', communicate=True):
     args = ['supervisorctl']
 
     supervisor_config_path = os.getenv('SUPERVISOR_CONFIG_PATH', None)
+    if config_path:
+        supervisor_config_path = config_path
     if supervisor_config_path:
         args.extend(['-c', supervisor_config_path])
 
