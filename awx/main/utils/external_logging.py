@@ -68,5 +68,5 @@ def reconfigure_rsyslog():
     with open('/var/lib/awx/rsyslog/rsyslog.conf', 'w') as f:
         f.write(tmpl + '\n')
     supervisor_service_command(command='restart', service='awx-rsyslogd')
-    if True: # what conditional can I put here? When awx_task exists....
+    if True:                                                            # what conditional can I put here? When awx_task exists....
         supervisor_service_command(command='restart', service='awx-rsyslogd', config_path='/supervisor_task.conf')

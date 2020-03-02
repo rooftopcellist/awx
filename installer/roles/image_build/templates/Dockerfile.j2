@@ -114,7 +114,7 @@ RUN find /var/lib/awx -not -path '/var/lib/awx/venv*' | xargs chgrp root
 RUN find /var/lib/awx -not -path '/var/lib/awx/venv*' | xargs chmod g+w
 
 # Pre-create things that we need to write to
-RUN for dir in /home/awx /var/run/tower/sockets /var/lib/awx/rsyslog /var/log/tower /var/log/nginx /var/lib/nginx; \
+RUN for dir in /home/awx /var/log/tower /var/log/nginx /var/lib/nginx; \
   do mkdir -p $dir; chmod -R g+rwx $dir; chgrp -R root $dir; done
 
 RUN for file in /etc/passwd /var/run/nginx.pid; \
@@ -123,8 +123,6 @@ RUN for file in /etc/passwd /var/run/nginx.pid; \
 # Create directories for and install rsyslog
 ADD rsyslog.repo /etc/yum.repos.d/
 RUN yum install -y rsyslog-omhttp
-RUN echo '$IncludeConfig /etc/rsyslog.conf' >> /var/lib/awx/rsyslog/rsyslog.conf
-RUN echo 'input(type="imuxsock" Socket="/var/run/tower/sockets/rsyslog.sock" unlink="on")' >> /var/lib/awx/rsyslog/rsyslog.conf
 
 # https://github.com/ansible/awx/issues/5224
 RUN chmod u+s /usr/bin/bwrap
