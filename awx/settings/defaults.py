@@ -966,7 +966,7 @@ LOG_AGGREGATOR_LEVEL = 'INFO'
 CHANNEL_LAYER_RECEIVE_MAX_RETRY = 10
 
 # Logging configuration.
-LOGGING_SOCK = '/var/run/tower/sockets/rsyslog.sock'
+LOGGING_SOCK = '/var/run/rsyslog/rsyslog.sock'
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
