@@ -95,11 +95,11 @@ RUN OFFICIAL=yes /var/lib/awx/venv/awx/bin/pip install /tmp/{{ awx_sdist_file }}
 ADD settings.py /etc/tower/settings.py
 ADD supervisor.conf /supervisor.conf
 ADD supervisor_task.conf /supervisor_task.conf
-ADD launch_awx.sh /usr/bin/launch_awx.sh
-ADD launch_awx_task.sh /usr/bin/launch_awx_task.sh
+ADD launch_awx /usr/bin/launch_awx
+ADD launch_awx_task /usr/bin/launch_awx_task
 ADD config-watcher /usr/bin/config-watcher
-RUN chmod +rx /usr/bin/launch_awx.sh && \
-    chmod +rx /usr/bin/launch_awx_task.sh && \
+RUN chmod +rx /usr/bin/launch_awx && \
+    chmod +rx /usr/bin/launch_awx_task && \
     chmod +rx /usr/bin/config-watcher
 
 # Install OpenShift CLI
@@ -133,4 +133,4 @@ USER 1000
 EXPOSE 8052
 
 ENTRYPOINT ["/tini", "--"]
-CMD /usr/bin/launch_awx.sh
+CMD launch_awx

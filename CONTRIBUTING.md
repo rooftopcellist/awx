@@ -216,7 +216,7 @@ Using `docker exec`, this will create a session in the running *awx* container, 
 If you want to start and use the development environment, you'll first need to bootstrap it by running the following command:
 
 ```bash
-(container)# /bootstrap_development.sh
+(container)# /bootstrap_development
 ```
 
 The above will do all the setup tasks, including running database migrations, so it may take a couple minutes.
