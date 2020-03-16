@@ -271,7 +271,7 @@ spec:
             privileged: true
           image: "{{ kubernetes_task_image }}:{{ kubernetes_task_version }}"
           command:
-            - /usr/bin/launch_awx_task.sh
+            - launch_awx_task
           imagePullPolicy: Always
           volumeMounts:
 {% if ca_trust_dir is defined %}

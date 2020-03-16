@@ -118,15 +118,15 @@
 
 - name: Stage launch_awx
   copy:
-    src: launch_awx.sh
-    dest: "{{ docker_base_path }}/launch_awx.sh"
+    src: launch_awx
+    dest: "{{ docker_base_path }}/launch_awx"
     mode: '0700'
   delegate_to: localhost
 
 - name: Stage launch_awx_task
   template:
-    src: launch_awx_task.sh.j2
-    dest: "{{ docker_base_path }}/launch_awx_task.sh"
+    src: launch_awx_task.j2
+    dest: "{{ docker_base_path }}/launch_awx_task"
     mode: '0700'
   delegate_to: localhost
 
