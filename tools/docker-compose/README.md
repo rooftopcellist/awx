@@ -74,3 +74,7 @@ An example of how to view the most recent logs from the container:
 ```
 docker exec -i -t $(docker ps -aqf "name=tools_logstash_1") tail -n 50 /logstash.log
 ```
+
+#### How to add logstash plugins
+
+Add any plugins you need in `tools/elastic/logstash/Dockerfile` before running the container.  
