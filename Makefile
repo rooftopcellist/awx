@@ -650,10 +650,8 @@ detect-schema-change: genschema
 docker-compose-clean: awx/projects
 	cd tools && TAG=$(COMPOSE_TAG) DEV_DOCKER_TAG_BASE=$(DEV_DOCKER_TAG_BASE) docker-compose rm -sf
 
-docker-compose-build: awx-devel-build
-
 # Base development image build
-awx-devel-build:
+docker-compose-build:
 	ansible localhost -m template -a "src=installer/roles/image_build/templates/Dockerfile.j2 dest=tools/docker-compose/Dockerfile" -e build_dev=True
 	docker build -t ansible/awx_devel -f tools/docker-compose/Dockerfile \
 		--cache-from=$(DEV_DOCKER_TAG_BASE)/awx_devel:$(COMPOSE_TAG) .

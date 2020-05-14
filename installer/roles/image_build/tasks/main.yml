@@ -132,7 +132,7 @@
 
 - name: Stage rsyslog.conf
   copy:
-    src: ../tools/docker-compose/rsyslog.conf
+    src: rsyslog.conf
     dest: "{{ docker_base_path }}/rsyslog.conf"
     mode: '0660'
   delegate_to: localhost
