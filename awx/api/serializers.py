@@ -4959,3 +4959,14 @@ class ActivityStreamSerializer(BaseSerializer):
         if obj.setting:
             summary_fields['setting'] = [obj.setting]
         return summary_fields
+
+    def to_representation(self, obj):
+        ret = super(ActivityStreamSerializer, self).to_representation(obj)
+        # Because this string is saved in the db in the source language,
+        # it must be marked for translation after it is pulled from the db, not when set
+        ret['operation'] = _(obj.operation)
+        ret['object1'] = _(obj.object1)
+        ret['object2'] = _(obj.object2)
+        return ret
+        
+        

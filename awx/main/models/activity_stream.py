@@ -10,7 +10,7 @@ from awx.main.models.base import accepts_json
 from django.db import models
 from django.conf import settings
 from django.utils.encoding import smart_str
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import ugettext_lazy as _, gettext_noop
 
 __all__ = ['ActivityStream']
 
@@ -25,11 +25,11 @@ class ActivityStream(models.Model):
         ordering = ('pk',)
 
     OPERATION_CHOICES = [
-        ('create', _('Entity Created')),
-        ('update', _("Entity Updated")),
-        ('delete', _("Entity Deleted")),
-        ('associate', _("Entity Associated with another Entity")),
-        ('disassociate', _("Entity was Disassociated with another Entity"))
+        (gettext_noop('create'), _('Entity Created')),
+        (gettext_noop('update'), _("Entity Updated")),
+        (gettext_noop('delete'), _("Entity Deleted")),
+        (gettext_noop('associate'), _("Entity Associated with another Entity")),
+        (gettext_noop('disassociate'), _("Entity was Disassociated with another Entity"))
     ]
 
     actor = models.ForeignKey('auth.User', null=True, on_delete=models.SET_NULL, related_name='activity_stream')

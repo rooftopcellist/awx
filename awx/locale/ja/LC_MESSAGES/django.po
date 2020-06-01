@@ -3054,6 +3054,10 @@ msgid "Entity Associated with another Entity"
 msgstr "エンティティーの別のエンティティーへの関連付け"
 
 #: awx/main/models/activity_stream.py:32
+msgid "disassociate"
+msgstr "関連付けの解除"
+
+#: awx/main/models/activity_stream.py:32
 msgid "Entity was Disassociated with another Entity"
 msgstr "エンティティーの別のエンティティーとの関連付けの解除"
 
@@ -6125,4 +6129,3 @@ msgstr "カスタムロゴの無効な形式です。base64 エンコードさ�
 #: awx/ui/fields.py:31
 msgid "Invalid base64-encoded data in data URL."
 msgstr "データ URL の無効な base64 エンコードされたデータ。"
-
