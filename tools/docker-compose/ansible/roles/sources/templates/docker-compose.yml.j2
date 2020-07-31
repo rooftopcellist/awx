@@ -32,6 +32,7 @@ services:
       - "../../docker-compose/_sources/websocket_secret.py:/etc/tower/conf.d/websocket_secret.py"
       - "../../docker-compose/_sources/local_settings.py:/etc/tower/conf.d/local_settings.py"
       - "redis_socket:/var/run/redis/:rw"
+      - "/sys/fs/cgroup:/sys/fs/cgroup"
     privileged: true
     tty: true
   # A useful container that simply passes through log messages to the console
