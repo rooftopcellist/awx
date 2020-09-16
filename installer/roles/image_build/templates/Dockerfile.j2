@@ -28,13 +28,18 @@ RUN dnf -y update && \
     dnf module -y enable 'postgresql:10' && \
     dnf config-manager --set-enabled PowerTools && \
     dnf -y install ansible \
+    dbus-c++-devel \
     gcc \
     gcc-c++ \
     gettext \
     git-core \
+    glib2-devel \
     glibc-langpack-en \
+    intltool \
     libcurl-devel \
     libffi-devel \
+    libnl3 \
+    libnl3-devel \
     libtool-ltdl-devel \
     make \
     nodejs \
