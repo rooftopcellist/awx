@@ -69,8 +69,12 @@ class Licenser(object):
             license_date=0,
             license_type='UNLICENSED',
         )
+        
+        license_setting = Setting.objects.filter(key='LICENSE').first()
+        if isinstance(license_setting, None):
+            license_setting.update_or_create(key='LICENSE', value={})
         if not kwargs:
-            kwargs = Setting.objects.filter(key='LICENSE').first().value
+            kwargs = license_setting.value
         if 'company_name' in kwargs:
             kwargs.pop('company_name')
         self._attrs.update(kwargs)
