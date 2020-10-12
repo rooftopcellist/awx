@@ -45,6 +45,7 @@ ANSIBLE_VENV_PATH = os.path.join(BASE_VENV_PATH, "ansible")
 AWX_VENV_PATH = os.path.join(BASE_VENV_PATH, "awx")
 
 AWX_ISOLATED_USERNAME = 'awx'
+LICENSE = {}
 
 LOGGING['handlers']['tower_warnings']['filename'] = '/var/log/tower/tower.log'  # noqa
 LOGGING['handlers']['callback_receiver']['filename'] = '/var/log/tower/callback_receiver.log'  # noqa
