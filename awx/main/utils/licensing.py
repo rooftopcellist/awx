@@ -70,7 +70,9 @@ class Licenser(object):
             license_type='UNLICENSED',
         )
         if not kwargs:
-            kwargs = Setting.objects.filter(key='LICENSE').first().value
+            # Needed for creating a default LICENSE setting before the conf/__init__.py has been run
+            license_setting, created = Setting.objects.get_or_create(key='LICENSE', defaults={'value': {}})
+            kwargs = license_setting.value
         if 'company_name' in kwargs:
             kwargs.pop('company_name')
         self._attrs.update(kwargs)
