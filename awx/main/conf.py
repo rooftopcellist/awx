@@ -361,6 +361,7 @@ register(
     field_class=fields.CharField,
     default='',
     required=False,
+    allow_blank=True,
     validators=[validate_entitlement_cert],  # TODO: may need to use/modify `validate_certificate` validator
     label=_('RHSM Entitlement Public Certificate and Private Key'),
     help_text=_('Obtain a key pair via subscription-manager, or https://access.redhat.com. Refer to Ansible Tower docs for formatting key pair.'),
