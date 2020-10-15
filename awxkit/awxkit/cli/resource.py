@@ -1,17 +1,22 @@
-import yaml
 import json
+import getpass
 import os
+import yaml
 
 from awxkit import api, config, yaml_file
 from awxkit.exceptions import ImportExportError
 from awxkit.utils import to_str
 from awxkit.api.pages import Page
 from awxkit.api.pages.api import EXPORTABLE_RESOURCES
+try:
+    from awxkit.cli import licensing, rhsm
+except ImportError:
+    rhsm = None
 from awxkit.cli.format import FORMATTERS, format_response, add_authentication_arguments
 from awxkit.cli.utils import CustomRegistryMeta, cprint
 
 
-CONTROL_RESOURCES = ['ping', 'config', 'me', 'metrics']
+CONTROL_RESOURCES = ['ping', 'config', 'me', 'register', 'metrics']
 
 DEPRECATED_RESOURCES = {
     'ad_hoc_commands': 'ad_hoc',
@@ -109,6 +114,59 @@ class Login(CustomCommand):
                 print('export TOWER_OAUTH_TOKEN={}'.format(token))
             else:
                 print(to_str(FORMATTERS[fmt]({'token': token}, '.')).strip())
+
+
+class Register(CustomCommand):
+    name = 'register'
+    help_text = 'Register Ansible Tower'
+
+    def handle(self, client, parser):
+
+        if not rhsm:
+            raise RuntimeError('This command is only intended for usage on Red Hat Enterprise Linux systems.')
+
+        auth = parser.add_argument_group('Red Hat Subscription Manager Options')
+        auth.add_argument(
+            '--username', metavar='', help='(required) Red Hat Subscription Manager username',
+            type=str, required=True
+        )
+        auth.add_argument(
+            '--password', metavar='', type=str,
+            help='(optional) Red Hat Subscription Manager password'
+        )
+        auth.add_argument(
+            '--quantity', metavar='', type=int,
+            help='(optional) quantity of managed nodes to consume (defaults to the entire selected subscription)'  # noqa
+        )
+        auth.add_argument('--verify', metavar='', type=bool)
+        auth.add_argument(
+            '-o', type=str, metavar='', help='(optional) file name to save the certificate'
+        )
+        if client.help:
+            parser.print_help()
+            raise SystemExit()
+        parsed = parser.parse_known_args()[0]
+        password = parsed.password
+        if password is None:
+            password = getpass.getpass()
+
+        licenser = licensing.Licenser()
+        subs = licenser.validate_rh(parsed.username, password)
+        for i, sub in enumerate(subs):
+            print(str(i + 1) + '. ' + sub['subscription_name'])
+
+        index = int(input(f'Select a License (1-{len(subs)}): '))
+        picked = subs[index - 1]
+        cert = rhsm.register_consumer(
+            parsed.username, password, picked['pool_id'],
+            quantity=parsed.quantity, verify=parsed.verify
+        )
+
+        if parsed.o:
+            with open(parsed.o, 'w') as f:
+                f.write(cert)
+        else:
+            print(cert)
 
 
 class Config(CustomCommand):

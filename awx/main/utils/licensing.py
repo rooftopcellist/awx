@@ -18,12 +18,19 @@ import logging
 import re
 import requests
 import time
+import types
 
 # Django
-from django.conf import settings
+try:
+    from django.conf import settings
+except ImportError:
+    settings = types.SimpleNamespace()
 
 # AWX
-from awx.main.models import Host
+try:
+    from awx.main.models import Host
+except ImportError:
+    Host = None
 
 # RHSM
 from rhsm import certificate
