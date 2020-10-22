@@ -93,10 +93,6 @@ export default
                         $scope.subscriptionCreds.password = data.SUBSCRIPTIONS_PASSWORD;
                         $scope.showPlaceholderPassword = true;
                     }
-
-                    if (data.ENTITLEMENT_CONSUMER && data.ENTITLEMENT_CONSUMER.org && data.ENTITLEMENT_CONSUMER.org !== "") {
-                        $scope.subscriptionCreds.organization_id = data.ENTITLEMENT_CONSUMER.org;
-                    }
                 }).catch(() => {
                     initVars(config);
                 });

@@ -119,7 +119,7 @@
 						<div class="d-block w-100">
 							<div class="AddPermissions-directions">
 								<span class="License-helperText">
-									<translate>Provide your Red Hat or Satellite credentials below and you can choose from a list of your available subscriptions.  If you are a Satellite user please specify the organization ID you wish to associate this Tower Installation to.  The credentials you use will be stored for future use in retrieving renewal or expanded subscriptions.</translate>
+									<translate>Provide your Red Hat or Satellite credentials below and you can choose from a list of your available subscriptions.  The credentials you use will be stored for future use in retrieving renewal or expanded subscriptions.</translate>
 								</span>
 							</div>
 							<div class="License-rhCredField">
@@ -139,10 +139,6 @@
 								<div class="input-group" ng-if="!showPlaceholderPassword">
 									<input id="rh-password" class="form-control Form-textInput" type="password" ng-model="subscriptionCreds.password" ng-disabled="!user_is_superuser || newLicense.file" />
 								</div>
-							</div>
-							<div class="License-rhCredField">
-								<label class="License-label d-block" translate>(OPTIONAL) ORGANIZATION LABEL</label>
-								<input class="form-control Form-textInput" type="text" ng-model="subscriptionCreds.organization_id" ng-disabled="!user_is_superuser || newLicense.file" />
 							</div>
 							<div class="License-getLicensesButton">
 								<span ng-click="lookupLicenses()" class="btn btn-primary" ng-disabled="!subscriptionCreds.username || !subscriptionCreds.password" translate>GET LICENSES</button>
