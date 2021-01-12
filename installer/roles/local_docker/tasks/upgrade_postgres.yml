@@ -43,8 +43,14 @@
     dest: "{{ postgres_data_dir + '/12/data/' }}"
   when: upgrade_postgres | bool
 
+- name: Register full path to postgres data dir
+  shell: "echo {{ postgres_data_dir }}"
+  register: fq_postgres_data_dir
+
+- name: Register temporary docker container
+  set_fact: 
+    container_command: "docker run -v '{{ fq_postgres_data_dir.stdout }}:/var/lib/postgresql' centos:8 bash "
+
 - name: Remove old data directory
-  file:
-    path: "{{ postgres_data_dir + '/10/data' }}"
-    state: absent
+  shell: "{{ container_command }} rm -rf /var/lib/postgresql/10/data"
   when: compose_start_containers|bool
