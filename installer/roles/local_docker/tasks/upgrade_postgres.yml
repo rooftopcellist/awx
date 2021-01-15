@@ -1,19 +1,26 @@
 ---
 
 - name: Register temporary docker container
-  set_fact:
-    container_command: "docker run -v '{{ postgres_data_dir | realpath }}:/var/lib/postgresql' centos:8 bash "
+  shell:
+    cmd: "docker run -v '{{ postgres_data_dir | realpath }}:/var/lib/postgresql' --name awx_tmp centos:8"
+
+- name: Add Docker container as host
+  add_host:
+    name: awx_tmp
+    ansible_connection: docker
+  changed_when: false
 
 - name: Check for existing Postgres data (run from inside the container for access to file)
-  shell:
-    cmd: "{{ container_command }} [[ -f /var/lib/postgresql/10/data/PG_VERSION ]] && echo 'exists'"
+  delegate_to: awx_tmp
+  stat:
+    path: /var/lib/postgresql/10/data/PG_VERSION
   register: pg_version_file
-  ignore_errors: true
 
 - name: Record Postgres version
-  shell: "{{ container_command }} cat var/lib/postgresql/10/data/PG_VERSION"
-  register: old_pg_version
-  when: pg_version_file.stdout == 'exists'
+  delegate_to: awx_tmp
+  set_fact:
+    old_pg_version: "{{ lookup('file', '/var/lib/postgresql/10/data/PG_VERSION') }}"
+  when: pg_version_file.stat.exists
 
 - name: Determine whether to upgrade postgres
   set_fact:
@@ -35,9 +42,23 @@
   when: upgrade_postgres | bool
 
 - name: Copy old pg_hba.conf
-  shell: "{{ container_command }} cp /var/lib/postgresql/10/data/pg_hba.conf /var/lib/postgresql/12/data/pg_hba.conf"
+  delegate_to: awx_tmp
+  copy:
+    src: /var/lib/postgresql/10/data/pg_hba.conf
+    dest: /var/lib/postgresql/12/data/pg_hba.conf
   when: upgrade_postgres | bool
 
 - name: Remove old data directory
-  shell: "{{ container_command }} rm -rf /var/lib/postgresql/10/data"
+  delegate_to: awx_tmp
+  file:
+    state: absent
+    path: /var/lib/postgresql/10/data
   when: compose_start_containers|bool
+
+- name: Clean up temporary container
+  docker:
+    name: awx_tmp
+    state: absent
+    force_kill: yes
+    
+  
