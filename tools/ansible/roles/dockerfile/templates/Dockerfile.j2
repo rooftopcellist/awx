@@ -236,6 +236,7 @@ RUN for dir in \
       /var/lib/awx/rsyslog/rsyslog.conf \
       /etc/subuid \
       /etc/subgid \
+      /etc/group \
       /etc/passwd ; \
 
     do touch $file ; chmod g+rw $file ; chgrp root $file ; done
