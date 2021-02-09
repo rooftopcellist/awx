@@ -564,11 +564,14 @@ awx/projects:
 # Community docker-compose installation
 # -----------------------------------------------------
 
+migrate-local-docker-to-community-compose:
+	ansible-playbook tools/ansible/migrate.yml -e @tools/docker-community/vars.yml
+
 stop-local-docker:
 	docker rm -f awx_task awx_web awx_postgres awx_redis
 
 template-awx:
-	ansible-playbook tools/ansible/sources.yml -e @tools/docker-community/vars.yml 
+	ansible-playbook tools/ansible/sources.yml -e @tools/docker-community/vars.yml
 
 run-awx: awx/projects template-awx stop-local-docker
 	# Run containers

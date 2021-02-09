@@ -1,0 +1,17 @@
+---
+
+- name: Stop Local Docker
+  - name: Remove AWX containers before migrating postgres so that the old postgres container does not get used
+    docker_compose:
+      project_src: "{{ old_docker_compose_dir }}"
+      state: stopped
+    ignore_errors: true
+
+- name: Create Data Volume
+  docker_volume:
+    name: awx_pg_data
+    state: present
+
+- name: Copy data into new volume
+  shell: |
+    docker cp {{ postgres_data_dir }}/12/data awx_pg_data:/data
