@@ -568,10 +568,12 @@ stop-local-docker:
 	docker rm -f awx_task awx_web awx_postgres awx_redis
 
 template-awx: # tools/ansible, slim this down to a playbook
-	ansible localhost -m template -a "src=tools/templates/nginx.conf.j2 dest=tools/docker-community/files/nginx.conf" -e @tools/docker-community/vars.yml
-	ansible localhost -m template -a "src=tools/templates/credentials.py.j2 dest=tools/docker-community/files/credentials.py" -e @tools/docker-community/vars.yml
-	ansible localhost -m template -a "src=tools/templates/environment.sh.j2 dest=tools/docker-community/files/environment.sh" -e @tools/docker-community/vars.yml
-	ansible localhost -m copy -a "content={{ secret_key }} dest=tools/docker-community/files/SECRET_KEY mode=0600" -e @tools/docker-community/vars.yml
+	ansi/ble-playbook tools/ansible/sources.yml -e @tools/docker-community/vars.yml 
+	# ?  Perhaps stick these in the dockerfile role and maybe rename that role?  (prepare_sources.yml)
+	# ansible localhost -m template -a "src=tools/templates/nginx.conf.j2 dest=tools/docker-community/files/nginx.conf" -e @tools/docker-community/vars.yml
+	# ansible localhost -m template -a "src=tools/templates/credentials.py.j2 dest=tools/docker-community/files/credentials.py" -e @tools/docker-community/vars.yml
+	# ansible localhost -m template -a "src=tools/templates/environment.sh.j2 dest=tools/docker-community/files/environment.sh" -e @tools/docker-community/vars.yml
+	# ansible localhost -m copy -a "content={{ secret_key }} dest=tools/docker-community/files/SECRET_KEY mode=0600" -e @tools/docker-community/vars.yml
 
 run-awx: awx/projects template-awx stop-local-docker
 	# Template docker-compose.yml
