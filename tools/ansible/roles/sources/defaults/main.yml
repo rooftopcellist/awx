@@ -1,6 +1,3 @@
 ---
-build_dev: false
-kube_dev: false
-sources_dest: '../docker-compose-community'
-template_dest: '_build'
-compose_name: 'docker-community-compose.yml'
+sources_dest: '../docker-community/files'
+compose_name: 'docker-compose-community.yml'

@@ -567,19 +567,12 @@ awx/projects:
 stop-local-docker:
 	docker rm -f awx_task awx_web awx_postgres awx_redis
 
-template-awx: # tools/ansible, slim this down to a playbook
-	ansi/ble-playbook tools/ansible/sources.yml -e @tools/docker-community/vars.yml 
-	# ?  Perhaps stick these in the dockerfile role and maybe rename that role?  (prepare_sources.yml)
-	# ansible localhost -m template -a "src=tools/templates/nginx.conf.j2 dest=tools/docker-community/files/nginx.conf" -e @tools/docker-community/vars.yml
-	# ansible localhost -m template -a "src=tools/templates/credentials.py.j2 dest=tools/docker-community/files/credentials.py" -e @tools/docker-community/vars.yml
-	# ansible localhost -m template -a "src=tools/templates/environment.sh.j2 dest=tools/docker-community/files/environment.sh" -e @tools/docker-community/vars.yml
-	# ansible localhost -m copy -a "content={{ secret_key }} dest=tools/docker-community/files/SECRET_KEY mode=0600" -e @tools/docker-community/vars.yml
+template-awx:
+	ansible-playbook tools/ansible/sources.yml -e @tools/docker-community/vars.yml 
 
 run-awx: awx/projects template-awx stop-local-docker
-	# Template docker-compose.yml
-	cd tools/docker-community && ansible localhost -m template -a "src=../templates/docker-compose.yml.j2 dest=docker-compose-community.yml" -e @vars.yml -e build_dev=False
 	# Run containers
-	cd tools/docker-community && tree && CURRENT_UID=$(shell id -u) OS="$(shell docker info | grep 'Operating System')" TAG=$(COMPOSE_TAG) DOCKER_TAG_BASE=$(DOCKER_TAG_BASE) docker-compose -f docker-compose-community.yml $(COMPOSE_UP_OPTS) up --no-recreate task
+	cd tools/docker-community && CURRENT_UID=$(shell id -u) OS="$(shell docker info | grep 'Operating System')" TAG=$(COMPOSE_TAG) DOCKER_TAG_BASE=$(DOCKER_TAG_BASE) docker-compose -f docker-compose-community.yml $(COMPOSE_UP_OPTS) up --no-recreate task
 
 build-awx:
 	ansible-playbook tools/ansible/dockerfile.yml -e dockerfile_dest=../docker-community
