@@ -567,7 +567,7 @@ awx/projects:
 stop-local-docker:
 	docker rm -f awx_task awx_web awx_postgres awx_redis
 
-template-awx:
+template-awx: # tools/ansible, slim this down to a playbook
 	ansible localhost -m template -a "src=tools/templates/nginx.conf.j2 dest=tools/docker-community/files/nginx.conf" -e @tools/docker-community/vars.yml
 	ansible localhost -m template -a "src=tools/templates/credentials.py.j2 dest=tools/docker-community/files/credentials.py" -e @tools/docker-community/vars.yml
 	ansible localhost -m template -a "src=tools/templates/environment.sh.j2 dest=tools/docker-community/files/environment.sh" -e @tools/docker-community/vars.yml
@@ -580,8 +580,8 @@ run-awx: awx/projects template-awx stop-local-docker
 	cd tools/docker-community && tree && CURRENT_UID=$(shell id -u) OS="$(shell docker info | grep 'Operating System')" TAG=$(COMPOSE_TAG) DOCKER_TAG_BASE=$(DOCKER_TAG_BASE) docker-compose -f docker-compose-community.yml $(COMPOSE_UP_OPTS) up --no-recreate task
 
 build-awx:
-	cd tools/docker-community && ansible localhost -m template -a "src=../templates/Dockerfile.j2 dest=Dockerfile" -e build_dev=False
-	docker build -t ansible/awx_devel -f Dockerfile \
+	ansible-playbook tools/ansible/dockerfile.yml -e dockerfile_dest=../docker-community
+	cd tools/docker-community && docker build -t ansible/awx_devel -f Dockerfile \
 		--cache-from=$(DOCKER_TAG_BASE)/awx_devel:$(COMPOSE_TAG) .
 	docker tag ansible/awx_devel $(DOCKER_TAG_BASE)/awx:$(COMPOSE_TAG)
 
@@ -594,7 +594,7 @@ COMPOSE_UP_OPTS ?=
 
 # Docker Compose Development environment
 docker-compose: docker-auth awx/projects
-	CURRENT_UID=$(shell id -u) OS="$(shell docker info | grep 'Operating System')" TAG=$(COMPOSE_TAG) DEV_DOCKER_TAG_BASE=$(DEV_DOCKER_TAG_BASE) docker-compose -f tools/docker-compose/docker-compose.yml $(COMPOSE_UP_OPTS) up --no-recreate awx
+	cd tools/docker-compose && CURRENT_UID=$(shell id -u) OS="$(shell docker info | grep 'Operating System')" TAG=$(COMPOSE_TAG) DEV_DOCKER_TAG_BASE=$(DEV_DOCKER_TAG_BASE) docker-compose -f docker-compose.yml $(COMPOSE_UP_OPTS) up --no-recreate awx
 
 docker-compose-cluster: docker-auth awx/projects
 	CURRENT_UID=$(shell id -u) TAG=$(COMPOSE_TAG) DEV_DOCKER_TAG_BASE=$(DEV_DOCKER_TAG_BASE) docker-compose -f tools/docker-compose-cluster.yml up
@@ -622,10 +622,11 @@ docker-compose-clean: awx/projects
 
 # Base development image build
 docker-compose-build:
-	ansible-playbook installer/dockerfile.yml -e build_dev=True
+	ansible-playbook tools/ansible/dockerfile.yml -e build_dev=True
 	docker build -t ansible/awx_devel \
+			--file tools/docker-compose/Dockerfile \
 	    --build-arg BUILDKIT_INLINE_CACHE=1 \
-	    --cache-from=$(DEV_DOCKER_TAG_BASE)/awx_devel:$(COMPOSE_TAG) .
+	    --cache-from=$(DEV_DOCKER_TAG_BASE)/awx_devel:$(COMPOSE_TAG) ./tools/docker-compose
 	docker tag ansible/awx_devel $(DEV_DOCKER_TAG_BASE)/awx_devel:$(COMPOSE_TAG)
 	#docker push $(DEV_DOCKER_TAG_BASE)/awx_devel:$(COMPOSE_TAG)
 
@@ -670,11 +671,12 @@ psql-container:
 VERSION:
 	@echo "awx: $(VERSION)"
 
-Dockerfile: installer/roles/dockerfile/templates/Dockerfile.j2
-	ansible-playbook installer/dockerfile.yml
+Dockerfile: tools/ansible/roles/dockerfile/templates/Dockerfile.j2
+	ansible-playbook tools/ansible/dockerfile.yml
 
-Dockerfile.kube-dev: installer/roles/dockerfile/templates/Dockerfile.j2
-	ansible-playbook installer/dockerfile.yml \
+# TODO: test kube-dev target after changing dockerfile.yml location - refer to https://github.com/ansible/awx/commit/7c8bd471980d26083d4c4e11067bb53730175496
+Dockerfile.kube-dev: tools/ansible/roles/dockerfile/templates/Dockerfile.j2
+	ansible-playbook tools/ansible/dockerfile.yml \
 	    -e dockerfile_name=Dockerfile.kube-dev \
 	    -e kube_dev=True \
 	    -e template_dest=_build_kube_dev

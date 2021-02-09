@@ -38,9 +38,11 @@ rsyslog.pid
 tools/prometheus/data
 tools/docker-compose/Dockerfile
 tools/docker-compose/docker-compose.yml
+tools/docker-compose/_build
 tools/docker-community/docker-compose-community.yml
 tools/docker-community/Dockerfile
 tools/docker-community/files
+tools/docker-community/_build
 
 # Tower setup playbook testing
 setup/test/roles/postgresql
