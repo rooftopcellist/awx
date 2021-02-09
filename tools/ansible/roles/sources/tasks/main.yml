@@ -1,0 +1,26 @@
+---
+
+- name: Create .build directory
+  file:
+    path: "{{ dockerfile_dest }}/{{ template_dest }}"
+    state: directory
+
+- name: Render supervisor configs
+  template:
+    src: "{{ item }}.j2"
+    dest: "{{ sources_dest }}/{{ template_dest }}/{{ item }}"
+  with_items:
+    - "nginx.conf"
+    - "credentials.py"
+    - "environment.sh"
+
+- name: Copy Secret Key
+  copy:
+    content: "{{ secret_key }}"
+    dest: tools/docker-community/files/SECRET_KEY
+    mode: 0600
+
+- name: Render Docker-Compose
+  template:
+    src: docker-compose.yml.j2
+    dest: "{{ source_dest }}/{{ compose_name }}"
