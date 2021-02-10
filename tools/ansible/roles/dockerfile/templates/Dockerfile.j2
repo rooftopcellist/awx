@@ -75,7 +75,6 @@ COPY . /tmp/src/
 WORKDIR /tmp/src/
 RUN make sdist && \
     /var/lib/awx/venv/awx/bin/pip install dist/awx-$(cat VERSION).tar.gz
-RUN ln -s /var/lib/awx/venv/awx/bin/awx-manage /usr/bin/awx-manage
 {% endif %}
 
 # Final container(s)
@@ -173,6 +172,8 @@ RUN dnf --enablerepo=debuginfo -y install python3-debuginfo || :
 # Copy app from builder
 COPY --from=builder /var/lib/awx /var/lib/awx
 
+RUN ln -s /var/lib/awx/venv/awx/bin/awx-manage /usr/bin/awx-manage
+
 {%if build_dev|bool %}
 RUN openssl req -nodes -newkey rsa:2048 -keyout /etc/nginx/nginx.key -out /etc/nginx/nginx.csr \
         -subj "/C=US/ST=North Carolina/L=Durham/O=Ansible/OU=AWX Development/CN=awx.localhost" && \
@@ -181,7 +182,7 @@ RUN openssl req -nodes -newkey rsa:2048 -keyout /etc/nginx/nginx.key -out /etc/n
 {% endif %}
 
 # Create default awx rsyslog config
-ADD installer/roles/dockerfile/files/rsyslog.conf /var/lib/awx/rsyslog/rsyslog.conf
+ADD tools/ansible/roles/dockerfile/files/rsyslog.conf /var/lib/awx/rsyslog/rsyslog.conf
 
 ## File mappings
 {% if build_dev|bool %}
@@ -218,7 +219,8 @@ RUN for dir in \
       /var/lib/nginx ; \
     do mkdir -m 0775 -p $dir ; chmod g+rw $dir ; chgrp root $dir ; done && \
     for file in \
-      /etc/passwd ; \
+      /etc/passwd \
+      /var/lib/awx/rsyslog/rsyslog.conf ; \
     do touch $file ; chmod g+rw $file ; chgrp root $file ; done
 
 # Adjust any remaining permissions

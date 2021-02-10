@@ -101,7 +101,7 @@ services:
       {% endif %}
     command: /usr/bin/launch_awx_task.sh
     hostname: {{ awx_task_hostname }}
-    user: root
+    user: {{ user_id }}
     restart: unless-stopped
     volumes:
       - supervisor-socket:/var/run/supervisor

@@ -20,6 +20,14 @@
     dest: "{{ sources_dest }}/SECRET_KEY"
     mode: 0600
 
+- name: Get user UID
+  shell: id -u
+  register: current_user
+
+- name: Set fact with user UID
+  set_fact:
+    user_id: "'{{ current_user.stdout }}'"
+
 - name: Render Docker-Compose
   template:
     src: docker-compose.yml.j2

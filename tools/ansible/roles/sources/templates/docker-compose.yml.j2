@@ -20,7 +20,7 @@ services:
       {% endif %}
     {% endif %}
     hostname: {{ awx_web_hostname }}
-    user: root
+    user: {{ user_id }}
     restart: unless-stopped
     {% if (awx_web_container_labels is defined) and (',' in awx_web_container_labels) %}
     {% set awx_web_container_labels_list = awx_web_container_labels.split(',') %}
@@ -101,7 +101,7 @@ services:
       {% endif %}
     command: /usr/bin/launch_awx_task.sh
     hostname: {{ awx_task_hostname }}
-    user: root
+    user: {{ user_id }}
     restart: unless-stopped
     volumes:
       - supervisor-socket:/var/run/supervisor
@@ -163,6 +163,7 @@ services:
       https_proxy: {{ https_proxy | default('') }}
       no_proxy: {{ no_proxy | default('') }}
     command: ["/usr/local/etc/redis/redis.conf"]
+    user: {{ user_id }}
     volumes:
       - "{{ docker_compose_dir }}/../../redis/redis.conf:/usr/local/etc/redis/redis.conf:ro"
       - "{{ docker_compose_dir }}/redis_socket:/var/run/redis/:rw"

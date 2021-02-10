@@ -576,7 +576,7 @@ run-awx: awx/projects template-awx stop-local-docker
 
 build-awx:
 	ansible-playbook tools/ansible/dockerfile.yml -e dockerfile_dest=../docker-community
-	cd tools/docker-community && docker build -t ansible/awx_devel -f Dockerfile \
+	docker build -t ansible/awx_devel -f tools/docker-community/Dockerfile \
 		--cache-from=$(DOCKER_TAG_BASE)/awx_devel:$(COMPOSE_TAG) .
 	docker tag ansible/awx_devel $(DOCKER_TAG_BASE)/awx:$(COMPOSE_TAG)
 
