@@ -15,7 +15,7 @@ postgresql_image="postgres:{{postgresql_version}}"
 compose_start_containers=true
 upgrade_postgres=false
 
-awx_docker_actual_image="${DOCKER_TAG_BASE}{{ awx_image }}:{{ awx_version }}"
+awx_docker_actual_image="${DOCKER_TAG_BASE}/{{ awx_image }}:{{ awx_version }}"
 # You can specify a custom image, for example:
 # awx_docker_actual_image="awx:test-build"
 
@@ -51,6 +51,9 @@ pg_database=awx
 pg_port=5432
 #pg_sslmode=require
 
+# Set pg_volume_name if you wish to use a pre-created or pre-existing docker volume
+pg_volume_name="postgres_data"
+
 # If requiring SSL communication (e.g. pg_sslmode='verify-full') with Postgres
 # and using a self-signed certificate or a certificate signed by a custom CA
 # set pg_root_ca_file to a file containing the self-signed certificate or the
@@ -62,8 +65,6 @@ pg_port=5432
 # then these default values are used
 admin_user=admin
 # admin_password=password
-# TODO: Remove temp password
-admin_password=password
 
 # Whether or not to create preload data for demonstration purposes
 create_preload_data=True

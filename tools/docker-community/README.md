@@ -31,7 +31,7 @@ old_docker_compose_dir: "~/.awx/awxcompose"
 ```
 
 ```
-ansible-playbook -i inventory migrate.yml -e "migrate_local_docker=true"
+ansible-playbook -i inventory migrate.yml -e "migrate_local_docker=true" --ask-become
 ```
 
 

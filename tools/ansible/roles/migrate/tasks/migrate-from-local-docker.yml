@@ -6,14 +6,10 @@
     state: absent
   ignore_errors: true
 
-- name: Create Data Volume
-  docker_volume:
-    name: awx_pg_data
-    state: present
-
-- debug:
-    msg: "{{ postgres_data_dir }}"
-
+# - name: Create Data Volume
+#   docker_volume:
+#     name: awx_pg_data
+#     state: present
 
 - name: Migrate data from bind mount to new volume
   block:
@@ -24,21 +20,36 @@
   # - name: Register temporary docker container
   #   set_fact:
   #     container_command: "docker run --rm -v '{{ fq_postgres_data_dir.stdout }}:/var/lib/postgresql' centos:8 bash -c "
-  
+
+  - debug:
+      msg: "{{pg_volume_name}}"
+
   - name: Create temporary container
-    docker_container:
-      name: awx_tmps
-      image: centos
-      state: started
-      recreate: true
-      command: sh
-      volumes:
-        awx_pg_data:/data
+    shell: |
+      docker run -d --name awx_tmp -v {{ pg_volume_name }}:/data busybox
+
+  # - name: Set permissions on data dir
+  #   shell: |
+  #     docker run -d --name awx_tmp -v docker-community_{{ pg_volume_name }}:/data busybox sh -c "chown -R postgres:postgres /data"
+
+  
+  # - name: Create temporary container
+  #   docker_container:
+  #     name: awx_tmps
+  #     image: centos
+  #     state: started
+  #     recreate: true
+  #     command: sh
+  #     volumes:
+  #       docker-community_awx_pg_data:/data
+
+  - debug:
+      msg: "{{ fq_postgres_data_dir }}"
 
   - name: Copy data into new volume
     become: true
     shell: |
-      docker cp {{ fq_postgres_data_dir }}/12/data awx_tmp:/data
+      docker cp {{ fq_postgres_data_dir.stdout }}/12/data awx_tmp:/data
 
   - name: Clean up temporary container
     community.general.docker_container:
