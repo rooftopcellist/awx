@@ -38,10 +38,11 @@ ansible-playbook -i inventory migrate.yml -e "migrate_local_docker=true" -e "pos
 
 > Note: This requires you to provide your become passwords to be able to access the postgresql data directory.  
 
-3. Change directory to the top of your awx checkout and start your containers
+3. Change directory to `tools/ansible` and start your containers
 
 ```
-make run-awx
+cd tools/ansible
+ansible-playbook -i inventory install.yml -vv
 ```
 
 4. After ensuring your data has been successfully migrated, you may delete your old data directory (typically stored at `~/.awx/pgdocker`). 
@@ -107,5 +108,6 @@ awx_docker_actual_image=ansible/awx:devel
 
 Then run the containers
 ```
-make run-awx
+cd tools/ansible
+ansible-playbook -i inventory install.yml -vv
 ```

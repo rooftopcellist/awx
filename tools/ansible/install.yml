@@ -1,0 +1,14 @@
+---
+- name: Install Community Docker Compose
+  hosts: localhost
+  gather_facts: true
+  roles:
+    - {role: sources}
+    - {role: migrate}
+
+  tasks:
+    - name: Start Local Docker database container
+      docker_compose:
+        project_src: "../docker-community"
+        files: "docker-compose-community.yml"
+        state: present

@@ -536,11 +536,11 @@ If you wish to use an external database, in the inventory file, set the value of
 
 ### Run the installer
 
-After updating the inventory file with any custom values, run the make target from the root of your AWX clone.  
+After updating the inventory file with any custom values, run the install playbook from the `tools/ansible` directory of your AWX clone.  
 
-```bash
-# Run the AWX Community docker-compose make target
-$ make run-awx
+```
+cd tools/ansible
+ansible-playbook -i inventory install.yml -vv
 ```
 
 > Note: If you want to use a custom image, see the docker-community [README.md](./tools/docker-community/README.md#building-your-own-image) for more information.  
@@ -620,12 +620,12 @@ You will prompted with a login dialog. The default administrator username is `ad
 
 Upgrading AWX involves checking out the new source code and re-running the make target. Download a newer release from [https://github.com/ansible/awx/releases](https://github.com/ansible/awx/releases) and re-populate the inventory file with your customized variables.
 
-After updating the inventory file with any custom values, run the make target from the root of your AWX clone.  
+After updating the inventory file with any custom values, run the install playbook from the `tools/ansible` directory of your AWX clone.  
 
 
-```bash
-# Run the AWX Community docker-compose make target
-$ make run-awx
+```
+cd tools/ansible
+ansible-playbook -i inventory install.yml -vv
 ```
 
 
