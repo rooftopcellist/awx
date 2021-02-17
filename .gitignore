@@ -161,3 +161,4 @@ use_dev_supervisor.txt
 /Dockerfile.kube-dev
 /_build_community/
 /Dockerfile.community
+/tools/docker-compose/_sources/

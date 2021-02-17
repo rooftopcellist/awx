@@ -4,7 +4,7 @@ services:
   # Primary AWX Development Container
   awx:
     user: "{{ ansible_user_uid }}"
-    image: {{ awx_image }}
+    image: "{{ awx_image }}:{{ awx_image_tag }}"
     container_name: tools_awx_1
     hostname: awx
     command: launch_awx.sh
@@ -25,10 +25,11 @@ services:
       - redis
     working_dir: "/awx_devel"
     volumes:
-      - "../../:/awx_devel"
-      - "../awx/projects/:/var/lib/awx/projects/"
-      - "../redis/redis_socket_standalone:/var/run/redis/"
-      - "../docker-compose/supervisor.conf:/etc/supervisord.conf"
+      - "../../../:/awx_devel"
+      - "../../docker-compose/supervisor.conf:/etc/supervisord.conf"
+      - "../../docker-compose/_sources/database.py:/etc/tower/conf.d/database.py"
+      - "../../docker-compose/_sources/websocket_secret.py:/etc/tower/conf.d/websocket_secret.py"
+      - "redis_socket:/var/run/redis/:rw"
     privileged: true
     tty: true
   # A useful container that simply passes through log messages to the console
@@ -44,16 +45,20 @@ services:
     container_name: tools_postgres_1
     environment:
       POSTGRES_HOST_AUTH_METHOD: trust
+      POSTGRES_USER: {{ pg_username }}
+      POSTGRES_DB: {{ pg_database }}
+      POSTGRES_PASSWORD: {{ pg_password }}
     volumes:
       - "awx_db:/var/lib/postgresql/data"
   redis:
     image: redis:latest
     container_name: tools_redis_1
-    user: "{{ ansible_user_uid }}"
     volumes:
-      - "../redis/redis.conf:/usr/local/etc/redis/redis.conf"
-      - "../redis/redis_socket_standalone:/var/run/redis/"
+      - "../../redis/redis.conf:/usr/local/etc/redis/redis.conf"
+      - "redis_socket:/var/run/redis/:rw"
+    entrypoint: ["redis-server"]
     command: ["/usr/local/etc/redis/redis.conf"]
 
 volumes:
   awx_db:
+  redis_socket:

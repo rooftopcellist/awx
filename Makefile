@@ -24,8 +24,8 @@ COLLECTION_BASE ?= /var/lib/awx/vendor/awx_ansible_collections
 SCL_PREFIX ?=
 CELERY_SCHEDULE_FILE ?= /var/lib/awx/beat.db
 
-# TODO change this to quay.io when set up
 DEV_DOCKER_TAG_BASE ?= gcr.io/ansible-tower-engineering
+DEVEL_IMAGE_NAME ?= $(DEV_DOCKER_TAG_BASE)/awx_devel:$(COMPOSE_TAG)
 
 # Python packages to install only from source (not from binary wheels)
 # Comma separated list
@@ -561,16 +561,6 @@ docker-auth:
 awx/projects:
 	@mkdir -p $@
 
-# Community docker-compose installation
-# -----------------------------------------------------
-
-# Note: if coming from Local Docker, consider migrating your data first using `tools/ansible/migrate.yml`
-run-awx: awx/projects
-	# Template sources
-	ansible-playbook -i tools/ansible/inventory tools/ansible/sources.yml -e "dev_env=true"
-	# Run containers
-	cd tools/docker-compose && TAG=$(COMPOSE_TAG) docker-compose -f docker-compose.yml $(COMPOSE_UP_OPTS) up task
-
 # Docker isolated rampart
 docker-compose-isolated: awx/projects
 	CURRENT_UID=$(shell id -u) TAG=$(COMPOSE_TAG) DEV_DOCKER_TAG_BASE=$(DEV_DOCKER_TAG_BASE) docker-compose -f tools/docker-compose.yml -f tools/docker-isolated-override.yml up
@@ -580,9 +570,17 @@ COMPOSE_UP_OPTS ?=
 # Docker Compose Development environment
 docker-compose: docker-auth awx/projects
 	# Template sources & docker-compose.yml
-	ansible-playbook -i tools/ansible/inventory tools/ansible/sources.yml \
-	    -e awx_image=$(DEV_DOCKER_TAG_BASE)/awx_devel:$(COMPOSE_TAG)
-	docker-compose -f tools/docker-compose/_sources/docker-compose.yml $(COMPOSE_UP_OPTS) up awx
+	ansible-playbook -i tools/docker-compose/inventory tools/ansible/sources.yml \
+	    -e awx_image=$(DEV_DOCKER_TAG_BASE)/awx_devel \
+	    -e awx_image_tag=$(COMPOSE_TAG)
+	docker-compose -f tools/docker-compose/_sources/docker-compose.yml $(COMPOSE_UP_OPTS) up --no-recreate awx
+
+# Community docker-compose installation
+# -----------------------------------------------------
+# Note: if coming from Local Docker, consider migrating your data first using `tools/ansible/migrate.yml`
+docker-compose-community: awx/projects
+	ansible-playbook -i tools/docker-compose/inventory tools/ansible/sources.yml
+	docker-compose -f tools/docker-compose/_sources/docker-compose.yml $(COMPOSE_UP_OPTS) up --no-recreate awx
 
 docker-compose-cluster: docker-auth awx/projects
 	CURRENT_UID=$(shell id -u) TAG=$(COMPOSE_TAG) DEV_DOCKER_TAG_BASE=$(DEV_DOCKER_TAG_BASE) docker-compose -f tools/docker-compose-cluster.yml up
@@ -611,11 +609,9 @@ docker-compose-clean: awx/projects
 # Base development image build
 docker-compose-build:
 	ansible-playbook tools/ansible/dockerfile.yml -e build_dev=True
-	docker build -t ansible/awx_devel \
+	docker build -t $(DEVEL_IMAGE_NAME) \
 	    --build-arg BUILDKIT_INLINE_CACHE=1 \
 	    --cache-from=$(DEV_DOCKER_TAG_BASE)/awx_devel:$(COMPOSE_TAG) .
-	docker tag ansible/awx_devel $(DEV_DOCKER_TAG_BASE)/awx_devel:$(COMPOSE_TAG)
-	#docker push $(DEV_DOCKER_TAG_BASE)/awx_devel:$(COMPOSE_TAG)
 
 # For use when developing on "isolated" AWX deployments
 docker-compose-isolated-build: docker-compose-build
