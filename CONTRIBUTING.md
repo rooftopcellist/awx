@@ -96,7 +96,7 @@ If you have not done so already, you'll need to fork the AWX repo on GitHub. For
 
 #### Create local settings
 
-AWX will import the file `awx/settings/local_settings.py` and combine it with defaults in `awx/settings/defaults.py`. This file is required for starting the development environment and startup will fail if it's not provided.
+AWX will import the file `awx/settings/local_settings.py` and combine it with defaults in `awx/settings/defaults.py`. This file is required for starting the development environment, and is needed for running tests.  
 
 An example is provided. Make a copy of it, and edit as needed (the defaults are usually fine):
 
@@ -106,7 +106,7 @@ An example is provided. Make a copy of it, and edit as needed (the defaults are 
 
 #### Build the base image
 
-The AWX base container image (defined in `tools/docker-compose/Dockerfile`) contains basic OS dependencies and symbolic links into the development environment that make running the services easy.
+The AWX base container image (defined in the Dockerfile templated from `tools/ansible/roles/dockerfile/templates/Dockerfile.j2`) contains basic OS dependencies and symbolic links into the development environment that make running the services easy.
 
 Run the following to build the image:
 
@@ -132,7 +132,7 @@ ansible/awx_devel                            latest              ba9ec3e8df74   
 Run the following to build the AWX UI:
 
 ```bash
-(host) $ make ui-devel
+(host) $ make clean-ui ui-devel
 ```
 See [the ui development documentation](awx/ui/README.md) for more information on using the frontend development, build, and test tooling.
 

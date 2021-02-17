@@ -29,7 +29,7 @@ This document provides a guide for installing AWX.
     + [Post-install](#post-install-1)
     + [Accessing AWX](#accessing-awx-1)
     + [SSL Termination](#ssl-termination)
-  * [Community Docker Compose](#community-docker-compose)
+  * [Docker Compose](#docker-compose)
     + [Prerequisites](#prerequisites-3)
     + [Pre-install steps](#pre-install-steps-2)
       - [Deploying to a remote host](#deploying-to-a-remote-host)
@@ -100,14 +100,14 @@ The system that runs the AWX service will need to satisfy the following requirem
 
 ### Choose a deployment platform
 
-We currently support running AWX as a containerized application using Docker images deployed to either an OpenShift cluster, a Kubernetes cluster, or Community Docker Compose. The remainder of this document will walk you through the process of building the images, and deploying them to either platform.
+We currently support running AWX as a containerized application using Docker images deployed to either an OpenShift cluster, a Kubernetes cluster, or Docker Compose. The remainder of this document will walk you through the process of building the images, and deploying them to either platform.
 
 The [installer](./installer) directory contains an [inventory](./installer/inventory) file, and a playbook, [install.yml](./installer/install.yml). You'll begin by setting variables in the inventory file according to the platform you wish to use, and then you'll start the image build and deployment process by running the playbook.
 
 In the sections below, you'll find deployment details and instructions for each platform:
 - [OpenShift](#openshift)
 - [Kubernetes](#kubernetes)
-- [Community Docker Compose](#community-docker-compose).
+- [Docker Compose](#docker-compose).
 
 ### Official vs Building Images
 
