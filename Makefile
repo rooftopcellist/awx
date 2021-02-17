@@ -570,16 +570,16 @@ COMPOSE_UP_OPTS ?=
 # Docker Compose Development environment
 docker-compose: docker-auth awx/projects
 	# Template sources & docker-compose.yml
-	ansible-playbook -i tools/docker-compose/inventory tools/ansible/sources.yml \
+	ansible-playbook -i tools/docker-compose/inventory tools/docker-compose/ansible/sources.yml \
 	    -e awx_image=$(DEV_DOCKER_TAG_BASE)/awx_devel \
 	    -e awx_image_tag=$(COMPOSE_TAG)
 	docker-compose -f tools/docker-compose/_sources/docker-compose.yml $(COMPOSE_UP_OPTS) up --no-recreate awx
 
 # Community docker-compose installation
 # -----------------------------------------------------
-# Note: if coming from Local Docker, consider migrating your data first using `tools/ansible/migrate.yml`
+# Note: if coming from Local Docker, consider migrating your data first using `tools/docker-compose/ansible/migrate.yml`
 docker-compose-community: awx/projects
-	ansible-playbook -i tools/docker-compose/inventory tools/ansible/sources.yml
+	ansible-playbook -i tools/docker-compose/inventory tools/docker-compose/ansible/sources.yml
 	docker-compose -f tools/docker-compose/_sources/docker-compose.yml $(COMPOSE_UP_OPTS) up --no-recreate awx
 
 docker-compose-cluster: docker-auth awx/projects
