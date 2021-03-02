@@ -18,7 +18,7 @@ services:
     user: ${CURRENT_UID}
     container_name: tools_awx_1_1
     privileged: true
-    image: ${DEV_DOCKER_TAG_BASE}/awx_devel:${TAG}
+    image: gcr.io/ansible-tower-engineering/awx_devel:devel
     hostname: awx-1
     environment:
       CURRENT_UID:
@@ -29,15 +29,16 @@ services:
     working_dir: "/awx_devel"
     volumes:
       - "../:/awx_devel"
-      - "./redis/redis_socket_ha_1:/var/run/redis/"
+      - "redis_socket:/var/run/redis/:rw"
       - "./docker-compose/supervisor.conf:/etc/supervisord.conf"
+      - "./docker-compose/_sources/local_settings.py:/etc/tower/conf.d/local_settings.py"
     ports:
       - "5899-5999:5899-5999"
   awx-2:
     user: ${CURRENT_UID}
     container_name: tools_awx_2_1
     privileged: true
-    image: ${DEV_DOCKER_TAG_BASE}/awx_devel:${TAG}
+    image: gcr.io/ansible-tower-engineering/awx_devel:devel
     hostname: awx-2
     command: launch_awx.sh
     working_dir: "/awx_devel"
@@ -48,15 +49,16 @@ services:
       AWX_GROUP_QUEUES: bravo,tower
     volumes:
       - "../:/awx_devel"
-      - "./redis/redis_socket_ha_2:/var/run/redis/"
+      - "redis_socket:/var/run/redis/:rw"
       - "./docker-compose/supervisor.conf:/etc/supervisord.conf"
+      - "./docker-compose/_sources/local_settings.py:/etc/tower/conf.d/local_settings.py"
     ports:
       - "7899-7999:7899-7999"
   awx-3:
     user: ${CURRENT_UID}
     container_name: tools_awx_3_1
     privileged: true
-    image: ${DEV_DOCKER_TAG_BASE}/awx_devel:${TAG}
+    image: gcr.io/ansible-tower-engineering/awx_devel:devel
     hostname: awx-3
     command: launch_awx.sh
     working_dir: "/awx_devel"
@@ -67,34 +69,48 @@ services:
       AWX_GROUP_QUEUES: charlie,tower
     volumes:
       - "../:/awx_devel"
-      - "./redis/redis_socket_ha_3:/var/run/redis/"
+      - "redis_socket:/var/run/redis/:rw"
       - "./docker-compose/supervisor.conf:/etc/supervisord.conf"
+      - "./docker-compose/_sources/local_settings.py:/etc/tower/conf.d/local_settings.py"
     ports:
       - "8899-8999:8899-8999"
   redis_1:
-    user: ${CURRENT_UID}
     image: redis:latest
     container_name: tools_redis_1_1
     command: ["/usr/local/etc/redis/redis.conf"]
     volumes:
       - "./redis/redis.conf:/usr/local/etc/redis/redis.conf"
-      - "./redis/redis_socket_ha_1:/var/run/redis/"
+      - "redis_socket:/var/run/redis/:rw"
+    entrypoint: ["redis-server"]
+    command: ["/usr/local/etc/redis/redis.conf"]
   redis_2:
-    user: ${CURRENT_UID}
     image: redis:latest
     container_name: tools_redis_2_1
     command: ["/usr/local/etc/redis/redis.conf"]
     volumes:
       - "./redis/redis.conf:/usr/local/etc/redis/redis.conf"
-      - "./redis/redis_socket_ha_2:/var/run/redis/"
+      - "redis_socket:/var/run/redis/:rw"
+    entrypoint: ["redis-server"]
+    command: ["/usr/local/etc/redis/redis.conf"]
   redis_3:
-    user: ${CURRENT_UID}
     image: redis:latest
     container_name: tools_redis_3_1
     command: ["/usr/local/etc/redis/redis.conf"]
     volumes:
       - "./redis/redis.conf:/usr/local/etc/redis/redis.conf"
-      - "./redis/redis_socket_ha_3:/var/run/redis/"
+      - "redis_socket:/var/run/redis/:rw"
+    entrypoint: ["redis-server"]
+    command: ["/usr/local/etc/redis/redis.conf"]
   postgres:
     image: postgres:12
     container_name: tools_postgres_1
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
+      POSTGRES_USER: awx
+      POSTGRES_DB: awx
+      POSTGRES_PASSWORD: awxpass
+    volumes:
+      - "awx_db:/var/lib/postgresql/data"
+volumes:
+  redis_socket:
+  awx_db:
