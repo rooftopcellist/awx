@@ -18,7 +18,8 @@ Table of Contents
 :warning: NOTE |
 --- |
 If you're installing an older release of AWX (prior to 18.0), these instructions have changed.  Take a look at your version specific instructions, e.g., for AWX 17.0.1, see: [https://github.com/ansible/awx/blob/17.0.1/INSTALL.md](https://github.com/ansible/awx/blob/17.0.1/INSTALL.md)
-If you're attempting to migrate an older Docker-based AWX installation, see: [Migrating Data from Local Docker](https://github.com/ansible/awx/blob/devel/tools/docker-compose/docs/data_migration.md) |
+If you're attempting to migrate an older Docker-based AWX installation, see: [Migrating Data from Local Docker](https://github.com/ansible/awx/blob/devel/tools/docker-compose/docs/data_migration.md) 
+If you're attempting to migrate an old kubernetes or openshift installation, see: [Migrating data from an old AWX instance](https://github.com/ansible/awx-operator#migrating-data-from-an-old-awx-instance)|
 
 ## The AWX Operator
 
@@ -48,6 +49,22 @@ For a comprehensive overview of features, see [README.md](https://github.com/ans
 $ minikube kubectl -- apply -f https://raw.githubusercontent.com/ansible/awx-operator/devel/deploy/awx-operator.yaml
 ```
 
+If you are using a Kubernetes cluster, set the correct cluster context for the cluster you intend to deploy to:
+
+```
+gcloud container clusters get-credentials <user> --zone=<zone>
+kubectl create ns <namespace>
+kubectl config set-context --current --namespace=<namespace>
+```
+
+If you are using an Openshift cluster, log in and set the project
+
+```
+oc login
+oc new-project <namespace>
+```
+
+
 ##### Verifying the Operator Deployment
 
 After a few seconds, the operator should be up and running. Verify it by running the following command:
@@ -63,7 +80,7 @@ awx-operator-7c78bfbfd-xb6th   1/1     Running   0          11s
 Once the Operator is running, you can now deploy AWX by creating a simple YAML file:
 
 ```
-$ cat myawx.yml
+$ cat my-awx.yml
 ---
 apiVersion: awx.ansible.com/v1beta1
 kind: AWX
@@ -76,7 +93,7 @@ spec:
 And then creating the AWX object in the Kubernetes API:
 
 ```
-$ minikube kubectl apply -- -f myawx.yml
+$ minikube kubectl apply -- -f my-awx.yml
 awx.awx.ansible.com/awx created
 ```
 
