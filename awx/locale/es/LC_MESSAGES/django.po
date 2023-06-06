@@ -198,9 +198,11 @@ msgstr "Error de análisis JSON; no es un objeto JSON"
 
 #: awx/api/parsers.py:36
 #, python-format
-msgid "JSON parse error - %s\n"
+msgid ""
+"JSON parse error - %s\n"
 "Possible cause: trailing comma."
-msgstr "Error de análisis JSON - %s\n"
+msgstr ""
+"Error de análisis JSON - %s\n"
 "Posible causa: coma final."
 
 #: awx/api/serializers.py:205
@@ -2182,12 +2184,14 @@ msgid "Loggers Sending Data to Log Aggregator Form"
 msgstr "Registradores que envían datos al formulario de agregadores de registros"
 
 #: awx/main/conf.py:530
-msgid "List of loggers that will send HTTP logs to the collector, these can include any or all of: \n"
+msgid ""
+"List of loggers that will send HTTP logs to the collector, these can include any or all of: \n"
 "awx - service logs\n"
 "activity_stream - activity stream records\n"
 "job_events - callback data from Ansible job events\n"
 "system_tracking - facts gathered from scan jobs."
-msgstr "Lista de registradores que enviarán registros HTTP al colector. Estos pueden incluir cualquiera o todos los siguientes: \n"
+msgstr ""
+"Lista de registradores que enviarán registros HTTP al colector. Estos pueden incluir cualquiera o todos los siguientes: \n"
 "awx - registros de servicio\n"
 "activity_stream - registros de flujo de actividades\n"
 "job_events - datos de retorno de llamada de eventos de tareas Ansible\n"
@@ -4433,9 +4437,11 @@ msgstr "Un identificador que corresponde al nodo de plantilla de tarea del flujo
 
 #: awx/main/models/workflow.py:302
 #, python-brace-format
-msgid "Bad launch configuration starting template {template_pk} as part of workflow {workflow_pk}. Errors:\n"
+msgid ""
+"Bad launch configuration starting template {template_pk} as part of workflow {workflow_pk}. Errors:\n"
 "{error_text}"
-msgstr "Configuración de lanzamiento incorrecta iniciando la plantilla {template_pk} como parte del flujo de trabajo {workflow_pk}. Errores:\n"
+msgstr ""
+"Configuración de lanzamiento incorrecta iniciando la plantilla {template_pk} como parte del flujo de trabajo {workflow_pk}. Errores:\n"
 "{error_text}"
 
 #: awx/main/models/workflow.py:622
@@ -4761,16 +4767,19 @@ msgid "Single Sign-On"
 msgstr "Inicio de sesión único (SSO)"
 
 #: awx/sso/conf.py:52
-msgid "Mapping to organization admins/users from social auth accounts. This setting\n"
+msgid ""
+"Mapping to organization admins/users from social auth accounts. This setting\n"
 "controls which users are placed into which organizations based on their\n"
 "username and email address. Configuration details are available in the \n"
 "documentation."
 msgstr "Asignación a administradores o usuarios de la organización desde cuentas de autorización social. Esta configuración controla qué usuarios se ubican en qué organizaciones en función de su nombre de usuario y dirección de correo electrónico. Los detalles de la configuración están disponibles en la documentación."
 
 #: awx/sso/conf.py:81
-msgid "Mapping of team members (users) from social auth accounts. Configuration\n"
+msgid ""
+"Mapping of team members (users) from social auth accounts. Configuration\n"
 "details are available in the documentation."
-msgstr "Asignación de miembros del equipo (usuarios) desde cuentas de autenticación social. Los detalles\n"
+msgstr ""
+"Asignación de miembros del equipo (usuarios) desde cuentas de autenticación social. Los detalles\n"
 "de la configuración están disponibles en la documentación."
 
 #: awx/sso/conf.py:101
