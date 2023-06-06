@@ -77,10 +77,12 @@ msgid "<0><1/> A tech preview of the new {brandName} user interface can be found
 msgstr ""
 
 #: screens/Project/shared/Project.helptext.js:76
-msgid "A refspec to fetch (passed to the Ansible git\n"
+msgid ""
+"A refspec to fetch (passed to the Ansible git\n"
 "module). This parameter allows access to references via\n"
 "the branch field not otherwise available."
-msgstr "取得する refspec (Ansible git モジュールに渡します)。\n"
+msgstr ""
+"取得する refspec (Ansible git モジュールに渡します)。\n"
 "このパラメーターを使用すると、(パラメーターなしでは利用できない) \n"
 "ブランチのフィールド経由で参照にアクセスできるようになります。"
 
@@ -357,11 +359,13 @@ msgid "Advanced search value input"
 msgstr "詳細な検索値の入力"
 
 #: screens/Inventory/shared/Inventory.helptext.js:131
-msgid "After every project update where the SCM revision\n"
+msgid ""
+"After every project update where the SCM revision\n"
 "changes, refresh the inventory from the selected source\n"
 "before executing job tasks. This is intended for static content,\n"
 "like the Ansible inventory .ini file format."
-msgstr "SCM リビジョンを変更するプロジェクトの毎回の更新後に、\n"
+msgstr ""
+"SCM リビジョンを変更するプロジェクトの毎回の更新後に、\n"
 "選択されたソースのインベントリーを更新してからジョブのタスクを実行します。\n"
 "これは、Ansible インベントリーの .ini ファイル形式のような静的コンテンツが対象であることが\n"
 "意図されています。"
@@ -400,9 +404,11 @@ msgid "Allow branch override"
 msgstr "ブランチの上書き許可"
 
 #: screens/Project/shared/Project.helptext.js:126
-msgid "Allow changing the Source Control branch or revision in a job\n"
+msgid ""
+"Allow changing the Source Control branch or revision in a job\n"
 "template that uses this project."
-msgstr "このプロジェクトを使用するジョブテンプレートで Source Control ブランチまたは\n"
+msgstr ""
+"このプロジェクトを使用するジョブテンプレートで Source Control ブランチまたは\n"
 "リビジョンを変更できるようにします。"
 
 #: screens/Application/shared/Application.helptext.js:6
@@ -776,11 +782,13 @@ msgid "Back to management jobs"
 msgstr "管理ジョブに戻る"
 
 #: screens/Project/shared/Project.helptext.js:8
-msgid "Base path used for locating playbooks. Directories\n"
+msgid ""
+"Base path used for locating playbooks. Directories\n"
 "found inside this path will be listed in the playbook directory drop-down.\n"
 "Together the base path and selected playbook directory provide the full\n"
 "path used to locate playbooks."
-msgstr "Playbook を見つけるために使用されるベースパスです。\n"
+msgstr ""
+"Playbook を見つけるために使用されるベースパスです。\n"
 "このパス内にあるディレクトリーは Playbook ディレクトリーのドロップダウンに一覧表示されます。\n"
 "ベースパスと選択されたPlaybook ディレクトリーは、\n"
 "Playbook を見つけるために使用される完全なパスを提供します。"
@@ -790,11 +798,13 @@ msgid "Basic auth password"
 msgstr "Basic 認証パスワード"
 
 #: screens/Project/shared/Project.helptext.js:104
-msgid "Branch to checkout. In addition to branches,\n"
+msgid ""
+"Branch to checkout. In addition to branches,\n"
 "you can input tags, commit hashes, and arbitrary refs. Some\n"
 "commit hashes and refs may not be available unless you also\n"
 "provide a custom refspec."
-msgstr "チェックアウトするブランチです。\n"
+msgstr ""
+"チェックアウトするブランチです。\n"
 "ブランチ以外に、タグ、コミットハッシュ値、任意の参照 (refs) を入力できます。\n"
 "カスタムの refspec も指定しない限り、コミットハッシュ値や参照で利用できないものもあります。"
 
@@ -993,9 +1003,11 @@ msgstr "取り消し済み"
 #~ msgstr "Cannot approve, cancel or deny completed workflow approvals"
 
 #: screens/Setting/Logging/LoggingEdit/LoggingEdit.js:129
-msgid "Cannot enable log aggregator without providing\n"
+msgid ""
+"Cannot enable log aggregator without providing\n"
 "logging aggregator host and logging aggregator type."
-msgstr "ログアグリゲーターホストとログアグリゲータータイプを指定せずに、\n"
+msgstr ""
+"ログアグリゲーターホストとログアグリゲータータイプを指定せずに、\n"
 "ログアグリゲーターを有効にすることはできません。"
 
 #: screens/Instances/InstancePeers/InstancePeerList.js:94
@@ -1039,9 +1051,11 @@ msgid "Case-insensitive version of startswith."
 msgstr "startswith で大文字小文字の区別なし。"
 
 #: screens/Project/shared/Project.helptext.js:14
-msgid "Change PROJECTS_ROOT when deploying\n"
+msgid ""
+"Change PROJECTS_ROOT when deploying\n"
 "{brandName} to change this location."
-msgstr "この場所を変更するには {brandName} のデプロイ時に\n"
+msgstr ""
+"この場所を変更するには {brandName} のデプロイ時に\n"
 " PROJECTS_ROOT を変更します。"
 
 #: components/StatusLabel/StatusLabel.js:55
@@ -1109,10 +1123,12 @@ msgid "Choose an HTTP method"
 msgstr "HTTP メソッドの選択"
 
 #: screens/Template/Survey/SurveyQuestionForm.js:46
-msgid "Choose an answer type or format you want as the prompt for the user.\n"
+msgid ""
+"Choose an answer type or format you want as the prompt for the user.\n"
 "Refer to the Ansible Controller Documentation for more additional\n"
 "information about each option."
-msgstr "ユーザーに表示されるプロンプトとして使用する回答タイプまたは形式を選択します。\n"
+msgstr ""
+"ユーザーに表示されるプロンプトとして使用する回答タイプまたは形式を選択します。\n"
 "各オプションの詳細については、\n"
 "Ansible Controller のドキュメントを参照してください。"
 
@@ -1362,9 +1378,11 @@ msgid "Control node"
 msgstr "コントロールノード"
 
 #: screens/Inventory/shared/Inventory.helptext.js:79
-msgid "Control the level of output Ansible\n"
+msgid ""
+"Control the level of output Ansible\n"
 "will produce for inventory source update jobs."
-msgstr "インベントリーソースの更新ジョブ用に\n"
+msgstr ""
+"インベントリーソースの更新ジョブ用に\n"
 " Ansible が生成する出力のレベルを制御します。"
 
 #: components/LaunchPrompt/steps/OtherPromptsStep.js:139
@@ -2023,11 +2041,13 @@ msgid "Delete survey question"
 msgstr "Survey の質問の削除"
 
 #: screens/Project/shared/Project.helptext.js:114
-msgid "Delete the local repository in its entirety prior to\n"
+msgid ""
+"Delete the local repository in its entirety prior to\n"
 "performing an update. Depending on the size of the\n"
 "repository this may significantly increase the amount\n"
 "of time required to complete an update."
-msgstr "更新の実行前にローカルリポジトリーを完全に削除します。\n"
+msgstr ""
+"更新の実行前にローカルリポジトリーを完全に削除します。\n"
 "リポジトリーのサイズによっては、\n"
 "更新の完了までにかかる時間が\n"
 "大幅に増大します。"
@@ -2452,15 +2472,18 @@ msgstr "メール"
 #~ msgstr "E-mail options"
 
 #: screens/Inventory/shared/Inventory.helptext.js:113
-msgid "Each time a job runs using this inventory,\n"
+msgid ""
+"Each time a job runs using this inventory,\n"
 "refresh the inventory from the selected source before\n"
 "executing job tasks."
-msgstr "このインベントリーでジョブを実行する際は常に、\n"
+msgstr ""
+"このインベントリーでジョブを実行する際は常に、\n"
 "選択されたソースのインベントリーを更新してから\n"
 "ジョブのタスクを実行します。"
 
 #: screens/Project/shared/Project.helptext.js:124
-msgid "Each time a job runs using this project, update the\n"
+msgid ""
+"Each time a job runs using this project, update the\n"
 "revision of the project prior to starting the job."
 msgstr "このプロジェクトでジョブを実行する際は常に、ジョブの開始前にプロジェクトのリビジョンを更新します。"
 
@@ -2773,11 +2796,13 @@ msgid "Enable Webhook for this workflow job template."
 msgstr "このワークフローのジョブテンプレートの Webhook を有効にします。"
 
 #: screens/Project/shared/Project.helptext.js:108
-msgid "Enable content signing to verify that the content \n"
+msgid ""
+"Enable content signing to verify that the content \n"
 "has remained secure when a project is synced. \n"
 "If the content has been tampered with, the \n"
 "job will not run."
-msgstr "コンテンツの署名を有効にして、コンテンツが\n"
+msgstr ""
+"コンテンツの署名を有効にして、コンテンツが\n"
 "プロジェクトが同期されても安全です。\n"
 "内容が改ざんされた場合、\n"
 "ジョブは実行されません。"
@@ -2850,7 +2875,8 @@ msgstr "有効な変数"
 #~ "template."
 
 #: components/AdHocCommands/AdHocDetailsStep.js:209
-msgid "Enables creation of a provisioning\n"
+msgid ""
+"Enables creation of a provisioning\n"
 "callback URL. Using the URL a host can contact {brandName}\n"
 "and request a configuration update using this job\n"
 "template"
@@ -4500,13 +4526,15 @@ msgid "Icon URL"
 msgstr "アイコン URL"
 
 #: screens/Inventory/shared/Inventory.helptext.js:100
-msgid "If checked, all variables for child groups\n"
+msgid ""
+"If checked, all variables for child groups\n"
 "and hosts will be removed and replaced by those found\n"
 "on the external source."
 msgstr "チェックが付けられている場合、子グループおよびホストのすべての変数が削除され、外部ソースにあるものによって置き換えられます。"
 
 #: screens/Inventory/shared/Inventory.helptext.js:84
-msgid "If checked, any hosts and groups that were\n"
+msgid ""
+"If checked, any hosts and groups that were\n"
 "previously present on the external source but are now removed\n"
 "will be removed from the inventory. Hosts and groups\n"
 "that were not managed by the inventory source will be promoted\n"
@@ -4528,7 +4556,8 @@ msgid "If enabled, run this playbook as an administrator."
 msgstr "有効な場合は、この Playbook を管理者として実行します。"
 
 #: components/LaunchPrompt/steps/OtherPromptsStep.js:184
-msgid "If enabled, show the changes made\n"
+msgid ""
+"If enabled, show the changes made\n"
 "by Ansible tasks, where supported. This is equivalent to Ansible’s\n"
 "--diff mode."
 msgstr "有効で、サポートされている場合は、Ansible タスクで加えられた変更を表示します。これは Ansible の --diff モードに相当します。"
@@ -4568,15 +4597,19 @@ msgid "If enabled, simultaneous runs of this workflow job template will be allow
 msgstr "有効な場合は、このワークフロージョブテンプレートの同時実行が許可されます。"
 
 #: screens/Inventory/shared/Inventory.helptext.js:195
-msgid "If enabled, the inventory will prevent adding any organization instance groups to the list of preferred instances groups to run associated job templates on.\n"
+msgid ""
+"If enabled, the inventory will prevent adding any organization instance groups to the list of preferred instances groups to run associated job templates on.\n"
 "Note: If this setting is enabled and you provided an empty list, the global instance groups will be applied."
-msgstr "有効にすると、インベントリーは、関連付けられたジョブテンプレートを実行する優先インスタンスグループのリストに組織インスタンスグループを追加することを防ぎます。\n"
+msgstr ""
+"有効にすると、インベントリーは、関連付けられたジョブテンプレートを実行する優先インスタンスグループのリストに組織インスタンスグループを追加することを防ぎます。\n"
 "注: この設定が有効で空のリストを指定した場合は、グローバルインスタンスグループが適用されます。"
 
 #: screens/Template/shared/JobTemplate.helptext.js:33
-msgid "If enabled, the job template will prevent adding any inventory or organization instance groups to the list of preferred instances groups to run on.\n"
+msgid ""
+"If enabled, the job template will prevent adding any inventory or organization instance groups to the list of preferred instances groups to run on.\n"
 "Note: If this setting is enabled and you provided an empty list, the global instance groups will be applied."
-msgstr "有効にすると、ジョブテンプレートによって、実行する優先インスタンスグループのリストにインベントリーまたは組織インスタンスグループが追加されなくなります。\n"
+msgstr ""
+"有効にすると、ジョブテンプレートによって、実行する優先インスタンスグループのリストにインベントリーまたは組織インスタンスグループが追加されなくなります。\n"
 "注: この設定が有効で空のリストを指定した場合は、グローバルインスタンスグループが適用されます。"
 
 #: screens/Template/shared/JobTemplateForm.js:611
@@ -4602,7 +4635,8 @@ msgid "If you are ready to upgrade or renew, please <0>contact us.</0>"
 msgstr "アップグレードまたは更新の準備ができましたら、<0>お問い合わせください</0>。"
 
 #: screens/Setting/Subscription/SubscriptionEdit/SubscriptionStep.js:63
-msgid "If you do not have a subscription, you can visit\n"
+msgid ""
+"If you do not have a subscription, you can visit\n"
 "Red Hat to obtain a trial subscription."
 msgstr "サブスクリプションをお持ちでない場合は、Red Hat にアクセスしてトライアルサブスクリプションを取得できます。"
 
@@ -4612,7 +4646,8 @@ msgstr "この特定のユーザーのアクセスのみを削除する場合は
 
 #: screens/Inventory/shared/Inventory.helptext.js:120
 #: screens/Inventory/shared/Inventory.helptext.js:139
-msgid "If you want the Inventory Source to update on\n"
+msgid ""
+"If you want the Inventory Source to update on\n"
 "launch and on project update, click on Update on launch, and also go to"
 msgstr "起動時およびプロジェクトの更新時にインベントリーソースを更新する場合は、起動時に更新をクリックして移動します"
 
@@ -4636,7 +4671,8 @@ msgid "Including File"
 msgstr "組み込みファイル"
 
 #: components/HostToggle/HostToggle.js:16
-msgid "Indicates if a host is available and should be included in running\n"
+msgid ""
+"Indicates if a host is available and should be included in running\n"
 "jobs.  For hosts that are part of an external inventory, this may be\n"
 "reset by the inventory sync process."
 msgstr "ホストが利用可能かどうか、またホストを実行中のジョブに組み込む必要があるかどうかを示します。外部インベントリーの一部となっているホストについては、これはインベントリー同期プロセスでリセットされる場合があります。"
@@ -5631,7 +5667,8 @@ msgstr "最大長"
 #: screens/InstanceGroup/InstanceGroupDetails/InstanceGroupDetails.js:86
 #: screens/InstanceGroup/shared/ContainerGroupForm.js:77
 #: screens/InstanceGroup/shared/InstanceGroupForm.js:62
-msgid "Maximum number of forks to allow across all jobs running concurrently on this group.\n"
+msgid ""
+"Maximum number of forks to allow across all jobs running concurrently on this group.\n"
 "Zero means no limit will be enforced."
 msgstr ""
 
@@ -5639,7 +5676,8 @@ msgstr ""
 #: screens/InstanceGroup/InstanceGroupDetails/InstanceGroupDetails.js:79
 #: screens/InstanceGroup/shared/ContainerGroupForm.js:67
 #: screens/InstanceGroup/shared/InstanceGroupForm.js:52
-msgid "Maximum number of jobs to run concurrently on this group.\n"
+msgid ""
+"Maximum number of jobs to run concurrently on this group.\n"
 "Zero means no limit will be enforced."
 msgstr ""
 
@@ -5679,13 +5717,15 @@ msgstr "最小長"
 
 #: screens/InstanceGroup/InstanceGroupDetails/InstanceGroupDetails.js:65
 #: screens/InstanceGroup/shared/InstanceGroupForm.js:31
-msgid "Minimum number of instances that will be automatically\n"
+msgid ""
+"Minimum number of instances that will be automatically\n"
 "assigned to this group when new instances come online."
 msgstr "新規インスタンスがオンラインになると、このグループに自動的に最小限割り当てられるインスタンス数"
 
 #: screens/InstanceGroup/InstanceGroupDetails/InstanceGroupDetails.js:71
 #: screens/InstanceGroup/shared/InstanceGroupForm.js:41
-msgid "Minimum percentage of all instances that will be automatically\n"
+msgid ""
+"Minimum percentage of all instances that will be automatically\n"
 "assigned to this group when new instances come online."
 msgstr "新規インスタンスがオンラインになると、このグループに自動的に最小限割り当てられるインスタンスの割合"
 
@@ -6274,14 +6314,16 @@ msgid "Not configured for inventory sync."
 msgstr "インベントリーの同期に設定されていません。"
 
 #: screens/Inventory/InventoryGroupHosts/InventoryGroupHostList.js:248
-msgid "Note that only hosts directly in this group can\n"
+msgid ""
+"Note that only hosts directly in this group can\n"
 "be disassociated. Hosts in sub-groups must be disassociated\n"
 "directly from the sub-group level that they belong."
 msgstr "このグループに直接含まれるホストのみの関連付けを解除できることに注意してください。サブグループのホストの関連付けの解除については、それらのホストが属するサブグループのレベルで直接実行する必要があります。"
 
 #: screens/Host/HostGroups/HostGroupsList.js:212
 #: screens/Inventory/InventoryHostGroups/InventoryHostGroupsList.js:230
-msgid "Note that you may still see the group in the list after\n"
+msgid ""
+"Note that you may still see the group in the list after\n"
 "disassociating if the host is also a member of that group’s\n"
 "children.  This list shows all groups the host is associated\n"
 "with directly and indirectly."
@@ -6300,7 +6342,8 @@ msgid "Note: This field assumes the remote name is \"origin\"."
 msgstr "注: このフィールドは、リモート名が \"origin\" であることが前提です。"
 
 #: screens/Project/shared/Project.helptext.js:35
-msgid "Note: When using SSH protocol for GitHub or\n"
+msgid ""
+"Note: When using SSH protocol for GitHub or\n"
 "Bitbucket, enter an SSH key only, do not enter a username\n"
 "(other than git). Additionally, GitHub and Bitbucket do\n"
 "not support password authentication when using SSH. GIT\n"
@@ -6445,7 +6488,8 @@ msgid "On days"
 msgstr "曜日"
 
 #: screens/NotificationTemplate/shared/Notifications.helptext.js:18
-msgid "One Slack channel per line. The pound symbol (#)\n"
+msgid ""
+"One Slack channel per line. The pound symbol (#)\n"
 "is required for channels. To respond to or start a thread to a specific message add the parent message Id to the channel where the parent message Id is 16 digits. A dot (.) must be manually inserted after the 10th digit.  ie:#destination-channel, 1231257890.006423. See Slack"
 msgstr "それぞれの行に 1 つの Slack チャンネルを入力します。チャンネルにはシャープ記号 (#) が必要です。特定のメッセージに対して応答する、またはスレッドを開始するには、チャンネルに 16 桁の親メッセージ ID を追加します。10 桁目の後にピリオド (.) を手動で挿入する必要があります (例: #destination-channel, 1231257890.006423)。Slack を参照してください。"
 
@@ -6462,10 +6506,12 @@ msgid "Option Details"
 msgstr "オプションの詳細"
 
 #: screens/Inventory/shared/Inventory.helptext.js:25
-msgid "Optional labels that describe this inventory,\n"
+msgid ""
+"Optional labels that describe this inventory,\n"
 "such as 'dev' or 'test'. Labels can be used to group and filter\n"
 "inventories and completed jobs."
-msgstr "「dev」、「test」などのこのインベントリーを説明するオプションラベルです。\n"
+msgstr ""
+"「dev」、「test」などのこのインベントリーを説明するオプションラベルです。\n"
 "ラベルを使用し、インベントリーおよび完了した\n"
 "ジョブの分類およびフィルターを実行できます。"
 
@@ -6485,10 +6531,12 @@ msgid "Optional labels that describe this job template, such as 'dev' or 'test'.
 msgstr "「dev」、「test」などのこのジョブテンプレートを説明するオプションラベルです。ラベルを使用し、ジョブテンプレートおよび完了したジョブの分類およびフィルターを実行できます。"
 
 #: screens/Template/shared/WorkflowJobTemplate.helptext.js:11
-msgid "Optional labels that describe this workflow job template,\n"
+msgid ""
+"Optional labels that describe this workflow job template,\n"
 "such as 'dev' or 'test'. Labels can be used to group and filter\n"
 "workflow job templates and completed jobs."
-msgstr "「dev」、「test」などのこのワークフロージョブテンプレートを説明するオプションラベルです。\n"
+msgstr ""
+"「dev」、「test」などのこのワークフロージョブテンプレートを説明するオプションラベルです。\n"
 "ラベルを使用し、ワークフロージョブテンプレートおよび完了した\n"
 "ジョブの分類およびフィルターを実行できます。"
 
@@ -6914,7 +6962,8 @@ msgstr "外部のシークレット管理システムからフィールドにデ
 #~ "examples."
 
 #: components/Lookup/HostFilterLookup.js:349
-msgid "Populate the hosts for this inventory by using a search\n"
+msgid ""
+"Populate the hosts for this inventory by using a search\n"
 "filter. Example: ansible_facts__ansible_distribution:\"RedHat\".\n"
 "Refer to the documentation for further syntax and\n"
 "examples.  Refer to the Ansible Controller documentation for further syntax and\n"
@@ -6931,7 +6980,8 @@ msgid "Preconditions for running this node when there are multiple parents. Refe
 msgstr "複数の親がある場合にこのノードを実行するための前提条件。参照:"
 
 #: screens/Template/Survey/MultipleChoiceField.js:59
-msgid "Press 'Enter' to add more answer choices. One answer\n"
+msgid ""
+"Press 'Enter' to add more answer choices. One answer\n"
 "choice per line."
 msgstr "Enter キーを押して、回答の選択肢をさらに追加します。回答の選択肢は、1 行に 1 つです。"
 
@@ -6940,7 +6990,8 @@ msgid "Press Enter to edit. Press ESC to stop editing."
 msgstr "Enter キーを押して編集します。編集を終了するには、ESC キーを押します。"
 
 #: components/SelectedList/DraggableSelectedList.js:85
-msgid "Press space or enter to begin dragging,\n"
+msgid ""
+"Press space or enter to begin dragging,\n"
 "and use the arrow keys to navigate up or down.\n"
 "Press enter to confirm the drag, or any other key to\n"
 "cancel the drag operation."
@@ -7090,11 +7141,13 @@ msgid "Prompted Values"
 msgstr "プロンプト値"
 
 #: screens/Template/shared/WorkflowJobTemplate.helptext.js:6
-msgid "Provide a host pattern to further constrain\n"
+msgid ""
+"Provide a host pattern to further constrain\n"
 "the list of hosts that will be managed or affected by the\n"
 "playbook. Multiple patterns are allowed. Refer to Ansible\n"
 "documentation for more information and examples on patterns."
-msgstr "Playbook によって管理されるか、またはその影響を受けるホストの一覧をさらに制限するためのホストのパターンを指定します。\n"
+msgstr ""
+"Playbook によって管理されるか、またはその影響を受けるホストの一覧をさらに制限するためのホストのパターンを指定します。\n"
 "複数のパターンが許可されます。\n"
 "パターンについての詳細およびサンプルについては、Ansible ドキュメントを参照してください。"
 
@@ -7120,12 +7173,14 @@ msgid "Provide a value for this field or select the Prompt on launch option."
 msgstr "このフィールドに値を入力するか、起動プロンプトを表示するオプションを選択します。"
 
 #: components/AdHocCommands/AdHocDetailsStep.js:247
-msgid "Provide key/value pairs using either\n"
+msgid ""
+"Provide key/value pairs using either\n"
 "YAML or JSON."
 msgstr "YAML または JSON のいずれかを使用してキーと値のペアを提供します。"
 
 #: screens/Setting/Subscription/SubscriptionEdit/SubscriptionStep.js:191
-msgid "Provide your Red Hat or Red Hat Satellite credentials\n"
+msgid ""
+"Provide your Red Hat or Red Hat Satellite credentials\n"
 "below and you can choose from a list of your available subscriptions.\n"
 "The credentials you use will be stored for future use in\n"
 "retrieving renewal or expanded subscriptions."
@@ -7527,7 +7582,8 @@ msgid "Restore initial value."
 msgstr "初期値を復元します。"
 
 #: screens/Inventory/shared/Inventory.helptext.js:153
-msgid "Retrieve the enabled state from the given dict of host variables.\n"
+msgid ""
+"Retrieve the enabled state from the given dict of host variables.\n"
 "The enabled variable may be specified using dot notation, e.g: 'foo.bar'"
 msgstr "ホスト変数の指定された辞書から有効な状態を取得します。有効な変数は、ドット表記を使用して指定できます (例: 「foo.bar」)。"
 
@@ -8163,10 +8219,12 @@ msgid "Select frequency"
 msgstr "周波数の選択"
 
 #: screens/Project/shared/Project.helptext.js:18
-msgid "Select from the list of directories found in\n"
+msgid ""
+"Select from the list of directories found in\n"
 "the Project Base Path. Together the base path and the playbook\n"
 "directory provide the full path used to locate playbooks."
-msgstr "プロジェクトのベースパスにあるデイレクトリーの一覧から選択します。ベースパスと Playbook ディレクトリーは、Playbook \n"
+msgstr ""
+"プロジェクトのベースパスにあるデイレクトリーの一覧から選択します。ベースパスと Playbook ディレクトリーは、Playbook \n"
 "を見つけるために使用される完全なパスを提供します。"
 
 #: components/UserAndTeamAccessAdd/UserAndTeamAccessAdd.js:98
@@ -8261,7 +8319,8 @@ msgstr "そのコマンドを実行するためにリモートホストへのア
 #~ msgstr "Select the execution environment for this job template."
 
 #: components/Lookup/InventoryLookup.js:123
-msgid "Select the inventory containing the hosts\n"
+msgid ""
+"Select the inventory containing the hosts\n"
 "you want this job to manage."
 msgstr "このジョブで管理するホストが含まれるインベントリーを選択してください。"
 
@@ -8766,14 +8825,17 @@ msgid "Sources"
 msgstr "ソース"
 
 #: screens/NotificationTemplate/shared/Notifications.helptext.js:30
-msgid "Specify HTTP Headers in JSON format. Refer to\n"
+msgid ""
+"Specify HTTP Headers in JSON format. Refer to\n"
 "the Ansible Controller documentation for example syntax."
 msgstr "JSON 形式で HTTP ヘッダーを指定します。構文のサンプルについては Ansible Controller ドキュメントを参照してください。"
 
 #: screens/NotificationTemplate/shared/Notifications.helptext.js:24
-msgid "Specify a notification color. Acceptable colors are hex\n"
+msgid ""
+"Specify a notification color. Acceptable colors are hex\n"
 "color code (example: #3af or #789abc)."
-msgstr "通知の色を指定します。使用できる色は、\n"
+msgstr ""
+"通知の色を指定します。使用できる色は、\n"
 "16 進数の色コード (例: #3af または #789abc) です。"
 
 #: screens/User/shared/UserTokenForm.js:71
@@ -8892,7 +8954,8 @@ msgid "Submit"
 msgstr "送信"
 
 #: screens/Project/shared/Project.helptext.js:118
-msgid "Submodules will track the latest commit on\n"
+msgid ""
+"Submodules will track the latest commit on\n"
 "their master branch (or other branch specified in\n"
 ".gitmodules). If no, submodules will be kept at\n"
 "the revision specified by the main project.\n"
@@ -9307,10 +9370,12 @@ msgid "The Instance Groups to which this instance belongs."
 msgstr "このインスタンスが属するインスタンスグループ。"
 
 #: screens/NotificationTemplate/shared/Notifications.helptext.js:6
-msgid "The amount of time (in seconds) before the email\n"
+msgid ""
+"The amount of time (in seconds) before the email\n"
 "notification stops trying to reach the host and times out. Ranges\n"
 "from 1 to 120 seconds."
-msgstr "メール通知が、ホストへの到達を試行するのをやめてタイムアウトするまでの時間 (秒単位)。\n"
+msgstr ""
+"メール通知が、ホストへの到達を試行するのをやめてタイムアウトするまでの時間 (秒単位)。\n"
 "範囲は 1 から 120 秒です。"
 
 #: screens/Template/shared/JobTemplateForm.js:489
@@ -9333,10 +9398,12 @@ msgid "The application that this token belongs to, or leave this field empty to 
 msgstr "このトークンが属するアプリケーション。あるいは、このフィールドを空欄のままにしてパーソナルアクセストークンを作成します。"
 
 #: screens/NotificationTemplate/shared/Notifications.helptext.js:9
-msgid "The base URL of the Grafana server - the\n"
+msgid ""
+"The base URL of the Grafana server - the\n"
 "/api/annotations endpoint will be added automatically to the base\n"
 "Grafana URL."
-msgstr "Grafana サーバーのベース URL。/api/annotations エンドポイントは、ベース Grafana URL に自動的に\n"
+msgstr ""
+"Grafana サーバーのベース URL。/api/annotations エンドポイントは、ベース Grafana URL に自動的に\n"
 "追加されます。"
 
 #: screens/Template/shared/JobTemplate.helptext.js:9
@@ -9344,11 +9411,13 @@ msgid "The container image to be used for execution."
 msgstr "実行に使用するコンテナーイメージ。"
 
 #: screens/Organization/OrganizationDetail/OrganizationDetail.js:105
-msgid "The execution environment that will be used for jobs\n"
+msgid ""
+"The execution environment that will be used for jobs\n"
 "inside of this organization. This will be used a fallback when\n"
 "an execution environment has not been explicitly assigned at the\n"
 "project, job template or workflow level."
-msgstr "この組織内のジョブに使用される実行環境。これは、実行環境がプロジェクト、\n"
+msgstr ""
+"この組織内のジョブに使用される実行環境。これは、実行環境がプロジェクト、\n"
 "ジョブテンプレート、またはワークフローレベルで\n"
 "明示的に割り当てられていない場合に\n"
 "フォールバックとして使用されます。"
@@ -9377,10 +9446,12 @@ msgid "The execution environment that will be used when launching this job templ
 msgstr "このジョブテンプレートを起動するときに使用される実行環境。解決された実行環境は、このジョブテンプレートに別の環境を明示的に割り当てることで上書きできます。"
 
 #: screens/Project/shared/Project.helptext.js:93
-msgid "The first fetches all references. The second\n"
+msgid ""
+"The first fetches all references. The second\n"
 "fetches the Github pull request number 62, in this example\n"
 "the branch needs to be \"pull/62/head\"."
-msgstr "1 番目はすべての参照を取得します。2 番目は Github のプル要求の 62 番を取得します。\n"
+msgstr ""
+"1 番目はすべての参照を取得します。2 番目は Github のプル要求の 62 番を取得します。\n"
 "この例では、ブランチは \"pull/62/head\" でなければなりません。"
 
 #: screens/WorkflowApproval/shared/WorkflowApprovalControls.js:66
@@ -9392,7 +9463,8 @@ msgid "The full image location, including the container registry, image name, an
 msgstr "コンテナーレジストリー、イメージ名、およびバージョンタグを含む完全なイメージの場所。"
 
 #: screens/Inventory/shared/Inventory.helptext.js:192
-msgid "The inventory file\n"
+msgid ""
+"The inventory file\n"
 "to be synced by this source. You can select from\n"
 "the dropdown or enter a file within the input."
 msgstr "このソースで同期されるインベントリーファイル。ドロップダウンから選択するか、入力にファイルを指定できます。"
@@ -9410,21 +9482,25 @@ msgid "The last {weekday} of {month}"
 msgstr "{month} の 最後の {weekday}"
 
 #: screens/Organization/OrganizationDetail/OrganizationDetail.js:96
-msgid "The maximum number of hosts allowed to be managed by\n"
+msgid ""
+"The maximum number of hosts allowed to be managed by\n"
 "this organization. Value defaults to 0 which means no limit.\n"
 "Refer to the Ansible documentation for more details."
-msgstr "この組織で管理可能な最大ホスト数。\n"
+msgstr ""
+"この組織で管理可能な最大ホスト数。\n"
 "デフォルト値は 0 で、管理可能な数に制限がありません。\n"
 "詳細は、Ansible のドキュメントを参照してください。"
 
 #: screens/Organization/shared/OrganizationForm.js:72
-msgid "The maximum number of hosts allowed to be managed by this organization.\n"
+msgid ""
+"The maximum number of hosts allowed to be managed by this organization.\n"
 "Value defaults to 0 which means no limit. Refer to the Ansible\n"
 "documentation for more details."
 msgstr "この組織で管理可能な最大ホスト数。デフォルト値は 0 で、管理可能な数に制限がありません。詳細は、Ansible ドキュメントを参照してください。"
 
 #: screens/NotificationTemplate/shared/Notifications.helptext.js:26
-msgid "The number associated with the \"Messaging\n"
+msgid ""
+"The number associated with the \"Messaging\n"
 "Service\" in Twilio with the format +18005550199."
 msgstr "Twilio の \"メッセージングサービス\" に関連付けられた番号 (形式: +18005550199)。"
 
@@ -9495,7 +9571,8 @@ msgid "The search filter did not produce any results…"
 msgstr "検索フィルターで結果が生成されませんでした…"
 
 #: screens/Template/Survey/SurveyQuestionForm.js:180
-msgid "The suggested format for variable names is lowercase and\n"
+msgid ""
+"The suggested format for variable names is lowercase and\n"
 "underscore-separated (for example, foo_bar, user_id, host_name,\n"
 "etc.). Variable names with spaces are not allowed."
 msgstr "アンダースコアで区切った小文字のみを使用する変数名が推奨の形式となっています (foo_bar、user_id、host_name など)。変数名にスペースを含めることはできません。"
@@ -9517,7 +9594,8 @@ msgstr "アンダースコアで区切った小文字のみを使用する変数
 #~ "source control using the Source Control Type option above."
 
 #: screens/Project/shared/ProjectSubForms/ManualSubForm.js:50
-msgid "There are no available playbook directories in {project_base_dir}.\n"
+msgid ""
+"There are no available playbook directories in {project_base_dir}.\n"
 "Either that directory is empty, or all of the contents are already\n"
 "assigned to other projects. Create a new directory there and make\n"
 "sure the playbook files can be read by the \"awx\" system user,\n"
@@ -9613,7 +9691,8 @@ msgid "This credential type is currently being used by some credentials and cann
 msgstr "この認証タイプは、現在一部の認証情報で使用されているため、削除できません"
 
 #: screens/Setting/Subscription/SubscriptionEdit/AnalyticsStep.js:74
-msgid "This data is used to enhance\n"
+msgid ""
+"This data is used to enhance\n"
 "future releases of the Software and to provide\n"
 "Automation Analytics."
 msgstr "このデータは、ソフトウェアの今後のリリースを強化し、自動化アナリティクスを提供するために使用されます。"
@@ -9629,7 +9708,8 @@ msgstr "このデータは、ソフトウェアの今後のリリースを強化
 #~ "Insights for Ansible Automation Platform."
 
 #: screens/Setting/Subscription/SubscriptionEdit/AnalyticsStep.js:62
-msgid "This data is used to enhance\n"
+msgid ""
+"This data is used to enhance\n"
 "future releases of the Tower Software and help\n"
 "streamline customer experience and success."
 msgstr "このデータは、Tower ソフトウェアの今後のリリースを強化し、顧客へのサービスを効率化し、成功に導くサポートをします。"
@@ -9794,9 +9874,11 @@ msgid "This schedule is missing required survey values"
 msgstr "このスケジュールには、必要な Survey 値がありません"
 
 #: components/Schedule/shared/UnsupportedScheduleForm.js:12
-msgid "This schedule uses complex rules that are not supported in the\n"
+msgid ""
+"This schedule uses complex rules that are not supported in the\n"
 "UI.  Please use the API to manage this schedule."
-msgstr "このスケジュールは、でサポートされていない複雑なルールを使用しています\n"
+msgstr ""
+"このスケジュールは、でサポートされていない複雑なルールを使用しています\n"
 "UI。このスケジュールを管理するには API を使用してください。"
 
 #: components/LaunchPrompt/steps/StepName.js:26
@@ -9828,9 +9910,11 @@ msgstr "これにより、このワークフローの後続のノードがすべ
 #~ msgstr "This will continue the workflow along failure and always paths."
 
 #: screens/Setting/shared/RevertAllAlert.js:36
-msgid "This will revert all configuration values on this page to\n"
+msgid ""
+"This will revert all configuration values on this page to\n"
 "their factory defaults. Are you sure you want to proceed?"
-msgstr "これにより、このページのすべての設定値が出荷時の設定に戻ります。\n"
+msgstr ""
+"これにより、このページのすべての設定値が出荷時の設定に戻ります。\n"
 "続行してもよろしいですか?"
 
 #: screens/Template/WorkflowJobTemplateVisualizer/VisualizerStartScreen.js:40
@@ -9865,7 +9949,8 @@ msgid "Time"
 msgstr "日時"
 
 #: screens/Project/shared/Project.helptext.js:128
-msgid "Time in seconds to consider a project\n"
+msgid ""
+"Time in seconds to consider a project\n"
 "to be current. During job runs and callbacks the task\n"
 "system will evaluate the timestamp of the latest project\n"
 "update. If it is older than Cache Timeout, it is not\n"
@@ -9874,7 +9959,8 @@ msgid "Time in seconds to consider a project\n"
 msgstr "プロジェクトが最新であることを判別するための時間 (秒単位) です。ジョブ実行およびコールバック時に、タスクシステムは最新のプロジェクト更新のタイムスタンプを評価します。これがキャッシュタイムアウトよりも古い場合には、最新とは見なされず、新規のプロジェクト更新が実行されます。"
 
 #: screens/Inventory/shared/Inventory.helptext.js:147
-msgid "Time in seconds to consider an inventory sync\n"
+msgid ""
+"Time in seconds to consider an inventory sync\n"
 "to be current. During job runs and callbacks the task system will\n"
 "evaluate the timestamp of the latest sync. If it is older than\n"
 "Cache Timeout, it is not considered current, and a new\n"
@@ -10127,7 +10213,8 @@ msgid "Type Details"
 msgstr "タイプの詳細"
 
 #: screens/Template/Survey/MultipleChoiceField.js:56
-msgid "Type answer then click checkbox on right to select answer as\n"
+msgid ""
+"Type answer then click checkbox on right to select answer as\n"
 "default."
 msgstr "回答を入力し、右側のチェックボックスをクリックして、回答をデフォルトとして選択します。"
 
@@ -10254,7 +10341,8 @@ msgid "Use TLS"
 msgstr "TLS の使用"
 
 #: screens/NotificationTemplate/shared/CustomMessagesSubForm.js:72
-msgid "Use custom messages to change the content of\n"
+msgid ""
+"Use custom messages to change the content of\n"
 "notifications sent when a job starts, succeeds, or fails. Use\n"
 "curly braces to access information about the job:"
 msgstr "カスタムメッセージを使用して、ジョブの開始時、成功時、または失敗時に送信する通知内容を変更します。波括弧を使用してジョブに関する情報にアクセスします:"
@@ -10264,7 +10352,8 @@ msgid "Use one Annotation Tag per line, without commas."
 msgstr "コンマで区切らずに、1 行ごとに 1 つのアノテーションタグを指定します。"
 
 #: screens/NotificationTemplate/shared/Notifications.helptext.js:13
-msgid "Use one IRC channel or username per line. The pound\n"
+msgid ""
+"Use one IRC channel or username per line. The pound\n"
 "symbol (#) for channels, and the at (@) symbol for users, are not\n"
 "required."
 msgstr "1 行ごとに 1 つの IRC チャンネルまたはユーザー名を指定します。チャンネルのシャープ記号 (#) およびユーザーのアットマーク (@) 記号は不要です。"
@@ -10274,7 +10363,8 @@ msgid "Use one email address per line to create a recipient list for this type o
 msgstr "1 行ごとに 1 つのメールアドレスを指定して、この通知タイプの受信者リストを作成します。"
 
 #: screens/NotificationTemplate/shared/Notifications.helptext.js:28
-msgid "Use one phone number per line to specify where to\n"
+msgid ""
+"Use one phone number per line to specify where to\n"
 "route SMS messages. Phone numbers should be formatted +11231231234. For more information see Twilio documentation"
 msgstr "1 行ごとに 1 つの電話番号を指定して、SMS メッセージのルーティング先を指定します。電話番号は +11231231234 の形式にする必要があります。詳細は、Twilio のドキュメントを参照してください"
 
@@ -10863,7 +10953,8 @@ msgid "Weekend day"
 msgstr "週末"
 
 #: screens/Setting/Subscription/SubscriptionEdit/SubscriptionStep.js:59
-msgid "Welcome to Red Hat Ansible Automation Platform!\n"
+msgid ""
+"Welcome to Red Hat Ansible Automation Platform!\n"
 "Please complete the steps below to activate your subscription."
 msgstr "Red Hat Ansible Automation Platform へようこそ! サブスクリプションをアクティブにするには、以下の手順を実行してください。"
 
@@ -10872,13 +10963,15 @@ msgid "Welcome to {brandName}!"
 msgstr "{brandName} へようこそ"
 
 #: screens/Inventory/shared/Inventory.helptext.js:105
-msgid "When not checked, a merge will be performed,\n"
+msgid ""
+"When not checked, a merge will be performed,\n"
 "combining local variables with those found on the\n"
 "external source."
 msgstr "チェックが付けられていない場合は、ローカル変数と外部ソースにあるものを組み合わせるマージが実行されます。"
 
 #: screens/Inventory/shared/Inventory.helptext.js:93
-msgid "When not checked, local child\n"
+msgid ""
+"When not checked, local child\n"
 "hosts and groups not found on the external source will remain\n"
 "untouched by the inventory update process."
 msgstr "チェックが付けられていない場合、外部ソースにないローカルの子ホストおよびグループは、インベントリーの更新プロセスによって処理されないままになります。"
@@ -11067,9 +11160,11 @@ msgid "You have automated against more hosts than your subscription allows."
 msgstr "サブスクリプションで許可されているよりも多くのホストに対して自動化しました。"
 
 #: screens/NotificationTemplate/shared/CustomMessagesSubForm.js:87
-msgid "You may apply a number of possible variables in the\n"
+msgid ""
+"You may apply a number of possible variables in the\n"
 "message. For more information, refer to the"
-msgstr "メッセージにはいくつかの可能な変数を適用できます。\n"
+msgstr ""
+"メッセージにはいくつかの可能な変数を適用できます。\n"
 "詳細の参照:"
 
 #: screens/Login/Login.js:198
