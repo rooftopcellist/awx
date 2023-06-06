@@ -198,9 +198,11 @@ msgstr "Erreur d'analyse JSON - pas un objet JSON"
 
 #: awx/api/parsers.py:36
 #, python-format
-msgid "JSON parse error - %s\n"
+msgid ""
+"JSON parse error - %s\n"
 "Possible cause: trailing comma."
-msgstr "Erreur d'analyse JSON - %s\n"
+msgstr ""
+"Erreur d'analyse JSON - %s\n"
 "Cause possible : virgule de fin."
 
 #: awx/api/serializers.py:205
@@ -1860,7 +1862,8 @@ msgstr "Liste des IP Proxy autorisés"
 
 #: awx/main/conf.py:87
 msgid "If the service is behind a reverse proxy/load balancer, use this setting to configure the proxy IP addresses from which the service should trust custom REMOTE_HOST_HEADERS header values. If this setting is an empty list (the default), the headers specified by REMOTE_HOST_HEADERS will be trusted unconditionally')"
-msgstr "Si service se trouve derrière un proxy inverse/équilibreur de charge, utilisez ce paramètre pour configurer les adresses IP du proxy en provenance desquelles le service devra approuver les valeurs d'en-tête REMOTE_HOST_HEADERS personnalisées. Si ce paramètre correspond à une liste vide (valeur par défaut), les en-têtes spécifiés par\n"
+msgstr ""
+"Si service se trouve derrière un proxy inverse/équilibreur de charge, utilisez ce paramètre pour configurer les adresses IP du proxy en provenance desquelles le service devra approuver les valeurs d'en-tête REMOTE_HOST_HEADERS personnalisées. Si ce paramètre correspond à une liste vide (valeur par défaut), les en-têtes spécifiés par\n"
 "REMOTE_HOST_HEADERS seront approuvés sans condition)"
 
 #: awx/main/conf.py:101
@@ -2183,12 +2186,14 @@ msgid "Loggers Sending Data to Log Aggregator Form"
 msgstr "Journaliseurs à l'origine des envois de données à l'agrégateur de journaux"
 
 #: awx/main/conf.py:530
-msgid "List of loggers that will send HTTP logs to the collector, these can include any or all of: \n"
+msgid ""
+"List of loggers that will send HTTP logs to the collector, these can include any or all of: \n"
 "awx - service logs\n"
 "activity_stream - activity stream records\n"
 "job_events - callback data from Ansible job events\n"
 "system_tracking - facts gathered from scan jobs."
-msgstr "Liste des journaliseurs qui enverront des journaux HTTP au collecteur notamment (tous les types ou certains seulement) : \n"
+msgstr ""
+"Liste des journaliseurs qui enverront des journaux HTTP au collecteur notamment (tous les types ou certains seulement) : \n"
 "awx - journaux de service\n"
 "activity_stream - enregistrements de flux d'activité                                                                                      \n"
 "job_events - données de rappel issues d'événements de tâche Ansible\n"
@@ -4434,9 +4439,11 @@ msgstr ""
 
 #: awx/main/models/workflow.py:302
 #, python-brace-format
-msgid "Bad launch configuration starting template {template_pk} as part of workflow {workflow_pk}. Errors:\n"
+msgid ""
+"Bad launch configuration starting template {template_pk} as part of workflow {workflow_pk}. Errors:\n"
 "{error_text}"
-msgstr "Modèle de démarrage de configuration de lancement incorrect {template_pk} dans le cadre du flux de travail {workflow_pk}. Erreurs :\n"
+msgstr ""
+"Modèle de démarrage de configuration de lancement incorrect {template_pk} dans le cadre du flux de travail {workflow_pk}. Erreurs :\n"
 "{error_text}"
 
 #: awx/main/models/workflow.py:622
@@ -4762,16 +4769,19 @@ msgid "Single Sign-On"
 msgstr "Single Sign-On"
 
 #: awx/sso/conf.py:52
-msgid "Mapping to organization admins/users from social auth accounts. This setting\n"
+msgid ""
+"Mapping to organization admins/users from social auth accounts. This setting\n"
 "controls which users are placed into which organizations based on their\n"
 "username and email address. Configuration details are available in the \n"
 "documentation."
-msgstr "Mappage avec des administrateurs/utilisateurs d'organisation appartenant à des comptes d'authentification sociale. Ce paramètre\n"
+msgstr ""
+"Mappage avec des administrateurs/utilisateurs d'organisation appartenant à des comptes d'authentification sociale. Ce paramètre\n"
 "contrôle les utilisateurs placés dans les organisations en fonction de\n"
 "leur nom d'utilisateur et adresse électronique. Les informations de configuration sont disponibles dans la documentation Ansible."
 
 #: awx/sso/conf.py:81
-msgid "Mapping of team members (users) from social auth accounts. Configuration\n"
+msgid ""
+"Mapping of team members (users) from social auth accounts. Configuration\n"
 "details are available in the documentation."
 msgstr "Mappage des membres de l'équipe (utilisateurs) appartenant à des comptes d'authentification sociale. Les informations de configuration sont disponibles dans la documentation."
 
