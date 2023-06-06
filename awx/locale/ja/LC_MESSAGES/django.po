@@ -198,9 +198,11 @@ msgstr "JSON パースエラー: JSON オブジェクトでありません"
 
 #: awx/api/parsers.py:36
 #, python-format
-msgid "JSON parse error - %s\n"
+msgid ""
+"JSON parse error - %s\n"
 "Possible cause: trailing comma."
-msgstr "JSON パースエラー: %s\n"
+msgstr ""
+"JSON パースエラー: %s\n"
 "考えられる原因: 末尾のコンマ。"
 
 #: awx/api/serializers.py:205
@@ -2182,12 +2184,14 @@ msgid "Loggers Sending Data to Log Aggregator Form"
 msgstr "ログアグリゲーターフォームにデータを送信するロガー"
 
 #: awx/main/conf.py:530
-msgid "List of loggers that will send HTTP logs to the collector, these can include any or all of: \n"
+msgid ""
+"List of loggers that will send HTTP logs to the collector, these can include any or all of: \n"
 "awx - service logs\n"
 "activity_stream - activity stream records\n"
 "job_events - callback data from Ansible job events\n"
 "system_tracking - facts gathered from scan jobs."
-msgstr "HTTP ログをコレクターに送信するロガーの一覧です。これらには以下のいずれか、またはすべてが含まれます。\n"
+msgstr ""
+"HTTP ログをコレクターに送信するロガーの一覧です。これらには以下のいずれか、またはすべてが含まれます。\n"
 "awx - サービスログ\n"
 "activity_stream - アクティビティーストリームレコード\n"
 "job_events - Ansible ジョブイベントからのコールバックデータ\n"
@@ -4433,9 +4437,11 @@ msgstr ""
 
 #: awx/main/models/workflow.py:302
 #, python-brace-format
-msgid "Bad launch configuration starting template {template_pk} as part of workflow {workflow_pk}. Errors:\n"
+msgid ""
+"Bad launch configuration starting template {template_pk} as part of workflow {workflow_pk}. Errors:\n"
 "{error_text}"
-msgstr "不正な起動設定が原因でワークフロー {workflow_pk} の一部としてテンプレート {template_pk} が開始されました。エラー:\n"
+msgstr ""
+"不正な起動設定が原因でワークフロー {workflow_pk} の一部としてテンプレート {template_pk} が開始されました。エラー:\n"
 "{error_text}"
 
 #: awx/main/models/workflow.py:622
@@ -4761,14 +4767,16 @@ msgid "Single Sign-On"
 msgstr "シングルサインオン"
 
 #: awx/sso/conf.py:52
-msgid "Mapping to organization admins/users from social auth accounts. This setting\n"
+msgid ""
+"Mapping to organization admins/users from social auth accounts. This setting\n"
 "controls which users are placed into which organizations based on their\n"
 "username and email address. Configuration details are available in the \n"
 "documentation."
 msgstr "ソーシャル認証アカウントから組織管理者/ユーザーへのマッピングです。この設定は、ユーザー名およびメールアドレスに基づいてどのユーザーをどの組織に配置するかを管理します。設定の詳細については、ドキュメントを参照してください。"
 
 #: awx/sso/conf.py:81
-msgid "Mapping of team members (users) from social auth accounts. Configuration\n"
+msgid ""
+"Mapping of team members (users) from social auth accounts. Configuration\n"
 "details are available in the documentation."
 msgstr "ソーシャル認証アカウントからチームメンバー (ユーザー) へのマッピングです。設定の詳細については、ドキュメントを参照してください。"
 
