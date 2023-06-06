@@ -8,7 +8,7 @@ msgstr ""
 "Language: fr\n"
 "Project-Id-Version: 6e2b1ff477170c54e8cb815d5a533f7c\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-06-06 18:39\n"
+"PO-Revision-Date: 2023-06-06 18:48\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
@@ -34,11 +34,11 @@ msgstr "* Ce champ sera récupéré dans un système externe de gestion des secr
 
 #: screens/Inventory/InventorySourceDetail/InventorySourceDetail.js:229
 msgid "/ (project root)"
-msgstr ""
+msgstr "/ (project root)"
 
 #: components/VerbositySelectField/VerbositySelectField.js:10
 msgid "0 (Normal)"
-msgstr ""
+msgstr "0 (Normal)"
 
 #: screens/Inventory/shared/InventorySourceSubForms/SharedFields.js:38
 msgid "0 (Warning)"
@@ -141,7 +141,7 @@ msgstr "Token de compte"
 
 #: screens/ActivityStream/ActivityStreamDetailButton.js:50
 msgid "Action"
-msgstr ""
+msgstr "Action"
 
 #: components/JobList/JobList.js:249
 #: components/JobList/JobListItem.js:103
@@ -206,7 +206,7 @@ msgstr ""
 #: screens/WorkflowApproval/WorkflowApprovalList/WorkflowApprovalList.js:225
 #: screens/WorkflowApproval/WorkflowApprovalList/WorkflowApprovalListItem.js:78
 msgid "Actions"
-msgstr ""
+msgstr "Actions"
 
 #: components/PromptDetail/PromptJobTemplateDetail.js:98
 #: components/PromptDetail/PromptWFJobTemplateDetail.js:61
@@ -338,7 +338,7 @@ msgstr "Ajout"
 #: routeConfig.js:113
 #: screens/ActivityStream/ActivityStream.js:190
 msgid "Administration"
-msgstr ""
+msgstr "Administration"
 
 #: components/DataListToolbar/DataListToolbar.js:139
 #: screens/Job/JobOutput/JobOutputSearch.js:136
@@ -412,7 +412,7 @@ msgstr "Toujours"
 
 #: screens/Template/WorkflowJobTemplateVisualizer/Modals/NodeModals/NodeTypeStep/InventorySourcesList.js:98
 msgid "Amazon EC2"
-msgstr ""
+msgstr "Amazon EC2"
 
 #: components/Lookup/shared/LookupErrorMessage.js:12
 msgid "An error occurred"
@@ -447,7 +447,7 @@ msgstr "Quelconque"
 #: screens/User/UserTokenDetail/UserTokenDetail.js:39
 #: screens/User/shared/UserTokenForm.js:48
 msgid "Application"
-msgstr ""
+msgstr "Application"
 
 #: screens/User/UserTokenList/UserTokenList.js:187
 msgid "Application Name"
@@ -475,7 +475,7 @@ msgstr "Application non trouvée."
 #: screens/Application/ApplicationsList/ApplicationsList.js:148
 #: util/getRelatedResourceDeleteDetails.js:209
 msgid "Applications"
-msgstr ""
+msgstr "Applications"
 
 #: screens/ActivityStream/ActivityStream.js:211
 msgid "Applications & Tokens"
@@ -570,7 +570,7 @@ msgstr "Voulez-vous vraiment demander l'annulation de ce job ?"
 #: components/AdHocCommands/AdHocDetailsStep.js:102
 #: components/AdHocCommands/AdHocDetailsStep.js:104
 msgid "Arguments"
-msgstr ""
+msgstr "Arguments"
 
 #: screens/Job/JobDetail/JobDetail.js:559
 msgid "Artifacts"
@@ -619,12 +619,12 @@ msgstr "Type d'autorisation"
 #: screens/Instances/InstanceList/InstanceListItem.js:235
 #: screens/Instances/InstancePeers/InstancePeerListItem.js:83
 msgid "Auto"
-msgstr ""
+msgstr "Auto"
 
 #: screens/Setting/Subscription/SubscriptionEdit/AnalyticsStep.js:71
 #: screens/Setting/Subscription/SubscriptionEdit/AnalyticsStep.js:72
 msgid "Automation Analytics"
-msgstr ""
+msgstr "Automation Analytics"
 
 #: screens/Setting/Subscription/SubscriptionEdit/AnalyticsStep.js:111
 msgid "Automation Analytics dashboard"
@@ -797,7 +797,7 @@ msgstr ""
 
 #: components/About/About.js:45
 msgid "Brand Image"
-msgstr ""
+msgstr "Brand Image"
 
 #: screens/Setting/Subscription/SubscriptionEdit/SubscriptionStep.js:158
 msgid "Browse"
@@ -827,7 +827,7 @@ msgstr "Par défaut, nous collectons et transmettons à Red Hat des données ana
 #: screens/Instances/InstanceList/InstanceListItem.js:171
 #: screens/TopologyView/Tooltip.js:285
 msgid "CPU {0}"
-msgstr ""
+msgstr "CPU {0}"
 
 #: components/PromptDetail/PromptInventorySourceDetail.js:102
 #: components/PromptDetail/PromptProjectDetail.js:151
@@ -1205,7 +1205,7 @@ msgstr "Fermer la modalité d'abonnement"
 
 #: components/CredentialChip/CredentialChip.js:11
 msgid "Cloud"
-msgstr ""
+msgstr "Cloud"
 
 #: components/ExpandCollapse/ExpandCollapse.js:41
 msgid "Collapse"
@@ -1379,7 +1379,7 @@ msgstr "Noeud du contrôleur"
 #: components/PromptDetail/PromptDetail.js:131
 #: screens/Template/WorkflowJobTemplateVisualizer/Modals/NodeModals/NodeTypeStep/NodeTypeStep.js:225
 msgid "Convergence"
-msgstr ""
+msgstr "Convergence"
 
 #: screens/Template/WorkflowJobTemplateVisualizer/Modals/NodeModals/NodeTypeStep/NodeTypeStep.js:256
 #: screens/Template/WorkflowJobTemplateVisualizer/Modals/NodeModals/NodeTypeStep/NodeTypeStep.js:257
@@ -1425,7 +1425,7 @@ msgstr "Copier la révision complète dans le Presse-papiers."
 
 #: components/About/About.js:35
 msgid "Copyright"
-msgstr ""
+msgstr "Copyright"
 
 #: components/LaunchPrompt/steps/OtherPromptsStep.js:231
 #: components/MultiSelect/TagMultiSelect.js:62
@@ -1786,7 +1786,7 @@ msgstr "Durée de conservation des données"
 
 #: screens/Dashboard/shared/LineChart.js:168
 msgid "Date"
-msgstr ""
+msgstr "Date"
 
 #: components/Schedule/ScheduleDetail/ScheduleDetail.js:180
 #: components/Schedule/shared/FrequencyDetailSubform.js:177
@@ -2166,7 +2166,7 @@ msgstr "Échec du déprovisionnement"
 #: screens/WorkflowApproval/WorkflowApprovalDetail/WorkflowApprovalDetail.js:145
 #: screens/WorkflowApproval/WorkflowApprovalList/WorkflowApprovalList.js:176
 msgid "Description"
-msgstr ""
+msgstr "Description"
 
 #: screens/NotificationTemplate/NotificationTemplateDetail/NotificationTemplateDetail.js:325
 msgid "Destination Channels"
@@ -2381,7 +2381,7 @@ msgstr "Diviser le travail effectué à l'aide de ce modèle de job en un nombre
 
 #: screens/Project/shared/Project.helptext.js:100
 msgid "Documentation."
-msgstr ""
+msgstr "Documentation."
 
 #: components/CodeEditor/VariablesDetail.js:117
 #: components/CodeEditor/VariablesDetail.js:123
@@ -2426,7 +2426,7 @@ msgstr "Le déplacement a commencé pour l'élément id : {newId}."
 
 #: screens/NotificationTemplate/shared/NotificationTemplateForm.js:81
 msgid "E-mail"
-msgstr ""
+msgstr "E-mail"
 
 #: screens/NotificationTemplate/shared/TypeInputsSubForm.js:121
 #~ msgid "E-mail options"
@@ -2717,7 +2717,7 @@ msgstr "Temps écoulé (en secondes) pendant lequel la tâche s'est exécutée."
 #: screens/User/UserList/UserList.js:115
 #: screens/User/shared/UserForm.js:73
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #: screens/NotificationTemplate/NotificationTemplateDetail/NotificationTemplateDetail.js:177
 #: screens/NotificationTemplate/shared/TypeInputsSubForm.js:125
@@ -3245,7 +3245,7 @@ msgstr "Fréquence des exceptions"
 
 #: components/Schedule/shared/ScheduleFormFields.js:160
 msgid "Exceptions"
-msgstr ""
+msgstr "Exceptions"
 
 #: screens/Template/WorkflowJobTemplateVisualizer/Modals/NodeModals/RunStep.js:47
 msgid "Execute regardless of the parent node's final state."
@@ -3413,7 +3413,7 @@ msgstr "Si cette option est activée, les données recueillies seront stockées 
 #: screens/Inventory/InventoryHost/InventoryHost.js:78
 #: screens/Inventory/InventoryHostFacts/InventoryHostFacts.js:39
 msgid "Facts"
-msgstr ""
+msgstr "Facts"
 
 #: components/JobList/JobList.js:232
 #: components/StatusLabel/StatusLabel.js:45
@@ -3981,7 +3981,7 @@ msgstr "Pour plus d'informations, reportez-vous à"
 #: screens/Template/shared/JobTemplateForm.js:409
 #: screens/TopologyView/Tooltip.js:282
 msgid "Forks"
-msgstr ""
+msgstr "Forks"
 
 #: components/Schedule/shared/FrequencyDetailSubform.js:414
 msgid "Fourth"
@@ -4062,12 +4062,12 @@ msgstr "Obtenir des abonnements"
 #: screens/Project/ProjectList/ProjectList.js:198
 #: screens/Template/WorkflowJobTemplateVisualizer/Modals/NodeModals/NodeTypeStep/ProjectsList.js:97
 msgid "Git"
-msgstr ""
+msgstr "Git"
 
 #: screens/Template/JobTemplateDetail/JobTemplateDetail.js:308
 #: screens/Template/shared/WebhookSubForm.js:106
 msgid "GitHub"
-msgstr ""
+msgstr "GitHub"
 
 #: screens/Setting/GitHub/GitHubDetail/GitHubDetail.js:85
 #: screens/Setting/Settings.js:51
@@ -4077,7 +4077,7 @@ msgstr "GitHub (Par défaut)"
 #: screens/Setting/GitHub/GitHubDetail/GitHubDetail.js:100
 #: screens/Setting/Settings.js:60
 msgid "GitHub Enterprise"
-msgstr ""
+msgstr "GitHub Enterprise"
 
 #: screens/Setting/GitHub/GitHubDetail/GitHubDetail.js:105
 #: screens/Setting/Settings.js:63
@@ -4087,7 +4087,7 @@ msgstr "Organisation GitHub Enterprise"
 #: screens/Setting/GitHub/GitHubDetail/GitHubDetail.js:110
 #: screens/Setting/Settings.js:66
 msgid "GitHub Enterprise Team"
-msgstr ""
+msgstr "GitHub Enterprise Team"
 
 #: screens/Setting/GitHub/GitHubDetail/GitHubDetail.js:90
 #: screens/Setting/Settings.js:54
@@ -4097,7 +4097,7 @@ msgstr "Organisation GitHub"
 #: screens/Setting/GitHub/GitHubDetail/GitHubDetail.js:95
 #: screens/Setting/Settings.js:57
 msgid "GitHub Team"
-msgstr ""
+msgstr "GitHub Team"
 
 #: screens/Setting/SettingList.js:61
 msgid "GitHub settings"
@@ -4106,7 +4106,7 @@ msgstr "Paramètres de GitHub"
 #: screens/Template/JobTemplateDetail/JobTemplateDetail.js:308
 #: screens/Template/shared/WebhookSubForm.js:112
 msgid "GitLab"
-msgstr ""
+msgstr "GitLab"
 
 #: components/Lookup/ExecutionEnvironmentLookup.js:206
 #~ msgid "Global Default Execution Environment"
@@ -4139,7 +4139,7 @@ msgstr "Obtenir la page précédente"
 
 #: screens/Template/WorkflowJobTemplateVisualizer/Modals/NodeModals/NodeTypeStep/InventorySourcesList.js:99
 msgid "Google Compute Engine"
-msgstr ""
+msgstr "Google Compute Engine"
 
 #: screens/Setting/SettingList.js:65
 msgid "Google OAuth 2 settings"
@@ -4147,12 +4147,12 @@ msgstr "Paramètres de Google OAuth 2"
 
 #: screens/Setting/Settings.js:69
 msgid "Google OAuth2"
-msgstr ""
+msgstr "Google OAuth2"
 
 #: components/NotificationList/NotificationList.js:194
 #: screens/NotificationTemplate/NotificationTemplateList/NotificationTemplateList.js:135
 msgid "Grafana"
-msgstr ""
+msgstr "Grafana"
 
 #: screens/NotificationTemplate/shared/TypeInputsSubForm.js:160
 msgid "Grafana API key"
@@ -4255,7 +4255,7 @@ msgstr "HipChat"
 
 #: screens/Instances/InstanceList/InstanceList.js:172
 msgid "Hop"
-msgstr ""
+msgstr "Hop"
 
 #: screens/TopologyView/Legend.js:103
 msgid "Hop node"
@@ -4415,7 +4415,7 @@ msgstr "Noeud hybride"
 #: components/Lookup/HostFilterLookup.js:98
 #: screens/Team/TeamRoles/TeamRolesList.js:155
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: screens/NotificationTemplate/NotificationTemplateDetail/NotificationTemplateDetail.js:193
 msgid "ID of the Dashboard"
@@ -4440,11 +4440,11 @@ msgstr "Adresse IP"
 #: components/NotificationList/NotificationList.js:196
 #: screens/NotificationTemplate/NotificationTemplateList/NotificationTemplateList.js:137
 msgid "IRC"
-msgstr ""
+msgstr "IRC"
 
 #: screens/NotificationTemplate/NotificationTemplateDetail/NotificationTemplateDetail.js:228
 msgid "IRC Nick"
-msgstr ""
+msgstr "IRC Nick"
 
 #: screens/NotificationTemplate/NotificationTemplateDetail/NotificationTemplateDetail.js:223
 msgid "IRC Server Address"
@@ -4456,7 +4456,7 @@ msgstr "Port du serveur IRC"
 
 #: screens/NotificationTemplate/shared/TypeInputsSubForm.js:223
 msgid "IRC nick"
-msgstr ""
+msgstr "IRC nick"
 
 #: screens/NotificationTemplate/shared/TypeInputsSubForm.js:215
 msgid "IRC server address"
@@ -4607,7 +4607,7 @@ msgstr "Si vous voulez que la source de l'inventaire soit mise à jour au lancem
 #: screens/Organization/OrganizationExecEnvList/OrganizationExecEnvList.js:108
 #: screens/Organization/OrganizationExecEnvList/OrganizationExecEnvListItem.js:21
 msgid "Image"
-msgstr ""
+msgstr "Image"
 
 #: screens/Job/JobOutput/JobOutputSearch.js:117
 msgid "Including File"
@@ -4621,7 +4621,7 @@ msgstr "Indique si un hôte est disponible et doit être inclus dans les Jobs en
 
 #: components/AppContainer/PageHeaderToolbar.js:103
 msgid "Info"
-msgstr ""
+msgstr "Info"
 
 #: screens/ActivityStream/ActivityStreamListItem.js:45
 msgid "Initiated By"
@@ -4680,7 +4680,7 @@ msgstr "Installé"
 
 #: screens/Metrics/Metrics.js:187
 msgid "Instance"
-msgstr ""
+msgstr "Instance"
 
 #: components/PromptDetail/PromptInventorySourceDetail.js:135
 msgid "Instance Filters"
@@ -4769,7 +4769,7 @@ msgstr "Type d'instance"
 #: screens/Instances/Instances.js:13
 #: screens/Instances/Instances.js:22
 msgid "Instances"
-msgstr ""
+msgstr "Instances"
 
 #: screens/Template/Survey/SurveyQuestionForm.js:93
 msgid "Integer"
@@ -4966,7 +4966,7 @@ msgstr "ID JOB :"
 
 #: screens/Job/JobOutput/HostEventModal.js:134
 msgid "JSON"
-msgstr ""
+msgstr "JSON"
 
 #: screens/Job/JobOutput/HostEventModal.js:135
 msgid "JSON tab"
@@ -5130,7 +5130,7 @@ msgstr "Modèles de Jobs"
 #: screens/Template/Templates.js:47
 #: screens/Template/WorkflowJobTemplate.js:141
 msgid "Jobs"
-msgstr ""
+msgstr "Jobs"
 
 #: screens/Setting/SettingList.js:96
 msgid "Jobs settings"
@@ -5165,27 +5165,27 @@ msgstr "Mot-clé "
 #: screens/User/UserDetail/UserDetail.js:56
 #: screens/User/UserList/UserListItem.js:44
 msgid "LDAP"
-msgstr ""
+msgstr "LDAP"
 
 #: screens/Setting/Settings.js:80
 msgid "LDAP 1"
-msgstr ""
+msgstr "LDAP 1"
 
 #: screens/Setting/Settings.js:81
 msgid "LDAP 2"
-msgstr ""
+msgstr "LDAP 2"
 
 #: screens/Setting/Settings.js:82
 msgid "LDAP 3"
-msgstr ""
+msgstr "LDAP 3"
 
 #: screens/Setting/Settings.js:83
 msgid "LDAP 4"
-msgstr ""
+msgstr "LDAP 4"
 
 #: screens/Setting/Settings.js:84
 msgid "LDAP 5"
-msgstr ""
+msgstr "LDAP 5"
 
 #: screens/Setting/Settings.js:79
 msgid "LDAP Default"
@@ -5197,23 +5197,23 @@ msgstr "Paramètres LDAP"
 
 #: screens/Setting/LDAP/LDAPDetail/LDAPDetail.js:107
 msgid "LDAP1"
-msgstr ""
+msgstr "LDAP1"
 
 #: screens/Setting/LDAP/LDAPDetail/LDAPDetail.js:112
 msgid "LDAP2"
-msgstr ""
+msgstr "LDAP2"
 
 #: screens/Setting/LDAP/LDAPDetail/LDAPDetail.js:117
 msgid "LDAP3"
-msgstr ""
+msgstr "LDAP3"
 
 #: screens/Setting/LDAP/LDAPDetail/LDAPDetail.js:122
 msgid "LDAP4"
-msgstr ""
+msgstr "LDAP4"
 
 #: screens/Setting/LDAP/LDAPDetail/LDAPDetail.js:127
 msgid "LDAP5"
-msgstr ""
+msgstr "LDAP5"
 
 #: components/RelatedTemplateList/RelatedTemplateList.js:191
 #: components/TemplateList/TemplateList.js:234
@@ -5450,7 +5450,7 @@ msgstr "Chargement en cours..."
 
 #: components/Schedule/ScheduleOccurrences/ScheduleOccurrences.js:49
 msgid "Local"
-msgstr ""
+msgstr "Local"
 
 #: components/Schedule/ScheduleDetail/ScheduleDetail.js:339
 msgid "Local Time Zone"
@@ -5576,7 +5576,7 @@ msgstr "Mars"
 #: components/NotificationList/NotificationList.js:197
 #: screens/NotificationTemplate/NotificationTemplateList/NotificationTemplateList.js:138
 msgid "Mattermost"
-msgstr ""
+msgstr "Mattermost"
 
 #: screens/Organization/OrganizationDetail/OrganizationDetail.js:94
 #: screens/Organization/shared/OrganizationForm.js:71
@@ -5599,7 +5599,7 @@ msgstr ""
 
 #: screens/Template/Survey/SurveyQuestionForm.js:220
 msgid "Maximum"
-msgstr ""
+msgstr "Maximum"
 
 #: screens/Template/Survey/SurveyQuestionForm.js:204
 msgid "Maximum length"
@@ -5645,11 +5645,11 @@ msgstr "Métriques"
 
 #: screens/Template/WorkflowJobTemplateVisualizer/Modals/NodeModals/NodeTypeStep/InventorySourcesList.js:100
 msgid "Microsoft Azure Resource Manager"
-msgstr ""
+msgstr "Microsoft Azure Resource Manager"
 
 #: screens/Template/Survey/SurveyQuestionForm.js:214
 msgid "Minimum"
-msgstr ""
+msgstr "Minimum"
 
 #: screens/Template/Survey/SurveyQuestionForm.js:198
 msgid "Minimum length"
@@ -5672,7 +5672,7 @@ msgstr "Le pourcentage minimum de toutes les instances qui seront automatiquemen
 #: components/Schedule/shared/ScheduleFormFields.js:125
 #: components/Schedule/shared/ScheduleFormFields.js:185
 msgid "Minute"
-msgstr ""
+msgstr "Minute"
 
 #: screens/Setting/Settings.js:100
 msgid "Miscellaneous Authentication"
@@ -5758,7 +5758,7 @@ msgstr "Modifié par (nom d'utilisateur)"
 #: components/AdHocCommands/AdHocDetailsStep.js:59
 #: screens/Job/JobOutput/HostEventModal.js:126
 msgid "Module"
-msgstr ""
+msgstr "Module"
 
 #: screens/Job/JobDetail/JobDetail.js:530
 msgid "Module Arguments"
@@ -5797,7 +5797,7 @@ msgstr "Plus d'informations pour"
 #: screens/Template/Survey/SurveyReorderModal.js:162
 #: screens/Template/Survey/SurveyReorderModal.js:163
 msgid "Multi-Select"
-msgstr ""
+msgstr "Multi-Select"
 
 #: screens/Template/Survey/SurveyReorderModal.js:146
 #: screens/Template/Survey/SurveyReorderModal.js:147
@@ -6050,7 +6050,7 @@ msgstr "Nom"
 
 #: components/AppContainer/AppContainer.js:95
 msgid "Navigation"
-msgstr ""
+msgstr "Navigation"
 
 #: components/Schedule/ScheduleDetail/FrequencyDetails.js:221
 #: components/Schedule/shared/FrequencyDetailSubform.js:512
@@ -6343,7 +6343,7 @@ msgstr "Type de notification"
 #: screens/Template/Templates.js:46
 #: screens/Template/WorkflowJobTemplate.js:123
 msgid "Notifications"
-msgstr ""
+msgstr "Notifications"
 
 #: components/Schedule/ScheduleDetail/FrequencyDetails.js:169
 #: components/Schedule/shared/FrequencyDetailSubform.js:148
@@ -6355,12 +6355,12 @@ msgstr "Novembre"
 #: screens/Credential/shared/CredentialPlugins/CredentialPluginPrompt/CredentialPluginPrompt.js:66
 #: screens/Job/JobOutput/shared/HostStatusBar.js:35
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: components/Schedule/ScheduleOccurrences/ScheduleOccurrences.js:42
 #: components/Schedule/shared/FrequencyDetailSubform.js:549
 msgid "Occurrences"
-msgstr ""
+msgstr "Occurrences"
 
 #: components/Schedule/ScheduleDetail/FrequencyDetails.js:168
 #: components/Schedule/shared/FrequencyDetailSubform.js:143
@@ -6434,7 +6434,7 @@ msgstr "Grouper seulement par"
 
 #: screens/Template/WorkflowJobTemplateVisualizer/Modals/NodeModals/NodeTypeStep/InventorySourcesList.js:103
 msgid "OpenStack"
-msgstr ""
+msgstr "OpenStack"
 
 #: screens/Project/shared/ProjectSubForms/SharedFields.js:111
 msgid "Option Details"
@@ -6482,7 +6482,7 @@ msgstr "En option, sélectionnez les informations d'identification à utiliser p
 #: screens/Template/shared/JobTemplateForm.js:545
 #: screens/Template/shared/WorkflowJobTemplateForm.js:241
 msgid "Options"
-msgstr ""
+msgstr "Options"
 
 #: screens/Template/Survey/SurveyReorderModal.js:217
 #: screens/Template/Survey/SurveyReorderModal.js:217
@@ -6608,7 +6608,7 @@ msgstr "PLACER"
 #: components/NotificationList/NotificationList.js:198
 #: screens/NotificationTemplate/NotificationTemplateList/NotificationTemplateList.js:139
 msgid "Pagerduty"
-msgstr ""
+msgstr "Pagerduty"
 
 #: screens/NotificationTemplate/NotificationTemplateDetail/NotificationTemplateDetail.js:279
 msgid "Pagerduty Subdomain"
@@ -6620,7 +6620,7 @@ msgstr "Sous-domaine Pagerduty"
 
 #: components/Pagination/Pagination.js:35
 msgid "Pagination"
-msgstr ""
+msgstr "Pagination"
 
 #: components/Workflow/WorkflowTools.js:165
 msgid "Pan Down"
@@ -6722,7 +6722,7 @@ msgstr "Jeton d'accès personnel"
 
 #: screens/Job/JobOutput/HostEventModal.js:123
 msgid "Play"
-msgstr ""
+msgstr "Play"
 
 #: screens/Job/JobOutput/shared/OutputToolbar.js:99
 msgid "Play Count"
@@ -6738,7 +6738,7 @@ msgstr "Play - Démarrage"
 #: screens/Template/WorkflowJobTemplateVisualizer/Modals/NodeModals/NodeTypeStep/JobTemplatesList.js:43
 #: screens/Template/shared/JobTemplateForm.js:357
 msgid "Playbook"
-msgstr ""
+msgstr "Playbook"
 
 #: components/JobList/JobListItem.js:44
 #: screens/Job/JobDetail/JobDetail.js:67
@@ -6780,7 +6780,7 @@ msgstr "Exécution du playbook"
 
 #: screens/Job/JobOutput/shared/OutputToolbar.js:100
 msgid "Plays"
-msgstr ""
+msgstr "Plays"
 
 #: components/Schedule/ScheduleList/ScheduleList.js:149
 msgid "Please add a Schedule to populate this list."
@@ -6899,7 +6899,7 @@ msgstr "Remplissez les hôtes pour cet inventaire en utilisant un filtre de rech
 #: screens/NotificationTemplate/NotificationTemplateDetail/NotificationTemplateDetail.js:165
 #: screens/NotificationTemplate/shared/TypeInputsSubForm.js:104
 msgid "Port"
-msgstr ""
+msgstr "Port"
 
 #: screens/Template/WorkflowJobTemplateVisualizer/Modals/NodeModals/NodeTypeStep/NodeTypeStep.js:231
 msgid "Preconditions for running this node when there are multiple parents. Refer to the"
@@ -7151,11 +7151,11 @@ msgstr "Extraire"
 
 #: screens/Template/Survey/SurveyQuestionForm.js:163
 msgid "Question"
-msgstr ""
+msgstr "Question"
 
 #: screens/Setting/Settings.js:106
 msgid "RADIUS"
-msgstr ""
+msgstr "RADIUS"
 
 #: screens/Setting/SettingList.js:73
 msgid "RADIUS settings"
@@ -7168,7 +7168,7 @@ msgstr "Paramètres RADIUS"
 #: screens/Instances/InstanceList/InstanceListItem.js:187
 #: screens/TopologyView/Tooltip.js:307
 msgid "RAM {0}"
-msgstr ""
+msgstr "RAM {0}"
 
 #: screens/User/shared/UserTokenForm.js:76
 msgid "Read"
@@ -7211,7 +7211,7 @@ msgstr "Liste de destinataires"
 
 #: screens/Template/WorkflowJobTemplateVisualizer/Modals/NodeModals/NodeTypeStep/InventorySourcesList.js:105
 msgid "Red Hat Ansible Automation Platform"
-msgstr ""
+msgstr "Red Hat Ansible Automation Platform"
 
 #: components/Lookup/ProjectLookup.js:139
 #: components/UserAndTeamAccessAdd/getResourceAccessConfig.js:92
@@ -7220,15 +7220,15 @@ msgstr ""
 #: screens/Project/ProjectList/ProjectList.js:201
 #: screens/Template/WorkflowJobTemplateVisualizer/Modals/NodeModals/NodeTypeStep/ProjectsList.js:100
 msgid "Red Hat Insights"
-msgstr ""
+msgstr "Red Hat Insights"
 
 #: screens/Template/WorkflowJobTemplateVisualizer/Modals/NodeModals/NodeTypeStep/InventorySourcesList.js:102
 msgid "Red Hat Satellite 6"
-msgstr ""
+msgstr "Red Hat Satellite 6"
 
 #: screens/Template/WorkflowJobTemplateVisualizer/Modals/NodeModals/NodeTypeStep/InventorySourcesList.js:104
 msgid "Red Hat Virtualization"
-msgstr ""
+msgstr "Red Hat Virtualization"
 
 #: screens/Setting/Subscription/SubscriptionEdit/SubscriptionStep.js:117
 msgid "Red Hat subscription manifest"
@@ -7236,7 +7236,7 @@ msgstr "Manifeste de souscription à Red Hat"
 
 #: components/About/About.js:36
 msgid "Red Hat, Inc."
-msgstr ""
+msgstr "Red Hat, Inc."
 
 #: screens/Application/ApplicationDetails/ApplicationDetails.js:94
 #: screens/Application/shared/ApplicationForm.js:107
@@ -7575,7 +7575,7 @@ msgstr "Révision n°"
 #: components/NotificationList/NotificationList.js:199
 #: screens/NotificationTemplate/NotificationTemplateList/NotificationTemplateList.js:140
 msgid "Rocket.Chat"
-msgstr ""
+msgstr "Rocket.Chat"
 
 #: screens/Team/TeamRoles/TeamRoleListItem.js:20
 #: screens/Team/TeamRoles/TeamRolesList.js:148
@@ -7699,7 +7699,7 @@ msgstr "Jobs en cours d'exécution"
 
 #: screens/Setting/Settings.js:109
 msgid "SAML"
-msgstr ""
+msgstr "SAML"
 
 #: screens/Setting/SettingList.js:77
 msgid "SAML settings"
@@ -7712,7 +7712,7 @@ msgstr "Mise à jour SCM"
 #: screens/User/UserDetail/UserDetail.js:58
 #: screens/User/UserList/UserListItem.js:49
 msgid "SOCIAL"
-msgstr ""
+msgstr "SOCIAL"
 
 #: components/LaunchPrompt/steps/CredentialPasswordsStep.js:95
 msgid "SSH password"
@@ -8576,7 +8576,7 @@ msgstr "Ignoré"
 #: components/NotificationList/NotificationList.js:200
 #: screens/NotificationTemplate/NotificationTemplateList/NotificationTemplateList.js:141
 msgid "Slack"
-msgstr ""
+msgstr "Slack"
 
 #: screens/Host/HostList/SmartInventoryButton.js:39
 #: screens/Host/HostList/SmartInventoryButton.js:48
@@ -8633,7 +8633,7 @@ msgstr "Trier"
 #: screens/Job/JobDetail/JobDetail.js:294
 #: screens/Template/WorkflowJobTemplateVisualizer/Modals/NodeModals/NodeTypeStep/InventorySourcesList.js:93
 msgid "Source"
-msgstr ""
+msgstr "Source"
 
 #: components/LaunchPrompt/steps/OtherPromptsStep.js:44
 #: components/PromptDetail/PromptDetail.js:237
@@ -8738,7 +8738,7 @@ msgstr "Provenance d'un projet"
 #: screens/Inventory/Inventories.js:84
 #: screens/Inventory/Inventory.js:68
 msgid "Sources"
-msgstr ""
+msgstr "Sources"
 
 #: screens/NotificationTemplate/shared/Notifications.helptext.js:30
 msgid "Specify HTTP Headers in JSON format. Refer to\n"
@@ -8857,7 +8857,7 @@ msgstr "État"
 
 #: screens/Job/JobOutput/JobOutputSearch.js:91
 msgid "Stdout"
-msgstr ""
+msgstr "Stdout"
 
 #: screens/Setting/Subscription/SubscriptionEdit/SubscriptionEdit.js:37
 #: screens/Setting/Subscription/SubscriptionEdit/SubscriptionEdit.js:49
@@ -8921,7 +8921,7 @@ msgstr "Table des abonnements"
 #: screens/Project/ProjectList/ProjectList.js:199
 #: screens/Template/WorkflowJobTemplateVisualizer/Modals/NodeModals/NodeTypeStep/ProjectsList.js:98
 msgid "Subversion"
-msgstr ""
+msgstr "Subversion"
 
 #: components/NotificationList/NotificationListItem.js:71
 #: components/NotificationList/NotificationListItem.js:72
@@ -9019,7 +9019,7 @@ msgstr "Modalité d'aperçu de l'enquête"
 #: screens/Project/shared/ProjectSyncButton.js:41
 #: screens/Project/shared/ProjectSyncButton.js:53
 msgid "Sync"
-msgstr ""
+msgstr "Sync"
 
 #: screens/Project/ProjectList/ProjectListItem.js:238
 #: screens/Project/shared/ProjectSyncButton.js:37
@@ -9084,7 +9084,7 @@ msgstr "Les administrateurs système ont un accès illimité à toutes les resso
 
 #: screens/Setting/Settings.js:115
 msgid "TACACS+"
-msgstr ""
+msgstr "TACACS+"
 
 #: screens/Setting/SettingList.js:81
 msgid "TACACS+ settings"
@@ -9225,7 +9225,7 @@ msgstr "Modèles"
 #: screens/Credential/shared/CredentialPlugins/CredentialPluginPrompt/CredentialPluginPrompt.js:80
 #: screens/NotificationTemplate/NotificationTemplateDetail/NotificationTemplateDetail.js:426
 msgid "Test"
-msgstr ""
+msgstr "Test"
 
 #: screens/Credential/shared/ExternalTestModal.js:77
 msgid "Test External Credential"
@@ -9990,7 +9990,7 @@ msgstr "Vue topologique"
 #: screens/Instances/InstanceList/InstanceListItem.js:230
 #: screens/Instances/InstancePeers/InstancePeerListItem.js:78
 msgid "Total Jobs"
-msgstr ""
+msgstr "Total Jobs"
 
 #: screens/Job/WorkflowOutput/WorkflowOutputToolbar.js:104
 #: screens/Template/WorkflowJobTemplateVisualizer/VisualizerToolbar.js:76
@@ -10046,7 +10046,7 @@ msgstr "Mardi"
 #: components/NotificationList/NotificationList.js:201
 #: screens/NotificationTemplate/NotificationTemplateList/NotificationTemplateList.js:142
 msgid "Twilio"
-msgstr ""
+msgstr "Twilio"
 
 #: components/JobList/JobList.js:246
 #: components/JobList/JobListItem.js:98
@@ -10093,7 +10093,7 @@ msgstr ""
 #: screens/User/UserRoles/UserRolesList.js:156
 #: screens/User/UserRoles/UserRolesListItem.js:21
 msgid "Type"
-msgstr ""
+msgstr "Type"
 
 #: screens/Credential/shared/TypeInputsSubForm.js:25
 #: screens/NotificationTemplate/shared/TypeInputsSubForm.js:47
@@ -10108,7 +10108,7 @@ msgstr "Saisir la réponse puis cliquez sur la case à cocher à droite pour sé
 
 #: components/Schedule/ScheduleOccurrences/ScheduleOccurrences.js:50
 msgid "UTC"
-msgstr ""
+msgstr "UTC"
 
 #: components/HostForm/HostForm.js:62
 msgid "Unable to change inventory on a host"
@@ -10371,7 +10371,7 @@ msgstr "Utilisateurs"
 
 #: screens/Template/WorkflowJobTemplateVisualizer/Modals/NodeModals/NodeTypeStep/InventorySourcesList.js:101
 msgid "VMware vCenter"
-msgstr ""
+msgstr "VMware vCenter"
 
 #: components/AdHocCommands/AdHocPreviewStep.js:69
 #: components/HostForm/HostForm.js:113
@@ -10397,7 +10397,7 @@ msgstr ""
 #: screens/Template/shared/WorkflowJobTemplateForm.js:212
 #: screens/WorkflowApproval/WorkflowApprovalDetail/WorkflowApprovalDetail.js:293
 msgid "Variables"
-msgstr ""
+msgstr "Variables"
 
 #: screens/Job/JobOutput/JobOutputSearch.js:130
 msgid "Variables Prompted"
@@ -10743,7 +10743,7 @@ msgstr "Nous n'avons pas pu localiser les abonnements associés à ce compte."
 #: components/NotificationList/NotificationList.js:202
 #: screens/NotificationTemplate/NotificationTemplateList/NotificationTemplateList.js:143
 msgid "Webhook"
-msgstr ""
+msgstr "Webhook"
 
 #: components/PromptDetail/PromptJobTemplateDetail.js:177
 #: components/PromptDetail/PromptWFJobTemplateDetail.js:103
@@ -10801,7 +10801,7 @@ msgstr "Les services webhook peuvent l'utiliser en tant que secret partagé."
 #: screens/Template/JobTemplateDetail/JobTemplateDetail.js:143
 #: screens/Template/WorkflowJobTemplateDetail/WorkflowJobTemplateDetail.js:63
 msgid "Webhooks"
-msgstr ""
+msgstr "Webhooks"
 
 #: screens/Template/shared/WorkflowJobTemplate.helptext.js:26
 msgid "Webhooks: Enable Webhook for this workflow job template."
@@ -11171,7 +11171,7 @@ msgstr "dissocier"
 #: screens/Template/WorkflowJobTemplateVisualizer/Modals/NodeModals/NodeTypeStep/NodeTypeStep.js:239
 #: screens/Template/shared/JobTemplate.helptext.js:61
 msgid "documentation"
-msgstr ""
+msgstr "documentation"
 
 #: screens/CredentialType/CredentialTypeDetails/CredentialTypeDetails.js:105
 #: screens/ExecutionEnvironment/ExecutionEnvironmentDetails/ExecutionEnvironmentDetails.js:117
@@ -11253,7 +11253,7 @@ msgstr "type de connexion"
 
 #: screens/Template/WorkflowJobTemplateVisualizer/Modals/NodeModals/NodeTypeStep/NodeTypeStep.js:203
 msgid "min"
-msgstr ""
+msgstr "min"
 
 #: screens/Template/Survey/SurveyListItem.js:91
 #~ msgid "move down"
@@ -11282,11 +11282,11 @@ msgstr "l'option à la"
 
 #: components/Pagination/Pagination.js:25
 msgid "page"
-msgstr ""
+msgstr "page"
 
 #: components/Pagination/Pagination.js:26
 msgid "pages"
-msgstr ""
+msgstr "pages"
 
 #: components/Pagination/Pagination.js:28
 msgid "per page"
@@ -11299,7 +11299,7 @@ msgstr "relancer les Jobs"
 
 #: screens/Template/WorkflowJobTemplateVisualizer/Modals/NodeModals/NodeTypeStep/NodeTypeStep.js:217
 msgid "sec"
-msgstr ""
+msgstr "sec"
 
 #: screens/Inventory/InventorySourceDetail/InventorySourceDetail.js:244
 msgid "seconds"
@@ -11319,7 +11319,7 @@ msgstr "sélectionner un module"
 
 #: screens/User/UserList/UserListItem.js:49
 msgid "social login"
-msgstr ""
+msgstr "social login"
 
 #: screens/Template/shared/JobTemplateForm.js:346
 #: screens/Template/shared/WorkflowJobTemplateForm.js:188
@@ -11356,11 +11356,11 @@ msgstr "clé webhook de modèles de tâche flux de travail"
 
 #: screens/Inventory/InventoryList/InventoryListItem.js:65
 msgid "{0, plural, one {# source with sync failures.} other {# sources with sync failures.}}"
-msgstr ""
+msgstr "{0, plural, one {# source with sync failures.} other {# sources with sync failures.}}"
 
 #: screens/Inventory/shared/InventoryGroupsDeleteModal.js:115
 msgid "{0, plural, one {Are you sure you want delete the group below?} other {Are you sure you want delete the groups below?}}"
-msgstr ""
+msgstr "{0, plural, one {Are you sure you want delete the group below?} other {Are you sure you want delete the groups below?}}"
 
 #: components/HealthCheckButton/HealthCheckButton.js:23
 #~ msgid "{0, plural, one {Click to run a health check on the selected instance.} other {Click to run a health check on the selected instances.}}"
@@ -11368,11 +11368,11 @@ msgstr ""
 
 #: screens/Inventory/shared/InventoryGroupsDeleteModal.js:86
 msgid "{0, plural, one {Delete Group?} other {Delete Groups?}}"
-msgstr ""
+msgstr "{0, plural, one {Delete Group?} other {Delete Groups?}}"
 
 #: util/validators.js:138
 msgid "{0, plural, one {Please enter a valid phone number.} other {Please enter valid phone numbers.}}"
-msgstr ""
+msgstr "{0, plural, one {Please enter a valid phone number.} other {Please enter valid phone numbers.}}"
 
 #: screens/InstanceGroup/InstanceGroupList/InstanceGroupList.js:175
 #~ msgid "{0, plural, one {The following Instance Group cannot be deleted} other {The following Instance Groups cannot be deleted}}"
@@ -11380,43 +11380,43 @@ msgstr ""
 
 #: screens/Inventory/InventoryList/InventoryList.js:247
 msgid "{0, plural, one {The inventory will be in a pending status until the final delete is processed.} other {The inventories will be in a pending status until the final delete is processed.}}"
-msgstr ""
+msgstr "{0, plural, one {The inventory will be in a pending status until the final delete is processed.} other {The inventories will be in a pending status until the final delete is processed.}}"
 
 #: components/JobList/JobList.js:280
 msgid "{0, plural, one {The selected job cannot be deleted due to insufficient permission or a running job status} other {The selected jobs cannot be deleted due to insufficient permissions or a running job status}}"
-msgstr ""
+msgstr "{0, plural, one {The selected job cannot be deleted due to insufficient permission or a running job status} other {The selected jobs cannot be deleted due to insufficient permissions or a running job status}}"
 
 #: screens/WorkflowApproval/WorkflowApprovalList/WorkflowApprovalList.js:209
 msgid "{0, plural, one {This approval cannot be deleted due to insufficient permissions or a pending job status} other {These approvals cannot be deleted due to insufficient permissions or a pending job status}}"
-msgstr ""
+msgstr "{0, plural, one {This approval cannot be deleted due to insufficient permissions or a pending job status} other {These approvals cannot be deleted due to insufficient permissions or a pending job status}}"
 
 #: screens/Credential/CredentialList/CredentialList.js:198
 msgid "{0, plural, one {This credential is currently being used by other resources. Are you sure you want to delete it?} other {Deleting these credentials could impact other resources that rely on them. Are you sure you want to delete anyway?}}"
-msgstr ""
+msgstr "{0, plural, one {This credential is currently being used by other resources. Are you sure you want to delete it?} other {Deleting these credentials could impact other resources that rely on them. Are you sure you want to delete anyway?}}"
 
 #: screens/CredentialType/CredentialTypeList/CredentialTypeList.js:164
 msgid "{0, plural, one {This credential type is currently being used by some credentials and cannot be deleted.} other {Credential types that are being used by credentials cannot be deleted. Are you sure you want to delete anyway?}}"
-msgstr ""
+msgstr "{0, plural, one {This credential type is currently being used by some credentials and cannot be deleted.} other {Credential types that are being used by credentials cannot be deleted. Are you sure you want to delete anyway?}}"
 
 #: screens/ExecutionEnvironment/ExecutionEnvironmentList/ExecutionEnvironmentList.js:194
 msgid "{0, plural, one {This execution environment is currently being used by other resources. Are you sure you want to delete it?} other {These execution environments could be in use by other resources that rely on them. Are you sure you want to delete them anyway?}}"
-msgstr ""
+msgstr "{0, plural, one {This execution environment is currently being used by other resources. Are you sure you want to delete it?} other {These execution environments could be in use by other resources that rely on them. Are you sure you want to delete them anyway?}}"
 
 #: screens/InstanceGroup/InstanceGroupList/InstanceGroupList.js:182
 msgid "{0, plural, one {This instance group is currently being by other resources. Are you sure you want to delete it?} other {Deleting these instance groups could impact other resources that rely on them. Are you sure you want to delete anyway?}}"
-msgstr ""
+msgstr "{0, plural, one {This instance group is currently being by other resources. Are you sure you want to delete it?} other {Deleting these instance groups could impact other resources that rely on them. Are you sure you want to delete anyway?}}"
 
 #: screens/Instances/Shared/RemoveInstanceButton.js:85
 msgid "{0, plural, one {This intance is currently being used by other resources. Are you sure you want to delete it?} other {Deprovisioning these instances could impact other resources that rely on them. Are you sure you want to delete anyway?}}"
-msgstr ""
+msgstr "{0, plural, one {This intance is currently being used by other resources. Are you sure you want to delete it?} other {Deprovisioning these instances could impact other resources that rely on them. Are you sure you want to delete anyway?}}"
 
 #: screens/Inventory/InventoryList/InventoryList.js:240
 msgid "{0, plural, one {This inventory is currently being used by some templates. Are you sure you want to delete it?} other {Deleting these inventories could impact some templates that rely on them. Are you sure you want to delete anyway?}}"
-msgstr ""
+msgstr "{0, plural, one {This inventory is currently being used by some templates. Are you sure you want to delete it?} other {Deleting these inventories could impact some templates that rely on them. Are you sure you want to delete anyway?}}"
 
 #: screens/Inventory/InventorySources/InventorySourceList.js:196
 msgid "{0, plural, one {This inventory source is currently being used by other resources that rely on it. Are you sure you want to delete it?} other {Deleting these inventory sources could impact other resources that rely on them. Are you sure you want to delete anyway}}"
-msgstr ""
+msgstr "{0, plural, one {This inventory source is currently being used by other resources that rely on it. Are you sure you want to delete it?} other {Deleting these inventory sources could impact other resources that rely on them. Are you sure you want to delete anyway}}"
 
 #: screens/Organization/OrganizationList/OrganizationList.js:166
 #~ msgid "{0, plural, one {This organization is currently being by other resources. Are you sure you want to delete it?} other {Deleting these organizations could impact other resources that rely on them. Are you sure you want to delete anyway?}}"
@@ -11424,28 +11424,28 @@ msgstr ""
 
 #: screens/Organization/OrganizationList/OrganizationList.js:166
 msgid "{0, plural, one {This organization is currently being used by other resources. Are you sure you want to delete it?} other {Deleting these organizations could impact other resources that rely on them. Are you sure you want to delete anyway?}}"
-msgstr ""
+msgstr "{0, plural, one {This organization is currently being used by other resources. Are you sure you want to delete it?} other {Deleting these organizations could impact other resources that rely on them. Are you sure you want to delete anyway?}}"
 
 #: screens/Project/ProjectList/ProjectList.js:252
 msgid "{0, plural, one {This project is currently being used by other resources. Are you sure you want to delete it?} other {Deleting these projects could impact other resources that rely on them. Are you sure you want to delete anyway?}}"
-msgstr ""
+msgstr "{0, plural, one {This project is currently being used by other resources. Are you sure you want to delete it?} other {Deleting these projects could impact other resources that rely on them. Are you sure you want to delete anyway?}}"
 
 #: components/RelatedTemplateList/RelatedTemplateList.js:222
 #: components/TemplateList/TemplateList.js:266
 msgid "{0, plural, one {This template is currently being used by some workflow nodes. Are you sure you want to delete it?} other {Deleting these templates could impact some workflow nodes that rely on them. Are you sure you want to delete anyway?}}"
-msgstr ""
+msgstr "{0, plural, one {This template is currently being used by some workflow nodes. Are you sure you want to delete it?} other {Deleting these templates could impact some workflow nodes that rely on them. Are you sure you want to delete anyway?}}"
 
 #: components/JobList/JobListCancelButton.js:72
 msgid "{0, plural, one {You cannot cancel the following job because it is not running:} other {You cannot cancel the following jobs because they are not running:}}"
-msgstr ""
+msgstr "{0, plural, one {You cannot cancel the following job because it is not running:} other {You cannot cancel the following jobs because they are not running:}}"
 
 #: components/JobList/JobListCancelButton.js:56
 msgid "{0, plural, one {You do not have permission to cancel the following job:} other {You do not have permission to cancel the following jobs:}}"
-msgstr ""
+msgstr "{0, plural, one {You do not have permission to cancel the following job:} other {You do not have permission to cancel the following jobs:}}"
 
 #: components/Schedule/ScheduleDetail/FrequencyDetails.js:143
 msgid "{0, selectordinal, one {The first {dayOfWeek}} two {The second {dayOfWeek}} =3 {The third {dayOfWeek}} =4 {The fourth {dayOfWeek}} =5 {The fifth {dayOfWeek}}}"
-msgstr ""
+msgstr "{0, selectordinal, one {The first {dayOfWeek}} two {The second {dayOfWeek}} =3 {The third {dayOfWeek}} =4 {The fourth {dayOfWeek}} =5 {The fifth {dayOfWeek}}}"
 
 #: components/Schedule/ScheduleDetail/FrequencyDetails.js:202
 msgid "{0, selectordinal, one {The first {weekday} of {month}} two {The second {weekday} of {month}} =3 {The third {weekday} of {month}} =4 {The fourth {weekday} of {month}} =5 {The fifth {weekday} of {month}}}"
@@ -11477,7 +11477,7 @@ msgstr "{automatedInstancesCount} depuis {automatedInstancesSinceDateTime}"
 
 #: components/AppContainer/AppContainer.js:55
 msgid "{brandName} logo"
-msgstr ""
+msgstr "{brandName} logo"
 
 #: components/DetailList/UserDateDetail.js:23
 msgid "{dateStr} by <0>{username}</0>"
@@ -11490,7 +11490,7 @@ msgstr "{dateStr} par <0>{username}</0>"
 #: screens/Instances/InstanceList/InstanceListItem.js:174
 #: screens/TopologyView/Tooltip.js:288
 msgid "{forks, plural, one {# fork} other {# forks}}"
-msgstr ""
+msgstr "{forks, plural, one {# fork} other {# forks}}"
 
 #: components/HealthCheckButton/HealthCheckButton.js:15
 #~ msgid "{hopNodeSelected, plural, one {Cannot run health check on a hop node.  Deselect the hop node to run a health check.} other {Cannot run health check on hop nodes.  Deselect the hop nodes to run health checks.}}"
@@ -11506,7 +11506,7 @@ msgstr "{interval, plural, one {{interval} heure} other {{interval} heures}}"
 
 #: components/Schedule/ScheduleDetail/FrequencyDetails.js:25
 msgid "{interval, plural, one {{interval} minute} other {{interval} minutes}}"
-msgstr ""
+msgstr "{interval, plural, one {{interval} minute} other {{interval} minutes}}"
 
 #: components/Schedule/ScheduleDetail/FrequencyDetails.js:57
 msgid "{interval, plural, one {{interval} month} other {{interval} months}}"
@@ -11522,27 +11522,27 @@ msgstr "{interval, plural, one {{interval} année} other {{interval} ans}}"
 
 #: components/Schedule/shared/FrequencyDetailSubform.js:198
 msgid "{intervalValue, plural, one {day} other {days}}"
-msgstr ""
+msgstr "{intervalValue, plural, one {day} other {days}}"
 
 #: components/Schedule/shared/FrequencyDetailSubform.js:196
 msgid "{intervalValue, plural, one {hour} other {hours}}"
-msgstr ""
+msgstr "{intervalValue, plural, one {hour} other {hours}}"
 
 #: components/Schedule/shared/FrequencyDetailSubform.js:194
 msgid "{intervalValue, plural, one {minute} other {minutes}}"
-msgstr ""
+msgstr "{intervalValue, plural, one {minute} other {minutes}}"
 
 #: components/Schedule/shared/FrequencyDetailSubform.js:202
 msgid "{intervalValue, plural, one {month} other {months}}"
-msgstr ""
+msgstr "{intervalValue, plural, one {month} other {months}}"
 
 #: components/Schedule/shared/FrequencyDetailSubform.js:200
 msgid "{intervalValue, plural, one {week} other {weeks}}"
-msgstr ""
+msgstr "{intervalValue, plural, one {week} other {weeks}}"
 
 #: components/Schedule/shared/FrequencyDetailSubform.js:204
 msgid "{intervalValue, plural, one {year} other {years}}"
-msgstr ""
+msgstr "{intervalValue, plural, one {year} other {years}}"
 
 #: components/Schedule/shared/DateTimePicker.js:49
 #~ msgid "{label} date"
@@ -11554,23 +11554,23 @@ msgstr ""
 
 #: components/PromptDetail/PromptDetail.js:45
 msgid "{minutes} min {seconds} sec"
-msgstr ""
+msgstr "{minutes} min {seconds} sec"
 
 #: components/JobList/JobListCancelButton.js:106
 msgid "{numJobsToCancel, plural, one {Cancel job} other {Cancel jobs}}"
-msgstr ""
+msgstr "{numJobsToCancel, plural, one {Cancel job} other {Cancel jobs}}"
 
 #: components/JobList/JobListCancelButton.js:168
 msgid "{numJobsToCancel, plural, one {This action will cancel the following job:} other {This action will cancel the following jobs:}}"
-msgstr ""
+msgstr "{numJobsToCancel, plural, one {This action will cancel the following job:} other {This action will cancel the following jobs:}}"
 
 #: components/JobList/JobListCancelButton.js:91
 msgid "{numJobsToCancel, plural, one {{0}} other {{1}}}"
-msgstr ""
+msgstr "{numJobsToCancel, plural, one {{0}} other {{1}}}"
 
 #: components/Schedule/ScheduleDetail/FrequencyDetails.js:226
 msgid "{numOccurrences, plural, one {After {numOccurrences} occurrence} other {After {numOccurrences} occurrences}}"
-msgstr ""
+msgstr "{numOccurrences, plural, one {After {numOccurrences} occurrence} other {After {numOccurrences} occurrences}}"
 
 #: components/DetailList/NumberSinceDetail.js:19
 #~ msgid "{number} since {dateStr}"
@@ -11582,9 +11582,9 @@ msgstr "{pluralizedItemName} Liste"
 
 #: components/HealthCheckButton/HealthCheckButton.js:18
 msgid "{selectedItemsCount, plural, one {Click to run a health check on the selected instance.} other {Click to run a health check on the selected instances.}}"
-msgstr ""
+msgstr "{selectedItemsCount, plural, one {Click to run a health check on the selected instance.} other {Click to run a health check on the selected instances.}}"
 
 #: components/AppContainer/AppContainer.js:154
 msgid "{sessionCountdown, plural, one {You will be logged out in # second due to inactivity} other {You will be logged out in # seconds due to inactivity}}"
-msgstr ""
+msgstr "{sessionCountdown, plural, one {You will be logged out in # second due to inactivity} other {You will be logged out in # seconds due to inactivity}}"
 
