@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: 6e2b1ff477170c54e8cb815d5a533f7c\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-29 13:13+0000\n"
-"PO-Revision-Date: 2023-06-06 18:39\n"
+"PO-Revision-Date: 2023-06-06 18:48\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -1280,7 +1280,7 @@ msgstr "您无法将常规清单变为\"智能\"清单。"
 #: awx/api/views/inventory.py:96
 #, python-brace-format
 msgid "{0}"
-msgstr ""
+msgstr "{0}"
 
 #: awx/api/views/metrics.py:29
 msgid "Metrics"
@@ -1309,11 +1309,11 @@ msgstr "凭证必须是 Galaxy 凭证，不是 {sub.credential_type.name}。"
 
 #: awx/api/views/root.py:41 awx/templates/rest_framework/api.html:28
 msgid "REST API"
-msgstr ""
+msgstr "REST API"
 
 #: awx/api/views/root.py:51 awx/templates/rest_framework/api.html:4
 msgid "AWX REST API"
-msgstr ""
+msgstr "AWX REST API"
 
 #: awx/api/views/root.py:64
 msgid "API OAuth 2 Authorization Root"
@@ -1325,7 +1325,7 @@ msgstr "版本 2"
 
 #: awx/api/views/root.py:140
 msgid "Ping"
-msgstr ""
+msgstr "Ping"
 
 #: awx/api/views/root.py:168
 msgid "Subscriptions"
@@ -1397,123 +1397,123 @@ msgstr "之前已收到 Webhook，正在中止。"
 
 #: awx/conf/conf.py:20
 msgid "Bud Frogs"
-msgstr ""
+msgstr "Bud Frogs"
 
 #: awx/conf/conf.py:21
 msgid "Bunny"
-msgstr ""
+msgstr "Bunny"
 
 #: awx/conf/conf.py:22
 msgid "Cheese"
-msgstr ""
+msgstr "Cheese"
 
 #: awx/conf/conf.py:23
 msgid "Daemon"
-msgstr ""
+msgstr "Daemon"
 
 #: awx/conf/conf.py:24
 msgid "Default Cow"
-msgstr ""
+msgstr "Default Cow"
 
 #: awx/conf/conf.py:25
 msgid "Dragon"
-msgstr ""
+msgstr "Dragon"
 
 #: awx/conf/conf.py:26
 msgid "Elephant in Snake"
-msgstr ""
+msgstr "Elephant in Snake"
 
 #: awx/conf/conf.py:27
 msgid "Elephant"
-msgstr ""
+msgstr "Elephant"
 
 #: awx/conf/conf.py:28
 msgid "Eyes"
-msgstr ""
+msgstr "Eyes"
 
 #: awx/conf/conf.py:29
 msgid "Hello Kitty"
-msgstr ""
+msgstr "Hello Kitty"
 
 #: awx/conf/conf.py:30
 msgid "Kitty"
-msgstr ""
+msgstr "Kitty"
 
 #: awx/conf/conf.py:31
 msgid "Luke Koala"
-msgstr ""
+msgstr "Luke Koala"
 
 #: awx/conf/conf.py:32
 msgid "Meow"
-msgstr ""
+msgstr "Meow"
 
 #: awx/conf/conf.py:33
 msgid "Milk"
-msgstr ""
+msgstr "Milk"
 
 #: awx/conf/conf.py:34
 msgid "Moofasa"
-msgstr ""
+msgstr "Moofasa"
 
 #: awx/conf/conf.py:35
 msgid "Moose"
-msgstr ""
+msgstr "Moose"
 
 #: awx/conf/conf.py:36
 msgid "Ren"
-msgstr ""
+msgstr "Ren"
 
 #: awx/conf/conf.py:37
 msgid "Sheep"
-msgstr ""
+msgstr "Sheep"
 
 #: awx/conf/conf.py:38
 msgid "Small Cow"
-msgstr ""
+msgstr "Small Cow"
 
 #: awx/conf/conf.py:39
 msgid "Stegosaurus"
-msgstr ""
+msgstr "Stegosaurus"
 
 #: awx/conf/conf.py:40
 msgid "Stimpy"
-msgstr ""
+msgstr "Stimpy"
 
 #: awx/conf/conf.py:41
 msgid "Super Milker"
-msgstr ""
+msgstr "Super Milker"
 
 #: awx/conf/conf.py:42
 msgid "Three Eyes"
-msgstr ""
+msgstr "Three Eyes"
 
 #: awx/conf/conf.py:43
 msgid "Turkey"
-msgstr ""
+msgstr "Turkey"
 
 #: awx/conf/conf.py:44
 msgid "Turtle"
-msgstr ""
+msgstr "Turtle"
 
 #: awx/conf/conf.py:45
 msgid "Tux"
-msgstr ""
+msgstr "Tux"
 
 #: awx/conf/conf.py:46
 msgid "Udder"
-msgstr ""
+msgstr "Udder"
 
 #: awx/conf/conf.py:47
 msgid "Vader Koala"
-msgstr ""
+msgstr "Vader Koala"
 
 #: awx/conf/conf.py:48
 msgid "Vader"
-msgstr ""
+msgstr "Vader"
 
 #: awx/conf/conf.py:49
 msgid "WWW"
-msgstr ""
+msgstr "WWW"
 
 #: awx/conf/conf.py:52
 msgid "Cow Selection"
@@ -1586,7 +1586,7 @@ msgstr "已更改"
 
 #: awx/conf/registry.py:79
 msgid "User-Defaults"
-msgstr ""
+msgstr "User-Defaults"
 
 #: awx/conf/registry.py:141
 msgid "This value has been set manually in a settings file."
@@ -1643,7 +1643,7 @@ msgstr "系统"
 #: awx/conf/tests/unit/test_registry.py:91
 #: awx/conf/tests/unit/test_registry.py:92
 msgid "OtherSystem"
-msgstr ""
+msgstr "OtherSystem"
 
 #: awx/conf/views.py:43
 msgid "Setting Categories"
@@ -2299,31 +2299,31 @@ msgstr ""
 
 #: awx/main/constants.py:19
 msgid "Sudo"
-msgstr ""
+msgstr "Sudo"
 
 #: awx/main/constants.py:20
 msgid "Su"
-msgstr ""
+msgstr "Su"
 
 #: awx/main/constants.py:21
 msgid "Pbrun"
-msgstr ""
+msgstr "Pbrun"
 
 #: awx/main/constants.py:22
 msgid "Pfexec"
-msgstr ""
+msgstr "Pfexec"
 
 #: awx/main/constants.py:23
 msgid "DZDO"
-msgstr ""
+msgstr "DZDO"
 
 #: awx/main/constants.py:24
 msgid "Pmrun"
-msgstr ""
+msgstr "Pmrun"
 
 #: awx/main/constants.py:25
 msgid "Runas"
-msgstr ""
+msgstr "Runas"
 
 #: awx/main/constants.py:26
 msgid "Enable"
@@ -2335,15 +2335,15 @@ msgstr ""
 
 #: awx/main/constants.py:28
 msgid "Ksu"
-msgstr ""
+msgstr "Ksu"
 
 #: awx/main/constants.py:29
 msgid "Machinectl"
-msgstr ""
+msgstr "Machinectl"
 
 #: awx/main/constants.py:30
 msgid "Sesu"
-msgstr ""
+msgstr "Sesu"
 
 #: awx/main/constants.py:32
 msgid "None"
@@ -2351,7 +2351,7 @@ msgstr "无"
 
 #: awx/main/credential_plugins/aim.py:12
 msgid "CyberArk AIM URL"
-msgstr ""
+msgstr "CyberArk AIM URL"
 
 #: awx/main/credential_plugins/aim.py:18
 msgid "Application ID"
@@ -2434,7 +2434,7 @@ msgstr "用于指定特定机密版本（如果留空，则会使用最新版本
 #: awx/main/credential_plugins/centrify_vault.py:10
 #: awx/main/credential_plugins/centrify_vault.py:12
 msgid "Centrify Tenant URL"
-msgstr ""
+msgstr "Centrify Tenant URL"
 
 #: awx/main/credential_plugins/centrify_vault.py:17
 msgid "Centrify API User"
@@ -2486,7 +2486,7 @@ msgstr "在 Centrify 门户网站中注册的机器名称"
 
 #: awx/main/credential_plugins/conjur.py:14
 msgid "Conjur URL"
-msgstr ""
+msgstr "Conjur URL"
 
 #: awx/main/credential_plugins/conjur.py:20
 msgid "API Key"
@@ -2581,7 +2581,7 @@ msgstr "用于验证 Vault 服务器 SSL 证书的 CA 证书"
 
 #: awx/main/credential_plugins/hashivault.py:34
 msgid "AppRole role_id"
-msgstr ""
+msgstr "AppRole role_id"
 
 #: awx/main/credential_plugins/hashivault.py:34
 msgid "The Role ID for AppRole Authentication"
@@ -2589,7 +2589,7 @@ msgstr "AppRole 身份验证的角色 ID"
 
 #: awx/main/credential_plugins/hashivault.py:37
 msgid "AppRole secret_id"
-msgstr ""
+msgstr "AppRole secret_id"
 
 #: awx/main/credential_plugins/hashivault.py:41
 msgid "The Secret ID for AppRole Authentication"
@@ -2703,7 +2703,7 @@ msgstr "对应的密码"
 
 #: awx/main/credential_plugins/tss.py:31
 msgid "Secret ID"
-msgstr ""
+msgstr "Secret ID"
 
 #: awx/main/credential_plugins/tss.py:32
 msgid "The integer ID of the secret"
@@ -2877,7 +2877,7 @@ msgstr "标签 None"
 
 #: awx/main/migrations/_inventory_source_vars.py:154
 msgid "VPC ID"
-msgstr ""
+msgstr "VPC ID"
 
 #: awx/main/models/activity_stream.py:28
 msgid "Entity Created"
@@ -2956,7 +2956,7 @@ msgstr "机器"
 #: awx/main/models/credential/__init__.py:332
 #: awx/main/models/credential/__init__.py:635
 msgid "Vault"
-msgstr ""
+msgstr "Vault"
 
 #: awx/main/models/credential/__init__.py:333
 #: awx/main/models/credential/__init__.py:661
@@ -2984,7 +2984,7 @@ msgstr "个人访问令牌"
 #: awx/main/models/credential/__init__.py:338
 #: awx/main/models/credential/__init__.py:955
 msgid "Insights"
-msgstr ""
+msgstr "Insights"
 
 #: awx/main/models/credential/__init__.py:339
 msgid "External"
@@ -2992,11 +2992,11 @@ msgstr "外部"
 
 #: awx/main/models/credential/__init__.py:340
 msgid "Kubernetes"
-msgstr ""
+msgstr "Kubernetes"
 
 #: awx/main/models/credential/__init__.py:341
 msgid "Galaxy/Automation Hub"
-msgstr ""
+msgstr "Galaxy/Automation Hub"
 
 #: awx/main/models/credential/__init__.py:353
 msgid "Enter injectors using either JSON or YAML syntax. Refer to the documentation for example syntax."
@@ -3064,7 +3064,7 @@ msgstr "授权密码"
 
 #: awx/main/models/credential/__init__.py:701
 msgid "Amazon Web Services"
-msgstr ""
+msgstr "Amazon Web Services"
 
 #: awx/main/models/credential/__init__.py:705
 msgid "Access Key"
@@ -3084,7 +3084,7 @@ msgstr "安全令牌服务 (STS) 是一个 Web 服务，让您可以为 AWS 身�
 
 #: awx/main/models/credential/__init__.py:732 awx/main/models/inventory.py:811
 msgid "OpenStack"
-msgstr ""
+msgstr "OpenStack"
 
 #: awx/main/models/credential/__init__.py:739
 msgid "Password (API Key)"
@@ -3132,7 +3132,7 @@ msgstr "验证 SSL"
 
 #: awx/main/models/credential/__init__.py:790 awx/main/models/inventory.py:809
 msgid "VMware vCenter"
-msgstr ""
+msgstr "VMware vCenter"
 
 #: awx/main/models/credential/__init__.py:796
 msgid "VCenter Host"
@@ -3156,7 +3156,7 @@ msgstr "输入与您的红帽卫星 6 服务器对应的 URL。例如：https://
 
 #: awx/main/models/credential/__init__.py:840 awx/main/models/inventory.py:807
 msgid "Google Compute Engine"
-msgstr ""
+msgstr "Google Compute Engine"
 
 #: awx/main/models/credential/__init__.py:846
 msgid "Service Account Email Address"
@@ -3180,7 +3180,7 @@ msgstr "粘贴与服务账户电子邮件关联的 PEM 文件的内容。"
 
 #: awx/main/models/credential/__init__.py:878 awx/main/models/inventory.py:808
 msgid "Microsoft Azure Resource Manager"
-msgstr ""
+msgstr "Microsoft Azure Resource Manager"
 
 #: awx/main/models/credential/__init__.py:884
 msgid "Subscription ID"
@@ -3233,7 +3233,7 @@ msgstr "要使用的 CA 文件的绝对文件路径（可选）"
 #: awx/main/models/credential/__init__.py:1023
 #: awx/main/models/credential/__init__.py:1029 awx/main/models/inventory.py:813
 msgid "Red Hat Ansible Automation Platform"
-msgstr ""
+msgstr "Red Hat Ansible Automation Platform"
 
 #: awx/main/models/credential/__init__.py:1031
 msgid "Red Hat Ansible Automation Platform base URL to authenticate with."
@@ -3293,7 +3293,7 @@ msgstr "Ansible Galaxy/Automation Hub API 令牌"
 
 #: awx/main/models/credential/__init__.py:1155
 msgid "Galaxy Server URL"
-msgstr ""
+msgstr "Galaxy Server URL"
 
 #: awx/main/models/credential/__init__.py:1157
 msgid "The URL of the Galaxy instance to connect to."
@@ -3626,11 +3626,11 @@ msgstr "源于项目"
 
 #: awx/main/models/inventory.py:806
 msgid "Amazon EC2"
-msgstr ""
+msgstr "Amazon EC2"
 
 #: awx/main/models/inventory.py:814 awx/main/models/projects.py:52
 msgid "Red Hat Insights"
-msgstr ""
+msgstr "Red Hat Insights"
 
 #: awx/main/models/inventory.py:841
 msgid "Inventory source variables in YAML or JSON format."
@@ -3849,35 +3849,35 @@ msgstr "电子邮件"
 
 #: awx/main/models/notifications.py:43
 msgid "Slack"
-msgstr ""
+msgstr "Slack"
 
 #: awx/main/models/notifications.py:44
 msgid "Twilio"
-msgstr ""
+msgstr "Twilio"
 
 #: awx/main/models/notifications.py:45
 msgid "Pagerduty"
-msgstr ""
+msgstr "Pagerduty"
 
 #: awx/main/models/notifications.py:46
 msgid "Grafana"
-msgstr ""
+msgstr "Grafana"
 
 #: awx/main/models/notifications.py:47 awx/main/models/unified_jobs.py:534
 msgid "Webhook"
-msgstr ""
+msgstr "Webhook"
 
 #: awx/main/models/notifications.py:48
 msgid "Mattermost"
-msgstr ""
+msgstr "Mattermost"
 
 #: awx/main/models/notifications.py:49
 msgid "Rocket.Chat"
-msgstr ""
+msgstr "Rocket.Chat"
 
 #: awx/main/models/notifications.py:50
 msgid "IRC"
-msgstr ""
+msgstr "IRC"
 
 #: awx/main/models/notifications.py:78
 msgid "Optional custom messages for notification template."
@@ -3969,11 +3969,11 @@ msgstr "手动"
 
 #: awx/main/models/projects.py:50
 msgid "Git"
-msgstr ""
+msgstr "Git"
 
 #: awx/main/models/projects.py:51
 msgid "Subversion"
-msgstr ""
+msgstr "Subversion"
 
 #: awx/main/models/projects.py:53
 msgid "Remote Archive"
@@ -3993,7 +3993,7 @@ msgstr "指定用来存储项目的源控制系统。"
 
 #: awx/main/models/projects.py:94
 msgid "SCM URL"
-msgstr ""
+msgstr "SCM URL"
 
 #: awx/main/models/projects.py:95
 msgid "The location where the project is stored."
@@ -4009,7 +4009,7 @@ msgstr "特定分支、标签或提交签出。"
 
 #: awx/main/models/projects.py:108
 msgid "SCM refspec"
-msgstr ""
+msgstr "SCM refspec"
 
 #: awx/main/models/projects.py:109
 msgid "For git projects, an additional refspec to fetch."
@@ -4268,7 +4268,7 @@ msgstr "角色"
 
 #: awx/main/models/rbac.py:448
 msgid "role_ancestors"
-msgstr ""
+msgstr "role_ancestors"
 
 #: awx/main/models/schedules.py:79
 msgid "Enables processing of this schedule."
@@ -4813,7 +4813,7 @@ msgstr "要连接到 LDAP 服务器的 URI，如 \"ldap://ldap.example.com:389\"
 #: awx/sso/conf.py:354 awx/sso/conf.py:369 awx/sso/conf.py:387
 #: awx/sso/conf.py:419
 msgid "LDAP"
-msgstr ""
+msgstr "LDAP"
 
 #: awx/sso/conf.py:181
 msgid "LDAP Bind DN"
@@ -4946,7 +4946,7 @@ msgstr "RADIUS 服务器的主机名/IP。如果此设置为空，则禁用 RADI
 #: awx/sso/conf.py:454 awx/sso/conf.py:467 awx/sso/conf.py:478
 #: awx/sso/models.py:13
 msgid "RADIUS"
-msgstr ""
+msgstr "RADIUS"
 
 #: awx/sso/conf.py:465
 msgid "RADIUS Port"
@@ -4975,7 +4975,7 @@ msgstr "TACACS+ 服务器的主机名。"
 #: awx/sso/conf.py:494 awx/sso/conf.py:506 awx/sso/conf.py:518
 #: awx/sso/conf.py:530 awx/sso/conf.py:542 awx/sso/models.py:13
 msgid "TACACS+"
-msgstr ""
+msgstr "TACACS+"
 
 #: awx/sso/conf.py:504
 msgid "TACACS+ Port"
@@ -5022,7 +5022,7 @@ msgstr "在您的注册过程中，提供此 URL 作为应用的回调 URL。请
 #: awx/sso/conf.py:595 awx/sso/conf.py:611 awx/sso/conf.py:623
 #: awx/sso/conf.py:635
 msgid "Google OAuth2"
-msgstr ""
+msgstr "Google OAuth2"
 
 #: awx/sso/conf.py:569
 msgid "Google OAuth2 Key"
@@ -5071,7 +5071,7 @@ msgstr "GitHub OAuth2 回调 URL"
 #: awx/sso/conf.py:653 awx/sso/conf.py:665 awx/sso/conf.py:676
 #: awx/sso/conf.py:688 awx/sso/conf.py:700 awx/sso/conf.py:920
 msgid "GitHub OAuth2"
-msgstr ""
+msgstr "GitHub OAuth2"
 
 #: awx/sso/conf.py:663
 msgid "GitHub OAuth2 Key"
@@ -5184,11 +5184,11 @@ msgstr "GitHub Enterprise OAuth2 回调 URL"
 #: awx/sso/conf.py:974 awx/sso/conf.py:987 awx/sso/conf.py:1077
 #: awx/sso/conf.py:1090
 msgid "GitHub Enterprise OAuth2"
-msgstr ""
+msgstr "GitHub Enterprise OAuth2"
 
 #: awx/sso/conf.py:883
 msgid "GitHub Enterprise URL"
-msgstr ""
+msgstr "GitHub Enterprise URL"
 
 #: awx/sso/conf.py:884 awx/sso/conf.py:973 awx/sso/conf.py:1076
 msgid "The URL for your Github Enterprise instance, e.g.: http(s)://hostname/. Refer to Github Enterprise documentation for more details."
@@ -5196,7 +5196,7 @@ msgstr "Github Enterprise 实例的 URL，如 http(s)://hostname/。如需更多
 
 #: awx/sso/conf.py:894
 msgid "GitHub Enterprise API URL"
-msgstr ""
+msgstr "GitHub Enterprise API URL"
 
 #: awx/sso/conf.py:896 awx/sso/conf.py:985 awx/sso/conf.py:1088
 msgid "The API URL for your GitHub Enterprise instance, e.g.: http(s)://hostname/api/v3/. Refer to Github Enterprise documentation for more details."
@@ -5212,7 +5212,7 @@ msgstr "您的 GitHub 开发应用中的 OAuth2 密钥（客户端 ID）。"
 
 #: awx/sso/conf.py:918
 msgid "GitHub Enterprise OAuth2 Secret"
-msgstr ""
+msgstr "GitHub Enterprise OAuth2 Secret"
 
 #: awx/sso/conf.py:919
 msgid "The OAuth2 secret (Client Secret) from your GitHub Enterprise developer application."
@@ -5233,15 +5233,15 @@ msgstr "GitHub Enterprise Organization OAuth2 回调 URL"
 #: awx/sso/conf.py:962 awx/sso/conf.py:998 awx/sso/conf.py:1009
 #: awx/sso/conf.py:1021 awx/sso/conf.py:1032 awx/sso/conf.py:1044
 msgid "GitHub Enterprise Organization OAuth2"
-msgstr ""
+msgstr "GitHub Enterprise Organization OAuth2"
 
 #: awx/sso/conf.py:972
 msgid "GitHub Enterprise Organization URL"
-msgstr ""
+msgstr "GitHub Enterprise Organization URL"
 
 #: awx/sso/conf.py:983
 msgid "GitHub Enterprise Organization API URL"
-msgstr ""
+msgstr "GitHub Enterprise Organization API URL"
 
 #: awx/sso/conf.py:996
 msgid "GitHub Enterprise Organization OAuth2 Key"
@@ -5282,15 +5282,15 @@ msgstr "GitHub Enterprise Team OAuth2 回调 URL"
 #: awx/sso/conf.py:1065 awx/sso/conf.py:1101 awx/sso/conf.py:1112
 #: awx/sso/conf.py:1124 awx/sso/conf.py:1135 awx/sso/conf.py:1147
 msgid "GitHub Enterprise Team OAuth2"
-msgstr ""
+msgstr "GitHub Enterprise Team OAuth2"
 
 #: awx/sso/conf.py:1075
 msgid "GitHub Enterprise Team URL"
-msgstr ""
+msgstr "GitHub Enterprise Team URL"
 
 #: awx/sso/conf.py:1086
 msgid "GitHub Enterprise Team API URL"
-msgstr ""
+msgstr "GitHub Enterprise Team API URL"
 
 #: awx/sso/conf.py:1099
 msgid "GitHub Enterprise Team OAuth2 Key"
@@ -5298,11 +5298,11 @@ msgstr "GitHub Enterprise Team OAuth2 密钥"
 
 #: awx/sso/conf.py:1110
 msgid "GitHub Enterprise Team OAuth2 Secret"
-msgstr ""
+msgstr "GitHub Enterprise Team OAuth2 Secret"
 
 #: awx/sso/conf.py:1122
 msgid "GitHub Enterprise Team ID"
-msgstr ""
+msgstr "GitHub Enterprise Team ID"
 
 #: awx/sso/conf.py:1123
 msgid "Find the numeric team ID using the Github Enterprise API: http://fabian-kostadinov.github.io/2015/01/16/how-to-find-a-github-team-id/."
@@ -5327,7 +5327,7 @@ msgstr "在您的注册过程中，提供此 URL 作为应用的回调 URL。请
 #: awx/sso/conf.py:1165 awx/sso/conf.py:1177 awx/sso/conf.py:1188
 #: awx/sso/conf.py:1200 awx/sso/conf.py:1212
 msgid "Azure AD OAuth2"
-msgstr ""
+msgstr "Azure AD OAuth2"
 
 #: awx/sso/conf.py:1175
 msgid "Azure AD OAuth2 Key"
@@ -5368,7 +5368,7 @@ msgstr "启用后（默认），映射的机构和团队将在成功的 SAML 登
 #: awx/sso/conf.py:1448 awx/sso/conf.py:1460 awx/sso/conf.py:1472
 #: awx/sso/conf.py:1484 awx/sso/conf.py:1505 awx/sso/models.py:13
 msgid "SAML"
-msgstr ""
+msgstr "SAML"
 
 #: awx/sso/conf.py:1245
 msgid "SAML Assertion Consumer Service (ACS) URL"
@@ -5591,7 +5591,7 @@ msgstr "TACACS+ 机密不允许使用非 ascii 字符"
 
 #: awx/templates/error.html:4
 msgid "AWX"
-msgstr ""
+msgstr "AWX"
 
 #: awx/templates/rest_framework/api.html:42
 msgid "API Guide"
@@ -5608,7 +5608,7 @@ msgstr "调整大小"
 #: awx/ui/apps.py:9 awx/ui/conf.py:18 awx/ui/conf.py:34 awx/ui/conf.py:50
 #: awx/ui/conf.py:60 awx/ui/conf.py:69
 msgid "UI"
-msgstr ""
+msgstr "UI"
 
 #: awx/ui/conf.py:15
 msgid "Off"
