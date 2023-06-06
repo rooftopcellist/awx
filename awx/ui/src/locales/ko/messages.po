@@ -77,7 +77,8 @@ msgid "<0><1/> A tech preview of the new {brandName} user interface can be found
 msgstr ""
 
 #: screens/Project/shared/Project.helptext.js:76
-msgid "A refspec to fetch (passed to the Ansible git\n"
+msgid ""
+"A refspec to fetch (passed to the Ansible git\n"
 "module). This parameter allows access to references via\n"
 "the branch field not otherwise available."
 msgstr "가져올 refspec(Ansible git 모듈에 전달됨)입니다. 이 매개변수를 사용하면 분기 필드를 통해 다른 방법으로는 사용할 수 없는 참조에 액세스할 수 있습니다."
@@ -355,7 +356,8 @@ msgid "Advanced search value input"
 msgstr "고급 검색 값 입력"
 
 #: screens/Inventory/shared/Inventory.helptext.js:131
-msgid "After every project update where the SCM revision\n"
+msgid ""
+"After every project update where the SCM revision\n"
 "changes, refresh the inventory from the selected source\n"
 "before executing job tasks. This is intended for static content,\n"
 "like the Ansible inventory .ini file format."
@@ -395,7 +397,8 @@ msgid "Allow branch override"
 msgstr "분기 덮어쓰기 허용"
 
 #: screens/Project/shared/Project.helptext.js:126
-msgid "Allow changing the Source Control branch or revision in a job\n"
+msgid ""
+"Allow changing the Source Control branch or revision in a job\n"
 "template that uses this project."
 msgstr "이 프로젝트를 사용하는 작업 템플릿에서 소스 제어 분기 또는 버전 변경을 허용합니다."
 
@@ -770,7 +773,8 @@ msgid "Back to management jobs"
 msgstr "관리 작업으로 돌아가기"
 
 #: screens/Project/shared/Project.helptext.js:8
-msgid "Base path used for locating playbooks. Directories\n"
+msgid ""
+"Base path used for locating playbooks. Directories\n"
 "found inside this path will be listed in the playbook directory drop-down.\n"
 "Together the base path and selected playbook directory provide the full\n"
 "path used to locate playbooks."
@@ -781,7 +785,8 @@ msgid "Basic auth password"
 msgstr "기본 인증 암호"
 
 #: screens/Project/shared/Project.helptext.js:104
-msgid "Branch to checkout. In addition to branches,\n"
+msgid ""
+"Branch to checkout. In addition to branches,\n"
 "you can input tags, commit hashes, and arbitrary refs. Some\n"
 "commit hashes and refs may not be available unless you also\n"
 "provide a custom refspec."
@@ -982,7 +987,8 @@ msgstr "취소됨"
 #~ msgstr "Cannot approve, cancel or deny completed workflow approvals"
 
 #: screens/Setting/Logging/LoggingEdit/LoggingEdit.js:129
-msgid "Cannot enable log aggregator without providing\n"
+msgid ""
+"Cannot enable log aggregator without providing\n"
 "logging aggregator host and logging aggregator type."
 msgstr "로깅 수집기 호스트 및 로깅 수집기 유형을 제공하지 않고 로그 수집기를 활성화할 수 없습니다."
 
@@ -1027,7 +1033,8 @@ msgid "Case-insensitive version of startswith."
 msgstr "처음에 대소문자를 구분하지 않는 버전입니다."
 
 #: screens/Project/shared/Project.helptext.js:14
-msgid "Change PROJECTS_ROOT when deploying\n"
+msgid ""
+"Change PROJECTS_ROOT when deploying\n"
 "{brandName} to change this location."
 msgstr "PROJECTS_ROOT를 변경하여 {brandName} 배포 시 이 위치를 변경합니다."
 
@@ -1096,7 +1103,8 @@ msgid "Choose an HTTP method"
 msgstr "HTTP 방법 선택"
 
 #: screens/Template/Survey/SurveyQuestionForm.js:46
-msgid "Choose an answer type or format you want as the prompt for the user.\n"
+msgid ""
+"Choose an answer type or format you want as the prompt for the user.\n"
 "Refer to the Ansible Controller Documentation for more additional\n"
 "information about each option."
 msgstr "사용자에 대한 프롬프트로 원하는 응답 유형 또는 형식을 선택합니다. 각 옵션에 대한 자세한 내용은 Ansible Controller 설명서를 참조하십시오."
@@ -1347,7 +1355,8 @@ msgid "Control node"
 msgstr "컨트롤 노드"
 
 #: screens/Inventory/shared/Inventory.helptext.js:79
-msgid "Control the level of output Ansible\n"
+msgid ""
+"Control the level of output Ansible\n"
 "will produce for inventory source update jobs."
 msgstr "인벤토리 소스 업데이트 작업에 대해 Ansible에서 생성할 출력 수준을 제어합니다."
 
@@ -2007,7 +2016,8 @@ msgid "Delete survey question"
 msgstr "설문 조사 질문 삭제"
 
 #: screens/Project/shared/Project.helptext.js:114
-msgid "Delete the local repository in its entirety prior to\n"
+msgid ""
+"Delete the local repository in its entirety prior to\n"
 "performing an update. Depending on the size of the\n"
 "repository this may significantly increase the amount\n"
 "of time required to complete an update."
@@ -2433,13 +2443,15 @@ msgstr "이메일"
 #~ msgstr "E-mail options"
 
 #: screens/Inventory/shared/Inventory.helptext.js:113
-msgid "Each time a job runs using this inventory,\n"
+msgid ""
+"Each time a job runs using this inventory,\n"
 "refresh the inventory from the selected source before\n"
 "executing job tasks."
 msgstr "이 인벤토리를 사용하여 작업을 실행할 때마다 작업 작업을 실행하기 전에 선택한 소스에서 인벤토리를 새로 고칩니다."
 
 #: screens/Project/shared/Project.helptext.js:124
-msgid "Each time a job runs using this project, update the\n"
+msgid ""
+"Each time a job runs using this project, update the\n"
 "revision of the project prior to starting the job."
 msgstr "이 프로젝트를 사용하여 작업을 실행할 때마다 작업을 시작하기 전에 프로젝트의 버전을 업데이트합니다."
 
@@ -2752,11 +2764,13 @@ msgid "Enable Webhook for this workflow job template."
 msgstr "이 워크플로 작업 템플릿에 대한 Webhook을 활성화합니다."
 
 #: screens/Project/shared/Project.helptext.js:108
-msgid "Enable content signing to verify that the content \n"
+msgid ""
+"Enable content signing to verify that the content \n"
 "has remained secure when a project is synced. \n"
 "If the content has been tampered with, the \n"
 "job will not run."
-msgstr "콘텐츠 서명을 활성화하여 프로젝트가 동기화될 때 \n"
+msgstr ""
+"콘텐츠 서명을 활성화하여 프로젝트가 동기화될 때 \n"
 " 콘텐츠가 안전하게 유지되는지 확인합니다. \n"
 " 컨텐츠가 변조된 경우, \n"
 " 작업이 실행되지 않습니다."
@@ -2829,7 +2843,8 @@ msgstr "활성화된 변수"
 #~ "template."
 
 #: components/AdHocCommands/AdHocDetailsStep.js:209
-msgid "Enables creation of a provisioning\n"
+msgid ""
+"Enables creation of a provisioning\n"
 "callback URL. Using the URL a host can contact {brandName}\n"
 "and request a configuration update using this job\n"
 "template"
@@ -4479,13 +4494,15 @@ msgid "Icon URL"
 msgstr "아이콘 URL"
 
 #: screens/Inventory/shared/Inventory.helptext.js:100
-msgid "If checked, all variables for child groups\n"
+msgid ""
+"If checked, all variables for child groups\n"
 "and hosts will be removed and replaced by those found\n"
 "on the external source."
 msgstr "이 옵션을 선택하면 하위 그룹 및 호스트의 모든 변수가 제거되고 외부 소스에 있는 변수로 대체됩니다."
 
 #: screens/Inventory/shared/Inventory.helptext.js:84
-msgid "If checked, any hosts and groups that were\n"
+msgid ""
+"If checked, any hosts and groups that were\n"
 "previously present on the external source but are now removed\n"
 "will be removed from the inventory. Hosts and groups\n"
 "that were not managed by the inventory source will be promoted\n"
@@ -4507,7 +4524,8 @@ msgid "If enabled, run this playbook as an administrator."
 msgstr "활성화하면 이 플레이북을 관리자로 실행합니다."
 
 #: components/LaunchPrompt/steps/OtherPromptsStep.js:184
-msgid "If enabled, show the changes made\n"
+msgid ""
+"If enabled, show the changes made\n"
 "by Ansible tasks, where supported. This is equivalent to Ansible’s\n"
 "--diff mode."
 msgstr "활성화된 경우 지원되는 Ansible 작업에서 변경한 내용을 표시합니다. 이는 Ansible의 --diff 모드와 동일합니다."
@@ -4547,15 +4565,19 @@ msgid "If enabled, simultaneous runs of this workflow job template will be allow
 msgstr "활성화하면 이 워크플로 작업 템플릿을 동시에 실행할 수 있습니다."
 
 #: screens/Inventory/shared/Inventory.helptext.js:195
-msgid "If enabled, the inventory will prevent adding any organization instance groups to the list of preferred instances groups to run associated job templates on.\n"
+msgid ""
+"If enabled, the inventory will prevent adding any organization instance groups to the list of preferred instances groups to run associated job templates on.\n"
 "Note: If this setting is enabled and you provided an empty list, the global instance groups will be applied."
-msgstr "활성화된 경우 인벤토리에서 연결된 작업 템플릿을 실행할 기본 인스턴스 그룹 목록에 조직 인스턴스 그룹을 추가할 수 없습니다. \n"
+msgstr ""
+"활성화된 경우 인벤토리에서 연결된 작업 템플릿을 실행할 기본 인스턴스 그룹 목록에 조직 인스턴스 그룹을 추가할 수 없습니다. \n"
 " 참고: 이 설정이 활성화되어 있고 빈 목록을 제공한 경우 글로벌 인스턴스 그룹이 적용됩니다."
 
 #: screens/Template/shared/JobTemplate.helptext.js:33
-msgid "If enabled, the job template will prevent adding any inventory or organization instance groups to the list of preferred instances groups to run on.\n"
+msgid ""
+"If enabled, the job template will prevent adding any inventory or organization instance groups to the list of preferred instances groups to run on.\n"
 "Note: If this setting is enabled and you provided an empty list, the global instance groups will be applied."
-msgstr "활성화된 경우 작업 템플릿에서 실행할 기본 인스턴스 그룹 목록에 인벤토리 또는 조직 인스턴스 그룹을 추가하지 않습니다. \n"
+msgstr ""
+"활성화된 경우 작업 템플릿에서 실행할 기본 인스턴스 그룹 목록에 인벤토리 또는 조직 인스턴스 그룹을 추가하지 않습니다. \n"
 " 참고: 이 설정이 활성화되어 있고 빈 목록을 제공한 경우 글로벌 인스턴스 그룹이 적용됩니다."
 
 #: screens/Template/shared/JobTemplateForm.js:611
@@ -4581,7 +4603,8 @@ msgid "If you are ready to upgrade or renew, please <0>contact us.</0>"
 msgstr "업그레이드 또는 갱신할 준비가 되었으면 <0>에 문의</0>하십시오."
 
 #: screens/Setting/Subscription/SubscriptionEdit/SubscriptionStep.js:63
-msgid "If you do not have a subscription, you can visit\n"
+msgid ""
+"If you do not have a subscription, you can visit\n"
 "Red Hat to obtain a trial subscription."
 msgstr "서브스크립션이 없는 경우 Red Hat에 문의하여 평가판 서브스크립션을 받을 수 있습니다."
 
@@ -4591,7 +4614,8 @@ msgstr "이 특정 사용자에 대한 액세스 권한만 제거하려면 팀�
 
 #: screens/Inventory/shared/Inventory.helptext.js:120
 #: screens/Inventory/shared/Inventory.helptext.js:139
-msgid "If you want the Inventory Source to update on\n"
+msgid ""
+"If you want the Inventory Source to update on\n"
 "launch and on project update, click on Update on launch, and also go to"
 msgstr "시작 및 프로젝트 업데이트 시 인벤토리 소스를 업데이트하려면 시작 시 업데이트를 클릭하고 다음으로 이동합니다."
 
@@ -4615,7 +4639,8 @@ msgid "Including File"
 msgstr "파일 포함"
 
 #: components/HostToggle/HostToggle.js:16
-msgid "Indicates if a host is available and should be included in running\n"
+msgid ""
+"Indicates if a host is available and should be included in running\n"
 "jobs.  For hosts that are part of an external inventory, this may be\n"
 "reset by the inventory sync process."
 msgstr "호스트를 사용할 수 있고 실행 중인 작업에 포함되어야 하는지 여부를 나타냅니다. 외부 인벤토리의 일부인 호스트의 경우 인벤토리 동기화 프로세스에서 재설정할 수 있습니다."
@@ -5610,7 +5635,8 @@ msgstr "최대 길이"
 #: screens/InstanceGroup/InstanceGroupDetails/InstanceGroupDetails.js:86
 #: screens/InstanceGroup/shared/ContainerGroupForm.js:77
 #: screens/InstanceGroup/shared/InstanceGroupForm.js:62
-msgid "Maximum number of forks to allow across all jobs running concurrently on this group.\n"
+msgid ""
+"Maximum number of forks to allow across all jobs running concurrently on this group.\n"
 "Zero means no limit will be enforced."
 msgstr ""
 
@@ -5618,7 +5644,8 @@ msgstr ""
 #: screens/InstanceGroup/InstanceGroupDetails/InstanceGroupDetails.js:79
 #: screens/InstanceGroup/shared/ContainerGroupForm.js:67
 #: screens/InstanceGroup/shared/InstanceGroupForm.js:52
-msgid "Maximum number of jobs to run concurrently on this group.\n"
+msgid ""
+"Maximum number of jobs to run concurrently on this group.\n"
 "Zero means no limit will be enforced."
 msgstr ""
 
@@ -5658,13 +5685,15 @@ msgstr "최소 길이"
 
 #: screens/InstanceGroup/InstanceGroupDetails/InstanceGroupDetails.js:65
 #: screens/InstanceGroup/shared/InstanceGroupForm.js:31
-msgid "Minimum number of instances that will be automatically\n"
+msgid ""
+"Minimum number of instances that will be automatically\n"
 "assigned to this group when new instances come online."
 msgstr "새 인스턴스가 온라인 상태가 되면 이 그룹에 자동으로 할당되는 최소 인스턴스 수입니다."
 
 #: screens/InstanceGroup/InstanceGroupDetails/InstanceGroupDetails.js:71
 #: screens/InstanceGroup/shared/InstanceGroupForm.js:41
-msgid "Minimum percentage of all instances that will be automatically\n"
+msgid ""
+"Minimum percentage of all instances that will be automatically\n"
 "assigned to this group when new instances come online."
 msgstr "새 인스턴스가 온라인 상태가 되면 이 그룹에 자동으로 할당되는 모든 인스턴스의 최소 백분율입니다."
 
@@ -6253,14 +6282,16 @@ msgid "Not configured for inventory sync."
 msgstr "인벤토리 동기화에 대해 구성되지 않았습니다."
 
 #: screens/Inventory/InventoryGroupHosts/InventoryGroupHostList.js:248
-msgid "Note that only hosts directly in this group can\n"
+msgid ""
+"Note that only hosts directly in this group can\n"
 "be disassociated. Hosts in sub-groups must be disassociated\n"
 "directly from the sub-group level that they belong."
 msgstr "이 그룹에서 직접 호스트만 연결할 수 있습니다. 하위 그룹의 호스트는 자신이 속한 하위 그룹 수준에서 직접 연결을 끊을 수 있어야 합니다."
 
 #: screens/Host/HostGroups/HostGroupsList.js:212
 #: screens/Inventory/InventoryHostGroups/InventoryHostGroupsList.js:230
-msgid "Note that you may still see the group in the list after\n"
+msgid ""
+"Note that you may still see the group in the list after\n"
 "disassociating if the host is also a member of that group’s\n"
 "children.  This list shows all groups the host is associated\n"
 "with directly and indirectly."
@@ -6279,7 +6310,8 @@ msgid "Note: This field assumes the remote name is \"origin\"."
 msgstr "참고: 이 필드는 원격 이름이 \"origin\"이라고 가정합니다."
 
 #: screens/Project/shared/Project.helptext.js:35
-msgid "Note: When using SSH protocol for GitHub or\n"
+msgid ""
+"Note: When using SSH protocol for GitHub or\n"
 "Bitbucket, enter an SSH key only, do not enter a username\n"
 "(other than git). Additionally, GitHub and Bitbucket do\n"
 "not support password authentication when using SSH. GIT\n"
@@ -6424,7 +6456,8 @@ msgid "On days"
 msgstr "요일에"
 
 #: screens/NotificationTemplate/shared/Notifications.helptext.js:18
-msgid "One Slack channel per line. The pound symbol (#)\n"
+msgid ""
+"One Slack channel per line. The pound symbol (#)\n"
 "is required for channels. To respond to or start a thread to a specific message add the parent message Id to the channel where the parent message Id is 16 digits. A dot (.) must be manually inserted after the 10th digit.  ie:#destination-channel, 1231257890.006423. See Slack"
 msgstr "한 줄에 하나의 Slack 채널입니다. 채널에 대해 파운드 기호(#)가 필요합니다. 특정 메시지에 응답하거나 스레드를 시작하려면 상위 메시지 ID가16자리인 채널에 상위 메시지 ID를 추가합니다. 10 번째 자리 숫자 뒤에 점(.)을 수동으로 삽입해야 합니다. 예:#destination-channel, 1231257890.006423. Slack 참조"
 
@@ -6441,7 +6474,8 @@ msgid "Option Details"
 msgstr "옵션 세부 정보"
 
 #: screens/Inventory/shared/Inventory.helptext.js:25
-msgid "Optional labels that describe this inventory,\n"
+msgid ""
+"Optional labels that describe this inventory,\n"
 "such as 'dev' or 'test'. Labels can be used to group and filter\n"
 "inventories and completed jobs."
 msgstr "'dev' 또는 'test'와 같이 이 인벤토리를 설명하는 선택적 레이블입니다. 레이블을 사용하여 인벤토리 및 완료된 작업을 그룹화하고 필터링할 수 있습니다."
@@ -6462,7 +6496,8 @@ msgid "Optional labels that describe this job template, such as 'dev' or 'test'.
 msgstr "'dev' 또는 'test'와 같이 이 작업 템플릿을 설명하는 선택적 레이블입니다. 레이블을 사용하여 작업 템플릿과 완료된 작업을 그룹화하고 필터링할 수 있습니다."
 
 #: screens/Template/shared/WorkflowJobTemplate.helptext.js:11
-msgid "Optional labels that describe this workflow job template,\n"
+msgid ""
+"Optional labels that describe this workflow job template,\n"
 "such as 'dev' or 'test'. Labels can be used to group and filter\n"
 "workflow job templates and completed jobs."
 msgstr "'dev' 또는 'test'와 같이 이 워크플로 작업 템플릿을 설명하는 선택적 레이블입니다. 레이블을 사용하여 워크플로 작업 템플릿과 완료된 작업을 그룹화하고 필터링할 수 있습니다."
@@ -6889,7 +6924,8 @@ msgstr "외부 보안 관리 시스템에서 필드 채우기"
 #~ "examples."
 
 #: components/Lookup/HostFilterLookup.js:349
-msgid "Populate the hosts for this inventory by using a search\n"
+msgid ""
+"Populate the hosts for this inventory by using a search\n"
 "filter. Example: ansible_facts__ansible_distribution:\"RedHat\".\n"
 "Refer to the documentation for further syntax and\n"
 "examples.  Refer to the Ansible Controller documentation for further syntax and\n"
@@ -6906,7 +6942,8 @@ msgid "Preconditions for running this node when there are multiple parents. Refe
 msgstr "여러 명의 부모가 있을 때 이 노드를 실행하기 위한 전제 조건"
 
 #: screens/Template/Survey/MultipleChoiceField.js:59
-msgid "Press 'Enter' to add more answer choices. One answer\n"
+msgid ""
+"Press 'Enter' to add more answer choices. One answer\n"
 "choice per line."
 msgstr "'Enter'를 눌러 더 많은 답변 선택 사항을 추가합니다. 행당 하나의 응답 선택."
 
@@ -6915,7 +6952,8 @@ msgid "Press Enter to edit. Press ESC to stop editing."
 msgstr "Enter를 눌러 편집합니다. ESC를 눌러 편집을 중지합니다."
 
 #: components/SelectedList/DraggableSelectedList.js:85
-msgid "Press space or enter to begin dragging,\n"
+msgid ""
+"Press space or enter to begin dragging,\n"
 "and use the arrow keys to navigate up or down.\n"
 "Press enter to confirm the drag, or any other key to\n"
 "cancel the drag operation."
@@ -7065,7 +7103,8 @@ msgid "Prompted Values"
 msgstr "프롬프트 값"
 
 #: screens/Template/shared/WorkflowJobTemplate.helptext.js:6
-msgid "Provide a host pattern to further constrain\n"
+msgid ""
+"Provide a host pattern to further constrain\n"
 "the list of hosts that will be managed or affected by the\n"
 "playbook. Multiple patterns are allowed. Refer to Ansible\n"
 "documentation for more information and examples on patterns."
@@ -7093,12 +7132,14 @@ msgid "Provide a value for this field or select the Prompt on launch option."
 msgstr "이 필드에 값을 제공하거나 시작 시 프롬프트 실행 옵션을 선택합니다."
 
 #: components/AdHocCommands/AdHocDetailsStep.js:247
-msgid "Provide key/value pairs using either\n"
+msgid ""
+"Provide key/value pairs using either\n"
 "YAML or JSON."
 msgstr "YAML 또는 JSON을 사용하여 키/값 쌍을 제공합니다."
 
 #: screens/Setting/Subscription/SubscriptionEdit/SubscriptionStep.js:191
-msgid "Provide your Red Hat or Red Hat Satellite credentials\n"
+msgid ""
+"Provide your Red Hat or Red Hat Satellite credentials\n"
 "below and you can choose from a list of your available subscriptions.\n"
 "The credentials you use will be stored for future use in\n"
 "retrieving renewal or expanded subscriptions."
@@ -7500,7 +7541,8 @@ msgid "Restore initial value."
 msgstr "초기 값을 복원합니다."
 
 #: screens/Inventory/shared/Inventory.helptext.js:153
-msgid "Retrieve the enabled state from the given dict of host variables.\n"
+msgid ""
+"Retrieve the enabled state from the given dict of host variables.\n"
 "The enabled variable may be specified using dot notation, e.g: 'foo.bar'"
 msgstr "호스트 변수의 지정된 dict에서 활성화된 상태를 검색합니다. 활성화된 변수는 점 표기법을 사용하여 지정할 수 있습니다(예: 'foo.bar')."
 
@@ -8136,7 +8178,8 @@ msgid "Select frequency"
 msgstr "빈도 선택"
 
 #: screens/Project/shared/Project.helptext.js:18
-msgid "Select from the list of directories found in\n"
+msgid ""
+"Select from the list of directories found in\n"
 "the Project Base Path. Together the base path and the playbook\n"
 "directory provide the full path used to locate playbooks."
 msgstr "프로젝트 기본 경로에 있는 디렉터리 목록에서 선택합니다. 기본 경로와 플레이북 디렉토리는 플레이북을 찾는 데 사용되는 전체 경로를 제공합니다."
@@ -8233,7 +8276,8 @@ msgstr "원격 호스트에 액세스하여 명령을 실행할 때 사용할 �
 #~ msgstr "Select the execution environment for this job template."
 
 #: components/Lookup/InventoryLookup.js:123
-msgid "Select the inventory containing the hosts\n"
+msgid ""
+"Select the inventory containing the hosts\n"
 "you want this job to manage."
 msgstr "이 작업을 관리할 호스트가 포함된 인벤토리를 선택합니다."
 
@@ -8738,12 +8782,14 @@ msgid "Sources"
 msgstr "소스"
 
 #: screens/NotificationTemplate/shared/Notifications.helptext.js:30
-msgid "Specify HTTP Headers in JSON format. Refer to\n"
+msgid ""
+"Specify HTTP Headers in JSON format. Refer to\n"
 "the Ansible Controller documentation for example syntax."
 msgstr "HTTP 헤더를 JSON 형식으로 지정합니다. 예를 들어 Ansible Controller 설명서를 참조하십시오."
 
 #: screens/NotificationTemplate/shared/Notifications.helptext.js:24
-msgid "Specify a notification color. Acceptable colors are hex\n"
+msgid ""
+"Specify a notification color. Acceptable colors are hex\n"
 "color code (example: #3af or #789abc)."
 msgstr "알림 색상을 지정합니다. 허용되는 색상은 16진수 색상 코드 (예: #3af 또는 #789abc)입니다."
 
@@ -8863,7 +8909,8 @@ msgid "Submit"
 msgstr "제출"
 
 #: screens/Project/shared/Project.helptext.js:118
-msgid "Submodules will track the latest commit on\n"
+msgid ""
+"Submodules will track the latest commit on\n"
 "their master branch (or other branch specified in\n"
 ".gitmodules). If no, submodules will be kept at\n"
 "the revision specified by the main project.\n"
@@ -9278,7 +9325,8 @@ msgid "The Instance Groups to which this instance belongs."
 msgstr "이 인스턴스가 속하는 인스턴스 그룹입니다."
 
 #: screens/NotificationTemplate/shared/Notifications.helptext.js:6
-msgid "The amount of time (in seconds) before the email\n"
+msgid ""
+"The amount of time (in seconds) before the email\n"
 "notification stops trying to reach the host and times out. Ranges\n"
 "from 1 to 120 seconds."
 msgstr "이메일 알림에서 호스트에 도달하려는 시도를 중지하고 시간 초과되기 전 까지의 시간(초)입니다. 범위는 1초에서 120초 사이입니다."
@@ -9303,7 +9351,8 @@ msgid "The application that this token belongs to, or leave this field empty to 
 msgstr "이 토큰이 속한 애플리케이션이나 이 필드를 비워 개인 액세스 토큰을 만듭니다."
 
 #: screens/NotificationTemplate/shared/Notifications.helptext.js:9
-msgid "The base URL of the Grafana server - the\n"
+msgid ""
+"The base URL of the Grafana server - the\n"
 "/api/annotations endpoint will be added automatically to the base\n"
 "Grafana URL."
 msgstr "Grafana 서버의 기본 URL - /api/annotations 엔드포인트가 기본 Grafana URL에 자동으로 추가됩니다."
@@ -9313,7 +9362,8 @@ msgid "The container image to be used for execution."
 msgstr "실행에 사용할 컨테이너 이미지입니다."
 
 #: screens/Organization/OrganizationDetail/OrganizationDetail.js:105
-msgid "The execution environment that will be used for jobs\n"
+msgid ""
+"The execution environment that will be used for jobs\n"
 "inside of this organization. This will be used a fallback when\n"
 "an execution environment has not been explicitly assigned at the\n"
 "project, job template or workflow level."
@@ -9343,7 +9393,8 @@ msgid "The execution environment that will be used when launching this job templ
 msgstr "이 작업 템플릿을 시작할 때 사용할 실행 환경입니다. 해결된 실행 환경은 이 작업 템플릿에 다른 실행 환경을 명시적으로 할당하여 재정의할 수 있습니다."
 
 #: screens/Project/shared/Project.helptext.js:93
-msgid "The first fetches all references. The second\n"
+msgid ""
+"The first fetches all references. The second\n"
 "fetches the Github pull request number 62, in this example\n"
 "the branch needs to be \"pull/62/head\"."
 msgstr "모든 참조에 대한 첫 번째 참조를 가져옵니다. Github pull 요청 번호 62에 대한 두 번째 참조를 가져옵니다. 이 예제에서 분기는 \"pull/62/head\"여야 합니다."
@@ -9357,7 +9408,8 @@ msgid "The full image location, including the container registry, image name, an
 msgstr "컨테이너 레지스트리, 이미지 이름, 버전 태그를 포함한 전체 이미지 위치입니다."
 
 #: screens/Inventory/shared/Inventory.helptext.js:192
-msgid "The inventory file\n"
+msgid ""
+"The inventory file\n"
 "to be synced by this source. You can select from\n"
 "the dropdown or enter a file within the input."
 msgstr "이 소스에서 동기화할 인벤토리 파일입니다. 드롭다운에서 선택하거나 입력 란에 파일을 입력할 수 있습니다."
@@ -9375,19 +9427,22 @@ msgid "The last {weekday} of {month}"
 msgstr "마지막 {weekday} / {month}"
 
 #: screens/Organization/OrganizationDetail/OrganizationDetail.js:96
-msgid "The maximum number of hosts allowed to be managed by\n"
+msgid ""
+"The maximum number of hosts allowed to be managed by\n"
 "this organization. Value defaults to 0 which means no limit.\n"
 "Refer to the Ansible documentation for more details."
 msgstr "이 조직에서 관리할 수 있는 최대 호스트 수입니다. 기본값은 0이며 이는 제한이 없음을 의미합니다. 자세한 내용은 Ansible 설명서를 참조하십시오."
 
 #: screens/Organization/shared/OrganizationForm.js:72
-msgid "The maximum number of hosts allowed to be managed by this organization.\n"
+msgid ""
+"The maximum number of hosts allowed to be managed by this organization.\n"
 "Value defaults to 0 which means no limit. Refer to the Ansible\n"
 "documentation for more details."
 msgstr "이 조직에서 관리할 수 있는 최대 호스트 수입니다. 기본값은 0이며 이는 제한이 없음을 의미합니다. 자세한 내용은 Ansible 설명서를 참조하십시오."
 
 #: screens/NotificationTemplate/shared/Notifications.helptext.js:26
-msgid "The number associated with the \"Messaging\n"
+msgid ""
+"The number associated with the \"Messaging\n"
 "Service\" in Twilio with the format +18005550199."
 msgstr "+18005550199 형식으로 Twilio의 \"메시징 서비스(Messaging Service)\"와 연결된 번호입니다."
 
@@ -9458,7 +9513,8 @@ msgid "The search filter did not produce any results…"
 msgstr "검색 필터에서 결과를 생성하지 않았습니다."
 
 #: screens/Template/Survey/SurveyQuestionForm.js:180
-msgid "The suggested format for variable names is lowercase and\n"
+msgid ""
+"The suggested format for variable names is lowercase and\n"
 "underscore-separated (for example, foo_bar, user_id, host_name,\n"
 "etc.). Variable names with spaces are not allowed."
 msgstr "변수 이름에 대한 권장되는 형식은 소문자 및 밑줄로 구분되어 있습니다(예: foo_bar, user_id, host_name 등). 공백이 있는 변수 이름은 허용되지 않습니다."
@@ -9480,7 +9536,8 @@ msgstr "변수 이름에 대한 권장되는 형식은 소문자 및 밑줄로 �
 #~ "source control using the Source Control Type option above."
 
 #: screens/Project/shared/ProjectSubForms/ManualSubForm.js:50
-msgid "There are no available playbook directories in {project_base_dir}.\n"
+msgid ""
+"There are no available playbook directories in {project_base_dir}.\n"
 "Either that directory is empty, or all of the contents are already\n"
 "assigned to other projects. Create a new directory there and make\n"
 "sure the playbook files can be read by the \"awx\" system user,\n"
@@ -9576,10 +9633,12 @@ msgid "This credential type is currently being used by some credentials and cann
 msgstr "현재 일부 인증 정보에서 이 인증 정보 유형을 사용하고 있으며 삭제할 수 없습니다."
 
 #: screens/Setting/Subscription/SubscriptionEdit/AnalyticsStep.js:74
-msgid "This data is used to enhance\n"
+msgid ""
+"This data is used to enhance\n"
 "future releases of the Software and to provide\n"
 "Automation Analytics."
-msgstr "이 데이터는\n"
+msgstr ""
+"이 데이터는\n"
 "향후 소프트웨어 릴리스를 개선하고\n"
 "Automation Analytics를 제공하는 데 사용됩니다."
 
@@ -9594,7 +9653,8 @@ msgstr "이 데이터는\n"
 #~ "Insights for Ansible Automation Platform."
 
 #: screens/Setting/Subscription/SubscriptionEdit/AnalyticsStep.js:62
-msgid "This data is used to enhance\n"
+msgid ""
+"This data is used to enhance\n"
 "future releases of the Tower Software and help\n"
 "streamline customer experience and success."
 msgstr "이 데이터는 향후 Tower 소프트웨어의 릴리스를 개선하고 고객 경험 및 성공을 단순화하는 데 사용됩니다."
@@ -9759,9 +9819,11 @@ msgid "This schedule is missing required survey values"
 msgstr "이 일정에는 필수 설문 조사 값이 없습니다."
 
 #: components/Schedule/shared/UnsupportedScheduleForm.js:12
-msgid "This schedule uses complex rules that are not supported in the\n"
+msgid ""
+"This schedule uses complex rules that are not supported in the\n"
 "UI.  Please use the API to manage this schedule."
-msgstr "이 일정은 UI에서 지원되지 않는 복잡한 규칙을 사용합니다. \n"
+msgstr ""
+"이 일정은 UI에서 지원되지 않는 복잡한 규칙을 사용합니다. \n"
 "  API를 사용하여 이 일정을 관리하십시오."
 
 #: components/LaunchPrompt/steps/StepName.js:26
@@ -9793,7 +9855,8 @@ msgstr "이 워크플로우의 모든 후속 노드가 취소됩니다."
 #~ msgstr "This will continue the workflow along failure and always paths."
 
 #: screens/Setting/shared/RevertAllAlert.js:36
-msgid "This will revert all configuration values on this page to\n"
+msgid ""
+"This will revert all configuration values on this page to\n"
 "their factory defaults. Are you sure you want to proceed?"
 msgstr "이렇게 하면 이 페이지의 모든 구성 값을 해당 팩토리 기본값으로 되돌립니다. 계속 진행하시겠습니까?"
 
@@ -9829,7 +9892,8 @@ msgid "Time"
 msgstr "시간"
 
 #: screens/Project/shared/Project.helptext.js:128
-msgid "Time in seconds to consider a project\n"
+msgid ""
+"Time in seconds to consider a project\n"
 "to be current. During job runs and callbacks the task\n"
 "system will evaluate the timestamp of the latest project\n"
 "update. If it is older than Cache Timeout, it is not\n"
@@ -9838,7 +9902,8 @@ msgid "Time in seconds to consider a project\n"
 msgstr "프로젝트가 최신 상태인 것으로 간주하는데 걸리는 시간(초)입니다. 작업 실행 및 콜백 중에 작업 시스템은 최신 프로젝트 업데이트의 타임스탬프를 평가합니다. 캐시 시간 초과보다 오래된 경우 최신 상태로 간주되지 않으며 새 프로젝트 업데이트가 수행됩니다."
 
 #: screens/Inventory/shared/Inventory.helptext.js:147
-msgid "Time in seconds to consider an inventory sync\n"
+msgid ""
+"Time in seconds to consider an inventory sync\n"
 "to be current. During job runs and callbacks the task system will\n"
 "evaluate the timestamp of the latest sync. If it is older than\n"
 "Cache Timeout, it is not considered current, and a new\n"
@@ -10091,7 +10156,8 @@ msgid "Type Details"
 msgstr "유형 세부 정보"
 
 #: screens/Template/Survey/MultipleChoiceField.js:56
-msgid "Type answer then click checkbox on right to select answer as\n"
+msgid ""
+"Type answer then click checkbox on right to select answer as\n"
 "default."
 msgstr "답을 입력한 다음 확인란 오른쪽을 클릭하여 답변을 기본값으로 선택합니다."
 
@@ -10218,7 +10284,8 @@ msgid "Use TLS"
 msgstr "TLS 사용"
 
 #: screens/NotificationTemplate/shared/CustomMessagesSubForm.js:72
-msgid "Use custom messages to change the content of\n"
+msgid ""
+"Use custom messages to change the content of\n"
 "notifications sent when a job starts, succeeds, or fails. Use\n"
 "curly braces to access information about the job:"
 msgstr "사용자 지정 메시지를 사용하여 작업이 시작, 성공 또는 실패할 때 전송된 알림 내용을 변경합니다. 작업에 대한 정보에 액세스하려면 중괄호를 사용합니다."
@@ -10228,7 +10295,8 @@ msgid "Use one Annotation Tag per line, without commas."
 msgstr "쉼표 없이 한 줄에 하나의 주석 태그를 사용합니다."
 
 #: screens/NotificationTemplate/shared/Notifications.helptext.js:13
-msgid "Use one IRC channel or username per line. The pound\n"
+msgid ""
+"Use one IRC channel or username per line. The pound\n"
 "symbol (#) for channels, and the at (@) symbol for users, are not\n"
 "required."
 msgstr "한 줄에 하나의 IRC 채널 또는 사용자 이름을 사용합니다. 채널에는 # 기호가 필요하지 않으며 사용자의 경우 @ 기호는 필요하지 않습니다."
@@ -10238,7 +10306,8 @@ msgid "Use one email address per line to create a recipient list for this type o
 msgstr "이 유형의 알림에 대한 수신자 목록을 만들려면 한 줄에 하나의 이메일 주소를 사용합니다."
 
 #: screens/NotificationTemplate/shared/Notifications.helptext.js:28
-msgid "Use one phone number per line to specify where to\n"
+msgid ""
+"Use one phone number per line to specify where to\n"
 "route SMS messages. Phone numbers should be formatted +11231231234. For more information see Twilio documentation"
 msgstr "SMS 메시지를 라우팅할 위치를 지정하려면 한 줄에 하나의 전화 번호를 사용합니다. 전화 번호는 +11231231234 형식이어야 합니다. 자세한 내용은 Twilio 문서를 참조하십시오."
 
@@ -10827,7 +10896,8 @@ msgid "Weekend day"
 msgstr "주말"
 
 #: screens/Setting/Subscription/SubscriptionEdit/SubscriptionStep.js:59
-msgid "Welcome to Red Hat Ansible Automation Platform!\n"
+msgid ""
+"Welcome to Red Hat Ansible Automation Platform!\n"
 "Please complete the steps below to activate your subscription."
 msgstr "Red Hat Ansible Automation Platform에 오신 것을 환영합니다! 서브스크립션을 활성화하려면 아래 단계를 완료하십시오."
 
@@ -10836,13 +10906,15 @@ msgid "Welcome to {brandName}!"
 msgstr "{brandName}에 오신 것을 환영합니다!"
 
 #: screens/Inventory/shared/Inventory.helptext.js:105
-msgid "When not checked, a merge will be performed,\n"
+msgid ""
+"When not checked, a merge will be performed,\n"
 "combining local variables with those found on the\n"
 "external source."
 msgstr "선택하지 않으면 병합이 수행되어 로컬 변수와 외부 소스에 있는 변수를 병합합니다."
 
 #: screens/Inventory/shared/Inventory.helptext.js:93
-msgid "When not checked, local child\n"
+msgid ""
+"When not checked, local child\n"
 "hosts and groups not found on the external source will remain\n"
 "untouched by the inventory update process."
 msgstr "선택 해제하면 외부 소스에서 찾을 수 없는 로컬 하위 호스트 및 그룹은 인벤토리 업데이트 프로세스에 의해 변경되지 않은 상태로 유지됩니다."
@@ -11031,7 +11103,8 @@ msgid "You have automated against more hosts than your subscription allows."
 msgstr "서브스크립션에서 허용하는 것보다 더 많은 호스트에 대해 자동화되었습니다."
 
 #: screens/NotificationTemplate/shared/CustomMessagesSubForm.js:87
-msgid "You may apply a number of possible variables in the\n"
+msgid ""
+"You may apply a number of possible variables in the\n"
 "message. For more information, refer to the"
 msgstr "메시지에 사용 가능한 여러 변수를 적용할 수 있습니다. 자세한 내용은 다음을 참조하십시오."
 
