@@ -8,7 +8,7 @@ msgstr ""
 "Language: zh\n"
 "Project-Id-Version: 6e2b1ff477170c54e8cb815d5a533f7c\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-06-06 18:39\n"
+"PO-Revision-Date: 2023-06-06 18:48\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -34,7 +34,7 @@ msgstr "* 此字段将使用指定的凭证从外部 secret 管理系统检索�
 
 #: screens/Inventory/InventorySourceDetail/InventorySourceDetail.js:229
 msgid "/ (project root)"
-msgstr ""
+msgstr "/ (project root)"
 
 #: components/VerbositySelectField/VerbositySelectField.js:10
 msgid "0 (Normal)"
@@ -412,7 +412,7 @@ msgstr "始终"
 
 #: screens/Template/WorkflowJobTemplateVisualizer/Modals/NodeModals/NodeTypeStep/InventorySourcesList.js:98
 msgid "Amazon EC2"
-msgstr ""
+msgstr "Amazon EC2"
 
 #: components/Lookup/shared/LookupErrorMessage.js:12
 msgid "An error occurred"
@@ -619,7 +619,7 @@ msgstr "授权授予类型"
 #: screens/Instances/InstanceList/InstanceListItem.js:235
 #: screens/Instances/InstancePeers/InstancePeerListItem.js:83
 msgid "Auto"
-msgstr ""
+msgstr "Auto"
 
 #: screens/Setting/Subscription/SubscriptionEdit/AnalyticsStep.js:71
 #: screens/Setting/Subscription/SubscriptionEdit/AnalyticsStep.js:72
@@ -636,7 +636,7 @@ msgstr "Automation Controller 版本"
 
 #: screens/Setting/Settings.js:47
 msgid "Azure AD"
-msgstr ""
+msgstr "Azure AD"
 
 #: screens/Setting/SettingList.js:57
 msgid "Azure AD settings"
@@ -827,7 +827,7 @@ msgstr "默认情况下，我们会收集关于服务使用情况的分析数据
 #: screens/Instances/InstanceList/InstanceListItem.js:171
 #: screens/TopologyView/Tooltip.js:285
 msgid "CPU {0}"
-msgstr ""
+msgstr "CPU {0}"
 
 #: components/PromptDetail/PromptInventorySourceDetail.js:102
 #: components/PromptDetail/PromptProjectDetail.js:151
@@ -3979,7 +3979,7 @@ msgstr "有关详情请参阅"
 #: screens/Template/shared/JobTemplateForm.js:409
 #: screens/TopologyView/Tooltip.js:282
 msgid "Forks"
-msgstr ""
+msgstr "Forks"
 
 #: components/Schedule/shared/FrequencyDetailSubform.js:414
 msgid "Fourth"
@@ -4060,42 +4060,42 @@ msgstr "获取订阅"
 #: screens/Project/ProjectList/ProjectList.js:198
 #: screens/Template/WorkflowJobTemplateVisualizer/Modals/NodeModals/NodeTypeStep/ProjectsList.js:97
 msgid "Git"
-msgstr ""
+msgstr "Git"
 
 #: screens/Template/JobTemplateDetail/JobTemplateDetail.js:308
 #: screens/Template/shared/WebhookSubForm.js:106
 msgid "GitHub"
-msgstr ""
+msgstr "GitHub"
 
 #: screens/Setting/GitHub/GitHubDetail/GitHubDetail.js:85
 #: screens/Setting/Settings.js:51
 msgid "GitHub Default"
-msgstr ""
+msgstr "GitHub Default"
 
 #: screens/Setting/GitHub/GitHubDetail/GitHubDetail.js:100
 #: screens/Setting/Settings.js:60
 msgid "GitHub Enterprise"
-msgstr ""
+msgstr "GitHub Enterprise"
 
 #: screens/Setting/GitHub/GitHubDetail/GitHubDetail.js:105
 #: screens/Setting/Settings.js:63
 msgid "GitHub Enterprise Organization"
-msgstr ""
+msgstr "GitHub Enterprise Organization"
 
 #: screens/Setting/GitHub/GitHubDetail/GitHubDetail.js:110
 #: screens/Setting/Settings.js:66
 msgid "GitHub Enterprise Team"
-msgstr ""
+msgstr "GitHub Enterprise Team"
 
 #: screens/Setting/GitHub/GitHubDetail/GitHubDetail.js:90
 #: screens/Setting/Settings.js:54
 msgid "GitHub Organization"
-msgstr ""
+msgstr "GitHub Organization"
 
 #: screens/Setting/GitHub/GitHubDetail/GitHubDetail.js:95
 #: screens/Setting/Settings.js:57
 msgid "GitHub Team"
-msgstr ""
+msgstr "GitHub Team"
 
 #: screens/Setting/SettingList.js:61
 msgid "GitHub settings"
@@ -4104,7 +4104,7 @@ msgstr "GitHub 设置"
 #: screens/Template/JobTemplateDetail/JobTemplateDetail.js:308
 #: screens/Template/shared/WebhookSubForm.js:112
 msgid "GitLab"
-msgstr ""
+msgstr "GitLab"
 
 #: components/Lookup/ExecutionEnvironmentLookup.js:206
 #~ msgid "Global Default Execution Environment"
@@ -4137,7 +4137,7 @@ msgstr "进入上一页"
 
 #: screens/Template/WorkflowJobTemplateVisualizer/Modals/NodeModals/NodeTypeStep/InventorySourcesList.js:99
 msgid "Google Compute Engine"
-msgstr ""
+msgstr "Google Compute Engine"
 
 #: screens/Setting/SettingList.js:65
 msgid "Google OAuth 2 settings"
@@ -4145,12 +4145,12 @@ msgstr "Google OAuth2 设置"
 
 #: screens/Setting/Settings.js:69
 msgid "Google OAuth2"
-msgstr ""
+msgstr "Google OAuth2"
 
 #: components/NotificationList/NotificationList.js:194
 #: screens/NotificationTemplate/NotificationTemplateList/NotificationTemplateList.js:135
 msgid "Grafana"
-msgstr ""
+msgstr "Grafana"
 
 #: screens/NotificationTemplate/shared/TypeInputsSubForm.js:160
 msgid "Grafana API key"
@@ -4159,7 +4159,7 @@ msgstr "Grafana API 密钥"
 #: screens/NotificationTemplate/NotificationTemplateDetail/NotificationTemplateDetail.js:187
 #: screens/NotificationTemplate/shared/TypeInputsSubForm.js:151
 msgid "Grafana URL"
-msgstr ""
+msgstr "Grafana URL"
 
 #: components/Search/LookupTypeInput.js:106
 msgid "Greater than comparison."
@@ -4413,7 +4413,7 @@ msgstr "混合节点"
 #: components/Lookup/HostFilterLookup.js:98
 #: screens/Team/TeamRoles/TeamRolesList.js:155
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: screens/NotificationTemplate/NotificationTemplateDetail/NotificationTemplateDetail.js:193
 msgid "ID of the Dashboard"
@@ -4438,11 +4438,11 @@ msgstr "IP 地址"
 #: components/NotificationList/NotificationList.js:196
 #: screens/NotificationTemplate/NotificationTemplateList/NotificationTemplateList.js:137
 msgid "IRC"
-msgstr ""
+msgstr "IRC"
 
 #: screens/NotificationTemplate/NotificationTemplateDetail/NotificationTemplateDetail.js:228
 msgid "IRC Nick"
-msgstr ""
+msgstr "IRC Nick"
 
 #: screens/NotificationTemplate/NotificationTemplateDetail/NotificationTemplateDetail.js:223
 msgid "IRC Server Address"
@@ -4619,7 +4619,7 @@ msgstr "指明主机是否可用且应该包含在正在运行的作业中。对
 
 #: components/AppContainer/PageHeaderToolbar.js:103
 msgid "Info"
-msgstr ""
+msgstr "Info"
 
 #: screens/ActivityStream/ActivityStreamListItem.js:45
 msgid "Initiated By"
@@ -4964,7 +4964,7 @@ msgstr "作业 ID："
 
 #: screens/Job/JobOutput/HostEventModal.js:134
 msgid "JSON"
-msgstr ""
+msgstr "JSON"
 
 #: screens/Job/JobOutput/HostEventModal.js:135
 msgid "JSON tab"
@@ -5163,27 +5163,27 @@ msgstr "关键字"
 #: screens/User/UserDetail/UserDetail.js:56
 #: screens/User/UserList/UserListItem.js:44
 msgid "LDAP"
-msgstr ""
+msgstr "LDAP"
 
 #: screens/Setting/Settings.js:80
 msgid "LDAP 1"
-msgstr ""
+msgstr "LDAP 1"
 
 #: screens/Setting/Settings.js:81
 msgid "LDAP 2"
-msgstr ""
+msgstr "LDAP 2"
 
 #: screens/Setting/Settings.js:82
 msgid "LDAP 3"
-msgstr ""
+msgstr "LDAP 3"
 
 #: screens/Setting/Settings.js:83
 msgid "LDAP 4"
-msgstr ""
+msgstr "LDAP 4"
 
 #: screens/Setting/Settings.js:84
 msgid "LDAP 5"
-msgstr ""
+msgstr "LDAP 5"
 
 #: screens/Setting/Settings.js:79
 msgid "LDAP Default"
@@ -5195,23 +5195,23 @@ msgstr "LDAP 设置"
 
 #: screens/Setting/LDAP/LDAPDetail/LDAPDetail.js:107
 msgid "LDAP1"
-msgstr ""
+msgstr "LDAP1"
 
 #: screens/Setting/LDAP/LDAPDetail/LDAPDetail.js:112
 msgid "LDAP2"
-msgstr ""
+msgstr "LDAP2"
 
 #: screens/Setting/LDAP/LDAPDetail/LDAPDetail.js:117
 msgid "LDAP3"
-msgstr ""
+msgstr "LDAP3"
 
 #: screens/Setting/LDAP/LDAPDetail/LDAPDetail.js:122
 msgid "LDAP4"
-msgstr ""
+msgstr "LDAP4"
 
 #: screens/Setting/LDAP/LDAPDetail/LDAPDetail.js:127
 msgid "LDAP5"
-msgstr ""
+msgstr "LDAP5"
 
 #: components/RelatedTemplateList/RelatedTemplateList.js:191
 #: components/TemplateList/TemplateList.js:234
@@ -5574,7 +5574,7 @@ msgstr "3 月"
 #: components/NotificationList/NotificationList.js:197
 #: screens/NotificationTemplate/NotificationTemplateList/NotificationTemplateList.js:138
 msgid "Mattermost"
-msgstr ""
+msgstr "Mattermost"
 
 #: screens/Organization/OrganizationDetail/OrganizationDetail.js:94
 #: screens/Organization/shared/OrganizationForm.js:71
@@ -5643,7 +5643,7 @@ msgstr "指标"
 
 #: screens/Template/WorkflowJobTemplateVisualizer/Modals/NodeModals/NodeTypeStep/InventorySourcesList.js:100
 msgid "Microsoft Azure Resource Manager"
-msgstr ""
+msgstr "Microsoft Azure Resource Manager"
 
 #: screens/Template/Survey/SurveyQuestionForm.js:214
 msgid "Minimum"
@@ -6431,7 +6431,7 @@ msgstr "唯一分组标准"
 
 #: screens/Template/WorkflowJobTemplateVisualizer/Modals/NodeModals/NodeTypeStep/InventorySourcesList.js:103
 msgid "OpenStack"
-msgstr ""
+msgstr "OpenStack"
 
 #: screens/Project/shared/ProjectSubForms/SharedFields.js:111
 msgid "Option Details"
@@ -6596,16 +6596,16 @@ msgstr "覆盖变量"
 
 #: screens/NotificationTemplate/shared/TypeInputsSubForm.js:493
 msgid "POST"
-msgstr ""
+msgstr "POST"
 
 #: screens/NotificationTemplate/shared/TypeInputsSubForm.js:494
 msgid "PUT"
-msgstr ""
+msgstr "PUT"
 
 #: components/NotificationList/NotificationList.js:198
 #: screens/NotificationTemplate/NotificationTemplateList/NotificationTemplateList.js:139
 msgid "Pagerduty"
-msgstr ""
+msgstr "Pagerduty"
 
 #: screens/NotificationTemplate/NotificationTemplateDetail/NotificationTemplateDetail.js:279
 msgid "Pagerduty Subdomain"
@@ -6621,19 +6621,19 @@ msgstr "分页"
 
 #: components/Workflow/WorkflowTools.js:165
 msgid "Pan Down"
-msgstr ""
+msgstr "Pan Down"
 
 #: components/Workflow/WorkflowTools.js:132
 msgid "Pan Left"
-msgstr ""
+msgstr "Pan Left"
 
 #: components/Workflow/WorkflowTools.js:176
 msgid "Pan Right"
-msgstr ""
+msgstr "Pan Right"
 
 #: components/Workflow/WorkflowTools.js:143
 msgid "Pan Up"
-msgstr ""
+msgstr "Pan Up"
 
 #: components/AdHocCommands/AdHocDetailsStep.js:243
 msgid "Pass extra command line changes. There are two ansible command line parameters:"
@@ -6720,7 +6720,7 @@ msgstr "个人访问令牌"
 
 #: screens/Job/JobOutput/HostEventModal.js:123
 msgid "Play"
-msgstr ""
+msgstr "Play"
 
 #: screens/Job/JobOutput/shared/OutputToolbar.js:99
 msgid "Play Count"
@@ -6736,7 +6736,7 @@ msgstr "Play 已启动"
 #: screens/Template/WorkflowJobTemplateVisualizer/Modals/NodeModals/NodeTypeStep/JobTemplatesList.js:43
 #: screens/Template/shared/JobTemplateForm.js:357
 msgid "Playbook"
-msgstr ""
+msgstr "Playbook"
 
 #: components/JobList/JobListItem.js:44
 #: screens/Job/JobDetail/JobDetail.js:67
@@ -7144,7 +7144,7 @@ msgstr "置备失败"
 #: screens/ExecutionEnvironment/ExecutionEnvironmentDetails/ExecutionEnvironmentDetails.js:86
 #: screens/ExecutionEnvironment/shared/ExecutionEnvironmentForm.js:114
 msgid "Pull"
-msgstr ""
+msgstr "Pull"
 
 #: screens/Template/Survey/SurveyQuestionForm.js:163
 msgid "Question"
@@ -7152,7 +7152,7 @@ msgstr "问题"
 
 #: screens/Setting/Settings.js:106
 msgid "RADIUS"
-msgstr ""
+msgstr "RADIUS"
 
 #: screens/Setting/SettingList.js:73
 msgid "RADIUS settings"
@@ -7165,7 +7165,7 @@ msgstr "RADIUS 设置"
 #: screens/Instances/InstanceList/InstanceListItem.js:187
 #: screens/TopologyView/Tooltip.js:307
 msgid "RAM {0}"
-msgstr ""
+msgstr "RAM {0}"
 
 #: screens/User/shared/UserTokenForm.js:76
 msgid "Read"
@@ -7208,7 +7208,7 @@ msgstr "接收者列表"
 
 #: screens/Template/WorkflowJobTemplateVisualizer/Modals/NodeModals/NodeTypeStep/InventorySourcesList.js:105
 msgid "Red Hat Ansible Automation Platform"
-msgstr ""
+msgstr "Red Hat Ansible Automation Platform"
 
 #: components/Lookup/ProjectLookup.js:139
 #: components/UserAndTeamAccessAdd/getResourceAccessConfig.js:92
@@ -7217,15 +7217,15 @@ msgstr ""
 #: screens/Project/ProjectList/ProjectList.js:201
 #: screens/Template/WorkflowJobTemplateVisualizer/Modals/NodeModals/NodeTypeStep/ProjectsList.js:100
 msgid "Red Hat Insights"
-msgstr ""
+msgstr "Red Hat Insights"
 
 #: screens/Template/WorkflowJobTemplateVisualizer/Modals/NodeModals/NodeTypeStep/InventorySourcesList.js:102
 msgid "Red Hat Satellite 6"
-msgstr ""
+msgstr "Red Hat Satellite 6"
 
 #: screens/Template/WorkflowJobTemplateVisualizer/Modals/NodeModals/NodeTypeStep/InventorySourcesList.js:104
 msgid "Red Hat Virtualization"
-msgstr ""
+msgstr "Red Hat Virtualization"
 
 #: screens/Setting/Subscription/SubscriptionEdit/SubscriptionStep.js:117
 msgid "Red Hat subscription manifest"
@@ -7233,7 +7233,7 @@ msgstr "Red Hat 订阅清单"
 
 #: components/About/About.js:36
 msgid "Red Hat, Inc."
-msgstr ""
+msgstr "Red Hat, Inc."
 
 #: screens/Application/ApplicationDetails/ApplicationDetails.js:94
 #: screens/Application/shared/ApplicationForm.js:107
@@ -7572,7 +7572,7 @@ msgstr "修订号 #"
 #: components/NotificationList/NotificationList.js:199
 #: screens/NotificationTemplate/NotificationTemplateList/NotificationTemplateList.js:140
 msgid "Rocket.Chat"
-msgstr ""
+msgstr "Rocket.Chat"
 
 #: screens/Team/TeamRoles/TeamRoleListItem.js:20
 #: screens/Team/TeamRoles/TeamRolesList.js:148
@@ -7696,7 +7696,7 @@ msgstr "运行作业"
 
 #: screens/Setting/Settings.js:109
 msgid "SAML"
-msgstr ""
+msgstr "SAML"
 
 #: screens/Setting/SettingList.js:77
 msgid "SAML settings"
@@ -8572,7 +8572,7 @@ msgstr "跳过'"
 #: components/NotificationList/NotificationList.js:200
 #: screens/NotificationTemplate/NotificationTemplateList/NotificationTemplateList.js:141
 msgid "Slack"
-msgstr ""
+msgstr "Slack"
 
 #: screens/Host/HostList/SmartInventoryButton.js:39
 #: screens/Host/HostList/SmartInventoryButton.js:48
@@ -8853,7 +8853,7 @@ msgstr "状态"
 
 #: screens/Job/JobOutput/JobOutputSearch.js:91
 msgid "Stdout"
-msgstr ""
+msgstr "Stdout"
 
 #: screens/Setting/Subscription/SubscriptionEdit/SubscriptionEdit.js:37
 #: screens/Setting/Subscription/SubscriptionEdit/SubscriptionEdit.js:49
@@ -8912,7 +8912,7 @@ msgstr "订阅表"
 #: screens/Project/ProjectList/ProjectList.js:199
 #: screens/Template/WorkflowJobTemplateVisualizer/Modals/NodeModals/NodeTypeStep/ProjectsList.js:98
 msgid "Subversion"
-msgstr ""
+msgstr "Subversion"
 
 #: components/NotificationList/NotificationListItem.js:71
 #: components/NotificationList/NotificationListItem.js:72
@@ -9075,7 +9075,7 @@ msgstr "系统管理员对所有资源的访问权限是不受限制的。"
 
 #: screens/Setting/Settings.js:115
 msgid "TACACS+"
-msgstr ""
+msgstr "TACACS+"
 
 #: screens/Setting/SettingList.js:81
 msgid "TACACS+ settings"
@@ -9253,7 +9253,7 @@ msgstr "未找到该值。请输入或选择一个有效值。"
 
 #: components/Schedule/shared/FrequencyDetailSubform.js:398
 msgid "The"
-msgstr ""
+msgstr "The"
 
 #: screens/Setting/MiscSystem/MiscSystemEdit/MiscSystemEdit.js:200
 #~ msgid "The Execution Environment to be used when one has not been configured for a job template."
@@ -10017,7 +10017,7 @@ msgstr "试用"
 #: screens/NotificationTemplate/NotificationTemplateDetail/NotificationTemplateDetail.js:373
 #: screens/Setting/Subscription/SubscriptionDetail/SubscriptionDetail.js:142
 msgid "True"
-msgstr ""
+msgstr "True"
 
 #: components/Schedule/shared/FrequencyDetailSubform.js:277
 msgid "Tue"
@@ -10033,7 +10033,7 @@ msgstr "周二"
 #: components/NotificationList/NotificationList.js:201
 #: screens/NotificationTemplate/NotificationTemplateList/NotificationTemplateList.js:142
 msgid "Twilio"
-msgstr ""
+msgstr "Twilio"
 
 #: components/JobList/JobList.js:246
 #: components/JobList/JobListItem.js:98
@@ -10095,7 +10095,7 @@ msgstr "键入回答，然后点右侧选择回答作为默认选项。"
 
 #: components/Schedule/ScheduleOccurrences/ScheduleOccurrences.js:50
 msgid "UTC"
-msgstr ""
+msgstr "UTC"
 
 #: components/HostForm/HostForm.js:62
 msgid "Unable to change inventory on a host"
@@ -10358,7 +10358,7 @@ msgstr "用户"
 
 #: screens/Template/WorkflowJobTemplateVisualizer/Modals/NodeModals/NodeTypeStep/InventorySourcesList.js:101
 msgid "VMware vCenter"
-msgstr ""
+msgstr "VMware vCenter"
 
 #: components/AdHocCommands/AdHocPreviewStep.js:69
 #: components/HostForm/HostForm.js:113
@@ -10730,7 +10730,7 @@ msgstr "我们无法找到与这个帐户关联的许可证。"
 #: components/NotificationList/NotificationList.js:202
 #: screens/NotificationTemplate/NotificationTemplateList/NotificationTemplateList.js:143
 msgid "Webhook"
-msgstr ""
+msgstr "Webhook"
 
 #: components/PromptDetail/PromptJobTemplateDetail.js:177
 #: components/PromptDetail/PromptWFJobTemplateDetail.js:103
@@ -10766,7 +10766,7 @@ msgstr "Webhook 服务"
 #: screens/Template/shared/WebhookSubForm.js:161
 #: screens/Template/shared/WebhookSubForm.js:167
 msgid "Webhook URL"
-msgstr ""
+msgstr "Webhook URL"
 
 #: screens/Template/shared/JobTemplateForm.js:646
 #: screens/Template/shared/WorkflowJobTemplateForm.js:271
@@ -11123,7 +11123,7 @@ msgstr "确认编辑登录重定向"
 
 #: screens/TopologyView/ContentLoading.js:32
 msgid "content-loading-in-progress"
-msgstr ""
+msgstr "content-loading-in-progress"
 
 #: components/Schedule/ScheduleDetail/FrequencyDetails.js:189
 msgid "day"
@@ -11216,11 +11216,11 @@ msgstr "此处。"
 
 #: screens/Inventory/InventoryGroupHosts/InventoryGroupHostListItem.js:49
 msgid "host-description-{0}"
-msgstr ""
+msgstr "host-description-{0}"
 
 #: screens/Inventory/InventoryGroupHosts/InventoryGroupHostListItem.js:44
 msgid "host-name-{0}"
-msgstr ""
+msgstr "host-name-{0}"
 
 #: components/Lookup/HostFilterLookup.js:418
 msgid "hosts"
@@ -11343,11 +11343,11 @@ msgstr "工作流作业模板 webhook 密钥"
 
 #: screens/Inventory/InventoryList/InventoryListItem.js:65
 msgid "{0, plural, one {# source with sync failures.} other {# sources with sync failures.}}"
-msgstr ""
+msgstr "{0, plural, one {# source with sync failures.} other {# sources with sync failures.}}"
 
 #: screens/Inventory/shared/InventoryGroupsDeleteModal.js:115
 msgid "{0, plural, one {Are you sure you want delete the group below?} other {Are you sure you want delete the groups below?}}"
-msgstr ""
+msgstr "{0, plural, one {Are you sure you want delete the group below?} other {Are you sure you want delete the groups below?}}"
 
 #: components/HealthCheckButton/HealthCheckButton.js:23
 #~ msgid "{0, plural, one {Click to run a health check on the selected instance.} other {Click to run a health check on the selected instances.}}"
@@ -11355,11 +11355,11 @@ msgstr ""
 
 #: screens/Inventory/shared/InventoryGroupsDeleteModal.js:86
 msgid "{0, plural, one {Delete Group?} other {Delete Groups?}}"
-msgstr ""
+msgstr "{0, plural, one {Delete Group?} other {Delete Groups?}}"
 
 #: util/validators.js:138
 msgid "{0, plural, one {Please enter a valid phone number.} other {Please enter valid phone numbers.}}"
-msgstr ""
+msgstr "{0, plural, one {Please enter a valid phone number.} other {Please enter valid phone numbers.}}"
 
 #: screens/InstanceGroup/InstanceGroupList/InstanceGroupList.js:175
 #~ msgid "{0, plural, one {The following Instance Group cannot be deleted} other {The following Instance Groups cannot be deleted}}"
@@ -11367,43 +11367,43 @@ msgstr ""
 
 #: screens/Inventory/InventoryList/InventoryList.js:247
 msgid "{0, plural, one {The inventory will be in a pending status until the final delete is processed.} other {The inventories will be in a pending status until the final delete is processed.}}"
-msgstr ""
+msgstr "{0, plural, one {The inventory will be in a pending status until the final delete is processed.} other {The inventories will be in a pending status until the final delete is processed.}}"
 
 #: components/JobList/JobList.js:280
 msgid "{0, plural, one {The selected job cannot be deleted due to insufficient permission or a running job status} other {The selected jobs cannot be deleted due to insufficient permissions or a running job status}}"
-msgstr ""
+msgstr "{0, plural, one {The selected job cannot be deleted due to insufficient permission or a running job status} other {The selected jobs cannot be deleted due to insufficient permissions or a running job status}}"
 
 #: screens/WorkflowApproval/WorkflowApprovalList/WorkflowApprovalList.js:209
 msgid "{0, plural, one {This approval cannot be deleted due to insufficient permissions or a pending job status} other {These approvals cannot be deleted due to insufficient permissions or a pending job status}}"
-msgstr ""
+msgstr "{0, plural, one {This approval cannot be deleted due to insufficient permissions or a pending job status} other {These approvals cannot be deleted due to insufficient permissions or a pending job status}}"
 
 #: screens/Credential/CredentialList/CredentialList.js:198
 msgid "{0, plural, one {This credential is currently being used by other resources. Are you sure you want to delete it?} other {Deleting these credentials could impact other resources that rely on them. Are you sure you want to delete anyway?}}"
-msgstr ""
+msgstr "{0, plural, one {This credential is currently being used by other resources. Are you sure you want to delete it?} other {Deleting these credentials could impact other resources that rely on them. Are you sure you want to delete anyway?}}"
 
 #: screens/CredentialType/CredentialTypeList/CredentialTypeList.js:164
 msgid "{0, plural, one {This credential type is currently being used by some credentials and cannot be deleted.} other {Credential types that are being used by credentials cannot be deleted. Are you sure you want to delete anyway?}}"
-msgstr ""
+msgstr "{0, plural, one {This credential type is currently being used by some credentials and cannot be deleted.} other {Credential types that are being used by credentials cannot be deleted. Are you sure you want to delete anyway?}}"
 
 #: screens/ExecutionEnvironment/ExecutionEnvironmentList/ExecutionEnvironmentList.js:194
 msgid "{0, plural, one {This execution environment is currently being used by other resources. Are you sure you want to delete it?} other {These execution environments could be in use by other resources that rely on them. Are you sure you want to delete them anyway?}}"
-msgstr ""
+msgstr "{0, plural, one {This execution environment is currently being used by other resources. Are you sure you want to delete it?} other {These execution environments could be in use by other resources that rely on them. Are you sure you want to delete them anyway?}}"
 
 #: screens/InstanceGroup/InstanceGroupList/InstanceGroupList.js:182
 msgid "{0, plural, one {This instance group is currently being by other resources. Are you sure you want to delete it?} other {Deleting these instance groups could impact other resources that rely on them. Are you sure you want to delete anyway?}}"
-msgstr ""
+msgstr "{0, plural, one {This instance group is currently being by other resources. Are you sure you want to delete it?} other {Deleting these instance groups could impact other resources that rely on them. Are you sure you want to delete anyway?}}"
 
 #: screens/Instances/Shared/RemoveInstanceButton.js:85
 msgid "{0, plural, one {This intance is currently being used by other resources. Are you sure you want to delete it?} other {Deprovisioning these instances could impact other resources that rely on them. Are you sure you want to delete anyway?}}"
-msgstr ""
+msgstr "{0, plural, one {This intance is currently being used by other resources. Are you sure you want to delete it?} other {Deprovisioning these instances could impact other resources that rely on them. Are you sure you want to delete anyway?}}"
 
 #: screens/Inventory/InventoryList/InventoryList.js:240
 msgid "{0, plural, one {This inventory is currently being used by some templates. Are you sure you want to delete it?} other {Deleting these inventories could impact some templates that rely on them. Are you sure you want to delete anyway?}}"
-msgstr ""
+msgstr "{0, plural, one {This inventory is currently being used by some templates. Are you sure you want to delete it?} other {Deleting these inventories could impact some templates that rely on them. Are you sure you want to delete anyway?}}"
 
 #: screens/Inventory/InventorySources/InventorySourceList.js:196
 msgid "{0, plural, one {This inventory source is currently being used by other resources that rely on it. Are you sure you want to delete it?} other {Deleting these inventory sources could impact other resources that rely on them. Are you sure you want to delete anyway}}"
-msgstr ""
+msgstr "{0, plural, one {This inventory source is currently being used by other resources that rely on it. Are you sure you want to delete it?} other {Deleting these inventory sources could impact other resources that rely on them. Are you sure you want to delete anyway}}"
 
 #: screens/Organization/OrganizationList/OrganizationList.js:166
 #~ msgid "{0, plural, one {This organization is currently being by other resources. Are you sure you want to delete it?} other {Deleting these organizations could impact other resources that rely on them. Are you sure you want to delete anyway?}}"
@@ -11411,32 +11411,32 @@ msgstr ""
 
 #: screens/Organization/OrganizationList/OrganizationList.js:166
 msgid "{0, plural, one {This organization is currently being used by other resources. Are you sure you want to delete it?} other {Deleting these organizations could impact other resources that rely on them. Are you sure you want to delete anyway?}}"
-msgstr ""
+msgstr "{0, plural, one {This organization is currently being used by other resources. Are you sure you want to delete it?} other {Deleting these organizations could impact other resources that rely on them. Are you sure you want to delete anyway?}}"
 
 #: screens/Project/ProjectList/ProjectList.js:252
 msgid "{0, plural, one {This project is currently being used by other resources. Are you sure you want to delete it?} other {Deleting these projects could impact other resources that rely on them. Are you sure you want to delete anyway?}}"
-msgstr ""
+msgstr "{0, plural, one {This project is currently being used by other resources. Are you sure you want to delete it?} other {Deleting these projects could impact other resources that rely on them. Are you sure you want to delete anyway?}}"
 
 #: components/RelatedTemplateList/RelatedTemplateList.js:222
 #: components/TemplateList/TemplateList.js:266
 msgid "{0, plural, one {This template is currently being used by some workflow nodes. Are you sure you want to delete it?} other {Deleting these templates could impact some workflow nodes that rely on them. Are you sure you want to delete anyway?}}"
-msgstr ""
+msgstr "{0, plural, one {This template is currently being used by some workflow nodes. Are you sure you want to delete it?} other {Deleting these templates could impact some workflow nodes that rely on them. Are you sure you want to delete anyway?}}"
 
 #: components/JobList/JobListCancelButton.js:72
 msgid "{0, plural, one {You cannot cancel the following job because it is not running:} other {You cannot cancel the following jobs because they are not running:}}"
-msgstr ""
+msgstr "{0, plural, one {You cannot cancel the following job because it is not running:} other {You cannot cancel the following jobs because they are not running:}}"
 
 #: components/JobList/JobListCancelButton.js:56
 msgid "{0, plural, one {You do not have permission to cancel the following job:} other {You do not have permission to cancel the following jobs:}}"
-msgstr ""
+msgstr "{0, plural, one {You do not have permission to cancel the following job:} other {You do not have permission to cancel the following jobs:}}"
 
 #: components/Schedule/ScheduleDetail/FrequencyDetails.js:143
 msgid "{0, selectordinal, one {The first {dayOfWeek}} two {The second {dayOfWeek}} =3 {The third {dayOfWeek}} =4 {The fourth {dayOfWeek}} =5 {The fifth {dayOfWeek}}}"
-msgstr ""
+msgstr "{0, selectordinal, one {The first {dayOfWeek}} two {The second {dayOfWeek}} =3 {The third {dayOfWeek}} =4 {The fourth {dayOfWeek}} =5 {The fifth {dayOfWeek}}}"
 
 #: components/Schedule/ScheduleDetail/FrequencyDetails.js:202
 msgid "{0, selectordinal, one {The first {weekday} of {month}} two {The second {weekday} of {month}} =3 {The third {weekday} of {month}} =4 {The fourth {weekday} of {month}} =5 {The fifth {weekday} of {month}}}"
-msgstr ""
+msgstr "{0, selectordinal, one {The first {weekday} of {month}} two {The second {weekday} of {month}} =3 {The third {weekday} of {month}} =4 {The fourth {weekday} of {month}} =5 {The fifth {weekday} of {month}}}"
 
 #: screens/ActivityStream/ActivityStreamListItem.js:28
 msgid "{0} (deleted)"
@@ -11477,7 +11477,7 @@ msgstr "{dateStr}（由 <0>{username}</0>）"
 #: screens/Instances/InstanceList/InstanceListItem.js:174
 #: screens/TopologyView/Tooltip.js:288
 msgid "{forks, plural, one {# fork} other {# forks}}"
-msgstr ""
+msgstr "{forks, plural, one {# fork} other {# forks}}"
 
 #: components/HealthCheckButton/HealthCheckButton.js:15
 #~ msgid "{hopNodeSelected, plural, one {Cannot run health check on a hop node.  Deselect the hop node to run a health check.} other {Cannot run health check on hop nodes.  Deselect the hop nodes to run health checks.}}"
@@ -11509,27 +11509,27 @@ msgstr "{interval, plural, one {{interval} 年} other {{interval} 年}}"
 
 #: components/Schedule/shared/FrequencyDetailSubform.js:198
 msgid "{intervalValue, plural, one {day} other {days}}"
-msgstr ""
+msgstr "{intervalValue, plural, one {day} other {days}}"
 
 #: components/Schedule/shared/FrequencyDetailSubform.js:196
 msgid "{intervalValue, plural, one {hour} other {hours}}"
-msgstr ""
+msgstr "{intervalValue, plural, one {hour} other {hours}}"
 
 #: components/Schedule/shared/FrequencyDetailSubform.js:194
 msgid "{intervalValue, plural, one {minute} other {minutes}}"
-msgstr ""
+msgstr "{intervalValue, plural, one {minute} other {minutes}}"
 
 #: components/Schedule/shared/FrequencyDetailSubform.js:202
 msgid "{intervalValue, plural, one {month} other {months}}"
-msgstr ""
+msgstr "{intervalValue, plural, one {month} other {months}}"
 
 #: components/Schedule/shared/FrequencyDetailSubform.js:200
 msgid "{intervalValue, plural, one {week} other {weeks}}"
-msgstr ""
+msgstr "{intervalValue, plural, one {week} other {weeks}}"
 
 #: components/Schedule/shared/FrequencyDetailSubform.js:204
 msgid "{intervalValue, plural, one {year} other {years}}"
-msgstr ""
+msgstr "{intervalValue, plural, one {year} other {years}}"
 
 #: components/Schedule/shared/DateTimePicker.js:49
 #~ msgid "{label} date"
@@ -11545,15 +11545,15 @@ msgstr "{minutes} 分 {seconds} 秒"
 
 #: components/JobList/JobListCancelButton.js:106
 msgid "{numJobsToCancel, plural, one {Cancel job} other {Cancel jobs}}"
-msgstr ""
+msgstr "{numJobsToCancel, plural, one {Cancel job} other {Cancel jobs}}"
 
 #: components/JobList/JobListCancelButton.js:168
 msgid "{numJobsToCancel, plural, one {This action will cancel the following job:} other {This action will cancel the following jobs:}}"
-msgstr ""
+msgstr "{numJobsToCancel, plural, one {This action will cancel the following job:} other {This action will cancel the following jobs:}}"
 
 #: components/JobList/JobListCancelButton.js:91
 msgid "{numJobsToCancel, plural, one {{0}} other {{1}}}"
-msgstr ""
+msgstr "{numJobsToCancel, plural, one {{0}} other {{1}}}"
 
 #: components/Schedule/ScheduleDetail/FrequencyDetails.js:226
 msgid "{numOccurrences, plural, one {After {numOccurrences} occurrence} other {After {numOccurrences} occurrences}}"
@@ -11569,9 +11569,9 @@ msgstr "{pluralizedItemName} 列表"
 
 #: components/HealthCheckButton/HealthCheckButton.js:18
 msgid "{selectedItemsCount, plural, one {Click to run a health check on the selected instance.} other {Click to run a health check on the selected instances.}}"
-msgstr ""
+msgstr "{selectedItemsCount, plural, one {Click to run a health check on the selected instance.} other {Click to run a health check on the selected instances.}}"
 
 #: components/AppContainer/AppContainer.js:154
 msgid "{sessionCountdown, plural, one {You will be logged out in # second due to inactivity} other {You will be logged out in # seconds due to inactivity}}"
-msgstr ""
+msgstr "{sessionCountdown, plural, one {You will be logged out in # second due to inactivity} other {You will be logged out in # seconds due to inactivity}}"
 
