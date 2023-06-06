@@ -198,9 +198,11 @@ msgstr "JSON-parseerfout - is geen JSON-object"
 
 #: awx/api/parsers.py:36
 #, python-format
-msgid "JSON parse error - %s\n"
+msgid ""
+"JSON parse error - %s\n"
 "Possible cause: trailing comma."
-msgstr "JSON-parseerfout - %s\n"
+msgstr ""
+"JSON-parseerfout - %s\n"
 "Mogelijke oorzaak: navolgende komma."
 
 #: awx/api/serializers.py:205
@@ -2182,12 +2184,14 @@ msgid "Loggers Sending Data to Log Aggregator Form"
 msgstr "Logboekverzamelingen die gegevens verzenden naar log aggregator-formulier"
 
 #: awx/main/conf.py:530
-msgid "List of loggers that will send HTTP logs to the collector, these can include any or all of: \n"
+msgid ""
+"List of loggers that will send HTTP logs to the collector, these can include any or all of: \n"
 "awx - service logs\n"
 "activity_stream - activity stream records\n"
 "job_events - callback data from Ansible job events\n"
 "system_tracking - facts gathered from scan jobs."
-msgstr "Lijst met logboekverzamelingen die HTTP-logboeken verzenden naar de verzamelaar. Deze kunnen bestaan uit een of meer van de volgende: \n"
+msgstr ""
+"Lijst met logboekverzamelingen die HTTP-logboeken verzenden naar de verzamelaar. Deze kunnen bestaan uit een of meer van de volgende: \n"
 "awx - servicelogboeken\n"
 "activity_stream - records activiteitenstroom\n"
 "job_events - terugkoppelgegevens van Ansible-taakgebeurtenissen\n"
@@ -4433,9 +4437,11 @@ msgstr ""
 
 #: awx/main/models/workflow.py:302
 #, python-brace-format
-msgid "Bad launch configuration starting template {template_pk} as part of workflow {workflow_pk}. Errors:\n"
+msgid ""
+"Bad launch configuration starting template {template_pk} as part of workflow {workflow_pk}. Errors:\n"
 "{error_text}"
-msgstr "Slechte opstartconfiguratie van sjabloon {template_pk} als onderdeel van workflow {workflow_pk}. Fouten:\n"
+msgstr ""
+"Slechte opstartconfiguratie van sjabloon {template_pk} als onderdeel van workflow {workflow_pk}. Fouten:\n"
 "{error_text}"
 
 #: awx/main/models/workflow.py:622
@@ -4761,16 +4767,19 @@ msgid "Single Sign-On"
 msgstr "Single Sign-On"
 
 #: awx/sso/conf.py:52
-msgid "Mapping to organization admins/users from social auth accounts. This setting\n"
+msgid ""
+"Mapping to organization admins/users from social auth accounts. This setting\n"
 "controls which users are placed into which organizations based on their\n"
 "username and email address. Configuration details are available in the \n"
 "documentation."
 msgstr "Toewijzing aan organisatiebeheerders/-gebruikers vanuit sociale verificatieaccounts. Deze instelling bepaalt welke gebruikers in welke organisaties worden geplaatst op grond van hun gebruikersnaam en e-mailadres. Configuratiedetails zijn beschikbaar in de documentatie."
 
 #: awx/sso/conf.py:81
-msgid "Mapping of team members (users) from social auth accounts. Configuration\n"
+msgid ""
+"Mapping of team members (users) from social auth accounts. Configuration\n"
 "details are available in the documentation."
-msgstr "Toewijzing van teamleden (gebruikers) vanuit sociale verificatieaccounts. Configuratie-\n"
+msgstr ""
+"Toewijzing van teamleden (gebruikers) vanuit sociale verificatieaccounts. Configuratie-\n"
 "details zijn beschikbaar in de documentatie."
 
 #: awx/sso/conf.py:101
