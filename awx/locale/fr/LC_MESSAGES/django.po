@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: 6e2b1ff477170c54e8cb815d5a533f7c\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-29 13:13+0000\n"
-"PO-Revision-Date: 2023-06-06 18:39\n"
+"PO-Revision-Date: 2023-06-06 18:48\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
@@ -842,7 +842,7 @@ msgstr "Période \"%s\" inconnue"
 
 #: awx/api/views/__init__.py:361
 msgid "Instances"
-msgstr ""
+msgstr "Instances"
 
 #: awx/api/views/__init__.py:369
 msgid "Instance Detail"
@@ -952,7 +952,7 @@ msgstr "Moi-même"
 
 #: awx/api/views/__init__.py:1017
 msgid "OAuth 2 Applications"
-msgstr ""
+msgstr "OAuth 2 Applications"
 
 #: awx/api/views/__init__.py:1026
 msgid "OAuth 2 Application Detail"
@@ -1280,7 +1280,7 @@ msgstr "Vous ne pouvez pas transformer un inventaire régulier en un inventaire 
 #: awx/api/views/inventory.py:96
 #, python-brace-format
 msgid "{0}"
-msgstr ""
+msgstr "{0}"
 
 #: awx/api/views/metrics.py:29
 msgid "Metrics"
@@ -1317,15 +1317,15 @@ msgstr "API REST AWX"
 
 #: awx/api/views/root.py:64
 msgid "API OAuth 2 Authorization Root"
-msgstr ""
+msgstr "API OAuth 2 Authorization Root"
 
 #: awx/api/views/root.py:130
 msgid "Version 2"
-msgstr ""
+msgstr "Version 2"
 
 #: awx/api/views/root.py:140
 msgid "Ping"
-msgstr ""
+msgstr "Ping"
 
 #: awx/api/views/root.py:168
 msgid "Subscriptions"
@@ -1361,7 +1361,7 @@ msgstr "Erreur de traitement des métadonnées d'abonnement."
 
 #: awx/api/views/root.py:254 awx/conf/apps.py:11
 msgid "Configuration"
-msgstr ""
+msgstr "Configuration"
 
 #: awx/api/views/root.py:312
 msgid "Invalid subscription data"
@@ -1397,123 +1397,123 @@ msgstr "Webhook reçu précédemment, abandon."
 
 #: awx/conf/conf.py:20
 msgid "Bud Frogs"
-msgstr ""
+msgstr "Bud Frogs"
 
 #: awx/conf/conf.py:21
 msgid "Bunny"
-msgstr ""
+msgstr "Bunny"
 
 #: awx/conf/conf.py:22
 msgid "Cheese"
-msgstr ""
+msgstr "Cheese"
 
 #: awx/conf/conf.py:23
 msgid "Daemon"
-msgstr ""
+msgstr "Daemon"
 
 #: awx/conf/conf.py:24
 msgid "Default Cow"
-msgstr ""
+msgstr "Default Cow"
 
 #: awx/conf/conf.py:25
 msgid "Dragon"
-msgstr ""
+msgstr "Dragon"
 
 #: awx/conf/conf.py:26
 msgid "Elephant in Snake"
-msgstr ""
+msgstr "Elephant in Snake"
 
 #: awx/conf/conf.py:27
 msgid "Elephant"
-msgstr ""
+msgstr "Elephant"
 
 #: awx/conf/conf.py:28
 msgid "Eyes"
-msgstr ""
+msgstr "Eyes"
 
 #: awx/conf/conf.py:29
 msgid "Hello Kitty"
-msgstr ""
+msgstr "Hello Kitty"
 
 #: awx/conf/conf.py:30
 msgid "Kitty"
-msgstr ""
+msgstr "Kitty"
 
 #: awx/conf/conf.py:31
 msgid "Luke Koala"
-msgstr ""
+msgstr "Luke Koala"
 
 #: awx/conf/conf.py:32
 msgid "Meow"
-msgstr ""
+msgstr "Meow"
 
 #: awx/conf/conf.py:33
 msgid "Milk"
-msgstr ""
+msgstr "Milk"
 
 #: awx/conf/conf.py:34
 msgid "Moofasa"
-msgstr ""
+msgstr "Moofasa"
 
 #: awx/conf/conf.py:35
 msgid "Moose"
-msgstr ""
+msgstr "Moose"
 
 #: awx/conf/conf.py:36
 msgid "Ren"
-msgstr ""
+msgstr "Ren"
 
 #: awx/conf/conf.py:37
 msgid "Sheep"
-msgstr ""
+msgstr "Sheep"
 
 #: awx/conf/conf.py:38
 msgid "Small Cow"
-msgstr ""
+msgstr "Small Cow"
 
 #: awx/conf/conf.py:39
 msgid "Stegosaurus"
-msgstr ""
+msgstr "Stegosaurus"
 
 #: awx/conf/conf.py:40
 msgid "Stimpy"
-msgstr ""
+msgstr "Stimpy"
 
 #: awx/conf/conf.py:41
 msgid "Super Milker"
-msgstr ""
+msgstr "Super Milker"
 
 #: awx/conf/conf.py:42
 msgid "Three Eyes"
-msgstr ""
+msgstr "Three Eyes"
 
 #: awx/conf/conf.py:43
 msgid "Turkey"
-msgstr ""
+msgstr "Turkey"
 
 #: awx/conf/conf.py:44
 msgid "Turtle"
-msgstr ""
+msgstr "Turtle"
 
 #: awx/conf/conf.py:45
 msgid "Tux"
-msgstr ""
+msgstr "Tux"
 
 #: awx/conf/conf.py:46
 msgid "Udder"
-msgstr ""
+msgstr "Udder"
 
 #: awx/conf/conf.py:47
 msgid "Vader Koala"
-msgstr ""
+msgstr "Vader Koala"
 
 #: awx/conf/conf.py:48
 msgid "Vader"
-msgstr ""
+msgstr "Vader"
 
 #: awx/conf/conf.py:49
 msgid "WWW"
-msgstr ""
+msgstr "WWW"
 
 #: awx/conf/conf.py:52
 msgid "Cow Selection"
@@ -1525,7 +1525,7 @@ msgstr "Sélectionnez quel cow utiliser avec cowsay lors de l'exécution de tâc
 
 #: awx/conf/conf.py:54 awx/conf/conf.py:75
 msgid "Cows"
-msgstr ""
+msgstr "Cows"
 
 #: awx/conf/conf.py:73
 msgid "Example Read-Only Setting"
@@ -2300,31 +2300,31 @@ msgstr ""
 
 #: awx/main/constants.py:19
 msgid "Sudo"
-msgstr ""
+msgstr "Sudo"
 
 #: awx/main/constants.py:20
 msgid "Su"
-msgstr ""
+msgstr "Su"
 
 #: awx/main/constants.py:21
 msgid "Pbrun"
-msgstr ""
+msgstr "Pbrun"
 
 #: awx/main/constants.py:22
 msgid "Pfexec"
-msgstr ""
+msgstr "Pfexec"
 
 #: awx/main/constants.py:23
 msgid "DZDO"
-msgstr ""
+msgstr "DZDO"
 
 #: awx/main/constants.py:24
 msgid "Pmrun"
-msgstr ""
+msgstr "Pmrun"
 
 #: awx/main/constants.py:25
 msgid "Runas"
-msgstr ""
+msgstr "Runas"
 
 #: awx/main/constants.py:26
 msgid "Enable"
@@ -2336,15 +2336,15 @@ msgstr ""
 
 #: awx/main/constants.py:28
 msgid "Ksu"
-msgstr ""
+msgstr "Ksu"
 
 #: awx/main/constants.py:29
 msgid "Machinectl"
-msgstr ""
+msgstr "Machinectl"
 
 #: awx/main/constants.py:30
 msgid "Sesu"
-msgstr ""
+msgstr "Sesu"
 
 #: awx/main/constants.py:32
 msgid "None"
@@ -2528,7 +2528,7 @@ msgstr "Identifiant du secret, par exemple : /some/identifier"
 
 #: awx/main/credential_plugins/dsv.py:12
 msgid "Tenant"
-msgstr ""
+msgstr "Tenant"
 
 #: awx/main/credential_plugins/dsv.py:13
 msgid "The tenant e.g. \"ex\" when the URL is https://ex.secretservercloud.com"
@@ -2566,7 +2566,7 @@ msgstr "URL Archivage sécurisé HashiCorp"
 #: awx/main/models/credential/__init__.py:923
 #: awx/main/models/credential/__init__.py:942
 msgid "Token"
-msgstr ""
+msgstr "Token"
 
 #: awx/main/credential_plugins/hashivault.py:25
 msgid "The access token used to authenticate to the Vault server"
@@ -2582,7 +2582,7 @@ msgstr "Le certificat CA utilisé pour vérifier le certificat SSL du serveur de
 
 #: awx/main/credential_plugins/hashivault.py:34
 msgid "AppRole role_id"
-msgstr ""
+msgstr "AppRole role_id"
 
 #: awx/main/credential_plugins/hashivault.py:34
 msgid "The Role ID for AppRole Authentication"
@@ -2590,7 +2590,7 @@ msgstr "L'ID de rôle pour l'authentification AppRole"
 
 #: awx/main/credential_plugins/hashivault.py:37
 msgid "AppRole secret_id"
-msgstr ""
+msgstr "AppRole secret_id"
 
 #: awx/main/credential_plugins/hashivault.py:41
 msgid "The Secret ID for AppRole Authentication"
@@ -2952,7 +2952,7 @@ msgstr "Saisissez les entrées en utilisant la syntaxe JSON ou YAML. Reportez-vo
 #: awx/main/models/credential/__init__.py:331
 #: awx/main/models/credential/__init__.py:585
 msgid "Machine"
-msgstr ""
+msgstr "Machine"
 
 #: awx/main/models/credential/__init__.py:332
 #: awx/main/models/credential/__init__.py:635
@@ -2971,7 +2971,7 @@ msgstr "Contrôle de la source"
 
 #: awx/main/models/credential/__init__.py:335
 msgid "Cloud"
-msgstr ""
+msgstr "Cloud"
 
 #: awx/main/models/credential/__init__.py:336
 #: awx/main/models/credential/__init__.py:1113
@@ -2985,7 +2985,7 @@ msgstr "Jeton d'accès personnel"
 #: awx/main/models/credential/__init__.py:338
 #: awx/main/models/credential/__init__.py:955
 msgid "Insights"
-msgstr ""
+msgstr "Insights"
 
 #: awx/main/models/credential/__init__.py:339
 msgid "External"
@@ -2993,7 +2993,7 @@ msgstr "Externe"
 
 #: awx/main/models/credential/__init__.py:340
 msgid "Kubernetes"
-msgstr ""
+msgstr "Kubernetes"
 
 #: awx/main/models/credential/__init__.py:341
 msgid "Galaxy/Automation Hub"
@@ -3065,7 +3065,7 @@ msgstr "Mot de passe d’autorisation"
 
 #: awx/main/models/credential/__init__.py:701
 msgid "Amazon Web Services"
-msgstr ""
+msgstr "Amazon Web Services"
 
 #: awx/main/models/credential/__init__.py:705
 msgid "Access Key"
@@ -3085,7 +3085,7 @@ msgstr "Le service de jeton de sécurité (STS) est un service Web qui permet de
 
 #: awx/main/models/credential/__init__.py:732 awx/main/models/inventory.py:811
 msgid "OpenStack"
-msgstr ""
+msgstr "OpenStack"
 
 #: awx/main/models/credential/__init__.py:739
 msgid "Password (API Key)"
@@ -3133,7 +3133,7 @@ msgstr "Vérifier SSL"
 
 #: awx/main/models/credential/__init__.py:790 awx/main/models/inventory.py:809
 msgid "VMware vCenter"
-msgstr ""
+msgstr "VMware vCenter"
 
 #: awx/main/models/credential/__init__.py:796
 msgid "VCenter Host"
@@ -3145,7 +3145,7 @@ msgstr "Saisir le nom d’hôte ou l’adresse IP qui correspond à votre VMware
 
 #: awx/main/models/credential/__init__.py:815 awx/main/models/inventory.py:810
 msgid "Red Hat Satellite 6"
-msgstr ""
+msgstr "Red Hat Satellite 6"
 
 #: awx/main/models/credential/__init__.py:821
 msgid "Satellite 6 URL"
@@ -3157,7 +3157,7 @@ msgstr "Veuillez saisir l’URL qui correspond à votre serveur Red Hat Satellit
 
 #: awx/main/models/credential/__init__.py:840 awx/main/models/inventory.py:807
 msgid "Google Compute Engine"
-msgstr ""
+msgstr "Google Compute Engine"
 
 #: awx/main/models/credential/__init__.py:846
 msgid "Service Account Email Address"
@@ -3181,7 +3181,7 @@ msgstr "Collez le contenu du fichier PEM associé à l’adresse électronique d
 
 #: awx/main/models/credential/__init__.py:878 awx/main/models/inventory.py:808
 msgid "Microsoft Azure Resource Manager"
-msgstr ""
+msgstr "Microsoft Azure Resource Manager"
 
 #: awx/main/models/credential/__init__.py:884
 msgid "Subscription ID"
@@ -3217,7 +3217,7 @@ msgstr "Ce jeton doit provenir de vos paramètres de profil dans GitLab"
 
 #: awx/main/models/credential/__init__.py:979 awx/main/models/inventory.py:812
 msgid "Red Hat Virtualization"
-msgstr ""
+msgstr "Red Hat Virtualization"
 
 #: awx/main/models/credential/__init__.py:983
 msgid "The host to authenticate with."
@@ -3234,7 +3234,7 @@ msgstr "Chemin d'accès absolu vers le fichier CA à utiliser (en option)"
 #: awx/main/models/credential/__init__.py:1023
 #: awx/main/models/credential/__init__.py:1029 awx/main/models/inventory.py:813
 msgid "Red Hat Ansible Automation Platform"
-msgstr ""
+msgstr "Red Hat Ansible Automation Platform"
 
 #: awx/main/models/credential/__init__.py:1031
 msgid "Red Hat Ansible Automation Platform base URL to authenticate with."
@@ -3627,11 +3627,11 @@ msgstr "Provenance d'un projet"
 
 #: awx/main/models/inventory.py:806
 msgid "Amazon EC2"
-msgstr ""
+msgstr "Amazon EC2"
 
 #: awx/main/models/inventory.py:814 awx/main/models/projects.py:52
 msgid "Red Hat Insights"
-msgstr ""
+msgstr "Red Hat Insights"
 
 #: awx/main/models/inventory.py:841
 msgid "Inventory source variables in YAML or JSON format."
@@ -3846,39 +3846,39 @@ msgstr "Identifiant unique de l'événement qui a déclenché ce webhook"
 
 #: awx/main/models/notifications.py:42
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #: awx/main/models/notifications.py:43
 msgid "Slack"
-msgstr ""
+msgstr "Slack"
 
 #: awx/main/models/notifications.py:44
 msgid "Twilio"
-msgstr ""
+msgstr "Twilio"
 
 #: awx/main/models/notifications.py:45
 msgid "Pagerduty"
-msgstr ""
+msgstr "Pagerduty"
 
 #: awx/main/models/notifications.py:46
 msgid "Grafana"
-msgstr ""
+msgstr "Grafana"
 
 #: awx/main/models/notifications.py:47 awx/main/models/unified_jobs.py:534
 msgid "Webhook"
-msgstr ""
+msgstr "Webhook"
 
 #: awx/main/models/notifications.py:48
 msgid "Mattermost"
-msgstr ""
+msgstr "Mattermost"
 
 #: awx/main/models/notifications.py:49
 msgid "Rocket.Chat"
-msgstr ""
+msgstr "Rocket.Chat"
 
 #: awx/main/models/notifications.py:50
 msgid "IRC"
-msgstr ""
+msgstr "IRC"
 
 #: awx/main/models/notifications.py:78
 msgid "Optional custom messages for notification template."
@@ -3902,7 +3902,7 @@ msgstr "le statut doit être soit en cours, soit réussi, soit échoué"
 
 #: awx/main/models/oauth.py:32
 msgid "application"
-msgstr ""
+msgstr "application"
 
 #: awx/main/models/oauth.py:39
 msgid "Confidential"
@@ -3910,7 +3910,7 @@ msgstr "Confidentiel"
 
 #: awx/main/models/oauth.py:40
 msgid "Public"
-msgstr ""
+msgstr "Public"
 
 #: awx/main/models/oauth.py:46
 msgid "Authorization code"
@@ -3970,11 +3970,11 @@ msgstr "Manuel"
 
 #: awx/main/models/projects.py:50
 msgid "Git"
-msgstr ""
+msgstr "Git"
 
 #: awx/main/models/projects.py:51
 msgid "Subversion"
-msgstr ""
+msgstr "Subversion"
 
 #: awx/main/models/projects.py:53
 msgid "Remote Archive"
@@ -4010,7 +4010,7 @@ msgstr "Branche, balise ou validation spécifique à valider."
 
 #: awx/main/models/projects.py:108
 msgid "SCM refspec"
-msgstr ""
+msgstr "SCM refspec"
 
 #: awx/main/models/projects.py:109
 msgid "For git projects, an additional refspec to fetch."
@@ -4110,11 +4110,11 @@ msgstr "Auditeur système"
 
 #: awx/main/models/rbac.py:37
 msgid "Ad Hoc"
-msgstr ""
+msgstr "Ad Hoc"
 
 #: awx/main/models/rbac.py:38
 msgid "Admin"
-msgstr ""
+msgstr "Admin"
 
 #: awx/main/models/rbac.py:39
 msgid "Project Admin"
@@ -4269,7 +4269,7 @@ msgstr "rôles"
 
 #: awx/main/models/rbac.py:448
 msgid "role_ancestors"
-msgstr ""
+msgstr "role_ancestors"
 
 #: awx/main/models/schedules.py:79
 msgid "Enables processing of this schedule."
@@ -4313,7 +4313,7 @@ msgstr "Jamais mis à jour"
 
 #: awx/main/models/unified_jobs.py:88
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: awx/main/models/unified_jobs.py:89
 msgid "Missing"
@@ -4362,7 +4362,7 @@ msgstr "Flux de travail"
 
 #: awx/main/models/unified_jobs.py:535
 msgid "Sync"
-msgstr ""
+msgstr "Sync"
 
 #: awx/main/models/unified_jobs.py:584
 msgid "The node the job executed on."
@@ -4759,7 +4759,7 @@ msgstr "Une erreur serveur s'est produite."
 
 #: awx/sso/apps.py:9
 msgid "Single Sign-On"
-msgstr ""
+msgstr "Single Sign-On"
 
 #: awx/sso/conf.py:52
 msgid "Mapping to organization admins/users from social auth accounts. This setting\n"
@@ -4814,7 +4814,7 @@ msgstr "URI de connexion au serveur LDAP, tel que \"ldap://ldap.exemple.com:389\
 #: awx/sso/conf.py:354 awx/sso/conf.py:369 awx/sso/conf.py:387
 #: awx/sso/conf.py:419
 msgid "LDAP"
-msgstr ""
+msgstr "LDAP"
 
 #: awx/sso/conf.py:181
 msgid "LDAP Bind DN"
@@ -4947,7 +4947,7 @@ msgstr "Nom d'hôte/IP du serveur RADIUS. L'authentification RADIUS est désacti
 #: awx/sso/conf.py:454 awx/sso/conf.py:467 awx/sso/conf.py:478
 #: awx/sso/models.py:13
 msgid "RADIUS"
-msgstr ""
+msgstr "RADIUS"
 
 #: awx/sso/conf.py:465
 msgid "RADIUS Port"
@@ -4976,7 +4976,7 @@ msgstr "Nom d'hôte du serveur TACACS+"
 #: awx/sso/conf.py:494 awx/sso/conf.py:506 awx/sso/conf.py:518
 #: awx/sso/conf.py:530 awx/sso/conf.py:542 awx/sso/models.py:13
 msgid "TACACS+"
-msgstr ""
+msgstr "TACACS+"
 
 #: awx/sso/conf.py:504
 msgid "TACACS+ Port"
@@ -5023,7 +5023,7 @@ msgstr "Fournir cette URL comme URL d'appel pour votre application dans le cadre
 #: awx/sso/conf.py:595 awx/sso/conf.py:611 awx/sso/conf.py:623
 #: awx/sso/conf.py:635
 msgid "Google OAuth2"
-msgstr ""
+msgstr "Google OAuth2"
 
 #: awx/sso/conf.py:569
 msgid "Google OAuth2 Key"
@@ -5174,22 +5174,22 @@ msgstr "Mappe d'organisations OAuth2 pour les équipes GitHub"
 
 #: awx/sso/conf.py:853
 msgid "GitHub Team OAuth2 Team Map"
-msgstr ""
+msgstr "GitHub Team OAuth2 Team Map"
 
 #: awx/sso/conf.py:869
 msgid "GitHub Enterprise OAuth2 Callback URL"
-msgstr ""
+msgstr "GitHub Enterprise OAuth2 Callback URL"
 
 #: awx/sso/conf.py:873 awx/sso/conf.py:885 awx/sso/conf.py:898
 #: awx/sso/conf.py:909 awx/sso/conf.py:932 awx/sso/conf.py:944
 #: awx/sso/conf.py:974 awx/sso/conf.py:987 awx/sso/conf.py:1077
 #: awx/sso/conf.py:1090
 msgid "GitHub Enterprise OAuth2"
-msgstr ""
+msgstr "GitHub Enterprise OAuth2"
 
 #: awx/sso/conf.py:883
 msgid "GitHub Enterprise URL"
-msgstr ""
+msgstr "GitHub Enterprise URL"
 
 #: awx/sso/conf.py:884 awx/sso/conf.py:973 awx/sso/conf.py:1076
 msgid "The URL for your Github Enterprise instance, e.g.: http(s)://hostname/. Refer to Github Enterprise documentation for more details."
@@ -5197,7 +5197,7 @@ msgstr "L'URL de votre instance Github Enterprise, par exemple : http(s)://hostn
 
 #: awx/sso/conf.py:894
 msgid "GitHub Enterprise API URL"
-msgstr ""
+msgstr "GitHub Enterprise API URL"
 
 #: awx/sso/conf.py:896 awx/sso/conf.py:985 awx/sso/conf.py:1088
 msgid "The API URL for your GitHub Enterprise instance, e.g.: http(s)://hostname/api/v3/. Refer to Github Enterprise documentation for more details."
@@ -5205,7 +5205,7 @@ msgstr "L'URL de l'API pour votre instance GitHub Enterprise, par exemple : http
 
 #: awx/sso/conf.py:907
 msgid "GitHub Enterprise OAuth2 Key"
-msgstr ""
+msgstr "GitHub Enterprise OAuth2 Key"
 
 #: awx/sso/conf.py:908
 msgid "The OAuth2 key (Client ID) from your GitHub Enterprise developer application."
@@ -5213,7 +5213,7 @@ msgstr "Clé OAuth2 (ID client) de votre application de développeur GitHub Ente
 
 #: awx/sso/conf.py:918
 msgid "GitHub Enterprise OAuth2 Secret"
-msgstr ""
+msgstr "GitHub Enterprise OAuth2 Secret"
 
 #: awx/sso/conf.py:919
 msgid "The OAuth2 secret (Client Secret) from your GitHub Enterprise developer application."
@@ -5234,15 +5234,15 @@ msgstr "URL de rappel GitHub Enterprise Organization OAuth2"
 #: awx/sso/conf.py:962 awx/sso/conf.py:998 awx/sso/conf.py:1009
 #: awx/sso/conf.py:1021 awx/sso/conf.py:1032 awx/sso/conf.py:1044
 msgid "GitHub Enterprise Organization OAuth2"
-msgstr ""
+msgstr "GitHub Enterprise Organization OAuth2"
 
 #: awx/sso/conf.py:972
 msgid "GitHub Enterprise Organization URL"
-msgstr ""
+msgstr "GitHub Enterprise Organization URL"
 
 #: awx/sso/conf.py:983
 msgid "GitHub Enterprise Organization API URL"
-msgstr ""
+msgstr "GitHub Enterprise Organization API URL"
 
 #: awx/sso/conf.py:996
 msgid "GitHub Enterprise Organization OAuth2 Key"
@@ -5315,7 +5315,7 @@ msgstr "Mappe d'organisations OAuth2 pour les organisations GitHub"
 
 #: awx/sso/conf.py:1145
 msgid "GitHub Enterprise Team OAuth2 Team Map"
-msgstr ""
+msgstr "GitHub Enterprise Team OAuth2 Team Map"
 
 #: awx/sso/conf.py:1161
 msgid "Azure AD OAuth2 Callback URL"
@@ -5369,7 +5369,7 @@ msgstr "Lorsque cette option est activée (par défaut), les organisations et le
 #: awx/sso/conf.py:1448 awx/sso/conf.py:1460 awx/sso/conf.py:1472
 #: awx/sso/conf.py:1484 awx/sso/conf.py:1505 awx/sso/models.py:13
 msgid "SAML"
-msgstr ""
+msgstr "SAML"
 
 #: awx/sso/conf.py:1245
 msgid "SAML Assertion Consumer Service (ACS) URL"
@@ -5502,7 +5502,7 @@ msgstr "Option(s) de connexion non valide(s) : {invalid_options}."
 
 #: awx/sso/fields.py:322
 msgid "Base"
-msgstr ""
+msgstr "Base"
 
 #: awx/sso/fields.py:322
 msgid "One Level"
@@ -5592,7 +5592,7 @@ msgstr "Le secret TACACS+ ne permet pas l'utilisation de caractères non-ascii"
 
 #: awx/templates/error.html:4
 msgid "AWX"
-msgstr ""
+msgstr "AWX"
 
 #: awx/templates/rest_framework/api.html:42
 msgid "API Guide"
@@ -5678,7 +5678,7 @@ msgstr "%s Mise à jour"
 
 #: awx/ui/urls.py:21
 msgid "Logo"
-msgstr ""
+msgstr "Logo"
 
 #: awx/ui/urls.py:22
 msgid "Loading"
