@@ -198,9 +198,11 @@ msgstr "JSON 구문 분석 오류 - JSON 오브젝트가 아님"
 
 #: awx/api/parsers.py:36
 #, python-format
-msgid "JSON parse error - %s\n"
+msgid ""
+"JSON parse error - %s\n"
 "Possible cause: trailing comma."
-msgstr "JSON 구문 분석 오류 - %s\n"
+msgstr ""
+"JSON 구문 분석 오류 - %s\n"
 "가능한 오류 원인: 후행 쉼표."
 
 #: awx/api/serializers.py:205
@@ -2182,12 +2184,14 @@ msgid "Loggers Sending Data to Log Aggregator Form"
 msgstr "로그 집계 양식에 데이터를 전송하는 로거"
 
 #: awx/main/conf.py:530
-msgid "List of loggers that will send HTTP logs to the collector, these can include any or all of: \n"
+msgid ""
+"List of loggers that will send HTTP logs to the collector, these can include any or all of: \n"
 "awx - service logs\n"
 "activity_stream - activity stream records\n"
 "job_events - callback data from Ansible job events\n"
 "system_tracking - facts gathered from scan jobs."
-msgstr "HTTP 로그를 수집기에 보낼 로거 목록입니다. 여기에는 다음 중 일부 또는 모두가 포함될 수 있습니다.\n"
+msgstr ""
+"HTTP 로그를 수집기에 보낼 로거 목록입니다. 여기에는 다음 중 일부 또는 모두가 포함될 수 있습니다.\n"
 "awx - 서비스 로그\n"
 "activity_stream - 활동 스트림 기록\n"
 "job_events - Ansible 작업 이벤트의 콜백 데이터\n"
@@ -4433,9 +4437,11 @@ msgstr ""
 
 #: awx/main/models/workflow.py:302
 #, python-brace-format
-msgid "Bad launch configuration starting template {template_pk} as part of workflow {workflow_pk}. Errors:\n"
+msgid ""
+"Bad launch configuration starting template {template_pk} as part of workflow {workflow_pk}. Errors:\n"
 "{error_text}"
-msgstr "워크플로 {workflow_pk}의 잘못된 시작 구성 시작 템플릿 {template_pk}입니다. 오류:\n"
+msgstr ""
+"워크플로 {workflow_pk}의 잘못된 시작 구성 시작 템플릿 {template_pk}입니다. 오류:\n"
 "{error_text}"
 
 #: awx/main/models/workflow.py:622
@@ -4761,14 +4767,16 @@ msgid "Single Sign-On"
 msgstr "로그인"
 
 #: awx/sso/conf.py:52
-msgid "Mapping to organization admins/users from social auth accounts. This setting\n"
+msgid ""
+"Mapping to organization admins/users from social auth accounts. This setting\n"
 "controls which users are placed into which organizations based on their\n"
 "username and email address. Configuration details are available in the \n"
 "documentation."
 msgstr "이를 통해 조직 관리자/사용자에 매핑합니다. 이 설정은 사용자 이름 및 이메일 주소를 기반으로 어떤 조직에 배치되는지 제어합니다. 구성 세부 정보는 문서에서 확인할 수 있습니다."
 
 #: awx/sso/conf.py:81
-msgid "Mapping of team members (users) from social auth accounts. Configuration\n"
+msgid ""
+"Mapping of team members (users) from social auth accounts. Configuration\n"
 "details are available in the documentation."
 msgstr "소셜 인증 계정에서 팀 구성원(사용자)을 매핑합니다. 구성 세부 정보는 문서에서 확인할 수 있습니다."
 
