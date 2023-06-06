@@ -198,9 +198,11 @@ msgstr "JSON 解析错误 - 不是 JSON 对象"
 
 #: awx/api/parsers.py:36
 #, python-format
-msgid "JSON parse error - %s\n"
+msgid ""
+"JSON parse error - %s\n"
 "Possible cause: trailing comma."
-msgstr "JSON 解析错误 - %s\n"
+msgstr ""
+"JSON 解析错误 - %s\n"
 "可能的原因：结尾逗号。"
 
 #: awx/api/serializers.py:205
@@ -2182,12 +2184,14 @@ msgid "Loggers Sending Data to Log Aggregator Form"
 msgstr "将数据发送到日志聚合器表单的日志记录器"
 
 #: awx/main/conf.py:530
-msgid "List of loggers that will send HTTP logs to the collector, these can include any or all of: \n"
+msgid ""
+"List of loggers that will send HTTP logs to the collector, these can include any or all of: \n"
 "awx - service logs\n"
 "activity_stream - activity stream records\n"
 "job_events - callback data from Ansible job events\n"
 "system_tracking - facts gathered from scan jobs."
-msgstr "将 HTTP 日志发送到收集器的日志记录器列表，其中包括以下任意一种或全部：\n"
+msgstr ""
+"将 HTTP 日志发送到收集器的日志记录器列表，其中包括以下任意一种或全部：\n"
 "awx - 服务日志\n"
 "activity_stream - 活动流记录\n"
 "job_events - Ansible 任务事件的回调数据\n"
@@ -4433,9 +4437,11 @@ msgstr ""
 
 #: awx/main/models/workflow.py:302
 #, python-brace-format
-msgid "Bad launch configuration starting template {template_pk} as part of workflow {workflow_pk}. Errors:\n"
+msgid ""
+"Bad launch configuration starting template {template_pk} as part of workflow {workflow_pk}. Errors:\n"
 "{error_text}"
-msgstr "工作流 {workflow_pk} 中的错误启动配置启动模板 {template_pk}。错误：\n"
+msgstr ""
+"工作流 {workflow_pk} 中的错误启动配置启动模板 {template_pk}。错误：\n"
 "{error_text}"
 
 #: awx/main/models/workflow.py:622
@@ -4761,16 +4767,19 @@ msgid "Single Sign-On"
 msgstr "单点登录"
 
 #: awx/sso/conf.py:52
-msgid "Mapping to organization admins/users from social auth accounts. This setting\n"
+msgid ""
+"Mapping to organization admins/users from social auth accounts. This setting\n"
 "controls which users are placed into which organizations based on their\n"
 "username and email address. Configuration details are available in the \n"
 "documentation."
-msgstr "从社交身份验证帐户到机构管理员/用户的映射。此设置\n"
+msgstr ""
+"从社交身份验证帐户到机构管理员/用户的映射。此设置\n"
 "可根据用户的用户名和电子邮件地址\n"
 "控制哪些用户被放置到哪些机构。配置详情可在 相关文档中找到。"
 
 #: awx/sso/conf.py:81
-msgid "Mapping of team members (users) from social auth accounts. Configuration\n"
+msgid ""
+"Mapping of team members (users) from social auth accounts. Configuration\n"
 "details are available in the documentation."
 msgstr "从社交身份验证帐户映射团队成员（用户）。配置详情可在相关文档中找到。"
 
