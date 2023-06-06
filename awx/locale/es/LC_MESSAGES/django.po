@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: 6e2b1ff477170c54e8cb815d5a533f7c\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-29 13:13+0000\n"
-"PO-Revision-Date: 2023-06-06 18:39\n"
+"PO-Revision-Date: 2023-06-06 18:48\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
@@ -1280,7 +1280,7 @@ msgstr "No puede convertir un inventario regular en un inventario \"inteligente\
 #: awx/api/views/inventory.py:96
 #, python-brace-format
 msgid "{0}"
-msgstr ""
+msgstr "{0}"
 
 #: awx/api/views/metrics.py:29
 msgid "Metrics"
@@ -1309,7 +1309,7 @@ msgstr "La credencial debe ser una credencial de Galaxy, no {sub.credential_type
 
 #: awx/api/views/root.py:41 awx/templates/rest_framework/api.html:28
 msgid "REST API"
-msgstr ""
+msgstr "REST API"
 
 #: awx/api/views/root.py:51 awx/templates/rest_framework/api.html:4
 msgid "AWX REST API"
@@ -1325,7 +1325,7 @@ msgstr "Versión 2"
 
 #: awx/api/views/root.py:140
 msgid "Ping"
-msgstr ""
+msgstr "Ping"
 
 #: awx/api/views/root.py:168
 msgid "Subscriptions"
@@ -1397,127 +1397,127 @@ msgstr "Webhook previamente recibido, anulando."
 
 #: awx/conf/conf.py:20
 msgid "Bud Frogs"
-msgstr ""
+msgstr "Bud Frogs"
 
 #: awx/conf/conf.py:21
 msgid "Bunny"
-msgstr ""
+msgstr "Bunny"
 
 #: awx/conf/conf.py:22
 msgid "Cheese"
-msgstr ""
+msgstr "Cheese"
 
 #: awx/conf/conf.py:23
 msgid "Daemon"
-msgstr ""
+msgstr "Daemon"
 
 #: awx/conf/conf.py:24
 msgid "Default Cow"
-msgstr ""
+msgstr "Default Cow"
 
 #: awx/conf/conf.py:25
 msgid "Dragon"
-msgstr ""
+msgstr "Dragon"
 
 #: awx/conf/conf.py:26
 msgid "Elephant in Snake"
-msgstr ""
+msgstr "Elephant in Snake"
 
 #: awx/conf/conf.py:27
 msgid "Elephant"
-msgstr ""
+msgstr "Elephant"
 
 #: awx/conf/conf.py:28
 msgid "Eyes"
-msgstr ""
+msgstr "Eyes"
 
 #: awx/conf/conf.py:29
 msgid "Hello Kitty"
-msgstr ""
+msgstr "Hello Kitty"
 
 #: awx/conf/conf.py:30
 msgid "Kitty"
-msgstr ""
+msgstr "Kitty"
 
 #: awx/conf/conf.py:31
 msgid "Luke Koala"
-msgstr ""
+msgstr "Luke Koala"
 
 #: awx/conf/conf.py:32
 msgid "Meow"
-msgstr ""
+msgstr "Meow"
 
 #: awx/conf/conf.py:33
 msgid "Milk"
-msgstr ""
+msgstr "Milk"
 
 #: awx/conf/conf.py:34
 msgid "Moofasa"
-msgstr ""
+msgstr "Moofasa"
 
 #: awx/conf/conf.py:35
 msgid "Moose"
-msgstr ""
+msgstr "Moose"
 
 #: awx/conf/conf.py:36
 msgid "Ren"
-msgstr ""
+msgstr "Ren"
 
 #: awx/conf/conf.py:37
 msgid "Sheep"
-msgstr ""
+msgstr "Sheep"
 
 #: awx/conf/conf.py:38
 msgid "Small Cow"
-msgstr ""
+msgstr "Small Cow"
 
 #: awx/conf/conf.py:39
 msgid "Stegosaurus"
-msgstr ""
+msgstr "Stegosaurus"
 
 #: awx/conf/conf.py:40
 msgid "Stimpy"
-msgstr ""
+msgstr "Stimpy"
 
 #: awx/conf/conf.py:41
 msgid "Super Milker"
-msgstr ""
+msgstr "Super Milker"
 
 #: awx/conf/conf.py:42
 msgid "Three Eyes"
-msgstr ""
+msgstr "Three Eyes"
 
 #: awx/conf/conf.py:43
 msgid "Turkey"
-msgstr ""
+msgstr "Turkey"
 
 #: awx/conf/conf.py:44
 msgid "Turtle"
-msgstr ""
+msgstr "Turtle"
 
 #: awx/conf/conf.py:45
 msgid "Tux"
-msgstr ""
+msgstr "Tux"
 
 #: awx/conf/conf.py:46
 msgid "Udder"
-msgstr ""
+msgstr "Udder"
 
 #: awx/conf/conf.py:47
 msgid "Vader Koala"
-msgstr ""
+msgstr "Vader Koala"
 
 #: awx/conf/conf.py:48
 msgid "Vader"
-msgstr ""
+msgstr "Vader"
 
 #: awx/conf/conf.py:49
 msgid "WWW"
-msgstr ""
+msgstr "WWW"
 
 #: awx/conf/conf.py:52
 msgid "Cow Selection"
-msgstr ""
+msgstr "Cow Selection"
 
 #: awx/conf/conf.py:53
 msgid "Select which cow to use with cowsay when running jobs."
@@ -1525,7 +1525,7 @@ msgstr "Seleccione con cual 'cow' debe ser utilizado cowsay mientras ejecuta tra
 
 #: awx/conf/conf.py:54 awx/conf/conf.py:75
 msgid "Cows"
-msgstr ""
+msgstr "Cows"
 
 #: awx/conf/conf.py:73
 msgid "Example Read-Only Setting"
@@ -2299,31 +2299,31 @@ msgstr ""
 
 #: awx/main/constants.py:19
 msgid "Sudo"
-msgstr ""
+msgstr "Sudo"
 
 #: awx/main/constants.py:20
 msgid "Su"
-msgstr ""
+msgstr "Su"
 
 #: awx/main/constants.py:21
 msgid "Pbrun"
-msgstr ""
+msgstr "Pbrun"
 
 #: awx/main/constants.py:22
 msgid "Pfexec"
-msgstr ""
+msgstr "Pfexec"
 
 #: awx/main/constants.py:23
 msgid "DZDO"
-msgstr ""
+msgstr "DZDO"
 
 #: awx/main/constants.py:24
 msgid "Pmrun"
-msgstr ""
+msgstr "Pmrun"
 
 #: awx/main/constants.py:25
 msgid "Runas"
-msgstr ""
+msgstr "Runas"
 
 #: awx/main/constants.py:26
 msgid "Enable"
@@ -2335,15 +2335,15 @@ msgstr ""
 
 #: awx/main/constants.py:28
 msgid "Ksu"
-msgstr ""
+msgstr "Ksu"
 
 #: awx/main/constants.py:29
 msgid "Machinectl"
-msgstr ""
+msgstr "Machinectl"
 
 #: awx/main/constants.py:30
 msgid "Sesu"
-msgstr ""
+msgstr "Sesu"
 
 #: awx/main/constants.py:32
 msgid "None"
@@ -2351,7 +2351,7 @@ msgstr "Ninguno"
 
 #: awx/main/credential_plugins/aim.py:12
 msgid "CyberArk AIM URL"
-msgstr ""
+msgstr "CyberArk AIM URL"
 
 #: awx/main/credential_plugins/aim.py:18
 msgid "Application ID"
@@ -2565,7 +2565,7 @@ msgstr "La URL para HashiCorp Vault"
 #: awx/main/models/credential/__init__.py:923
 #: awx/main/models/credential/__init__.py:942
 msgid "Token"
-msgstr ""
+msgstr "Token"
 
 #: awx/main/credential_plugins/hashivault.py:25
 msgid "The access token used to authenticate to the Vault server"
@@ -2581,7 +2581,7 @@ msgstr "El certificado de CA utilizado para verificar el certificado SSL del ser
 
 #: awx/main/credential_plugins/hashivault.py:34
 msgid "AppRole role_id"
-msgstr ""
+msgstr "AppRole role_id"
 
 #: awx/main/credential_plugins/hashivault.py:34
 msgid "The Role ID for AppRole Authentication"
@@ -2589,7 +2589,7 @@ msgstr "El ID de rol para la autentificación de AppRole"
 
 #: awx/main/credential_plugins/hashivault.py:37
 msgid "AppRole secret_id"
-msgstr ""
+msgstr "AppRole secret_id"
 
 #: awx/main/credential_plugins/hashivault.py:41
 msgid "The Secret ID for AppRole Authentication"
@@ -2877,7 +2877,7 @@ msgstr "Etiqueta ninguna"
 
 #: awx/main/migrations/_inventory_source_vars.py:154
 msgid "VPC ID"
-msgstr ""
+msgstr "VPC ID"
 
 #: awx/main/models/activity_stream.py:28
 msgid "Entity Created"
@@ -2956,7 +2956,7 @@ msgstr "Máquina"
 #: awx/main/models/credential/__init__.py:332
 #: awx/main/models/credential/__init__.py:635
 msgid "Vault"
-msgstr ""
+msgstr "Vault"
 
 #: awx/main/models/credential/__init__.py:333
 #: awx/main/models/credential/__init__.py:661
@@ -2984,7 +2984,7 @@ msgstr "Token de acceso personal"
 #: awx/main/models/credential/__init__.py:338
 #: awx/main/models/credential/__init__.py:955
 msgid "Insights"
-msgstr ""
+msgstr "Insights"
 
 #: awx/main/models/credential/__init__.py:339
 msgid "External"
@@ -2992,7 +2992,7 @@ msgstr "Externo"
 
 #: awx/main/models/credential/__init__.py:340
 msgid "Kubernetes"
-msgstr ""
+msgstr "Kubernetes"
 
 #: awx/main/models/credential/__init__.py:341
 msgid "Galaxy/Automation Hub"
@@ -3064,7 +3064,7 @@ msgstr "Contraseña de autorización"
 
 #: awx/main/models/credential/__init__.py:701
 msgid "Amazon Web Services"
-msgstr ""
+msgstr "Amazon Web Services"
 
 #: awx/main/models/credential/__init__.py:705
 msgid "Access Key"
@@ -3084,7 +3084,7 @@ msgstr "El Security Token Service (STS) es un servicio web que habilita su solic
 
 #: awx/main/models/credential/__init__.py:732 awx/main/models/inventory.py:811
 msgid "OpenStack"
-msgstr ""
+msgstr "OpenStack"
 
 #: awx/main/models/credential/__init__.py:739
 msgid "Password (API Key)"
@@ -3132,7 +3132,7 @@ msgstr "Verificar SSL"
 
 #: awx/main/models/credential/__init__.py:790 awx/main/models/inventory.py:809
 msgid "VMware vCenter"
-msgstr ""
+msgstr "VMware vCenter"
 
 #: awx/main/models/credential/__init__.py:796
 msgid "VCenter Host"
@@ -3144,7 +3144,7 @@ msgstr "Introduzca el nombre de host o la dirección IP que corresponda a su VMW
 
 #: awx/main/models/credential/__init__.py:815 awx/main/models/inventory.py:810
 msgid "Red Hat Satellite 6"
-msgstr ""
+msgstr "Red Hat Satellite 6"
 
 #: awx/main/models/credential/__init__.py:821
 msgid "Satellite 6 URL"
@@ -3156,7 +3156,7 @@ msgstr "Introduzca la URL que corresponda a su servidor Red Hat Satellite 6. Por
 
 #: awx/main/models/credential/__init__.py:840 awx/main/models/inventory.py:807
 msgid "Google Compute Engine"
-msgstr ""
+msgstr "Google Compute Engine"
 
 #: awx/main/models/credential/__init__.py:846
 msgid "Service Account Email Address"
@@ -3180,7 +3180,7 @@ msgstr "Pegue el contenido del fichero PEM asociado al correo de la cuenta de se
 
 #: awx/main/models/credential/__init__.py:878 awx/main/models/inventory.py:808
 msgid "Microsoft Azure Resource Manager"
-msgstr ""
+msgstr "Microsoft Azure Resource Manager"
 
 #: awx/main/models/credential/__init__.py:884
 msgid "Subscription ID"
@@ -3433,7 +3433,7 @@ msgstr "Playbook terminado"
 
 #: awx/main/models/events.py:197 awx/main/models/events.py:776
 msgid "Debug"
-msgstr ""
+msgstr "Debug"
 
 #: awx/main/models/events.py:198 awx/main/models/events.py:777
 msgid "Verbose"
@@ -3454,7 +3454,7 @@ msgstr "Advertencia del sistema"
 #: awx/main/models/events.py:202 awx/main/models/events.py:781
 #: awx/main/models/unified_jobs.py:79
 msgid "Error"
-msgstr ""
+msgstr "Error"
 
 #: awx/main/models/execution_environments.py:17
 msgid "Always pull container before running."
@@ -3602,7 +3602,7 @@ msgstr "Grupo de variables en formato JSON o YAML."
 
 #: awx/main/models/inventory.py:619
 msgid "Hosts associated directly with this group."
-msgstr ""
+msgstr "Hosts associated directly with this group."
 
 #: awx/main/models/inventory.py:625
 msgid "Inventory source(s) that created or modified this group."
@@ -3626,11 +3626,11 @@ msgstr "Extraído de un proyecto"
 
 #: awx/main/models/inventory.py:806
 msgid "Amazon EC2"
-msgstr ""
+msgstr "Amazon EC2"
 
 #: awx/main/models/inventory.py:814 awx/main/models/projects.py:52
 msgid "Red Hat Insights"
-msgstr ""
+msgstr "Red Hat Insights"
 
 #: awx/main/models/inventory.py:841
 msgid "Inventory source variables in YAML or JSON format."
@@ -3849,35 +3849,35 @@ msgstr "Correo electrónico"
 
 #: awx/main/models/notifications.py:43
 msgid "Slack"
-msgstr ""
+msgstr "Slack"
 
 #: awx/main/models/notifications.py:44
 msgid "Twilio"
-msgstr ""
+msgstr "Twilio"
 
 #: awx/main/models/notifications.py:45
 msgid "Pagerduty"
-msgstr ""
+msgstr "Pagerduty"
 
 #: awx/main/models/notifications.py:46
 msgid "Grafana"
-msgstr ""
+msgstr "Grafana"
 
 #: awx/main/models/notifications.py:47 awx/main/models/unified_jobs.py:534
 msgid "Webhook"
-msgstr ""
+msgstr "Webhook"
 
 #: awx/main/models/notifications.py:48
 msgid "Mattermost"
-msgstr ""
+msgstr "Mattermost"
 
 #: awx/main/models/notifications.py:49
 msgid "Rocket.Chat"
-msgstr ""
+msgstr "Rocket.Chat"
 
 #: awx/main/models/notifications.py:50
 msgid "IRC"
-msgstr ""
+msgstr "IRC"
 
 #: awx/main/models/notifications.py:78
 msgid "Optional custom messages for notification template."
@@ -3965,15 +3965,15 @@ msgstr "El entorno de ejecución predeterminado para las tareas ejecutadas por e
 
 #: awx/main/models/projects.py:49 awx/main/models/unified_jobs.py:528
 msgid "Manual"
-msgstr ""
+msgstr "Manual"
 
 #: awx/main/models/projects.py:50
 msgid "Git"
-msgstr ""
+msgstr "Git"
 
 #: awx/main/models/projects.py:51
 msgid "Subversion"
-msgstr ""
+msgstr "Subversion"
 
 #: awx/main/models/projects.py:53
 msgid "Remote Archive"
@@ -3993,7 +3993,7 @@ msgstr "Especifica el sistema de control de fuentes utilizado para almacenar el 
 
 #: awx/main/models/projects.py:94
 msgid "SCM URL"
-msgstr ""
+msgstr "SCM URL"
 
 #: awx/main/models/projects.py:95
 msgid "The location where the project is stored."
@@ -4009,7 +4009,7 @@ msgstr "Especificar rama, etiqueta o commit para checkout."
 
 #: awx/main/models/projects.py:108
 msgid "SCM refspec"
-msgstr ""
+msgstr "SCM refspec"
 
 #: awx/main/models/projects.py:109
 msgid "For git projects, an additional refspec to fetch."
@@ -4109,11 +4109,11 @@ msgstr "Auditor del sistema"
 
 #: awx/main/models/rbac.py:37
 msgid "Ad Hoc"
-msgstr ""
+msgstr "Ad Hoc"
 
 #: awx/main/models/rbac.py:38
 msgid "Admin"
-msgstr ""
+msgstr "Admin"
 
 #: awx/main/models/rbac.py:39
 msgid "Project Admin"
@@ -4145,7 +4145,7 @@ msgstr "Administrador de notificaciones"
 
 #: awx/main/models/rbac.py:46
 msgid "Auditor"
-msgstr ""
+msgstr "Auditor"
 
 #: awx/main/models/rbac.py:47
 msgid "Execute"
@@ -4264,11 +4264,11 @@ msgstr "Puede aprobar o denegar un nodo de aprobación de flujo de trabajo"
 
 #: awx/main/models/rbac.py:142
 msgid "roles"
-msgstr ""
+msgstr "roles"
 
 #: awx/main/models/rbac.py:448
 msgid "role_ancestors"
-msgstr ""
+msgstr "role_ancestors"
 
 #: awx/main/models/schedules.py:79
 msgid "Enables processing of this schedule."
@@ -4312,7 +4312,7 @@ msgstr "Nunca actualizado"
 
 #: awx/main/models/unified_jobs.py:88
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: awx/main/models/unified_jobs.py:89
 msgid "Missing"
@@ -4345,7 +4345,7 @@ msgstr "Relanzar"
 
 #: awx/main/models/unified_jobs.py:530
 msgid "Callback"
-msgstr ""
+msgstr "Callback"
 
 #: awx/main/models/unified_jobs.py:531
 msgid "Scheduled"
@@ -4812,7 +4812,7 @@ msgstr "URI para conectar a un servidor LDAP. Por ejemplo \"ldap://ldap.ejemplo.
 #: awx/sso/conf.py:354 awx/sso/conf.py:369 awx/sso/conf.py:387
 #: awx/sso/conf.py:419
 msgid "LDAP"
-msgstr ""
+msgstr "LDAP"
 
 #: awx/sso/conf.py:181
 msgid "LDAP Bind DN"
@@ -4945,7 +4945,7 @@ msgstr "Nombre de host/IP del servidor RADIUS. La autenticación de RADIUS se de
 #: awx/sso/conf.py:454 awx/sso/conf.py:467 awx/sso/conf.py:478
 #: awx/sso/models.py:13
 msgid "RADIUS"
-msgstr ""
+msgstr "RADIUS"
 
 #: awx/sso/conf.py:465
 msgid "RADIUS Port"
@@ -4974,7 +4974,7 @@ msgstr "Nombre de host del servidor TACACS+."
 #: awx/sso/conf.py:494 awx/sso/conf.py:506 awx/sso/conf.py:518
 #: awx/sso/conf.py:530 awx/sso/conf.py:542 awx/sso/models.py:13
 msgid "TACACS+"
-msgstr ""
+msgstr "TACACS+"
 
 #: awx/sso/conf.py:504
 msgid "TACACS+ Port"
@@ -5010,7 +5010,7 @@ msgstr "Elija el protocolo de autenticación utilizado por el cliente TACACS+."
 
 #: awx/sso/conf.py:555
 msgid "Google OAuth2 Callback URL"
-msgstr ""
+msgstr "Google OAuth2 Callback URL"
 
 #: awx/sso/conf.py:557 awx/sso/conf.py:651 awx/sso/conf.py:716
 #: awx/sso/conf.py:871 awx/sso/conf.py:960
@@ -5021,7 +5021,7 @@ msgstr "Indique esta URL como URL de callback para su aplicación como parte del
 #: awx/sso/conf.py:595 awx/sso/conf.py:611 awx/sso/conf.py:623
 #: awx/sso/conf.py:635
 msgid "Google OAuth2"
-msgstr ""
+msgstr "Google OAuth2"
 
 #: awx/sso/conf.py:569
 msgid "Google OAuth2 Key"
@@ -5065,12 +5065,12 @@ msgstr "Mapa de equipo para Google OAuth2"
 
 #: awx/sso/conf.py:649
 msgid "GitHub OAuth2 Callback URL"
-msgstr ""
+msgstr "GitHub OAuth2 Callback URL"
 
 #: awx/sso/conf.py:653 awx/sso/conf.py:665 awx/sso/conf.py:676
 #: awx/sso/conf.py:688 awx/sso/conf.py:700 awx/sso/conf.py:920
 msgid "GitHub OAuth2"
-msgstr ""
+msgstr "GitHub OAuth2"
 
 #: awx/sso/conf.py:663
 msgid "GitHub OAuth2 Key"
@@ -5326,7 +5326,7 @@ msgstr "Indique esta URL como URL de callback para su aplicación como parte del
 #: awx/sso/conf.py:1165 awx/sso/conf.py:1177 awx/sso/conf.py:1188
 #: awx/sso/conf.py:1200 awx/sso/conf.py:1212
 msgid "Azure AD OAuth2"
-msgstr ""
+msgstr "Azure AD OAuth2"
 
 #: awx/sso/conf.py:1175
 msgid "Azure AD OAuth2 Key"
@@ -5367,7 +5367,7 @@ msgstr "Cuando esté habilitado (valor predeterminado), se crearán automáticam
 #: awx/sso/conf.py:1448 awx/sso/conf.py:1460 awx/sso/conf.py:1472
 #: awx/sso/conf.py:1484 awx/sso/conf.py:1505 awx/sso/models.py:13
 msgid "SAML"
-msgstr ""
+msgstr "SAML"
 
 #: awx/sso/conf.py:1245
 msgid "SAML Assertion Consumer Service (ACS) URL"
@@ -5500,7 +5500,7 @@ msgstr "Opción(es) de conexión no válida(s): {invalid_options}."
 
 #: awx/sso/fields.py:322
 msgid "Base"
-msgstr ""
+msgstr "Base"
 
 #: awx/sso/fields.py:322
 msgid "One Level"
@@ -5590,7 +5590,7 @@ msgstr "La clave secreta TACACS+ no permite caracteres no ascii"
 
 #: awx/templates/error.html:4
 msgid "AWX"
-msgstr ""
+msgstr "AWX"
 
 #: awx/templates/rest_framework/api.html:42
 msgid "API Guide"
@@ -5607,11 +5607,11 @@ msgstr "Redimensionar"
 #: awx/ui/apps.py:9 awx/ui/conf.py:18 awx/ui/conf.py:34 awx/ui/conf.py:50
 #: awx/ui/conf.py:60 awx/ui/conf.py:69
 msgid "UI"
-msgstr ""
+msgstr "UI"
 
 #: awx/ui/conf.py:15
 msgid "Off"
-msgstr ""
+msgstr "Off"
 
 #: awx/ui/conf.py:15
 msgid "Anonymous"
